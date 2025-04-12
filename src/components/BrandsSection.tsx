@@ -11,16 +11,13 @@ const BrandsSection: React.FC = () => {
   return (
     <div className="radial-bg w-full py-16 font-sans">
       <div className="container mx-auto z-10 px-4">
-        {/* Section title */}
         <div className="mb-12 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-wide">
+          <h2 className="text-2xl md:text-3xl font-normal text-white uppercase tracking-wide">
             Brands We've Worked With
           </h2>
         </div>
         
-        {/* Brands grid */}
         <div className="max-w-6xl mx-auto mb-14 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {/* Row 1 */}
           <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
             <img 
               src="/lovable-uploads/fa2da3b1-56bc-47f5-b588-2a9a2e38269e.png" 
@@ -42,7 +39,6 @@ const BrandsSection: React.FC = () => {
             <span className="text-white text-2xl font-light tracking-widest">LEGEND</span>
           </div>
           
-          {/* Row 2 */}
           <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
             <span className="text-white text-2xl font-bold">GUIZIO</span>
           </div>
@@ -59,7 +55,6 @@ const BrandsSection: React.FC = () => {
             <span className="text-white text-lg font-medium tracking-wider">KUSH QUEEN</span>
           </div>
           
-          {/* Row 3 */}
           <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
             <span className="text-white text-lg italic">Hallmark</span>
           </div>
@@ -77,24 +72,22 @@ const BrandsSection: React.FC = () => {
           </div>
         </div>
         
-        {/* More brands text */}
         <div className="text-center mb-10">
-          <p className="text-white text-xl font-medium">And 200+ More!</p>
+          <p className="text-white text-xl font-normal">And 200+ More!</p>
         </div>
         
-        {/* CTA button */}
         <div className="text-center">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button 
-                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-4 px-8 rounded-lg text-lg uppercase shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-normal py-4 px-8 rounded-lg text-lg uppercase shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                 >
                   👉 UPGRADE MY EMAIL FLOWS HERE 👈
                 </Button>
               </TooltipTrigger>
               <TooltipContent 
-                className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-bold px-4 py-2"
+                className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-normal px-4 py-2"
               >
                 It's time to change your email marketing!
               </TooltipContent>

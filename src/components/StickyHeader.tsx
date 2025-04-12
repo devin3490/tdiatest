@@ -37,13 +37,13 @@ const StickyHeader: React.FC = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <Link to="/" className="text-white font-bold text-xl">
+          <Link to="/" className="text-white font-normal text-xl">
             Agency
           </Link>
         </div>
         <nav className="hidden md:flex space-x-2">
           <Link to="/case-studies">
-            <Button variant="ghost" className="text-white hover:bg-gray-800">
+            <Button variant="ghost" className="text-white hover:bg-gray-800 font-normal">
               Case Studies
             </Button>
           </Link>
@@ -51,13 +51,13 @@ const StickyHeader: React.FC = () => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button 
-                  className="bg-[#F97316] hover:bg-[#ea580c] text-white font-medium shadow-lg shadow-orange-500/30 transition-all duration-300 transform hover:scale-105"
+                  className="bg-[#F97316] hover:bg-[#ea580c] text-white font-normal shadow-lg shadow-orange-500/30 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                 </Button>
               </TooltipTrigger>
               <TooltipContent 
-                className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-bold px-4 py-2"
+                className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-normal px-4 py-2"
               >
                 It's time to change your life!
               </TooltipContent>
