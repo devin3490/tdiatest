@@ -78,7 +78,7 @@ const WhatYouGetSection: React.FC = () => {
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
-              <div className="text-[#ffde00] mr-3">
+              <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">100% Money Back Guaranteed</p>
