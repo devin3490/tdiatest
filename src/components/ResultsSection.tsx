@@ -27,10 +27,10 @@ const ResultsSection: React.FC = () => {
                 alt="Woman in black outfit" 
                 className="w-full h-52 object-cover translate-z-10"
               />
-              <div className="bg-[#B3FF17] p-3 translate-z-15">
+              <div className="bg-[#006fff] p-3 translate-z-15">
                 <div className="flex flex-col space-y-1">
-                  <p className="font-medium text-black">↑ ROAS by 33%</p>
-                  <p className="font-medium text-black">↑ CTR by 14%</p>
+                  <p className="font-medium text-white">↑ ROAS by 33%</p>
+                  <p className="font-medium text-white">↑ CTR by 14%</p>
                 </div>
               </div>
             </div>
@@ -45,8 +45,8 @@ const ResultsSection: React.FC = () => {
               </div>
               <div className="bg-[#006fff] p-3 translate-z-15">
                 <div className="flex flex-col space-y-1">
-                  <p className="font-medium text-black">↑ Hook Rate by 85%</p>
-                  <p className="font-medium text-black">↓ CPO by 22%</p>
+                  <p className="font-medium text-white">↑ Hook Rate by 85%</p>
+                  <p className="font-medium text-white">↓ CPO by 22%</p>
                 </div>
               </div>
             </div>
