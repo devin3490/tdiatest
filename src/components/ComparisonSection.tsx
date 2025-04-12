@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Check, X } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
@@ -57,8 +58,12 @@ const ComparisonSection: React.FC = () => {
           
           {/* Right Column - Your Business */}
           <div className="bg-gradient-to-br from-black/40 to-red-950/20 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">
-              YOUR BUSINESS.
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 flex justify-center">
+              <img 
+                src="/lovable-uploads/0c3b7ab5-8d38-44cf-afdb-ceed68c71346.png" 
+                alt="Tdia Logo" 
+                className="h-16 w-auto" 
+              />
             </h3>
             
             <div className="space-y-6">
