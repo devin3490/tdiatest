@@ -1,5 +1,6 @@
 
 import React from 'react';
+import HeroSection from '../components/HeroSection';
 import BrandsSection from '../components/BrandsSection';
 import ResultsSection from '../components/ResultsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
@@ -18,6 +19,7 @@ const Index = () => {
   return (
     <div className="min-h-screen w-full">
       <StickyHeader />
+      <HeroSection />
       <BrandsSection />
       <EcommerceProblemSection />
       <ResultsSection />

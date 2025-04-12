@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
@@ -19,6 +20,13 @@ const WhatYouGetSection: React.FC = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
           What You Get
         </h2>
+        
+        {/* Platform Logos */}
+        <div className="flex flex-wrap justify-center items-center gap-8 mb-16">
+          <img src="/lovable-uploads/c88f347d-3800-4312-be98-31ba7f554896.png" alt="Shopify" className="h-8 md:h-10" />
+          <img src="/lovable-uploads/60429fd4-b1d4-4da3-9bc4-dde2e4ef6708.png" alt="BigCommerce" className="h-8 md:h-10" />
+          <img src="/lovable-uploads/9eee0582-65db-43e5-8471-eea5b47edf35.png" alt="WooCommerce" className="h-8 md:h-10" />
+        </div>
         
         <Card className="max-w-3xl mx-auto border border-[#3944bc]/40 rounded-xl overflow-hidden bg-gradient-to-br from-[#111350] to-[#0a0b25] shadow-lg shadow-[#006FFF]/10">
           <div className="p-8 space-y-6">

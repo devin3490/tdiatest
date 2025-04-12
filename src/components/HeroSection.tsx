@@ -66,13 +66,13 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="mb-8 flex flex-wrap justify-center items-center gap-6 md:gap-10 px-4">
-          <img src="/lovable-uploads/f1e62fb5-d4a1-4e5d-a5d4-f58c15b32824.png" alt="Attentive" className="h-8 md:h-10" />
-          <img src="/lovable-uploads/7ffa3f5e-fdf6-42c1-ae0f-4c3d4a9e000e.png" alt="Shopify" className="h-8 md:h-10" />
-          <img src="/lovable-uploads/f59f920b-ba40-49e4-86a9-7889e7630fed.png" alt="Klaviyo" className="h-8 md:h-10" />
-          <img src="/lovable-uploads/3502708d-f5bf-40b4-b221-7ae466b6c5c1.png" alt="Bigcommerce" className="h-8 md:h-10" />
-          <img src="/lovable-uploads/12df6a62-82d2-49a6-83ad-e80efff58141.png" alt="Woocommerce" className="h-8 md:h-10" />
-          <img src="/lovable-uploads/3ac1a65b-fb0c-4b6e-befc-0f013a63c9ec.png" alt="Magento" className="h-8 md:h-10" />
+        <div className="mb-8 brand-logos flex flex-wrap justify-center items-center gap-4 md:gap-8">
+          <img src="/lovable-uploads/5a4fa8c2-1ff7-4767-a6e8-d2a531664cf8.png" alt="attentive" className="h-5 md:h-6" />
+          <img src="/lovable-uploads/c88f347d-3800-4312-be98-31ba7f554896.png" alt="shopify" className="h-5 md:h-6" />
+          <img src="/lovable-uploads/3e49c3b6-3afa-47ca-90fd-cced42929b24.png" alt="klaviyo" className="h-5 md:h-6" />
+          <img src="/lovable-uploads/60429fd4-b1d4-4da3-9bc4-dde2e4ef6708.png" alt="bigcommerce" className="h-5 md:h-6" />
+          <img src="/lovable-uploads/9eee0582-65db-43e5-8471-eea5b47edf35.png" alt="woocommerce" className="h-5 md:h-6" />
+          <img src="/lovable-uploads/83387c98-8746-47f1-8cb1-00fb5e0953e2.png" alt="magento" className="h-5 md:h-6" />
         </div>
 
         <div className="mb-10 text-center">
@@ -99,12 +99,7 @@ const HeroSection: React.FC = () => {
 
         <div className="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden shadow-2xl bg-gray-800">
           <div className="w-full h-[400px] flex items-center justify-center text-white">
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-              <img src="/lovable-uploads/afcfdf95-d63f-4b3d-ab38-f880989c16ec.png" alt="Facebook Ads" className="h-10 md:h-12" />
-              <img src="/lovable-uploads/8a1e5f0c-be86-408d-a0bb-30d41292f1f5.png" alt="Google Ads" className="h-10 md:h-12" />
-              <img src="/lovable-uploads/fb91d15c-97ed-420c-8803-e3627543ee1d.png" alt="TikTok Ads" className="h-10 md:h-12" />
-              <img src="/lovable-uploads/fb91d15c-97ed-420c-8803-e3627543ee1d.png" alt="Instagram Ads" className="h-10 md:h-12" />
-            </div>
+            Video Placeholder
           </div>
           <button 
             className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-black p-3 rounded-full play-button-pulse"
