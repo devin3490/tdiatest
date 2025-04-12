@@ -86,6 +86,9 @@ const FAQSection: React.FC = () => {
           </Accordion>
         </div>
       </div>
+      
+      {/* Gradient Blue Bottom Section */}
+      <div className="w-full h-20 bg-gradient-to-b from-transparent to-[#006fff]/30 mt-12"></div>
     </div>
   );
 };
