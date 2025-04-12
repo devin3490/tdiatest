@@ -49,7 +49,7 @@ const HeroSection: React.FC = () => {
           >
             Your Ads Aren't Broken — They're Just Untapped Potential. We Unlock It in 30 Days.
           </h1>
-          <div className="mt-2 text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+          <div className="mt-2 text-3xl md:text-4xl lg:text-6xl font-bold text-[#fad500] leading-tight tracking-tight">
             Results Guaranteed — Or You Don't Pay a Dime.
           </div>
         </div>
