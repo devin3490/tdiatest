@@ -25,15 +25,7 @@ const HeroSection: React.FC = () => {
     <div className="hero-section-gradient w-full min-h-screen flex flex-col items-center justify-center px-4 py-12 lg:py-16 font-sans relative">
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-black w-full"></div>
       
-      <div className="container mx-auto z-10">
-        {/* Logo */}
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/1b81247b-025c-40ca-beca-4f195a7d8189.png" 
-            alt="classe.a logo" 
-            className="h-10 mx-auto"
-          />
-        </div>
+
 
         {/* Target audience label */}
         <div className="mb-6">
