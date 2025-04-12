@@ -17,7 +17,7 @@ const FounderSection: React.FC = () => {
         
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-10">
-          Meet the <span className="italic font-normal">founder.</span>
+          Meet the <span className="italic font-normal">team.</span>
         </h2>
         
         {/* Description */}
