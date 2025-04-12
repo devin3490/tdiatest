@@ -9,7 +9,7 @@ import {
 
 const BrandsSection: React.FC = () => {
   return (
-    <div className="radial-bg w-full py-16 font-sans">
+    <div className="bg-black w-full py-16 font-sans">
       <div className="container mx-auto z-10 px-4">
         <div className="mb-12 text-center">
           <h2 className="text-2xl md:text-3xl font-normal text-white uppercase tracking-wide">
