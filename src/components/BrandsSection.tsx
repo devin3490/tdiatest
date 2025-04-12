@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -7,6 +6,12 @@ import {
   TooltipProvider, 
   TooltipTrigger 
 } from "@/components/ui/tooltip";
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem 
+} from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface BrandCardProps {
   src: string;
@@ -74,6 +79,7 @@ const BrandCard: React.FC<BrandCardProps> = ({ src, alt }) => {
 };
 
 const BrandsSection: React.FC = () => {
+  const isMobile = useIsMobile();
   const brands = [
     { src: "/lovable-uploads/55f4a520-199c-4f60-a299-f4f53f4e03d5.png", alt: "Roots logo" },
     { src: "/lovable-uploads/93d97cb7-54fd-41f5-a9df-85cf0c707dec.png", alt: "Cafexo logo" },
@@ -86,6 +92,38 @@ const BrandsSection: React.FC = () => {
     { src: "/lovable-uploads/ca87324b-abc5-494c-939c-4b5f93d7f252.png", alt: "Le Coconut logo" },
   ];
 
+  // Reference for the carousel element
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  // Effect for auto-scrolling animation on mobile
+  useEffect(() => {
+    if (!isMobile || !carouselRef.current) return;
+    
+    // Create the auto-scrolling animation
+    const scrollAnimation = () => {
+      if (carouselRef.current) {
+        const scrollContainer = carouselRef.current.querySelector('.embla__container');
+        if (scrollContainer) {
+          const currentScroll = scrollContainer.scrollLeft;
+          const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+          
+          // If we're at the end, reset to the beginning
+          if (currentScroll >= maxScroll - 10) {
+            scrollContainer.scrollLeft = 0;
+          } else {
+            // Otherwise, continue scrolling
+            scrollContainer.scrollLeft += 1;
+          }
+        }
+      }
+    };
+
+    // Set interval for continuous scrolling
+    const intervalId = setInterval(scrollAnimation, 30);
+
+    return () => clearInterval(intervalId);
+  }, [isMobile]);
+
   return (
     <div className="bg-black w-full py-16 font-sans">
       <div className="container mx-auto z-10 px-4">
@@ -95,15 +133,43 @@ const BrandsSection: React.FC = () => {
           </h2>
         </div>
         
-        <div className="max-w-5xl mx-auto mb-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {brands.map((brand, index) => (
-            <BrandCard 
-              key={index}
-              src={brand.src}
-              alt={brand.alt}
-            />
-          ))}
-        </div>
+        {isMobile ? (
+          <div className="mb-14">
+            <Carousel 
+              ref={carouselRef}
+              className="w-full"
+              opts={{
+                align: "start",
+                loop: true,
+                dragFree: true,
+                containScroll: "trimSnaps"
+              }}
+            >
+              <CarouselContent className="-ml-4">
+                {brands.map((brand, index) => (
+                  <CarouselItem key={index} className="pl-4 basis-1/2 sm:basis-1/3">
+                    <div className="p-1">
+                      <BrandCard 
+                        src={brand.src}
+                        alt={brand.alt}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
+        ) : (
+          <div className="max-w-5xl mx-auto mb-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {brands.map((brand, index) => (
+              <BrandCard 
+                key={index}
+                src={brand.src}
+                alt={brand.alt}
+              />
+            ))}
+          </div>
+        )}
         
         <div className="text-center mb-10">
           <p className="text-white text-xl font-normal">And 30+ More!</p>
