@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
@@ -93,7 +92,7 @@ const WhatYouGetSection: React.FC = () => {
             </h3>
             
             <Button 
-              className="bg-[#006FFF] hover:bg-[#0052cc] text-white font-bold py-3 px-6 rounded-md text-sm flex items-center justify-center gap-2 mx-auto"
+              className="text-white font-bold text-sm flex items-center justify-center gap-2 mx-auto"
             >
               <span>⚡</span> GET BETTER FLOWS <span>⚡</span>
             </Button>

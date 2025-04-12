@@ -41,7 +41,7 @@ const StickyHeader: React.FC = () => {
             <img 
               src="/lovable-uploads/8aed80b0-7be6-4426-9e2a-d10ece4ace35.png" 
               alt="Tdia Logo" 
-              className="h-10 w-auto" // Changed from h-8 to h-10 to make it slightly larger
+              className="h-10 w-auto"
             />
           </Link>
         </div>
@@ -55,7 +55,7 @@ const StickyHeader: React.FC = () => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button 
-                  className="bg-[#006fff] hover:bg-[#006fff] text-white font-normal shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                  className="text-white font-normal shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                 </Button>
@@ -74,4 +74,3 @@ const StickyHeader: React.FC = () => {
 };
 
 export default StickyHeader;
-

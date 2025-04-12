@@ -114,7 +114,7 @@ const BrandsSection: React.FC = () => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button 
-                  className="bg-gradient-to-r from-[#006fff] to-[#1eaedb] hover:from-[#1eaedb] hover:to-[#006fff] text-white font-normal py-4 px-8 rounded-lg text-lg shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                  className="text-white font-normal text-lg shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                 >
                   Book Your Free Discovery Call 
                 </Button>

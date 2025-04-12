@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -104,7 +103,7 @@ const CaseStudiesCarousel: React.FC = () => {
         <div className="flex justify-center mt-10">
           <Link to="/case-studies">
             <Button 
-              className="bg-[#006fff] hover:bg-[#0052cc] text-white font-bold py-3 px-6 rounded-lg"
+              className="text-white font-bold"
             >
               SEE MORE CASE STUDIES
               <ChevronRight className="ml-2 h-5 w-5" />

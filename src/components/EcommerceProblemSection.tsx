@@ -55,7 +55,7 @@ const EcommerceProblemSection: React.FC = () => {
               </p>
               <div className="pt-4">
                 <Button 
-                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
+                  className="text-white font-bold text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
                 >
                   <ZapIcon size={20} /> GET BETTER FLOWS <ZapIcon size={20} />
                 </Button>
@@ -191,7 +191,7 @@ const EcommerceProblemSection: React.FC = () => {
               </p>
               <div className="pt-4">
                 <Button 
-                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
+                  className="text-white font-bold text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
                 >
                   <ZapIcon size={20} /> GET BETTER FLOWS <ZapIcon size={20} />
                 </Button>

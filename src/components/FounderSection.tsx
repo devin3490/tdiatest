@@ -32,7 +32,7 @@ const FounderSection: React.FC = () => {
         {/* CTA Button */}
         <div className="flex justify-center mb-16">
           <Button 
-            className="bg-[#006fff] hover:bg-[#006fff] text-white px-8 py-6 text-lg rounded-md transition-colors"
+            className="text-white text-lg"
           >
             Get Your Free Audit <ArrowRight className="ml-2" />
           </Button>

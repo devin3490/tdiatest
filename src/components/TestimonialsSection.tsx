@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Play } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -45,7 +44,7 @@ const TestimonialsSection: React.FC = () => {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button 
-                      className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-2 px-6 rounded-lg text-sm shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                      className="text-white font-bold text-sm shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                     >
                       👉 UPGRADE MY EMAIL FLOWS HERE 👈
                     </Button>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -94,7 +93,7 @@ const AdStrategiesSection: React.FC = () => {
             </div>
             
             <Button 
-              className="bg-[#006FFF] hover:bg-[#0052cc] text-black font-bold py-3 px-6 rounded-full text-center"
+              className="text-black font-bold text-center"
             >
               BOOK YOUR FREE DISCOVERY CALL
             </Button>

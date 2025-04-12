@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import Card3D from './Card3D';
@@ -120,7 +119,7 @@ const ResultsSection: React.FC = () => {
         {/* CTA Button */}
         <div className="text-center">
           <Button 
-            className="bg-[#006fff] hover:bg-[#0052cc] text-white font-bold py-4 px-8 rounded-full text-lg"
+            className="text-white font-bold text-lg"
           >
             BOOK YOUR FREE DISCOVERY CALL
           </Button>
