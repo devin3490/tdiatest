@@ -77,7 +77,7 @@ const HeroSection: React.FC = () => {
 
         <div className="mb-10 text-center">
           <div className="flex items-center justify-center space-x-1 mb-2">
-            <span className="text-white font-medium text-sm md:text-base">Trusted by Over 200+ Shopify Brands</span>
+            <span className="text-white font-medium text-sm md:text-base">Trusted by Over 30+ Brands</span>
             <div className="flex">
               {[1, 2, 3, 4, 5].map((_, index) => (
                 <Star key={index} className="h-3 w-3 md:h-4 md:w-4 text-[#fad500] fill-[#fad500]" />
