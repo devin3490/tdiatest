@@ -27,8 +27,8 @@ const ResultsSection: React.FC = () => {
             />
             <div className="bg-[#B3FF17] p-3">
               <div className="flex flex-col space-y-1">
-                <p className="font-medium">↑ ROAS by 33%</p>
-                <p className="font-medium">↑ CTR by 14%</p>
+                <p className="font-medium text-black">↑ ROAS by 33%</p>
+                <p className="font-medium text-black">↑ CTR by 14%</p>
               </div>
             </div>
           </div>
@@ -41,8 +41,8 @@ const ResultsSection: React.FC = () => {
             </div>
             <div className="bg-[#B3FF17] p-3">
               <div className="flex flex-col space-y-1">
-                <p className="font-medium">↑ Hook Rate by 85%</p>
-                <p className="font-medium">↓ CPO by 22%</p>
+                <p className="font-medium text-black">↑ Hook Rate by 85%</p>
+                <p className="font-medium text-black">↓ CPO by 22%</p>
               </div>
             </div>
           </div>
@@ -55,8 +55,8 @@ const ResultsSection: React.FC = () => {
             </div>
             <div className="bg-[#B3FF17] p-3">
               <div className="flex flex-col space-y-1">
-                <p className="font-medium">↓ CPA by 30%</p>
-                <p className="font-medium">↑ Hook rate by 280%</p>
+                <p className="font-medium text-black">↓ CPA by 30%</p>
+                <p className="font-medium text-black">↑ Hook rate by 280%</p>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ const ResultsSection: React.FC = () => {
             </div>
             <div className="bg-[#B3FF17] p-3">
               <div className="flex flex-col space-y-1">
-                <p className="font-medium">↑ Return customer rate by 91%</p>
+                <p className="font-medium text-black">↑ Return customer rate by 91%</p>
               </div>
             </div>
           </div>
@@ -122,3 +122,4 @@ const ResultsSection: React.FC = () => {
 };
 
 export default ResultsSection;
+
