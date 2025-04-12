@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight, Plus } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -42,7 +43,10 @@ const FAQSection: React.FC = () => {
         {/* CTA Section */}
         <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-xl p-12 mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
-            Ready to scale your<br />brand to <span className="italic font-normal">new heights?</span>
+            Ready to scale your<br />brand to{' '}
+            <span className="italic font-normal bg-gradient-to-r from-white to-[#006fff] text-transparent bg-clip-text">
+              new heights?
+            </span>
           </h2>
           
           <div className="max-w-2xl mx-auto mb-8">
