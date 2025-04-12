@@ -331,6 +331,30 @@
   opacity: 1;
 }
 
+/* Perspective card component styles for 3D effect */
+.perspective-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.perspective-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.translate-z-20 {
+  transform: translateZ(20px);
+}
+
 #root {
   width: 100%;
   max-width: 100%;

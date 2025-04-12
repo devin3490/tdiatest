@@ -8,6 +8,7 @@ import {
   TooltipTrigger 
 } from "@/components/ui/tooltip";
 import CounterValue from './CounterValue';
+import Card3D from './Card3D';
 
 const BraggingSection: React.FC = () => {
   return (
@@ -20,39 +21,51 @@ const BraggingSection: React.FC = () => {
           </h2>
         </div>
         
-        {/* Single row of stats with counter animation */}
+        {/* Single row of stats with counter animation and 3D effect */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
           {/* Stat 1 */}
-          <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white">
-            <CounterValue 
-              value={20} 
-              prefix="$" 
-              suffix="M+" 
-              className="text-5xl md:text-6xl font-bold mb-2"
-            />
-            <p className="text-base md:text-lg">Ad Spend Under Management</p>
-          </div>
+          <Card3D glowColor="rgba(0, 111, 255, 0.3)">
+            <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white h-full transform-style-preserve-3d">
+              <div className="transform translate-z-20">
+                <CounterValue 
+                  value={20} 
+                  prefix="$" 
+                  suffix="M+" 
+                  className="text-5xl md:text-6xl font-bold mb-2"
+                />
+                <p className="text-base md:text-lg">Ad Spend Under Management</p>
+              </div>
+            </div>
+          </Card3D>
           
           {/* Stat 2 */}
-          <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white">
-            <CounterValue 
-              value={5} 
-              suffix="x" 
-              className="text-5xl md:text-6xl font-bold mb-2"
-            />
-            <p className="text-base md:text-lg">Average Return</p>
-          </div>
+          <Card3D glowColor="rgba(0, 111, 255, 0.3)">
+            <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white h-full transform-style-preserve-3d">
+              <div className="transform translate-z-20">
+                <CounterValue 
+                  value={5} 
+                  suffix="x" 
+                  className="text-5xl md:text-6xl font-bold mb-2"
+                />
+                <p className="text-base md:text-lg">Average Return</p>
+              </div>
+            </div>
+          </Card3D>
           
           {/* Stat 3 */}
-          <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white">
-            <CounterValue 
-              value={100} 
-              prefix="$" 
-              suffix="M+" 
-              className="text-5xl md:text-6xl font-bold mb-2"
-            />
-            <p className="text-base md:text-lg">In Client Revenue Generated</p>
-          </div>
+          <Card3D glowColor="rgba(0, 111, 255, 0.3)">
+            <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white h-full transform-style-preserve-3d">
+              <div className="transform translate-z-20">
+                <CounterValue 
+                  value={100} 
+                  prefix="$" 
+                  suffix="M+" 
+                  className="text-5xl md:text-6xl font-bold mb-2"
+                />
+                <p className="text-base md:text-lg">In Client Revenue Generated</p>
+              </div>
+            </div>
+          </Card3D>
         </div>
         
         {/* CTA Button */}
