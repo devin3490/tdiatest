@@ -55,7 +55,7 @@ const FAQSection: React.FC = () => {
           
           <div className="flex justify-center">
             <Button 
-              className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black px-8 py-6 text-lg rounded-md transition-colors"
+              className="bg-[#006fff] hover:bg-[#7006fff] text-black px-8 py-6 text-lg rounded-md transition-colors"
             >
               Get Your Free Audit <ArrowRight className="ml-2" />
             </Button>
