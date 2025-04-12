@@ -23,9 +23,9 @@ const Index = () => {
       <BrandsSection />
       <EcommerceProblemSection />
       <ResultsSection />
+      <AdStrategiesSection />
       <TestimonialsSection />
       <CaseStudiesCarousel />
-      <AdStrategiesSection />
       <BraggingSection />
       <WhatYouGetSection />
       <ComparisonSection />
