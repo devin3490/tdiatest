@@ -48,7 +48,13 @@ const HeroSection: React.FC = () => {
         <div className="max-w-5xl mx-auto mb-6">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight" 
               style={{
-                WebkitTextStroke: '1px rgba(255, 255, 255, 0.5)'
+                WebkitTextStroke: '1.5px',
+                WebkitTextStrokeColor: 'transparent',
+                WebkitTextFillColor: 'white',
+                background: 'linear-gradient(to right, #000000, #006fff)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextStroke: '1px',
+                textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 4px rgba(0, 111, 255, 0.5)'
               }}
           >
             Your Ads Aren't Broken — They're Just Untapped Potential. We Unlock It in 30 Days.
