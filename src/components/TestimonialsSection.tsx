@@ -30,7 +30,7 @@ const TestimonialsSection: React.FC = () => {
             {/* Stars now above the title with better spacing */}
             <div className="flex space-x-1 mb-4">
               {[1, 2, 3, 4, 5].map((star) => (
-                <span key={star} className="text-[#006FFF] text-2xl">★</span>
+                <span key={star} className="text-[#fad500] text-2xl">★</span>
               ))}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold">Mike Loved It, and<br />So Will You</h2>
