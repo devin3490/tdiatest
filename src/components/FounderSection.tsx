@@ -49,17 +49,7 @@ const FounderSection: React.FC = () => {
       role: "Head of Data & CRO",
       photo: "/lovable-uploads/664cb3fb-6045-474b-a673-d32ac9eb4897.png"
     },
-    {
-      name: "Jonathan Thompson",
-      role: "Marketing Specialist",
-      photo: "/lovable-uploads/9ac83d52-cf2c-4fd9-8211-6267c478a2ef.png"
-    },
-    {
-      name: "Alexandre Martin",
-      role: "Creative Designer",
-      photo: "/lovable-uploads/9eee0582-65db-43e5-8471-eea5b47edf35.png"
-    }
-  ];
+
 
   return (
     <div className="w-full py-20 font-sans bg-[#0a0a0a]">
