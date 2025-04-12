@@ -36,27 +36,17 @@ const FounderSection: React.FC = () => {
     },
     {
       name: "Mahdi Almi",
-      role: "Head of Customer Success",
+      role: "Head of Creatives",
       photo: "/lovable-uploads/b3c497cb-c8cf-4cec-aa09-7e64cbe5ea55.png"
     },
     {
-      name: "David Williams",
-      role: "Lead Strategist",
-      photo: "/lovable-uploads/3f5903a7-5417-48c0-8afe-723f58b33f3a.png"
-    },
-    {
       name: "Tristan Langlais",
-      role: "Technical Director",
+      role: "Head of Advertising",
       photo: "/lovable-uploads/e32ad8cf-c021-45ee-8bb8-f9bc5903d8c2.png"
     },
     {
-      name: "Ryan Edwards",
-      role: "Creative Director",
-      photo: "/lovable-uploads/4285838e-319b-4162-9522-23ff393a6e1d.png"
-    },
-    {
       name: "Bafing Keita",
-      role: "Marketing Specialist",
+      role: "Head of Data & CRO",
       photo: "/lovable-uploads/664cb3fb-6045-474b-a673-d32ac9eb4897.png"
     }
   ];
