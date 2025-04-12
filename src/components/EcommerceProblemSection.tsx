@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Database, Users, Search, ZapIcon } from 'lucide-react';
@@ -16,7 +17,7 @@ const EcommerceProblemSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full bg-gradient-to-b from-[#10112b] via-[#006fff]/20 to-[#10112b] text-white py-16 font-sans relative overflow-hidden">
+    <div className="w-full bg-gradient-to-b from-black via-[#0a0b1a] to-black text-white py-16 font-sans relative overflow-hidden">
       {/* Add grid lines in the background */}
       <div className="absolute inset-0 w-full h-full">
         <div className="grid-lines-horizontal"></div>
