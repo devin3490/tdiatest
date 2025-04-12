@@ -103,9 +103,9 @@ const CaseStudiesCarousel: React.FC = () => {
         <div className="flex justify-center mt-10">
           <Link to="/case-studies">
             <Button 
-              className="text-white font-bold"
+              className="text-white font-thin"
             >
-              SEE MORE CASE STUDIES
+              See More Case Studies
               <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
