@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import Card3D from './Card3D';
@@ -14,6 +15,14 @@ const ResultsSection: React.FC = () => {
           <p className="text-gray-300 mt-3 max-w-3xl mx-auto">
             High-converting ads rely on bold, optimized creatives, which is why we design, test, and refine every asset to ensure your ads capture attention and drive sales.
           </p>
+        </div>
+        
+        {/* Platforms we work with logos */}
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-12">
+          <img src="/lovable-uploads/0a9f5c3a-f32d-4d4d-bb6e-93fdbe7ab21d.png" alt="Facebook Ads" className="h-8 md:h-10" />
+          <img src="/lovable-uploads/8b0c8b6b-dcb7-4936-b244-464b838e377d.png" alt="Instagram Ads" className="h-8 md:h-10" />
+          <img src="/lovable-uploads/2f423ce1-a0eb-4fe6-9fca-52e98352b921.png" alt="Google Ads" className="h-7 md:h-9" />
+          <img src="/lovable-uploads/0a9f5c3a-f32d-4d4d-bb6e-93fdbe7ab21d.png" alt="TikTok Ads" className="h-8 md:h-10" />
         </div>
         
         {/* Results cards grid with 3D effect */}

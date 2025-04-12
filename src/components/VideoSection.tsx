@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -49,6 +50,13 @@ const VideoSection: React.FC = () => {
             <span className="text-[#006FFF]">Step 1:</span> 
             <span className="text-white ml-2">Watch The Video Below</span>
           </h2>
+        </div>
+        
+        {/* Ad Platform logos */}
+        <div className="flex flex-wrap justify-center items-center gap-8 mb-10">
+          <img src="/lovable-uploads/0a9f5c3a-f32d-4d4d-bb6e-93fdbe7ab21d.png" alt="Facebook Ads" className="h-8 md:h-10" />
+          <img src="/lovable-uploads/8b0c8b6b-dcb7-4936-b244-464b838e377d.png" alt="Instagram Ads" className="h-8 md:h-10" />
+          <img src="/lovable-uploads/2f423ce1-a0eb-4fe6-9fca-52e98352b921.png" alt="Google Ads" className="h-7 md:h-9" />
         </div>
         
         {/* Guarantee badge - ALREADY ABOVE VIDEO */}
