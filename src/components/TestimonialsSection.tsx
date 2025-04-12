@@ -19,7 +19,7 @@ const TestimonialsSection: React.FC = () => {
           <div className="flex flex-col space-y-4 order-2 md:order-1">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((star) => (
-                <span key={star} className="text-[#8bfa7b] text-xl">★</span>
+                <span key={star} className="text-[#006FFF] text-xl">★</span>
               ))}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold">Mike Loved It, and<br />So Will You</h2>
@@ -56,7 +56,7 @@ const TestimonialsSection: React.FC = () => {
                 alt="Mike testimonial" 
                 className="w-full rounded-lg"
               />
-              <button className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#8bfa7b] hover:bg-[#7ae36c] text-black p-3 rounded-full">
+              <button className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#006FFF] hover:bg-[#0052cc] text-black p-3 rounded-full">
                 <Play className="h-6 w-6" />
               </button>
             </div>

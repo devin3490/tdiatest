@@ -71,18 +71,18 @@ const HeroSection: React.FC = () => {
             <span className="text-white font-medium text-sm md:text-base">Trusted by Over 200+ Shopify Brands</span>
             <div className="flex">
               {[1, 2, 3, 4, 5].map((_, index) => (
-                <Star key={index} className="h-3 w-3 md:h-4 md:w-4 text-[#8bfa7b] fill-[#8bfa7b]" />
+                <Star key={index} className="h-3 w-3 md:h-4 md:w-4 text-[#006FFF] fill-[#006FFF]" />
               ))}
             </div>
           </div>
-          <p className="text-[#8bfa7b] font-medium text-sm md:text-base">
+          <p className="text-[#006FFF] font-medium text-sm md:text-base">
             Over $3M in Ads Revenue (P.S: We Only Create and Optimize Ads)
           </p>
         </div>
 
         {/* Guarantee badge - MOVED ABOVE VIDEO */}
         <div className="text-center mb-6">
-          <div className="bg-[#111827] inline-block px-6 py-2 rounded-md border border-[#8bfa7b]/20">
+          <div className="bg-[#111827] inline-block px-6 py-2 rounded-md border border-[#006FFF]/20">
             <p className="text-white uppercase tracking-wider font-normal text-sm">
               100% MONEY BACK GUARANTEED
             </p>
@@ -95,7 +95,7 @@ const HeroSection: React.FC = () => {
             Video Placeholder
           </div>
           <button 
-            className="absolute left-4 bottom-4 bg-[#8bfa7b] hover:bg-[#7ae36c] text-black p-3 rounded-full play-button-pulse"
+            className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-black p-3 rounded-full play-button-pulse"
             aria-label="Play video"
             onClick={playVideo}
           >
@@ -129,7 +129,7 @@ const HeroSection: React.FC = () => {
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
           <div className="relative w-full max-w-4xl">
             <button 
-              className="absolute -top-12 right-0 text-white hover:text-[#8bfa7b]"
+              className="absolute -top-12 right-0 text-white hover:text-[#006FFF]"
               onClick={closeVideo}
             >
               <X className="h-8 w-8" />

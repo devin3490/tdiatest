@@ -9,7 +9,7 @@ const AdStrategiesSection: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-8 items-center">
           {/* Left side with image and stats */}
           <div className="relative w-full md:w-1/2 max-w-md mx-auto">
-            <div className="bg-[#8bfa7b] p-6 rounded-3xl">
+            <div className="bg-[#006FFF] p-6 rounded-3xl">
               <div className="relative">
                 {/* Client Logo Badge */}
                 <div className="absolute -top-8 left-6 bg-white py-2 px-4 rounded-full z-10 shadow-lg">
@@ -47,21 +47,21 @@ const AdStrategiesSection: React.FC = () => {
               {/* Left Column */}
               <div className="space-y-3">
                 <div className="flex items-start">
-                  <span className="text-[#8bfa7b] mr-2">•</span>
+                  <span className="text-[#006FFF] mr-2">•</span>
                   <div>
                     <p className="text-white font-semibold">Creative-First Approach</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <span className="text-[#8bfa7b] mr-2">•</span>
+                  <span className="text-[#006FFF] mr-2">•</span>
                   <div>
                     <p className="text-white font-semibold">Data-Driven Decisions</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <span className="text-[#8bfa7b] mr-2">•</span>
+                  <span className="text-[#006FFF] mr-2">•</span>
                   <div>
                     <p className="text-white font-semibold">Funnel-Specific Messaging</p>
                   </div>
@@ -71,21 +71,21 @@ const AdStrategiesSection: React.FC = () => {
               {/* Right Column */}
               <div className="space-y-3">
                 <div className="flex items-start">
-                  <span className="text-[#8bfa7b] mr-2">•</span>
+                  <span className="text-[#006FFF] mr-2">•</span>
                   <div>
                     <p className="text-white font-semibold">Advanced AI Targeting</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <span className="text-[#8bfa7b] mr-2">•</span>
+                  <span className="text-[#006FFF] mr-2">•</span>
                   <div>
                     <p className="text-white font-semibold">Optimized Ad Volume</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <span className="text-[#8bfa7b] mr-2">•</span>
+                  <span className="text-[#006FFF] mr-2">•</span>
                   <div>
                     <p className="text-white font-semibold">Constant Iterative Process</p>
                   </div>
@@ -94,7 +94,7 @@ const AdStrategiesSection: React.FC = () => {
             </div>
             
             <Button 
-              className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-bold py-3 px-6 rounded-full text-center"
+              className="bg-[#006FFF] hover:bg-[#0052cc] text-black font-bold py-3 px-6 rounded-full text-center"
             >
               BOOK YOUR FREE DISCOVERY CALL
             </Button>

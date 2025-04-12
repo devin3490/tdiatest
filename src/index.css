@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 /* Add Overusedgrotesk font import */
@@ -55,7 +54,7 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --highlight: 86 98% 73%;
+    --highlight: 210 100% 50%;
   }
 
   .dark {

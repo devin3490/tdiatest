@@ -10,7 +10,7 @@ const CaseStudies: React.FC = () => {
       {/* Header section */}
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
-          Our Track Record of <span className="text-[#8bfa7b]">Client Success</span>
+          Our Track Record of <span className="text-[#006FFF]">Client Success</span>
         </h1>
         <p className="text-gray-300 text-center max-w-2xl mx-auto mb-12">
           We consistently deliver exceptional results for our clients through our creative-first approach and data-driven strategies.
@@ -30,7 +30,7 @@ const CaseStudies: React.FC = () => {
                 
                 <div className="mb-8">
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
-                    <span className="text-[#8bfa7b]">328%</span> Increase in Flow Revenue
+                    <span className="text-[#006FFF]">328%</span> Increase in Flow Revenue
                   </h2>
                   <p className="text-gray-400 mt-2">in 30 Days</p>
                 </div>
@@ -56,7 +56,7 @@ const CaseStudies: React.FC = () => {
                 
                 <div className="mb-8">
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
-                    <span className="text-[#8bfa7b]">210%</span> Increase in Flow Revenue
+                    <span className="text-[#006FFF]">210%</span> Increase in Flow Revenue
                   </h2>
                   <p className="text-gray-400 mt-2">in 30 Days</p>
                 </div>
@@ -83,7 +83,7 @@ const CaseStudies: React.FC = () => {
                 
                 <div className="mb-8">
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
-                    <span className="text-[#8bfa7b]">132%</span> Increase in Flow Revenue
+                    <span className="text-[#006FFF]">132%</span> Increase in Flow Revenue
                   </h2>
                   <p className="text-gray-400 mt-2">in 30 Days</p>
                 </div>
@@ -104,13 +104,13 @@ const CaseStudies: React.FC = () => {
           <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden">
             <CardContent className="p-8 flex flex-col items-center justify-center h-full">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
-                Ready to <span className="text-[#8bfa7b]">Grow</span> Your Business?
+                Ready to <span className="text-[#006FFF]">Grow</span> Your Business?
               </h2>
               <p className="text-gray-300 text-center mb-8 max-w-md">
                 Let's discuss how our creative-first approach can help you achieve similar results for your business.
               </p>
               <Button 
-                className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-bold py-3 px-6 rounded-full text-center"
+                className="bg-[#006FFF] hover:bg-[#0052cc] text-black font-bold py-3 px-6 rounded-full text-center"
               >
                 BOOK YOUR FREE DISCOVERY CALL
                 <ArrowRight className="ml-2" />
