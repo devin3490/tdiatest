@@ -21,8 +21,29 @@ const VideoSection: React.FC = () => {
   };
 
   return (
-    <div className="radial-bg w-full py-16 font-sans">
-      <div className="container mx-auto z-10 px-4">
+    <div 
+      className="w-full py-16 font-sans relative" 
+      style={{
+        background: `radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(3, 4, 10) 70%)`
+      }}
+    >
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(circle at center, rgba(0, 111, 255, 0.3) 0%, transparent 40%),
+            radial-gradient(circle at center, rgba(0, 111, 255, 0.2) 0%, transparent 60%),
+            linear-gradient(45deg, transparent 98%, rgba(255, 255, 255, 0.1) 99%, transparent 100%),
+            linear-gradient(135deg, transparent 97%, rgba(255, 255, 255, 0.1) 98%, transparent 100%),
+            linear-gradient(225deg, transparent 96%, rgba(255, 255, 255, 0.15) 97%, transparent 100%),
+            linear-gradient(315deg, transparent 95%, rgba(255, 255, 255, 0.1) 96%, transparent 100%)
+          `,
+          backgroundSize: '100% 100%, 100% 100%, 50px 50px, 60px 60px, 70px 70px, 80px 80px',
+          opacity: 0.8
+        }}
+      ></div>
+      
+      <div className="container mx-auto z-10 px-4 relative">
         {/* Step title */}
         <div className="mb-10 text-center">
           <h2 className="text-3xl md:text-4xl font-normal">

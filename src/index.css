@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 /* Add Overusedgrotesk font import */
@@ -111,7 +110,7 @@
 }
 
 .radial-bg {
-  background: radial-gradient(circle at center, rgb(0, 111, 255) 0%, rgb(3, 4, 10) 100%);
+  background: radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(3, 4, 10) 70%);
   position: relative;
   overflow: hidden;
 }
@@ -128,11 +127,11 @@
   z-index: 0;
 }
 
-/* Hero section gradient with transition to black and enhanced breathing animation */
+/* Hero section gradient with static blue to black gradient */
 .hero-section-gradient {
   position: relative;
   overflow: hidden;
-  animation: breatheBackground 20s infinite ease-in-out;
+  background: radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(3, 4, 10) 70%);
 }
 
 /* Add subtle white details/lines to the hero section */
@@ -152,7 +151,7 @@
     linear-gradient(315deg, transparent 95%, rgba(255, 255, 255, 0.1) 96%, transparent 100%);
   background-size: 100% 100%, 100% 100%, 50px 50px, 60px 60px, 70px 70px, 80px 80px;
   z-index: 0;
-  animation: breatheOverlay 20s infinite ease-in-out;
+  opacity: 0.8;
 }
 
 /* Add additional subtle diagonal light lines */
@@ -169,62 +168,6 @@
   background-size: 100px 100px, 120px 120px;
   z-index: 0;
   pointer-events: none;
-}
-
-/* Enhanced breathing background animation with ultra-smooth expanding/contracting */
-@keyframes breatheBackground {
-  0% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.700) 0%, rgb(3, 4, 10) 70%);
-  }
-  10% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.715) 0%, rgb(3, 4, 10) 71.5%);
-  }
-  20% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.730) 0%, rgb(3, 4, 10) 73%);
-  }
-  30% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.745) 0%, rgb(3, 4, 10) 74.5%);
-  }
-  40% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.760) 0%, rgb(3, 4, 10) 76%);
-  }
-  50% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.775) 0%, rgb(3, 4, 10) 77.5%);
-  }
-  60% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.760) 0%, rgb(3, 4, 10) 76%);
-  }
-  70% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.745) 0%, rgb(3, 4, 10) 74.5%);
-  }
-  80% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.730) 0%, rgb(3, 4, 10) 73%);
-  }
-  90% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.715) 0%, rgb(3, 4, 10) 71.5%);
-  }
-  100% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.700) 0%, rgb(3, 4, 10) 70%);
-  }
-}
-
-/* Smooth breathing overlay animation for the lines and details */
-@keyframes breatheOverlay {
-  0% {
-    opacity: 0.7;
-  }
-  25% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.9;
-  }
-  75% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0.7;
-  }
 }
 
 .highlight {
@@ -260,7 +203,6 @@
   justify-content: center;
 }
 
-/* Grid lines for the eCommerce Problem section */
 .grid-lines-horizontal {
   position: absolute;
   width: 100%;
@@ -277,7 +219,6 @@
   background-size: 15px 15px;
 }
 
-/* Brand grid styles */
 .brands-grid [data-brand] {
   filter: brightness(0) invert(1);
   opacity: 0.7;
@@ -288,7 +229,6 @@
   opacity: 1;
 }
 
-/* 3D hover effect for brand cards */
 .brand-card {
   transition: transform 0.3s ease;
   perspective: 1000px;
@@ -313,7 +253,6 @@
   transition: transform 0.3s ease;
 }
 
-/* Brand card shadow effect */
 .brand-card::after {
   content: '';
   position: absolute;
@@ -331,7 +270,6 @@
   opacity: 1;
 }
 
-/* Perspective card component styles for 3D effect */
 .perspective-card {
   position: relative;
   transform-style: preserve-3d;

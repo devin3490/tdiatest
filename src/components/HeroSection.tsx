@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -11,36 +11,6 @@ import { Play, X } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [gradientPosition, setGradientPosition] = useState(70);
-  const [increasing, setIncreasing] = useState(true);
-  
-  useEffect(() => {
-    let animationFrame: number;
-    const animateGradient = () => {
-      setGradientPosition(prev => {
-        if (increasing) {
-          if (prev >= 85) {
-            setIncreasing(false);
-            return prev - 0.001;
-          }
-          return prev + 0.001;
-        } else {
-          if (prev <= 70) {
-            setIncreasing(true);
-            return prev + 0.001;
-          }
-          return prev - 0.001;
-        }
-      });
-      animationFrame = requestAnimationFrame(animateGradient);
-    };
-    
-    animationFrame = requestAnimationFrame(animateGradient);
-    
-    return () => {
-      cancelAnimationFrame(animationFrame);
-    };
-  }, [increasing]);
 
   const playVideo = () => {
     setIsPlaying(true);
@@ -54,8 +24,7 @@ const HeroSection: React.FC = () => {
     <div 
       className="w-full min-h-screen flex flex-col items-center justify-center px-4 py-12 lg:py-16 font-sans relative"
       style={{
-        background: `radial-gradient(circle at center, rgba(0, 111, 255, ${0.7 + (gradientPosition - 70) * 0.005}) 0%, rgb(3, 4, 10) ${gradientPosition}%)`,
-        transition: 'background 0.001s ease-in-out'
+        background: `radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(3, 4, 10) 70%)`
       }}
     >
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-black w-full"></div>
@@ -72,7 +41,7 @@ const HeroSection: React.FC = () => {
             linear-gradient(315deg, transparent 95%, rgba(255, 255, 255, 0.1) 96%, transparent 100%)
           `,
           backgroundSize: '100% 100%, 100% 100%, 50px 50px, 60px 60px, 70px 70px, 80px 80px',
-          opacity: 0.7 + (gradientPosition - 70) * 0.01
+          opacity: 0.8
         }}
       ></div>
       
