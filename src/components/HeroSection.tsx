@@ -78,6 +78,15 @@ const HeroSection: React.FC = () => {
           </p>
         </div>
 
+        {/* Guarantee badge - MOVED ABOVE VIDEO */}
+        <div className="text-center mb-6">
+          <div className="bg-[#111827] inline-block px-6 py-2 rounded-md border border-[#8bfa7b]/20">
+            <p className="text-white uppercase tracking-wider font-normal text-sm">
+              100% MONEY BACK GUARANTEED
+            </p>
+          </div>
+        </div>
+
         {/* Video container */}
         <div className="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden shadow-2xl">
           <img 
@@ -92,15 +101,6 @@ const HeroSection: React.FC = () => {
           >
             <Play className="h-6 w-6" />
           </button>
-        </div>
-
-        {/* Guarantee badge */}
-        <div className="text-center mb-6">
-          <div className="bg-[#111827] inline-block px-6 py-2 rounded-md border border-[#8bfa7b]/20">
-            <p className="text-white uppercase tracking-wider font-normal text-sm">
-              100% MONEY BACK GUARANTEED
-            </p>
-          </div>
         </div>
 
         {/* CTA button */}

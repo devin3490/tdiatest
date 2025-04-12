@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -30,7 +31,7 @@ const VideoSection: React.FC = () => {
           </h2>
         </div>
         
-        {/* Guarantee badge */}
+        {/* Guarantee badge - ALREADY ABOVE VIDEO */}
         <div className="text-center mb-6">
           <div className="bg-[#111827] inline-block px-6 py-2 rounded-md border border-[#8bfa7b]/20">
             <p className="text-white uppercase tracking-wider font-normal text-sm">

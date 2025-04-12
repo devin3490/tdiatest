@@ -31,6 +31,7 @@ const Index = () => {
       <ComparisonSection />
       <FounderSection />
       <FAQSection />
+      <VideoSection />
     </div>
   );
 };
