@@ -40,12 +40,10 @@ const HeroSection: React.FC = () => {
         <div className="max-w-5xl mx-auto mb-6">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight" 
               style={{
-                WebkitTextStroke: '1.5px',
-                WebkitTextStrokeColor: 'transparent',
+                WebkitTextStroke: '1px',
                 WebkitTextFillColor: 'white',
                 background: 'linear-gradient(to right, #000000, #006fff)',
                 WebkitBackgroundClip: 'text',
-                WebkitTextStroke: '1px',
                 textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 4px rgba(0, 111, 255, 0.5)'
               }}
           >
