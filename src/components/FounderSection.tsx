@@ -6,10 +6,6 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import {
   Carousel,
@@ -18,6 +14,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
+import Card3D from './Card3D';
 
 // Définition du type pour les membres de l'équipe
 interface TeamMember {
@@ -27,6 +25,8 @@ interface TeamMember {
 }
 
 const FounderSection: React.FC = () => {
+  const isMobile = useIsMobile();
+  
   // Liste de tous les membres de l'équipe
   const teamMembers: TeamMember[] = [
     {
@@ -48,6 +48,16 @@ const FounderSection: React.FC = () => {
       name: "Bafing Keita",
       role: "Head of Data & CRO",
       photo: "/lovable-uploads/664cb3fb-6045-474b-a673-d32ac9eb4897.png"
+    },
+    {
+      name: "Jonathan Thompson",
+      role: "Marketing Specialist",
+      photo: "/lovable-uploads/9ac83d52-cf2c-4fd9-8211-6267c478a2ef.png"
+    },
+    {
+      name: "Alexandre Martin",
+      role: "Creative Designer",
+      photo: "/lovable-uploads/9eee0582-65db-43e5-8471-eea5b47edf35.png"
     }
   ];
 
@@ -83,50 +93,62 @@ const FounderSection: React.FC = () => {
         </div>
         
         {/* Team Members - Desktop View */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {teamMembers.map((member, index) => (
-            <Card key={index} className="bg-black/20 backdrop-blur-sm border border-white/10 overflow-hidden">
-              <div className="relative aspect-[3/4]">
-                <img 
-                  src={member.photo} 
-                  alt={member.name} 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                  <h3 className="text-2xl font-bold text-white">{member.name}</h3>
-                  <p className="text-white/70">{member.role}</p>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
+        {!isMobile && (
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {teamMembers.map((member, index) => (
+              <Card3D key={index} className="bg-transparent">
+                <Card key={index} className="bg-black/20 backdrop-blur-sm border border-white/10 overflow-hidden">
+                  <div className="relative aspect-[3/4]">
+                    <img 
+                      src={member.photo} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                      <h3 className="text-2xl font-bold text-white">{member.name}</h3>
+                      <p className="text-white/70">{member.role}</p>
+                    </div>
+                  </div>
+                </Card>
+              </Card3D>
+            ))}
+          </div>
+        )}
         
         {/* Team Members - Mobile View (Carousel) */}
-        <div className="md:hidden relative mb-16">
-          <Carousel className="w-full">
-            <CarouselContent>
-              {teamMembers.map((member, index) => (
-                <CarouselItem key={index} className="pl-2 md:basis-1/2 lg:basis-1/3">
-                  <Card className="bg-black/20 backdrop-blur-sm border border-white/10 overflow-hidden">
-                    <div className="relative aspect-[3/4]">
-                      <img 
-                        src={member.photo} 
-                        alt={member.name} 
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                        <h3 className="text-2xl font-bold text-white">{member.name}</h3>
-                        <p className="text-white/70">{member.role}</p>
+        {isMobile && (
+          <div className="md:hidden relative mb-16">
+            <Carousel className="w-full" opts={{
+              align: "start",
+              containScroll: "trimSnaps",
+              dragFree: true
+            }}>
+              <CarouselContent>
+                {teamMembers.map((member, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="bg-black/20 backdrop-blur-sm border border-white/10 overflow-hidden">
+                      <div className="relative aspect-[3/4]">
+                        <img 
+                          src={member.photo} 
+                          alt={member.name} 
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                          <h3 className="text-2xl font-bold text-white">{member.name}</h3>
+                          <p className="text-white/70">{member.role}</p>
+                        </div>
                       </div>
-                    </div>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="absolute left-2 bg-black/50 border-white/20 text-white hover:bg-black/80" />
-            <CarouselNext className="absolute right-2 bg-black/50 border-white/20 text-white hover:bg-black/80" />
-          </Carousel>
-        </div>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center gap-2 mt-4">
+                <CarouselPrevious className="static transform-none bg-black/50 border-white/20 text-white hover:bg-black/80" />
+                <CarouselNext className="static transform-none bg-black/50 border-white/20 text-white hover:bg-black/80" />
+              </div>
+            </Carousel>
+          </div>
+        )}
       </div>
     </div>
   );
