@@ -83,7 +83,7 @@ const ParallaxDots: React.FC<ParallaxDotsProps> = ({
               height: `${dot.size}px`,
               backgroundColor: dot.color,
               opacity: dot.opacity,
-              transition: 'left 0.3s ease-out, top 0.3s ease-out',
+              transition: 'left 0.8s cubic-bezier(0.22, 1, 0.36, 1), top 0.8s cubic-bezier(0.22, 1, 0.36, 1)',
             }}
           />
         );
