@@ -8,6 +8,7 @@ import BraggingSection from '../components/BraggingSection';
 import EcommerceProblemSection from '../components/EcommerceProblemSection';
 import WhatYouGetSection from '../components/WhatYouGetSection';
 import ComparisonSection from '../components/ComparisonSection';
+import FounderSection from '../components/FounderSection';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <EcommerceProblemSection />
       <WhatYouGetSection />
       <ComparisonSection />
+      <FounderSection />
     </div>
   );
 };
