@@ -1,5 +1,11 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { 
+  Tooltip, 
+  TooltipContent, 
+  TooltipProvider, 
+  TooltipTrigger 
+} from "@/components/ui/tooltip";
 import { Bolt } from 'lucide-react';
 
 const EcommerceProblemSection: React.FC = () => {
@@ -24,11 +30,22 @@ const EcommerceProblemSection: React.FC = () => {
               ads—what would that do for your bottom line?
             </p>
             <div className="pt-4">
-              <Button 
-                className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2"
-              >
-                <Bolt size={20} /> GET BETTER FLOWS <Bolt size={20} />
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button 
+                      className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                    >
+                      <Bolt size={20} /> GET BETTER FLOWS <Bolt size={20} />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent 
+                    className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-bold px-4 py-2"
+                  >
+                    It's time to change your email marketing!
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
           </div>
 
@@ -121,11 +138,22 @@ const EcommerceProblemSection: React.FC = () => {
               left on the table.
             </p>
             <div className="pt-4">
-              <Button 
-                className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2"
-              >
-                <Bolt size={20} /> GET BETTER FLOWS <Bolt size={20} />
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button 
+                      className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                    >
+                      <Bolt size={20} /> GET BETTER FLOWS <Bolt size={20} />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent 
+                    className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-bold px-4 py-2"
+                  >
+                    It's time to change your email marketing!
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
           </div>
         </div>

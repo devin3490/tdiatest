@@ -1,6 +1,11 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { 
+  Tooltip, 
+  TooltipContent, 
+  TooltipProvider, 
+  TooltipTrigger 
+} from "@/components/ui/tooltip";
 
 const BraggingSection: React.FC = () => {
   return (
@@ -57,11 +62,22 @@ const BraggingSection: React.FC = () => {
         
         {/* CTA Button */}
         <div className="text-center">
-          <Button 
-            className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-bold py-4 px-8 rounded-full text-lg uppercase"
-          >
-            Book Your Free Discovery Call
-          </Button>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button 
+                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-4 px-8 rounded-full text-lg uppercase shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                >
+                  Book Your Free Discovery Call
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent 
+                className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-bold px-4 py-2"
+              >
+                It's time to change your business!
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
       </div>
     </div>

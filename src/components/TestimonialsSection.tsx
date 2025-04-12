@@ -1,7 +1,12 @@
-
 import React from 'react';
 import { Play } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { 
+  Tooltip, 
+  TooltipContent, 
+  TooltipProvider, 
+  TooltipTrigger 
+} from "@/components/ui/tooltip";
 
 const TestimonialsSection: React.FC = () => {
   return (
@@ -35,11 +40,22 @@ const TestimonialsSection: React.FC = () => {
               effect that positively impacted his bottom line, day in and day out.
             </p>
             <div className="pt-4">
-              <Button 
-                className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-bold py-2 px-6 rounded-lg text-sm"
-              >
-                👉 UPGRADE MY EMAIL FLOWS HERE 👈
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button 
+                      className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-2 px-6 rounded-lg text-sm shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                    >
+                      👉 UPGRADE MY EMAIL FLOWS HERE 👈
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent 
+                    className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-bold px-4 py-2"
+                  >
+                    It's time to change your email marketing!
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
           </div>
         </div>
@@ -61,11 +77,22 @@ const TestimonialsSection: React.FC = () => {
               his business growth.
             </p>
             <div className="pt-4">
-              <Button 
-                className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-bold py-2 px-6 rounded-lg text-sm"
-              >
-                👉 UPGRADE MY EMAIL FLOWS HERE 👈
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button 
+                      className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-2 px-6 rounded-lg text-sm shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                    >
+                      👉 UPGRADE MY EMAIL FLOWS HERE 👈
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent 
+                    className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-bold px-4 py-2"
+                  >
+                    It's time to change your email marketing!
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
           </div>
           
