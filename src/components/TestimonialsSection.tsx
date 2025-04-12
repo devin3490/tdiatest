@@ -28,7 +28,8 @@ const TestimonialsSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-20">
           {/* Texte maintenant à gauche */}
           <div className="flex flex-col space-y-4 order-2 md:order-1">
-            <div className="flex">
+            {/* Moved stars above the title */}
+            <div className="flex space-x-1 mb-2">
               {[1, 2, 3, 4, 5].map((star) => (
                 <span key={star} className="text-[#006FFF] text-xl">★</span>
               ))}
