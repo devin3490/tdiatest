@@ -3,7 +3,6 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {
   Card,
   CardContent,
@@ -54,6 +53,11 @@ const FounderSection: React.FC = () => {
       name: "Ryan Edwards",
       role: "Creative Director",
       photo: "/lovable-uploads/4285838e-319b-4162-9522-23ff393a6e1d.png"
+    },
+    {
+      name: "Jonathan Thompson",
+      role: "Marketing Specialist",
+      photo: "/lovable-uploads/664cb3fb-6045-474b-a673-d32ac9eb4897.png"
     }
   ];
 
