@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -26,7 +27,6 @@ const HeroSection: React.FC = () => {
       
       <div className="container mx-auto z-10">
         
-
         {/* Target audience label */}
         <div className="mb-6">
           <div className="bg-opacity-20 bg-white px-6 py-2 rounded-full inline-block">
@@ -109,7 +109,7 @@ const HeroSection: React.FC = () => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button 
-                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-normal py-4 px-8 rounded-lg text-lg shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-normal py-4 px-8 rounded-lg text-lg shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
                 >
                   Book Your Free Discovery Call 
                 </Button>
