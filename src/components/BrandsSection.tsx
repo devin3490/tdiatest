@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -46,7 +45,7 @@ const BrandCard: React.FC<BrandCardProps> = ({ src, alt }) => {
   return (
     <div 
       ref={cardRef}
-      className="bg-black border border-gray-800 rounded-lg brand-card aspect-[3/4] overflow-hidden"
+      className="bg-[#111111] border border-gray-800 p-4 rounded-md brand-card"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -55,7 +54,7 @@ const BrandCard: React.FC<BrandCardProps> = ({ src, alt }) => {
       } as React.CSSProperties}
     >
       <div 
-        className="brand-card-inner h-full flex items-center justify-center p-4"
+        className="brand-card-inner h-32 flex items-center justify-center"
         style={{
           transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`
         }}
@@ -63,7 +62,7 @@ const BrandCard: React.FC<BrandCardProps> = ({ src, alt }) => {
         <img 
           src={src} 
           alt={alt} 
-          className="w-[80%] max-h-[80%] object-contain brightness-[1.2] filter invert"
+          className="h-32 w-auto object-contain"
         />
       </div>
     </div>
