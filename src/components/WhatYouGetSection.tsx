@@ -12,7 +12,7 @@ const WhatYouGetSection: React.FC = () => {
           What You Get
         </h2>
         
-        <Card className="max-w-3xl mx-auto bg-black border border-[#1e2042]/50 rounded-xl overflow-hidden">
+        <Card className="max-w-3xl mx-auto border border-[#3944bc]/40 rounded-xl overflow-hidden bg-gradient-to-br from-[#111350] to-[#0a0b25] shadow-lg shadow-[#006FFF]/10">
           <div className="p-8 space-y-6">
             {/* List items with check marks */}
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
