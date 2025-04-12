@@ -51,7 +51,7 @@ const StickyHeader: React.FC = () => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button 
-                  className="bg-[#006fff] hover:bg-[#006fff] text-white font-normal shadow-lg shadow-orange-500/30 transition-all duration-300 transform hover:scale-105"
+                  className="bg-[#006fff] hover:bg-[#006fff] text-white font-normal shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                 </Button>
