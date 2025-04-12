@@ -25,29 +25,20 @@ const BrandCard: React.FC<BrandCardProps> = ({ src, alt }) => {
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (cardRef.current) {
-      // Get the card dimensions and position
       const rect = cardRef.current.getBoundingClientRect();
-      
-      // Calculate mouse position relative to the card
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      
-      // Calculate the percentage of the mouse position within the card
       const mouseX = Math.round((x / rect.width) * 100);
       const mouseY = Math.round((y / rect.height) * 100);
-      
-      // Calculate rotation (maximum ±10 degrees)
       const rotateY = ((mouseX / 100) * 20) - 10;
-      const rotateX = (((mouseY / 100) * 20) - 10) * -1; // Invert Y axis for natural movement
+      const rotateX = (((mouseY / 100) * 20) - 10) * -1;
       
-      // Update state
       setRotation({ x: rotateX, y: rotateY });
       setPosition({ x: mouseX, y: mouseY });
     }
   };
 
   const handleMouseLeave = () => {
-    // Reset rotation when mouse leaves
     setRotation({ x: 0, y: 0 });
   };
 
@@ -92,37 +83,20 @@ const BrandsSection: React.FC = () => {
     { src: "/lovable-uploads/ca87324b-abc5-494c-939c-4b5f93d7f252.png", alt: "Le Coconut logo" },
   ];
 
-  // Reference for the carousel element
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [api, setApi] = useState<any>(null);
 
-  // Effect for auto-scrolling animation on mobile
   useEffect(() => {
-    if (!isMobile || !carouselRef.current) return;
+    if (!isMobile || !api) return;
     
-    // Create the auto-scrolling animation
-    const scrollAnimation = () => {
-      if (carouselRef.current) {
-        const scrollContainer = carouselRef.current.querySelector('.embla__container');
-        if (scrollContainer) {
-          const currentScroll = scrollContainer.scrollLeft;
-          const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-          
-          // If we're at the end, reset to the beginning
-          if (currentScroll >= maxScroll - 10) {
-            scrollContainer.scrollLeft = 0;
-          } else {
-            // Otherwise, continue scrolling
-            scrollContainer.scrollLeft += 1;
-          }
-        }
-      }
-    };
-
-    // Set interval for continuous scrolling
-    const intervalId = setInterval(scrollAnimation, 30);
-
-    return () => clearInterval(intervalId);
-  }, [isMobile]);
+    const autoScrollInterval = setInterval(() => {
+      api.scrollNext();
+    }, 3000);
+    
+    return () => clearInterval(autoScrollInterval);
+  }, [isMobile, api]);
+  
+  const extendedBrands = isMobile ? [...brands, ...brands] : brands;
 
   return (
     <div className="bg-black w-full py-16 font-sans">
@@ -134,20 +108,22 @@ const BrandsSection: React.FC = () => {
         </div>
         
         {isMobile ? (
-          <div className="mb-14">
+          <div className="mb-14 overflow-hidden">
             <Carousel 
               ref={carouselRef}
               className="w-full"
+              setApi={setApi}
               opts={{
                 align: "start",
                 loop: true,
                 dragFree: true,
-                containScroll: "trimSnaps"
+                containScroll: false,
+                slidesToScroll: 1
               }}
             >
               <CarouselContent className="-ml-4">
-                {brands.map((brand, index) => (
-                  <CarouselItem key={index} className="pl-4 basis-1/2 sm:basis-1/3">
+                {extendedBrands.map((brand, index) => (
+                  <CarouselItem key={index} className="pl-4 basis-1/3 md:basis-1/4 lg:basis-1/6">
                     <div className="p-1">
                       <BrandCard 
                         src={brand.src}
