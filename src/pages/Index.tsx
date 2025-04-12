@@ -7,6 +7,7 @@ import ResultsSection from '../components/ResultsSection';
 import BraggingSection from '../components/BraggingSection';
 import EcommerceProblemSection from '../components/EcommerceProblemSection';
 import WhatYouGetSection from '../components/WhatYouGetSection';
+import ComparisonSection from '../components/ComparisonSection';
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <BraggingSection />
       <EcommerceProblemSection />
       <WhatYouGetSection />
+      <ComparisonSection />
     </div>
   );
 };
