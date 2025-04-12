@@ -48,7 +48,7 @@ const ParallaxDots: React.FC<ParallaxDotsProps> = ({
         size: minSize + Math.random() * (maxSize - minSize),
         color: colors[Math.floor(Math.random() * colors.length)],
         // Increase speed range to make movement more noticeable
-        speed: 0.01 + Math.random() * 0.03,
+        speed: 0.01 + Math.random() * 0.04,
         opacity: minOpacity + Math.random() * (maxOpacity - minOpacity)
       });
     }
