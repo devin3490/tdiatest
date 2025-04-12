@@ -53,8 +53,33 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
+        {/* Partner logos - MOVED ABOVE VIDEO */}
+        <div className="mt-10 mb-10 brand-logos flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f089d11c59b02d40d9e18e317e8a8a982cb45d8ce3c0575ba7f2b2c98a7208a?apiKey=null&" alt="attentive" className="h-6 md:h-8" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a2e1a938e5a956776f2aa1810cf5d697e2596fe9997cb309c7b0c92728fb767?apiKey=null&" alt="shopify" className="h-6 md:h-8" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/181e328673ffc0498c92ffa9cee7c547e1c468bd1b12d524f01db16d76a4ba1c?apiKey=null&" alt="klaviyo" className="h-6 md:h-8" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/97f0e5629fce9f464d238379ede8ed37374eb3196c5ae0821e262e2267ff3df4?apiKey=null&" alt="bigcommerce" className="h-6 md:h-8" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/804d31e8abf3a0af5392a37a0599349c8e6c2b286863262f34e3b22a9908f28e?apiKey=null&" alt="woocommerce" className="h-6 md:h-8" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b2f739e679054692185f80ab69d5df2af3dbb65256d5edc6fc2a6ba1f1ef5abb?apiKey=null&" alt="magento" className="h-6 md:h-8" />
+        </div>
+
+        {/* Social proof - MOVED ABOVE VIDEO */}
+        <div className="mb-12 text-center">
+          <div className="flex items-center justify-center space-x-1 mb-3">
+            <span className="text-white font-medium">Trusted by Over 200+ Shopify Brands</span>
+            <div className="flex">
+              {[1, 2, 3, 4, 5].map((_, index) => (
+                <Star key={index} className="h-4 w-4 text-[#8bfa7b] fill-[#8bfa7b]" />
+              ))}
+            </div>
+          </div>
+          <p className="text-[#8bfa7b] font-medium">
+            Over $150M in Flow Revenue (P.S: We Only Build Flows - Specialists of the Art!)
+          </p>
+        </div>
+
         {/* Video container */}
-        <div className="max-w-4xl mx-auto my-12 relative rounded-lg overflow-hidden shadow-2xl">
+        <div className="max-w-4xl mx-auto mb-12 relative rounded-lg overflow-hidden shadow-2xl">
           <img 
             src="/lovable-uploads/86ce686e-a76d-473a-b356-ed4acedb6c6f.png" 
             alt="Video thumbnail" 
@@ -96,31 +121,6 @@ const HeroSection: React.FC = () => {
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
-        </div>
-
-        {/* Partner logos */}
-        <div className="mt-20 brand-logos flex flex-wrap justify-center items-center gap-8 md:gap-12">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f089d11c59b02d40d9e18e317e8a8a982cb45d8ce3c0575ba7f2b2c98a7208a?apiKey=null&" alt="attentive" className="h-6 md:h-8" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a2e1a938e5a956776f2aa1810cf5d697e2596fe9997cb309c7b0c92728fb767?apiKey=null&" alt="shopify" className="h-6 md:h-8" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/181e328673ffc0498c92ffa9cee7c547e1c468bd1b12d524f01db16d76a4ba1c?apiKey=null&" alt="klaviyo" className="h-6 md:h-8" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/97f0e5629fce9f464d238379ede8ed37374eb3196c5ae0821e262e2267ff3df4?apiKey=null&" alt="bigcommerce" className="h-6 md:h-8" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/804d31e8abf3a0af5392a37a0599349c8e6c2b286863262f34e3b22a9908f28e?apiKey=null&" alt="woocommerce" className="h-6 md:h-8" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b2f739e679054692185f80ab69d5df2af3dbb65256d5edc6fc2a6ba1f1ef5abb?apiKey=null&" alt="magento" className="h-6 md:h-8" />
-        </div>
-
-        {/* Social proof */}
-        <div className="mt-10 text-center">
-          <div className="flex items-center justify-center space-x-1 mb-3">
-            <span className="text-white font-medium">Trusted by Over 200+ Shopify Brands</span>
-            <div className="flex">
-              {[1, 2, 3, 4, 5].map((_, index) => (
-                <Star key={index} className="h-4 w-4 text-[#8bfa7b] fill-[#8bfa7b]" />
-              ))}
-            </div>
-          </div>
-          <p className="text-[#8bfa7b] font-medium">
-            Over $150M in Flow Revenue (P.S: We Only Build Flows - Specialists of the Art!)
-          </p>
         </div>
       </div>
 
