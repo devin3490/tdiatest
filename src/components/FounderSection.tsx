@@ -48,8 +48,8 @@ const FounderSection: React.FC = () => {
       name: "Bafing Keita",
       role: "Head of Data & CRO",
       photo: "/lovable-uploads/664cb3fb-6045-474b-a673-d32ac9eb4897.png"
-    },
-
+    }
+  ]; // Added closing bracket here
 
   return (
     <div className="w-full py-20 font-sans bg-[#0a0a0a]">
