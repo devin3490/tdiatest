@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -42,6 +41,8 @@ const HeroSection: React.FC = () => {
         <div className="max-w-5xl mx-auto mb-6">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight" 
               style={{
+                WebkitTextStroke: '1.5px',
+                WebkitTextStrokeColor: 'transparent',
                 WebkitTextFillColor: 'white',
                 background: 'linear-gradient(to right, #000000, #006fff)',
                 WebkitBackgroundClip: 'text',
@@ -112,13 +113,13 @@ const HeroSection: React.FC = () => {
                 <Button 
                   className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-normal py-4 px-8 rounded-lg text-lg uppercase shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                 >
-                  👉 UPGRADE MY EMAIL FLOWS HERE 👈
+                  👉 Book Your Free Discovery Call 👈
                 </Button>
               </TooltipTrigger>
               <TooltipContent 
                 className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-normal px-4 py-2"
               >
-                It's time to change your email marketing!
+                It's time to have a reel ROI!
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
