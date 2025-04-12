@@ -6,6 +6,7 @@ import BrandsSection from '../components/BrandsSection';
 import ResultsSection from '../components/ResultsSection';
 import BraggingSection from '../components/BraggingSection';
 import EcommerceProblemSection from '../components/EcommerceProblemSection';
+import WhatYouGetSection from '../components/WhatYouGetSection';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <ResultsSection />
       <BraggingSection />
       <EcommerceProblemSection />
+      <WhatYouGetSection />
     </div>
   );
 };
