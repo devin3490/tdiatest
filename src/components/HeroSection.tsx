@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -11,6 +11,36 @@ import { Play, X } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [gradientPosition, setGradientPosition] = useState(70);
+  const [increasing, setIncreasing] = useState(true);
+  
+  useEffect(() => {
+    let animationFrame: number;
+    const animateGradient = () => {
+      setGradientPosition(prev => {
+        if (increasing) {
+          if (prev >= 85) {
+            setIncreasing(false);
+            return prev - 0.001;
+          }
+          return prev + 0.001;
+        } else {
+          if (prev <= 70) {
+            setIncreasing(true);
+            return prev + 0.001;
+          }
+          return prev - 0.001;
+        }
+      });
+      animationFrame = requestAnimationFrame(animateGradient);
+    };
+    
+    animationFrame = requestAnimationFrame(animateGradient);
+    
+    return () => {
+      cancelAnimationFrame(animationFrame);
+    };
+  }, [increasing]);
 
   const playVideo = () => {
     setIsPlaying(true);
@@ -21,12 +51,33 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <div className="hero-section-gradient w-full min-h-screen flex flex-col items-center justify-center px-4 py-12 lg:py-16 font-sans relative">
+    <div 
+      className="w-full min-h-screen flex flex-col items-center justify-center px-4 py-12 lg:py-16 font-sans relative"
+      style={{
+        background: `radial-gradient(circle at center, rgba(0, 111, 255, ${0.7 + (gradientPosition - 70) * 0.005}) 0%, rgb(3, 4, 10) ${gradientPosition}%)`,
+        transition: 'background 0.001s ease-in-out'
+      }}
+    >
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-black w-full"></div>
+      
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(circle at center, rgba(0, 111, 255, 0.3) 0%, transparent 40%),
+            radial-gradient(circle at center, rgba(0, 111, 255, 0.2) 0%, transparent 60%),
+            linear-gradient(45deg, transparent 98%, rgba(255, 255, 255, 0.1) 99%, transparent 100%),
+            linear-gradient(135deg, transparent 97%, rgba(255, 255, 255, 0.1) 98%, transparent 100%),
+            linear-gradient(225deg, transparent 96%, rgba(255, 255, 255, 0.15) 97%, transparent 100%),
+            linear-gradient(315deg, transparent 95%, rgba(255, 255, 255, 0.1) 96%, transparent 100%)
+          `,
+          backgroundSize: '100% 100%, 100% 100%, 50px 50px, 60px 60px, 70px 70px, 80px 80px',
+          opacity: 0.7 + (gradientPosition - 70) * 0.01
+        }}
+      ></div>
       
       <div className="container mx-auto z-10">
         
-        {/* Target audience label */}
         <div className="mb-6">
           <div className="bg-opacity-20 bg-white px-6 py-2 rounded-full inline-block">
             <p className="text-white uppercase tracking-wider font-medium text-sm">
@@ -35,11 +86,10 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Main headline - Updated text */}
         <div className="max-w-5xl mx-auto mb-6">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight" 
               style={{
-                WebkitTextStroke: '1px', // Kept only one WebkitTextStroke property
+                WebkitTextStroke: '1px', 
                 WebkitTextStrokeColor: 'transparent',
                 WebkitTextFillColor: 'white',
                 background: 'linear-gradient(to right, #000000, #006fff)',
@@ -54,7 +104,6 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Partner logos - right below the headline */}
         <div className="mb-8 brand-logos flex flex-wrap justify-center items-center gap-4 md:gap-8">
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f089d11c59b02d40d9e18e317e8a8a982cb45d8ce3c0575ba7f2b2c98a7208a?apiKey=null&" alt="attentive" className="h-5 md:h-6" />
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a2e1a938e5a956776f2aa1810cf5d697e2596fe9997cb309c7b0c92728fb767?apiKey=null&" alt="shopify" className="h-5 md:h-6" />
@@ -64,7 +113,6 @@ const HeroSection: React.FC = () => {
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b2f739e679054692185f80ab69d5df2af3dbb65256d5edc6fc2a6ba1f1ef5abb?apiKey=null&" alt="magento" className="h-5 md:h-6" />
         </div>
 
-        {/* Social proof - more compact */}
         <div className="mb-10 text-center">
           <div className="flex items-center justify-center space-x-1 mb-2">
             <span className="text-white font-medium text-sm md:text-base">Trusted by Over 200+ Shopify Brands</span>
@@ -79,7 +127,6 @@ const HeroSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Guarantee badge - MOVED ABOVE VIDEO */}
         <div className="text-center mb-6">
           <div className="bg-[#111827] inline-block px-6 py-2 rounded-md border border-[#006FFF]/20">
             <p className="text-white uppercase tracking-wider font-normal text-sm">
@@ -88,7 +135,6 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Video container - removed the specific image */}
         <div className="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden shadow-2xl bg-gray-800">
           <div className="w-full h-[400px] flex items-center justify-center text-white">
             Video Placeholder
@@ -102,7 +148,6 @@ const HeroSection: React.FC = () => {
           </button>
         </div>
 
-        {/* CTA button */}
         <div className="text-center">
           <TooltipProvider>
             <Tooltip>
@@ -123,7 +168,6 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Video modal */}
       {isPlaying && (
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
           <div className="relative w-full max-w-4xl">
