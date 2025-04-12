@@ -106,7 +106,7 @@ const BrandsSection: React.FC = () => {
         </div>
         
         <div className="text-center mb-10">
-          <p className="text-white text-xl font-normal">And 40+ More!</p>
+          <p className="text-white text-xl font-normal">And 30+ More!</p>
         </div>
         
         <div className="text-center">
