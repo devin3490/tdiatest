@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -65,13 +66,13 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="mb-8 brand-logos flex flex-wrap justify-center items-center gap-4 md:gap-8">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f089d11c59b02d40d9e18e317e8a8a982cb45d8ce3c0575ba7f2b2c98a7208a?apiKey=null&" alt="attentive" className="h-5 md:h-6" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a2e1a938e5a956776f2aa1810cf5d697e2596fe9997cb309c7b0c92728fb767?apiKey=null&" alt="shopify" className="h-5 md:h-6" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/181e328673ffc0498c92ffa9cee7c547e1c468bd1b12d524f01db16d76a4ba1c?apiKey=null&" alt="klaviyo" className="h-5 md:h-6" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/97f0e5629fce9f464d238379ede8ed37374eb3196c5ae0821e262e2267ff3df4?apiKey=null&" alt="bigcommerce" className="h-5 md:h-6" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/804d31e8abf3a0af5392a37a0599349c8e6c2b286863262f34e3b22a9908f28e?apiKey=null&" alt="woocommerce" className="h-5 md:h-6" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b2f739e679054692185f80ab69d5df2af3dbb65256d5edc6fc2a6ba1f1ef5abb?apiKey=null&" alt="magento" className="h-5 md:h-6" />
+        <div className="mb-8 flex flex-wrap justify-center items-center gap-6 md:gap-10 px-4">
+          <img src="/lovable-uploads/f1e62fb5-d4a1-4e5d-a5d4-f58c15b32824.png" alt="Attentive" className="h-8 md:h-10" />
+          <img src="/lovable-uploads/7ffa3f5e-fdf6-42c1-ae0f-4c3d4a9e000e.png" alt="Shopify" className="h-8 md:h-10" />
+          <img src="/lovable-uploads/f59f920b-ba40-49e4-86a9-7889e7630fed.png" alt="Klaviyo" className="h-8 md:h-10" />
+          <img src="/lovable-uploads/3502708d-f5bf-40b4-b221-7ae466b6c5c1.png" alt="Bigcommerce" className="h-8 md:h-10" />
+          <img src="/lovable-uploads/12df6a62-82d2-49a6-83ad-e80efff58141.png" alt="Woocommerce" className="h-8 md:h-10" />
+          <img src="/lovable-uploads/3ac1a65b-fb0c-4b6e-befc-0f013a63c9ec.png" alt="Magento" className="h-8 md:h-10" />
         </div>
 
         <div className="mb-10 text-center">
@@ -98,7 +99,12 @@ const HeroSection: React.FC = () => {
 
         <div className="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden shadow-2xl bg-gray-800">
           <div className="w-full h-[400px] flex items-center justify-center text-white">
-            Video Placeholder
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              <img src="/lovable-uploads/afcfdf95-d63f-4b3d-ab38-f880989c16ec.png" alt="Facebook Ads" className="h-10 md:h-12" />
+              <img src="/lovable-uploads/8a1e5f0c-be86-408d-a0bb-30d41292f1f5.png" alt="Google Ads" className="h-10 md:h-12" />
+              <img src="/lovable-uploads/fb91d15c-97ed-420c-8803-e3627543ee1d.png" alt="TikTok Ads" className="h-10 md:h-12" />
+              <img src="/lovable-uploads/fb91d15c-97ed-420c-8803-e3627543ee1d.png" alt="Instagram Ads" className="h-10 md:h-12" />
+            </div>
           </div>
           <button 
             className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-black p-3 rounded-full play-button-pulse"
