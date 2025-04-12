@@ -17,7 +17,7 @@ const EcommerceProblemSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#0a0b1a] text-white py-16 font-sans relative overflow-hidden">
+    <div className="w-full bg-gradient-to-b from-black via-[#0a0b1a] to-black text-white py-16 font-sans relative overflow-hidden">
       {/* Add grid lines in the background */}
       <div className="absolute inset-0 w-full h-full">
         <div className="grid-lines-horizontal"></div>
