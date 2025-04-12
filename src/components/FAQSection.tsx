@@ -114,7 +114,7 @@ const FAQSection: React.FC = () => {
           
           <div className="flex justify-center relative z-10">
             <Button 
-              className="text-white text-lg"
+              className="text-white font-thin text-lg"
             >
               Book Your Free Discovery Call <ArrowRight className="ml-2" />
             </Button>
