@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -9,16 +10,16 @@ import {
 
 const BrandsSection: React.FC = () => {
   return (
-    <div className="radial-bg w-full py-16 font-sans">
+    <div className="bg-white w-full py-16 font-sans">
       <div className="container mx-auto z-10 px-4">
         <div className="mb-12 text-center">
-          <h2 className="text-2xl md:text-3xl font-normal text-white uppercase tracking-wide">
+          <h2 className="text-2xl md:text-3xl font-normal text-gray-800 uppercase tracking-wide">
             Brands We've Worked With
           </h2>
         </div>
         
         <div className="max-w-6xl mx-auto mb-14 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
             <img 
               src="/lovable-uploads/fa2da3b1-56bc-47f5-b588-2a9a2e38269e.png" 
               alt="Brand logo" 
@@ -27,53 +28,53 @@ const BrandsSection: React.FC = () => {
             />
           </div>
           
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-2xl font-bold tracking-wide">enVy</span>
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
+            <span className="text-gray-800 text-2xl font-bold tracking-wide">enVy</span>
           </div>
           
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-xl font-semibold tracking-wide">FOUR SIGMATIC</span>
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
+            <span className="text-gray-800 text-xl font-semibold tracking-wide">FOUR SIGMATIC</span>
           </div>
           
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-2xl font-light tracking-widest">LEGEND</span>
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
+            <span className="text-gray-800 text-2xl font-light tracking-widest">LEGEND</span>
           </div>
           
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-2xl font-bold">GUIZIO</span>
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
+            <span className="text-gray-800 text-2xl font-bold">GUIZIO</span>
           </div>
           
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-xl tracking-widest">R A I T H</span>
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
+            <span className="text-gray-800 text-xl tracking-widest">R A I T H</span>
           </div>
           
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-lg font-semibold">PETSMONT</span>
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
+            <span className="text-gray-800 text-lg font-semibold">PETSMONT</span>
           </div>
           
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-lg font-medium tracking-wider">KUSH QUEEN</span>
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
+            <span className="text-gray-800 text-lg font-medium tracking-wider">KUSH QUEEN</span>
           </div>
           
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-lg italic">Hallmark</span>
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
+            <span className="text-gray-800 text-lg italic">Hallmark</span>
           </div>
           
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-xl font-semibold">Freestyle</span>
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
+            <span className="text-gray-800 text-xl font-semibold">Freestyle</span>
           </div>
           
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-xl font-bold">STEPR</span>
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
+            <span className="text-gray-800 text-xl font-bold">STEPR</span>
           </div>
           
-          <div className="bg-black/50 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-xl font-light">kiwi&co</span>
+          <div className="bg-gray-100 p-8 flex items-center justify-center rounded-md">
+            <span className="text-gray-800 text-xl font-light">kiwi&co</span>
           </div>
         </div>
         
         <div className="text-center mb-10">
-          <p className="text-white text-xl font-normal">And 200+ More!</p>
+          <p className="text-gray-800 text-xl font-normal">And 200+ More!</p>
         </div>
         
         <div className="text-center">
@@ -100,3 +101,4 @@ const BrandsSection: React.FC = () => {
 };
 
 export default BrandsSection;
+
