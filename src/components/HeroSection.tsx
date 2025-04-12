@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -23,7 +22,6 @@ const HeroSection: React.FC = () => {
 
   return (
     <div className="hero-section-gradient w-full min-h-screen flex flex-col items-center justify-center px-4 py-12 lg:py-16 font-sans relative">
-      {/* Ajouter un élément pour la transition vers le noir */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-black w-full"></div>
       
       <div className="container mx-auto z-10">
@@ -45,11 +43,10 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Main headline - MORE COMPACT VERSION */}
+        {/* Main headline - Updated text */}
         <div className="max-w-5xl mx-auto mb-6">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
-            Your eComm Email Flows Are <span className="inline-flex items-center align-middle">💩 —</span> 
-            <span className="text-[#8bfa7b]"> We'll Build 12–15 Custom<br />Revenue Boosting Flows in 30 Days.</span>
+            Your Ads Aren't Broken — They're Just Untapped Potential. We Unlock It in 30 Days.
           </h1>
           <div className="mt-2 text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
             Results Guaranteed — Or You Don't Pay a Dime.
