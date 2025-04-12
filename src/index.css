@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 /* Add Overusedgrotesk font import */
@@ -179,6 +180,17 @@
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
   }
+}
+
+/* Brand grid styles */
+.brands-grid [data-brand] {
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.brands-grid [data-brand]:hover {
+  opacity: 1;
 }
 
 #root {
