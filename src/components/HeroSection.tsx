@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -41,8 +42,6 @@ const HeroSection: React.FC = () => {
         <div className="max-w-5xl mx-auto mb-6">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight" 
               style={{
-                WebkitTextStroke: '1.5px',
-                WebkitTextStrokeColor: 'transparent',
                 WebkitTextFillColor: 'white',
                 background: 'linear-gradient(to right, #000000, #006fff)',
                 WebkitBackgroundClip: 'text',

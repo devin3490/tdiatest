@@ -21,12 +21,12 @@ const Index = () => {
       <StickyHeader />
       <HeroSection />
       <BrandsSection />
+      <EcommerceProblemSection />
       <ResultsSection />
       <TestimonialsSection />
       <CaseStudiesCarousel />
       <AdStrategiesSection />
       <BraggingSection />
-      <EcommerceProblemSection />
       <WhatYouGetSection />
       <ComparisonSection />
       <FounderSection />
