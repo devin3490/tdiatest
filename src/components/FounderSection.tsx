@@ -32,30 +32,30 @@ const FounderSection: React.FC = () => {
     {
       name: "Isaac Mikola",
       role: "Founder of TDIA",
-      photo: "/lovable-uploads/b53bbceb-4b94-4f63-8bc5-b85c5a654da1.png"
+      photo: "/lovable-uploads/4285838e-319b-4162-9522-23ff393a6e1d.png"
     },
     {
       name: "Mahdi Almi",
-      role: "Head of Creatives",
+      role: "Head of Customer Success",
       photo: "/lovable-uploads/b3c497cb-c8cf-4cec-aa09-7e64cbe5ea55.png"
     },
     {
-      name: "Tristan Langlais",
+      name: "David Williams",
       role: "Lead Strategist",
-      photo: "/lovable-uploads/e32ad8cf-c021-45ee-8bb8-f9bc5903d8c2.png"
+      photo: "/lovable-uploads/3f5903a7-5417-48c0-8afe-723f58b33f3a.png"
     },
     {
-      name: "Michael Chen",
+      name: "Tristan Langlais",
       role: "Technical Director",
       photo: "/lovable-uploads/e32ad8cf-c021-45ee-8bb8-f9bc5903d8c2.png"
     },
     {
       name: "Ryan Edwards",
       role: "Creative Director",
-      photo: "/lovable-uploads/664cb3fb-6045-474b-a673-d32ac9eb4897.png"
+      photo: "/lovable-uploads/4285838e-319b-4162-9522-23ff393a6e1d.png"
     },
     {
-      name: "Jonathan Thompson",
+      name: "Bafing Keita",
       role: "Marketing Specialist",
       photo: "/lovable-uploads/664cb3fb-6045-474b-a673-d32ac9eb4897.png"
     }
