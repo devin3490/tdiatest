@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { LightningBoltIcon } from 'lucide-react';
+import { Bolt } from 'lucide-react';
 
 const EcommerceProblemSection: React.FC = () => {
   return (
@@ -28,7 +27,7 @@ const EcommerceProblemSection: React.FC = () => {
               <Button 
                 className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2"
               >
-                <LightningBoltIcon size={20} /> GET BETTER FLOWS <LightningBoltIcon size={20} />
+                <Bolt size={20} /> GET BETTER FLOWS <Bolt size={20} />
               </Button>
             </div>
           </div>
@@ -54,7 +53,7 @@ const EcommerceProblemSection: React.FC = () => {
                 
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-[#1a1c3a] p-2 rounded-md border border-blue-800">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
                   </svg>
                 </div>
                 
@@ -66,7 +65,7 @@ const EcommerceProblemSection: React.FC = () => {
                 
                 <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-[#1a1c3a] p-2 rounded-md border border-blue-800">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4" />
                   </svg>
                 </div>
 
@@ -125,7 +124,7 @@ const EcommerceProblemSection: React.FC = () => {
               <Button 
                 className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2"
               >
-                <LightningBoltIcon size={20} /> GET BETTER FLOWS <LightningBoltIcon size={20} />
+                <Bolt size={20} /> GET BETTER FLOWS <Bolt size={20} />
               </Button>
             </div>
           </div>
