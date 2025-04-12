@@ -19,45 +19,85 @@ const BrandsSection: React.FC = () => {
         </div>
         
         <div className="max-w-6xl mx-auto mb-14 grid grid-cols-3 gap-4">
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
+          {/* Logo 1 */}
+          <div className="flex items-center justify-center">
             <img 
-              src="/lovable-uploads/fa2da3b1-56bc-47f5-b588-2a9a2e38269e.png" 
-              alt="Brand logo" 
-              className="h-12 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
-              data-brand="logo1"
+              src="/lovable-uploads/2319dd84-1e89-423c-a0a0-b5b1aa35fbfc.png" 
+              alt="Roots" 
+              className="h-20 w-auto object-contain"
             />
           </div>
           
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-2xl font-bold tracking-wide">enVy</span>
+          {/* Logo 2 */}
+          <div className="flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/a0aeafca-5f60-4f36-a3ae-7528670fff29.png" 
+              alt="Cafexo" 
+              className="h-16 w-auto object-contain"
+            />
           </div>
           
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-xl font-semibold tracking-wide">FOUR SIGMATIC</span>
+          {/* Logo 3 */}
+          <div className="flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/9922aec5-4675-44c1-afa3-5e2bf6015540.png" 
+              alt="Mille Et Une Noix" 
+              className="h-20 w-auto object-contain"
+            />
           </div>
           
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-2xl font-light tracking-widest">LEGEND</span>
+          {/* Logo 4 */}
+          <div className="flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/904c80ac-429d-4660-88d4-4c35f39ca98a.png" 
+              alt="Lockfeet" 
+              className="h-14 w-auto object-contain"
+            />
           </div>
           
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-2xl font-bold">GUIZIO</span>
+          {/* Logo 5 */}
+          <div className="flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/037e2fbd-db6d-4ba7-b394-d8400d309c3d.png" 
+              alt="Ika" 
+              className="h-16 w-auto object-contain"
+            />
           </div>
           
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-xl tracking-widest">R A I T H</span>
+          {/* Logo 6 */}
+          <div className="flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/cbea3a38-d2f3-4d6a-beef-411cc932c37e.png" 
+              alt="Annick Levesque" 
+              className="h-18 w-auto object-contain"
+            />
           </div>
           
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-lg font-semibold">PETSMONT</span>
+          {/* Logo 7 */}
+          <div className="flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/e140f6c4-84e2-4967-9c45-62293e41ce00.png" 
+              alt="Onyx" 
+              className="h-14 w-auto object-contain"
+            />
           </div>
           
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-lg font-medium tracking-wider">KUSH QUEEN</span>
+          {/* Logo 8 */}
+          <div className="flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/7d715b48-b8df-4375-a48d-48eeec6f19c2.png" 
+              alt="Runak" 
+              className="h-16 w-auto object-contain"
+            />
           </div>
           
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-lg italic">Hallmark</span>
+          {/* Logo 9 */}
+          <div className="flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/d9281956-260c-423a-8c12-4f754c23bc43.png" 
+              alt="Le Coconut" 
+              className="h-20 w-auto object-contain"
+            />
           </div>
         </div>
         
