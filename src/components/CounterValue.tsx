@@ -21,15 +21,17 @@ const CounterValue: React.FC<CounterValueProps> = ({
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
+    initialInView: false
   });
 
   const formattedCount = useCounter({
-    end: inView ? value : 0,
+    end: value,
     start: 0,
     duration: 2500,
     decimals,
     prefix,
-    suffix
+    suffix,
+    shouldStart: inView
   });
 
   return (

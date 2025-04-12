@@ -8,6 +8,7 @@ interface CounterProps {
   decimals?: number;
   prefix?: string;
   suffix?: string;
+  shouldStart?: boolean;
 }
 
 export const useCounter = ({
@@ -16,14 +17,23 @@ export const useCounter = ({
   duration = 2000,
   decimals = 0,
   prefix = '',
-  suffix = ''
+  suffix = '',
+  shouldStart = true
 }: CounterProps) => {
   const [count, setCount] = useState(start);
-  const countRef = useRef(start);
   const frameRef = useRef<number | null>(null);
   const startTimeRef = useRef<number | null>(null);
 
   useEffect(() => {
+    // Don't start animation until shouldStart is true
+    if (!shouldStart) {
+      setCount(start);
+      return;
+    }
+
+    // Reset the start time when shouldStart changes
+    startTimeRef.current = null;
+    
     const easeOutQuart = (x: number): number => {
       return 1 - Math.pow(1 - x, 4);
     };
@@ -38,32 +48,27 @@ export const useCounter = ({
       
       if (relativeProgress < 1) {
         const easedProgress = easeOutQuart(relativeProgress);
-        const currentCount = Math.min(start + (end - start) * easedProgress, end);
+        const currentCount = start + (end - start) * easedProgress;
         
-        countRef.current = currentCount;
         setCount(currentCount);
-        
         frameRef.current = requestAnimationFrame(animate);
       } else {
-        countRef.current = end;
         setCount(end);
       }
     };
 
+    // Start animation
     frameRef.current = requestAnimationFrame(animate);
 
+    // Cleanup animation on unmount or when dependencies change
     return () => {
       if (frameRef.current !== null) {
         cancelAnimationFrame(frameRef.current);
       }
     };
-  }, [end, start, duration]);
+  }, [end, start, duration, shouldStart]);
 
   // Format the count with the correct number of decimal places and add prefix/suffix
-  const formattedCount = () => {
-    const fixed = Number(count.toFixed(decimals));
-    return `${prefix}${fixed}${suffix}`;
-  };
-
-  return formattedCount();
+  const formattedValue = prefix + Number(count.toFixed(decimals)) + suffix;
+  return formattedValue;
 };
