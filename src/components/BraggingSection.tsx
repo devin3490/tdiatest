@@ -27,7 +27,7 @@ const BraggingSection: React.FC = () => {
             <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white h-full transform-style-preserve-3d">
               <div className="transform translate-z-20">
                 <CounterValue 
-                  value={20} 
+                  value={1.3} 
                   prefix="$" 
                   suffix="M+" 
                   className="text-5xl md:text-6xl font-bold mb-2"
@@ -42,7 +42,7 @@ const BraggingSection: React.FC = () => {
             <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white h-full transform-style-preserve-3d">
               <div className="transform translate-z-20">
                 <CounterValue 
-                  value={5} 
+                  value={6} 
                   suffix="x" 
                   className="text-5xl md:text-6xl font-bold mb-2"
                 />
@@ -56,7 +56,7 @@ const BraggingSection: React.FC = () => {
             <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white h-full transform-style-preserve-3d">
               <div className="transform translate-z-20">
                 <CounterValue 
-                  value={100} 
+                  value={7.5} 
                   prefix="$" 
                   suffix="M+" 
                   className="text-5xl md:text-6xl font-bold mb-2"
