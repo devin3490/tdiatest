@@ -13,22 +13,10 @@ const TestimonialsSection: React.FC = () => {
   return (
     <div className="w-full bg-black text-white py-16 font-sans">
       <div className="container mx-auto px-4 py-8">
-        {/* Premier témoignage */}
+        {/* Premier témoignage - côtés inversés */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-20">
-          <div className="relative rounded-lg overflow-hidden bg-[#0c1533] p-4">
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/7663611f-941b-485c-937f-b000270c6de8.png" 
-                alt="Mike testimonial" 
-                className="w-full rounded-lg"
-              />
-              <button className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#8bfa7b] hover:bg-[#7ae36c] text-black p-3 rounded-full">
-                <Play className="h-6 w-6" />
-              </button>
-            </div>
-          </div>
-          
-          <div className="flex flex-col space-y-4">
+          {/* Texte maintenant à gauche */}
+          <div className="flex flex-col space-y-4 order-2 md:order-1">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((star) => (
                 <span key={star} className="text-[#8bfa7b] text-xl">★</span>
@@ -59,6 +47,20 @@ const TestimonialsSection: React.FC = () => {
               </TooltipProvider>
             </div>
           </div>
+          
+          {/* Vidéo maintenant à droite */}
+          <div className="relative rounded-lg overflow-hidden bg-[#0c1533] p-4 order-1 md:order-2">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/7663611f-941b-485c-937f-b000270c6de8.png" 
+                alt="Mike testimonial" 
+                className="w-full rounded-lg"
+              />
+              <button className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#8bfa7b] hover:bg-[#7ae36c] text-black p-3 rounded-full">
+                <Play className="h-6 w-6" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -66,4 +68,3 @@ const TestimonialsSection: React.FC = () => {
 };
 
 export default TestimonialsSection;
-
