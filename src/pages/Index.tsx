@@ -23,11 +23,11 @@ const Index = () => {
       <EcommerceProblemSection />
       <ResultsSection />
       <AdStrategiesSection />
-      <FounderSection />
       <TestimonialsSection />
       <CaseStudiesCarousel />
       <BraggingSection />
       <WhatYouGetSection />
+      <FounderSection />
       <ComparisonSection />
       <FAQSection />
     </div>
