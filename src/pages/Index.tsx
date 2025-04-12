@@ -13,7 +13,6 @@ import ComparisonSection from '../components/ComparisonSection';
 import FounderSection from '../components/FounderSection';
 import FAQSection from '../components/FAQSection';
 import StickyHeader from '../components/StickyHeader';
-import VideoSection from '../components/VideoSection';
 
 const Index = () => {
   return (
@@ -31,7 +30,6 @@ const Index = () => {
       <ComparisonSection />
       <FounderSection />
       <FAQSection />
-      <VideoSection />
     </div>
   );
 };
