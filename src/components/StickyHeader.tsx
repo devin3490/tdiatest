@@ -41,7 +41,7 @@ const StickyHeader: React.FC = () => {
             <img 
               src="/lovable-uploads/8aed80b0-7be6-4426-9e2a-d10ece4ace35.png" 
               alt="Tdia Logo" 
-              className="h-8 w-auto"
+              className="h-10 w-auto" // Changed from h-8 to h-10 to make it slightly larger
             />
           </Link>
         </div>
@@ -74,3 +74,4 @@ const StickyHeader: React.FC = () => {
 };
 
 export default StickyHeader;
+
