@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 /* Add Overusedgrotesk font import */
@@ -127,12 +128,11 @@
   z-index: 0;
 }
 
-/* Hero section gradient with transition to black and breathing animation */
+/* Hero section gradient with transition to black and smooth breathing animation */
 .hero-section-gradient {
-  background: radial-gradient(circle at center, rgb(0, 111, 255) 0%, rgb(3, 4, 10) 100%);
   position: relative;
   overflow: hidden;
-  animation: breatheLight 8s infinite alternate ease-in-out;
+  animation: breatheBackground 10s infinite ease-in-out;
 }
 
 /* Add subtle white details/lines to the hero section */
@@ -152,7 +152,7 @@
     linear-gradient(315deg, transparent 95%, rgba(255, 255, 255, 0.1) 96%, transparent 100%);
   background-size: 100% 100%, 100% 100%, 50px 50px, 60px 60px, 70px 70px, 80px 80px;
   z-index: 0;
-  animation: breatheOverlay 8s infinite alternate ease-in-out;
+  animation: breatheOverlay 10s infinite ease-in-out;
 }
 
 /* Add additional subtle diagonal light lines */
@@ -171,29 +171,41 @@
   pointer-events: none;
 }
 
-/* Breathing light animation for the hero section gradient */
-@keyframes breatheLight {
+/* Smooth breathing background animation for the hero section gradient */
+@keyframes breatheBackground {
   0% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.8) 0%, rgb(3, 4, 10) 100%);
+    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(3, 4, 10) 100%);
+  }
+  25% {
+    background: radial-gradient(circle at center, rgba(0, 125, 255, 0.8) 0%, rgb(3, 4, 10) 100%);
   }
   50% {
-    background: radial-gradient(circle at center, rgba(0, 140, 255, 1) 0%, rgb(3, 4, 10) 100%);
+    background: radial-gradient(circle at center, rgba(0, 140, 255, 0.9) 0%, rgb(3, 4, 10) 100%);
+  }
+  75% {
+    background: radial-gradient(circle at center, rgba(0, 125, 255, 0.8) 0%, rgb(3, 4, 10) 100%);
   }
   100% {
-    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.8) 0%, rgb(3, 4, 10) 100%);
+    background: radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(3, 4, 10) 100%);
   }
 }
 
-/* Breathing overlay animation for the lines and details */
+/* Smooth breathing overlay animation for the lines and details */
 @keyframes breatheOverlay {
   0% {
+    opacity: 0.7;
+  }
+  25% {
     opacity: 0.8;
   }
   50% {
-    opacity: 1;
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 0.8;
   }
   100% {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 }
 
