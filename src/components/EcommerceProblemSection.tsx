@@ -1,9 +1,21 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Database, Users, Search, ZapIcon } from 'lucide-react';
 
 const EcommerceProblemSection: React.FC = () => {
+  const [rotation, setRotation] = useState(0);
+  const [hoverIcon, setHoverIcon] = useState<string | null>(null);
+
+  // Animate the orbit continuously
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRotation(prev => (prev + 0.1) % 360);
+    }, 20);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="w-full bg-[#0a0b1a] text-white py-16 font-sans relative overflow-hidden">
       {/* Add grid lines in the background */}
@@ -52,11 +64,13 @@ const EcommerceProblemSection: React.FC = () => {
 
             <div className="relative hidden md:block">
               <div className="aspect-square relative">
-                {/* Center icon */}
+                {/* Center icon with pulsing effect */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-24 h-24 bg-[#151638] rounded-full flex items-center justify-center border border-blue-600/30 z-10 shadow-lg shadow-blue-900/20">
+                  <div className="w-24 h-24 bg-[#151638] rounded-full flex items-center justify-center border border-blue-600/30 z-10 shadow-lg shadow-blue-900/20 animate-pulse">
                     <ShoppingCart className="h-10 w-10 text-white" />
                   </div>
+                  {/* Pulsing ring effect */}
+                  <div className="absolute w-32 h-32 rounded-full border border-[#006fff]/30 animate-ping opacity-30" style={{animationDuration: '3s'}}></div>
                 </div>
                 
                 {/* Grid background */}
@@ -68,33 +82,57 @@ const EcommerceProblemSection: React.FC = () => {
                   </div>
                 </div>
                 
-                {/* Orbit elements */}
+                {/* Orbit circle - now animated */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-64 h-64 rounded-full border border-[#2a2d55]/50 animate-spin" style={{ animationDuration: '20s', animationTimingFunction: 'linear' }}></div>
+                  <div className="w-64 h-64 rounded-full border border-[#2a2d55]/50"></div>
                 </div>
                 
-                {/* Icon boxes on the orbit */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#151638] p-2 rounded-md border border-blue-600/30">
-                  <Users className="h-5 w-5 text-white" />
-                </div>
-                
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-[#151638] p-2 rounded-md border border-blue-600/30">
-                  <Database className="h-5 w-5 text-white" />
-                </div>
-                
-                <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-[#151638] p-2 rounded-md border border-blue-600/30">
-                  <Search className="h-5 w-5 text-white" />
-                </div>
-                
-                <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-[#151638] p-2 rounded-md border border-blue-600/30">
-                  <ZapIcon className="h-5 w-5 text-white" />
-                </div>
+                {/* Icon boxes on the orbit - now animated */}
+                <div className="absolute inset-0 w-full h-full"
+                  style={{ transform: `rotate(${rotation}deg)`, transformOrigin: 'center center', transition: 'transform 0.1s linear' }}>
+                  
+                  {/* Top icon */}
+                  <div 
+                    className={`absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#151638] p-2 rounded-md border transition-all duration-300 ${hoverIcon === 'users' ? 'scale-125 border-[#006fff] shadow-lg shadow-[#006fff]/30' : 'border-blue-600/30'}`}
+                    onMouseEnter={() => setHoverIcon('users')}
+                    onMouseLeave={() => setHoverIcon(null)}
+                  >
+                    <Users className={`h-5 w-5 ${hoverIcon === 'users' ? 'text-[#006fff]' : 'text-white'}`} />
+                  </div>
+                  
+                  {/* Bottom icon */}
+                  <div 
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-[#151638] p-2 rounded-md border transition-all duration-300 ${hoverIcon === 'database' ? 'scale-125 border-[#006fff] shadow-lg shadow-[#006fff]/30' : 'border-blue-600/30'}`}
+                    onMouseEnter={() => setHoverIcon('database')}
+                    onMouseLeave={() => setHoverIcon(null)}
+                  >
+                    <Database className={`h-5 w-5 ${hoverIcon === 'database' ? 'text-[#006fff]' : 'text-white'}`} />
+                  </div>
+                  
+                  {/* Right icon */}
+                  <div 
+                    className={`absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-[#151638] p-2 rounded-md border transition-all duration-300 ${hoverIcon === 'search' ? 'scale-125 border-[#006fff] shadow-lg shadow-[#006fff]/30' : 'border-blue-600/30'}`}
+                    onMouseEnter={() => setHoverIcon('search')}
+                    onMouseLeave={() => setHoverIcon(null)}
+                  >
+                    <Search className={`h-5 w-5 ${hoverIcon === 'search' ? 'text-[#006fff]' : 'text-white'}`} />
+                  </div>
+                  
+                  {/* Left icon */}
+                  <div 
+                    className={`absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-[#151638] p-2 rounded-md border transition-all duration-300 ${hoverIcon === 'zap' ? 'scale-125 border-[#006fff] shadow-lg shadow-[#006fff]/30' : 'border-blue-600/30'}`}
+                    onMouseEnter={() => setHoverIcon('zap')}
+                    onMouseLeave={() => setHoverIcon(null)}
+                  >
+                    <ZapIcon className={`h-5 w-5 ${hoverIcon === 'zap' ? 'text-[#006fff]' : 'text-white'}`} />
+                  </div>
 
-                {/* Dots with glow on the orbit */}
-                <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-[#4d9bff] rounded-full shadow-sm shadow-[#4d9bff]/70"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-[#4d9bff] rounded-full shadow-sm shadow-[#4d9bff]/70"></div>
-                <div className="absolute bottom-1/4 left-1/4 w-2 h-2 bg-[#4d9bff] rounded-full shadow-sm shadow-[#4d9bff]/70"></div>
-                <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-[#4d9bff] rounded-full shadow-sm shadow-[#4d9bff]/70"></div>
+                  {/* Glowing dots on the orbit */}
+                  <div className="absolute top-1/4 right-1/4 w-3 h-3 bg-[#4d9bff] rounded-full shadow-md shadow-[#4d9bff] animate-pulse"></div>
+                  <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-[#4d9bff] rounded-full shadow-md shadow-[#4d9bff] animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                  <div className="absolute bottom-1/4 left-1/4 w-3 h-3 bg-[#4d9bff] rounded-full shadow-md shadow-[#4d9bff] animate-pulse" style={{animationDelay: '1s'}}></div>
+                  <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-[#4d9bff] rounded-full shadow-md shadow-[#4d9bff] animate-pulse" style={{animationDelay: '1.5s'}}></div>
+                </div>
               </div>
             </div>
           </div>
