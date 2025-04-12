@@ -31,10 +31,11 @@ const ParallaxDots: React.FC<ParallaxDotsProps> = ({
   className = '',
 }) => {
   const [dots, setDots] = useState<Dot[]>([]);
-  const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
+  const containerRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number | null>(null);
-  const dotsRef = useRef<Dot[]>([]);
-  const targetMousePosition = useRef({ x: 50, y: 50 });
+  const mousePosition = useRef({ x: 0, y: 0 });
+  const currentMousePosition = useRef({ x: 0, y: 0 });
+  const dotsDataRef = useRef<Dot[]>([]);
 
   useEffect(() => {
     // Generate random dots
@@ -47,36 +48,44 @@ const ParallaxDots: React.FC<ParallaxDotsProps> = ({
         y: Math.random() * 100, // % position
         size: minSize + Math.random() * (maxSize - minSize),
         color: colors[Math.floor(Math.random() * colors.length)],
-        // Increase speed range to make movement more noticeable
-        speed: 0.01 + Math.random() * 0.04,
+        // Increase speed range further for more noticeable parallax effect
+        speed: 0.02 + Math.random() * 0.08, // Significantly higher speed values
         opacity: minOpacity + Math.random() * (maxOpacity - minOpacity)
       });
     }
     
     setDots(newDots);
-    dotsRef.current = newDots;
+    dotsDataRef.current = newDots;
 
-    // Add mouse move event listener
+    // Initialize mouse position to center
+    mousePosition.current = { x: 50, y: 50 };
+    currentMousePosition.current = { x: 50, y: 50 };
+
+    // Add mouse move event listener with improved sensitivity
     const handleMouseMove = (e: MouseEvent) => {
-      // Update target mouse position immediately to make parallax feel responsive
-      targetMousePosition.current = {
-        x: (e.clientX / window.innerWidth) * 100,
-        y: (e.clientY / window.innerHeight) * 100
-      };
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        mousePosition.current = {
+          x: ((e.clientX - rect.left) / rect.width) * 100,
+          y: ((e.clientY - rect.top) / rect.height) * 100
+        };
+      }
     };
 
     window.addEventListener('mousemove', handleMouseMove);
     
-    // Setup animation frame for smooth movement
+    // Use requestAnimationFrame for smooth animation
     const animate = () => {
-      // Use a higher lerp factor for more immediate response
-      const lerpFactor = 0.15; // Higher value = more responsive
+      // Higher lerp factor for much more immediate response
+      const lerpFactor = 0.2; 
       
-      setMousePosition(prevPos => ({
-        x: prevPos.x + (targetMousePosition.current.x - prevPos.x) * lerpFactor,
-        y: prevPos.y + (targetMousePosition.current.y - prevPos.y) * lerpFactor
-      }));
+      currentMousePosition.current = {
+        x: currentMousePosition.current.x + (mousePosition.current.x - currentMousePosition.current.x) * lerpFactor,
+        y: currentMousePosition.current.y + (mousePosition.current.y - currentMousePosition.current.y) * lerpFactor
+      };
       
+      // Update dots state for render only when needed
+      setDots(prevDots => [...prevDots]);
       animationRef.current = requestAnimationFrame(animate);
     };
     
@@ -92,11 +101,15 @@ const ParallaxDots: React.FC<ParallaxDotsProps> = ({
   }, [count, colors, minSize, maxSize, minOpacity, maxOpacity]);
 
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
+    <div 
+      ref={containerRef} 
+      className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
+    >
       {dots.map((dot) => {
-        // Increase movement range for more noticeable parallax effect
-        const offsetX = (mousePosition.x - 50) * dot.speed * 1.5;
-        const offsetY = (mousePosition.y - 50) * dot.speed * 1.5;
+        // Calculate the parallax offset based on current mouse position
+        // Increase movement range significantly for much more noticeable effect
+        const offsetX = (currentMousePosition.current.x - 50) * dot.speed * 3;
+        const offsetY = (currentMousePosition.current.y - 50) * dot.speed * 3;
         
         return (
           <div
@@ -110,8 +123,7 @@ const ParallaxDots: React.FC<ParallaxDotsProps> = ({
               backgroundColor: dot.color,
               opacity: dot.opacity,
               transform: 'translate(-50%, -50%)',
-              // Use a shorter transition duration for more immediate response
-              transition: 'left 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), top 0.6s cubic-bezier(0.25, 0.1, 0.25, 1)',
+              // Remove transition for direct movement - this will make it perfectly smooth
               willChange: 'left, top'
             }}
           />
