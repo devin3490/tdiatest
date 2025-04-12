@@ -25,7 +25,6 @@ const HeroSection: React.FC = () => {
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-black w-full"></div>
       
       <div className="container mx-auto z-10">
-        {/* Remove the specific image you mentioned */}
         
 
         {/* Target audience label */}
@@ -41,12 +40,11 @@ const HeroSection: React.FC = () => {
         <div className="max-w-5xl mx-auto mb-6">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight" 
               style={{
-                WebkitTextStroke: '1.5px',
+                WebkitTextStroke: '1px', // Kept only one WebkitTextStroke property
                 WebkitTextStrokeColor: 'transparent',
                 WebkitTextFillColor: 'white',
                 background: 'linear-gradient(to right, #000000, #006fff)',
                 WebkitBackgroundClip: 'text',
-                WebkitTextStroke: '1px',
                 textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 4px rgba(0, 111, 255, 0.5)'
               }}
           >
