@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -24,7 +25,7 @@ const VideoSection: React.FC = () => {
       <div className="container mx-auto z-10 px-4">
         {/* Step title */}
         <div className="mb-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-normal">
             <span className="text-[#8bfa7b]">Step 1:</span> 
             <span className="text-white ml-2">Watch The Video Below</span>
           </h2>
@@ -33,7 +34,7 @@ const VideoSection: React.FC = () => {
         {/* Guarantee badge */}
         <div className="text-center mb-6">
           <div className="bg-[#111827] inline-block px-6 py-2 rounded-md border border-[#8bfa7b]/20">
-            <p className="text-white uppercase tracking-wider font-medium text-sm">
+            <p className="text-white uppercase tracking-wider font-normal text-sm">
               100% MONEY BACK GUARANTEED
             </p>
           </div>
@@ -61,13 +62,13 @@ const VideoSection: React.FC = () => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button 
-                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-4 px-8 rounded-lg text-lg uppercase shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-normal py-4 px-8 rounded-lg text-lg uppercase shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                 >
                   👉 UPGRADE MY EMAIL FLOWS HERE 👈
                 </Button>
               </TooltipTrigger>
               <TooltipContent 
-                className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-bold px-4 py-2"
+                className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-normal px-4 py-2"
               >
                 It's time to change your email marketing!
               </TooltipContent>
