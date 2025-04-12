@@ -49,7 +49,7 @@ const HeroSection: React.FC = () => {
         
         <div className="mb-6">
           <div className="bg-opacity-20 bg-white px-6 py-2 rounded-full inline-block">
-            <p className="text-white uppercase tracking-wider font-medium text-sm">
+            <p className="text-white uppercase tracking-wider font-thin text-sm">
               ATTN: ECOMMERCE FOUNDERS
             </p>
           </div>
@@ -79,7 +79,7 @@ const HeroSection: React.FC = () => {
             <span className="text-white font-medium text-sm md:text-base">Trusted by Over 200+ Shopify Brands</span>
             <div className="flex">
               {[1, 2, 3, 4, 5].map((_, index) => (
-                <Star key={index} className="h-3 w-3 md:h-4 md:w-4 text-[#fad500] fill-[#8B0000]" />
+                <Star key={index} className="h-3 w-3 md:h-4 md:w-4 text-[#fad500] fill-[#fad50]" />
               ))}
             </div>
           </div>
@@ -114,7 +114,7 @@ const HeroSection: React.FC = () => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button 
-                  className="text-white font-normal text-lg shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+                  className="text-white font-thin text-lg shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
                 >
                   Book Your Free Discovery Call 
                 </Button>
