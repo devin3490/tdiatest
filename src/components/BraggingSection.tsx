@@ -73,7 +73,7 @@ const BraggingSection: React.FC = () => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button 
-                  className="text-white text-lg uppercase shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                  className="text-white text-lg font-thin shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                 >
                   Book Your Free Discovery Call
                 </Button>
