@@ -193,7 +193,7 @@ const EcommerceProblemSection: React.FC = () => {
                 <Button 
                   className="text-white font-thin text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
                 >
-                  <span>⚡</span> Book Your Free Discovery Call <span>⚡</span>
+ Book Your Free Discovery Call 
                 </Button>
               </div>
             </div>
