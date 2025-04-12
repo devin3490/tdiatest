@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Plus } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -13,72 +12,18 @@ const FAQSection: React.FC = () => {
   const [backgroundElements, setBackgroundElements] = useState<Array<any>>([]);
 
   useEffect(() => {
-    // Generate background elements with initial positions
+    // Generate background elements with static positions and uniform color
     const elements = [...Array(20)].map((_, index) => ({
       id: index,
       top: Math.random() * 100,
       left: Math.random() * 100,
       rotate: Math.random() * 90,
       scale: 0.5 + Math.random() * 2,
-      color: index % 3 === 0 ? '#006fff' : index % 3 === 1 ? '#ff0066' : '#ffffff',
-      opacity: 0.07 + (Math.random() * 0.1),
-      // Animation properties - using extremely slow speeds
-      direction: Math.random() > 0.5 ? 1 : -1,
-      speed: 0.005 + Math.random() * 0.01, // Extremely reduced speed values
-      rotationSpeed: 0.001 + Math.random() * 0.005, // Extremely reduced rotation speed
-      pulsePhase: Math.random() * Math.PI * 2 // Random starting phase for pulse effect
+      color: '#006fff', // Uniform color
+      opacity: 0.07 + (Math.random() * 0.1)
     }));
     
     setBackgroundElements(elements);
-    
-    // Animation frame
-    let animationFrameId: number;
-    let lastTime = 0;
-    
-    const animate = (time: number) => {
-      if (lastTime === 0) {
-        lastTime = time;
-      }
-      
-      const deltaTime = time - lastTime;
-      lastTime = time;
-      
-      setBackgroundElements(prevElements => 
-        prevElements.map(el => {
-          // Update position with extremely smooth floating motion - very long periods & tiny amplitude
-          let newTop = el.top + (el.direction * el.speed * Math.sin(time/14000 + el.id) * 0.1);
-          let newLeft = el.left + (el.direction * el.speed * Math.cos(time/13000 + el.id) * 0.1);
-          
-          // Boundary check with wraparound
-          if (newTop < -10) newTop = 110;
-          if (newTop > 110) newTop = -10;
-          if (newLeft < -10) newLeft = 110;
-          if (newLeft > 110) newLeft = -10;
-          
-          // Update rotation extremely slowly
-          const newRotate = (el.rotate + el.rotationSpeed * deltaTime / 16) % 360;
-          
-          // Extremely slow pulse scale effect based on sine wave with very long period
-          const pulseEffect = 1 + Math.sin(time/7000 + el.pulsePhase) * 0.01; // Tiny amplitude, very long period
-          
-          return {
-            ...el,
-            top: newTop,
-            left: newLeft,
-            rotate: newRotate,
-            currentScale: el.scale * pulseEffect
-          };
-        })
-      );
-      
-      animationFrameId = requestAnimationFrame(animate);
-    };
-    
-    animationFrameId = requestAnimationFrame(animate);
-    
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-    };
   }, []);
 
   const faqItems = [
@@ -119,7 +64,7 @@ const FAQSection: React.FC = () => {
             style={{
               top: `${el.top}%`,
               left: `${el.left}%`,
-              transform: `rotate(${el.rotate}deg) scale(${el.currentScale || el.scale})`,
+              transform: `rotate(${el.rotate}deg) scale(${el.scale})`,
               color: el.color,
               opacity: el.opacity,
               transition: 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
@@ -202,4 +147,3 @@ const FAQSection: React.FC = () => {
 };
 
 export default FAQSection;
-

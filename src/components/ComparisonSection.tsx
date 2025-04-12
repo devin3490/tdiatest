@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Check, X, Plus } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
@@ -7,67 +6,18 @@ const ComparisonSection: React.FC = () => {
   const [backgroundElements, setBackgroundElements] = useState<Array<any>>([]);
   
   useEffect(() => {
-    // Generate background elements with initial positions
+    // Generate background elements with static positions and uniform color
     const elements = [...Array(15)].map((_, index) => ({
       id: index,
       top: Math.random() * 100,
       left: Math.random() * 100,
       rotate: Math.random() * 90,
       scale: 0.5 + Math.random() * 2,
-      color: index % 3 === 0 ? '#006fff' : index % 3 === 1 ? '#ff0066' : '#ffffff',
-      opacity: 0.07 + (Math.random() * 0.1),
-      // Animation properties - using extremely slow speeds
-      direction: Math.random() > 0.5 ? 1 : -1,
-      speed: 0.005 + Math.random() * 0.01, // Extremely reduced speed values
-      rotationSpeed: 0.001 + Math.random() * 0.005 // Extremely reduced rotation speed
+      color: '#006fff', // Uniform color
+      opacity: 0.07 + (Math.random() * 0.1)
     }));
     
     setBackgroundElements(elements);
-    
-    // Animation frame
-    let animationFrameId: number;
-    let lastTime = 0;
-    
-    const animate = (time: number) => {
-      if (lastTime === 0) {
-        lastTime = time;
-      }
-      
-      const deltaTime = time - lastTime;
-      lastTime = time;
-      
-      setBackgroundElements(prevElements => 
-        prevElements.map(el => {
-          // Update position with extremely smooth, slow movement
-          let newTop = el.top + (el.direction * el.speed * Math.sin(time/12000) * 0.1); // Even longer period, smaller amplitude
-          let newLeft = el.left + (el.direction * el.speed * Math.cos(time/11000) * 0.1); // Even longer period, smaller amplitude
-          
-          // Boundary check
-          if (newTop < -10) newTop = 110;
-          if (newTop > 110) newTop = -10;
-          if (newLeft < -10) newLeft = 110;
-          if (newLeft > 110) newLeft = -10;
-          
-          // Update rotation extremely slowly
-          const newRotate = (el.rotate + el.rotationSpeed * deltaTime / 16) % 360;
-          
-          return {
-            ...el,
-            top: newTop,
-            left: newLeft,
-            rotate: newRotate
-          };
-        })
-      );
-      
-      animationFrameId = requestAnimationFrame(animate);
-    };
-    
-    animationFrameId = requestAnimationFrame(animate);
-    
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-    };
   }, []);
 
   return (
@@ -186,4 +136,3 @@ const ComparisonSection: React.FC = () => {
 };
 
 export default ComparisonSection;
-
