@@ -32,7 +32,7 @@ const FounderSection: React.FC = () => {
         {/* CTA Button */}
         <div className="flex justify-center mb-16">
           <Button 
-            className="text-white text-lg"
+            className="text-white font-thin text-lg"
           >
             Book Your Free Discovery Call <ArrowRight className="ml-2" />
           </Button>
@@ -48,8 +48,8 @@ const FounderSection: React.FC = () => {
                 className="w-full h-auto"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                <h3 className="text-2xl font-bold text-white">Mark Mei</h3>
-                <p className="text-white/70">Founder of Dahaus Digital</p>
+                <h3 className="text-2xl font-bold text-white">Isaac Mikola</h3>
+                <p className="text-white/70">Founder of TDIA</p>
               </div>
             </div>
           </div>

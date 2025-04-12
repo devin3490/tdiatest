@@ -119,7 +119,7 @@ const ResultsSection: React.FC = () => {
         {/* CTA Button */}
         <div className="text-center">
           <Button 
-            className="text-white font-bold text-lg"
+            className="text-white font-thin text-lg"
           >
             Book Your Free Discovery Call
           </Button>
