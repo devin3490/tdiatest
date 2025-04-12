@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { Star } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="radial-bg w-full min-h-screen flex flex-col items-center justify-center px-4 py-16 lg:py-24">
+    <div className="radial-bg w-full min-h-screen flex flex-col items-center justify-center px-4 py-16 lg:py-24 font-sans">
       <div className="container mx-auto z-10">
         {/* Logo */}
         <div className="mb-12">

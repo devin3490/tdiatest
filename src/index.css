@@ -1,6 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
+// Add Overusedgrotesk font import (assuming it's a web font or you have the font files)
+@font-face {
+  font-family: 'Overusedgrotesk';
+  src: url('/fonts/Overusedgrotesk.woff2') format('woff2'),
+       url('/fonts/Overusedgrotesk.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
