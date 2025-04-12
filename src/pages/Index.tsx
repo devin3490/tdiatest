@@ -3,7 +3,6 @@ import React from 'react';
 import HeroSection from '../components/HeroSection';
 import BrandsSection from '../components/BrandsSection';
 import ResultsSection from '../components/ResultsSection';
-import TestimonialsSection from '../components/TestimonialsSection';
 import CaseStudiesCarousel from '../components/CaseStudiesCarousel';
 import AdStrategiesSection from '../components/AdStrategiesSection';
 import BraggingSection from '../components/BraggingSection';
@@ -24,7 +23,6 @@ const Index = () => {
       <EcommerceProblemSection />
       <ResultsSection />
       <AdStrategiesSection />
-      <TestimonialsSection />
       <CaseStudiesCarousel />
       <BraggingSection />
       <WhatYouGetSection />
