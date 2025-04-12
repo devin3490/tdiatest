@@ -86,7 +86,7 @@ const WhatYouGetSection: React.FC = () => {
           
           {/* Guarantee section */}
           <div className="mt-6 pb-8 text-center">
-            <p className="text-gray-500 text-xs uppercase tracking-wider mb-3">ALL BACKED BY A</p>
+            <p className="text-white text-xs uppercase tracking-wider mb-3">ALL BACKED BY A</p>
             <h3 className="text-white md:text-4xl font-bold mb-8">
               <span className="text-[#006fff]">100%</span> Money Back Guarantee
             </h3>
