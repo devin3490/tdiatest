@@ -66,14 +66,25 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="mb-10 brand-logos flex flex-wrap justify-center items-center gap-4 md:gap-8">
-          <img src="/lovable-uploads/c88f347d-3800-4312-be98-31ba7f554896.png" alt="shopify" className="h-24 md:h-20" />
-          <img src="/lovable-uploads/8b0c8b6b-dcb7-4936-b244-464b838e377d.png" alt="Instagram Ads" className="h-24 md:h-20" />
-          <img src="/lovable-uploads/3e49c3b6-3afa-47ca-90fd-cced42929b24.png" alt="klaviyo" className="h-24 md:h-20" />
-          <img src="/lovable-uploads/60429fd4-b1d4-4da3-9bc4-dde2e4ef6708.png" alt="bigcommerce" className="h-24 md:h-20" />
-          <img src="/lovable-uploads/9eee0582-65db-43e5-8471-eea5b47edf35.png" alt="woocommerce" className="h-24 md:h-20" />
-          <img src="/lovable-uploads/83387c98-8746-47f1-8cb1-00fb5e0953e2.png" alt="magento" className="h-24 md:h-20" />
-        </div>
+{/* Version Mobile : compacte en 3 colonnes */}
+<div className="grid grid-cols-3 gap-4 justify-items-center mb-10 md:hidden">
+  <img src="/lovable-uploads/c88f347d-3800-4312-be98-31ba7f554896.png" alt="Shopify" className="h-10" />
+  <img src="/lovable-uploads/8b0c8b6b-dcb7-4936-b244-464b838e377d.png" alt="Instagram Ads" className="h-10" />
+  <img src="/lovable-uploads/3e49c3b6-3afa-47ca-90fd-cced42929b24.png" alt="Klaviyo" className="h-10" />
+  <img src="/lovable-uploads/60429fd4-b1d4-4da3-9bc4-dde2e4ef6708.png" alt="Bigcommerce" className="h-10" />
+  <img src="/lovable-uploads/9eee0582-65db-43e5-8471-eea5b47edf35.png" alt="Woocommerce" className="h-10" />
+  <img src="/lovable-uploads/83387c98-8746-47f1-8cb1-00fb5e0953e2.png" alt="Magento" className="h-10" />
+</div>
+
+{/* Version Desktop : inchangée */}
+<div className="hidden md:flex flex-wrap justify-center items-center gap-8 mb-10">
+  <img src="/lovable-uploads/c88f347d-3800-4312-be98-31ba7f554896.png" alt="Shopify" className="h-20" />
+  <img src="/lovable-uploads/8b0c8b6b-dcb7-4936-b244-464b838e377d.png" alt="Instagram Ads" className="h-20" />
+  <img src="/lovable-uploads/3e49c3b6-3afa-47ca-90fd-cced42929b24.png" alt="Klaviyo" className="h-20" />
+  <img src="/lovable-uploads/60429fd4-b1d4-4da3-9bc4-dde2e4ef6708.png" alt="Bigcommerce" className="h-20" />
+  <img src="/lovable-uploads/9eee0582-65db-43e5-8471-eea5b47edf35.png" alt="Woocommerce" className="h-20" />
+  <img src="/lovable-uploads/83387c98-8746-47f1-8cb1-00fb5e0953e2.png" alt="Magento" className="h-20" />
+</div>
 
         <div className="mb-10 text-center">
           <div className="flex items-center justify-center space-x-1 mb-2">
