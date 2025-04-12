@@ -78,7 +78,7 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           <p className="text-[#8bfa7b] font-medium text-sm md:text-base">
-            Over $150M in Flow Revenue (P.S: We Only Build Flows - Specialists of the Art!)
+            Over $3M in Ads Revenue (P.S: We Only Create and Optimize Ads)
           </p>
         </div>
 
