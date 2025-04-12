@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
               ))}
             </div>
           </div>
-          <p className="text-[#006FFF] font-medium text-sm md:text-base">
+          <p className="text-[#8B0000] font-medium text-sm md:text-base">
             Over $3M in Ads Revenue (P.S: We Only Create and Optimize Ads)
           </p>
         </div>
