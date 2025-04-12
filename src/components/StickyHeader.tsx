@@ -37,8 +37,12 @@ const StickyHeader: React.FC = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <Link to="/" className="text-white font-normal text-xl">
-            Agency
+          <Link to="/">
+            <img 
+              src="/lovable-uploads/8aed80b0-7be6-4426-9e2a-d10ece4ace35.png" 
+              alt="Tdia Logo" 
+              className="h-8 w-auto"
+            />
           </Link>
         </div>
         <nav className="hidden md:flex space-x-2">
