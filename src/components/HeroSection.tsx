@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -26,14 +25,8 @@ const HeroSection: React.FC = () => {
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-black w-full"></div>
       
       <div className="container mx-auto z-10">
-        {/* Logo */}
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/1b81247b-025c-40ca-beca-4f195a7d8189.png" 
-            alt="classe.a logo" 
-            className="h-10 mx-auto"
-          />
-        </div>
+        {/* Remove the specific image you mentioned */}
+        
 
         {/* Target audience label */}
         <div className="mb-6">
@@ -98,13 +91,11 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Video container */}
-        <div className="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden shadow-2xl">
-          <img 
-            src="/lovable-uploads/86ce686e-a76d-473a-b356-ed4acedb6c6f.png" 
-            alt="Video thumbnail" 
-            className="w-full h-auto rounded-lg"
-          />
+        {/* Video container - removed the specific image */}
+        <div className="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden shadow-2xl bg-gray-800">
+          <div className="w-full h-[400px] flex items-center justify-center text-white">
+            Video Placeholder
+          </div>
           <button 
             className="absolute left-4 bottom-4 bg-[#8bfa7b] hover:bg-[#7ae36c] text-black p-3 rounded-full play-button-pulse"
             aria-label="Play video"
