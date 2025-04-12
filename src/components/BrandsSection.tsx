@@ -22,7 +22,7 @@ const BrandsSection: React.FC = () => {
           {/* Logo 1 - Roots */}
           <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
             <img 
-              src="/lovable-uploads/51b35d3e-4aa2-4ed3-acea-aec17c99c2cc.png" 
+              src="/lovable-uploads/55f4a520-199c-4f60-a299-f4f53f4e03d5.png" 
               alt="Roots logo" 
               className="h-24 w-auto object-contain"
             />
@@ -31,7 +31,7 @@ const BrandsSection: React.FC = () => {
           {/* Logo 2 - Cafexo */}
           <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
             <img 
-              src="/lovable-uploads/c9e81737-3181-455f-bd43-4066e3a4564d.png" 
+              src="/lovable-uploads/93d97cb7-54fd-41f5-a9df-85cf0c707dec.png" 
               alt="Cafexo logo" 
               className="h-24 w-auto object-contain"
             />
@@ -40,7 +40,7 @@ const BrandsSection: React.FC = () => {
           {/* Logo 3 - Mille et une noix */}
           <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
             <img 
-              src="/lovable-uploads/9ac83d52-cf2c-4fd9-8211-6267c478a2ef.png" 
+              src="/lovable-uploads/5c9eddd3-5fef-4698-9226-2342603b8414.png" 
               alt="Mille et une noix logo" 
               className="h-24 w-auto object-contain"
             />
@@ -49,7 +49,7 @@ const BrandsSection: React.FC = () => {
           {/* Logo 4 - Lockfeet */}
           <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
             <img 
-              src="/lovable-uploads/fef58f99-7425-4014-b102-55c3b919e491.png" 
+              src="/lovable-uploads/6c45d0a7-a649-4ba0-8c64-5c166ffed649.png" 
               alt="Lockfeet logo" 
               className="h-24 w-auto object-contain"
             />
@@ -58,7 +58,7 @@ const BrandsSection: React.FC = () => {
           {/* Logo 5 - Lika */}
           <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
             <img 
-              src="/lovable-uploads/849867d6-86f0-4088-baa6-63f6f93901a7.png" 
+              src="/lovable-uploads/cf826ab0-ef3c-44b2-bddb-f4d89d658aa1.png" 
               alt="Lika logo" 
               className="h-24 w-auto object-contain"
             />
@@ -67,7 +67,7 @@ const BrandsSection: React.FC = () => {
           {/* Logo 6 - Annick Levesque */}
           <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
             <img 
-              src="/lovable-uploads/80b100b9-0baf-4646-93e7-d1229bef68cd.png" 
+              src="/lovable-uploads/c8b3e4cb-8979-4685-b500-0e7c71f5182b.png" 
               alt="Annick Levesque logo" 
               className="h-24 w-auto object-contain"
             />
@@ -76,7 +76,7 @@ const BrandsSection: React.FC = () => {
           {/* Logo 7 - Onyx */}
           <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
             <img 
-              src="/lovable-uploads/3faab11a-2fe0-4ca1-a0ef-aae077e75536.png" 
+              src="/lovable-uploads/5cfdadc8-4f5a-428d-b774-fb149220ee4b.png" 
               alt="Onyx logo" 
               className="h-24 w-auto object-contain"
             />
@@ -85,7 +85,7 @@ const BrandsSection: React.FC = () => {
           {/* Logo 8 - Runak */}
           <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
             <img 
-              src="/lovable-uploads/3d4fa156-9074-4c76-ac75-c8a241ea6271.png" 
+              src="/lovable-uploads/0be2b643-ce09-4db2-8250-f17844bd33ab.png" 
               alt="Runak logo" 
               className="h-24 w-auto object-contain"
             />
@@ -94,7 +94,7 @@ const BrandsSection: React.FC = () => {
           {/* Logo 9 - Le Coconut */}
           <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
             <img 
-              src="/lovable-uploads/b204c0ad-06bb-4a68-8074-fe3e66b6e2fb.png" 
+              src="/lovable-uploads/ca87324b-abc5-494c-939c-4b5f93d7f252.png" 
               alt="Le Coconut logo" 
               className="h-24 w-auto object-contain"
             />
@@ -129,4 +129,3 @@ const BrandsSection: React.FC = () => {
 };
 
 export default BrandsSection;
-
