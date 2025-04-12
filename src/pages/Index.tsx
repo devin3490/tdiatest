@@ -6,6 +6,7 @@ import VideoSection from '../components/VideoSection';
 import BrandsSection from '../components/BrandsSection';
 import ResultsSection from '../components/ResultsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
+import CaseStudiesCarousel from '../components/CaseStudiesCarousel';
 import AdStrategiesSection from '../components/AdStrategiesSection';
 import BraggingSection from '../components/BraggingSection';
 import EcommerceProblemSection from '../components/EcommerceProblemSection';
@@ -33,6 +34,7 @@ const Index = () => {
       <BrandsSection />
       <ResultsSection />
       <TestimonialsSection />
+      <CaseStudiesCarousel />
       <AdStrategiesSection />
       <BraggingSection />
       <EcommerceProblemSection />
