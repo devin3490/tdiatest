@@ -5,6 +5,7 @@ import VideoSection from '../components/VideoSection';
 import BrandsSection from '../components/BrandsSection';
 import ResultsSection from '../components/ResultsSection';
 import BraggingSection from '../components/BraggingSection';
+import EcommerceProblemSection from '../components/EcommerceProblemSection';
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <BrandsSection />
       <ResultsSection />
       <BraggingSection />
+      <EcommerceProblemSection />
     </div>
   );
 };
