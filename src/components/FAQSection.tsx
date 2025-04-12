@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, Plus } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -38,7 +37,7 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <div className="radial-bg w-full py-20 font-sans bg-[#0a0a0a]">
+    <div className="w-full py-20 font-sans bg-[#0a0a0a]">
       <div className="container mx-auto max-w-4xl px-4 z-10 relative">
         {/* CTA Section */}
         <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-xl p-12 mb-12">

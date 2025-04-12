@@ -6,7 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const FounderSection: React.FC = () => {
   return (
-    <div className="radial-bg w-full py-20 font-sans bg-[#0a0a0a]">
+    <div className="w-full py-20 font-sans bg-[#0a0a0a]">
       <div className="container mx-auto max-w-5xl px-4 z-10 relative">
         {/* Badge */}
         <div className="flex justify-center mb-6">
