@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
     <div 
       className="w-full min-h-screen flex flex-col items-center justify-center px-4 py-12 lg:py-16 font-sans relative"
       style={{
-        background: `radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(0, 0, 0) 80%)`
+        background: `radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(0, 0, 0) 60%)`
       }}
     >
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-black w-full"></div>
