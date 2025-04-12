@@ -7,6 +7,7 @@ import {
   TooltipProvider, 
   TooltipTrigger 
 } from "@/components/ui/tooltip";
+import CounterValue from './CounterValue';
 
 const BraggingSection: React.FC = () => {
   return (
@@ -19,23 +20,37 @@ const BraggingSection: React.FC = () => {
           </h2>
         </div>
         
-        {/* Single row of stats (removed the bottom row) */}
+        {/* Single row of stats with counter animation */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
           {/* Stat 1 */}
           <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white">
-            <p className="text-5xl md:text-6xl font-bold mb-2">$20M+</p>
+            <CounterValue 
+              value={20} 
+              prefix="$" 
+              suffix="M+" 
+              className="text-5xl md:text-6xl font-bold mb-2"
+            />
             <p className="text-base md:text-lg">Ad Spend Under Management</p>
           </div>
           
           {/* Stat 2 */}
           <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white">
-            <p className="text-5xl md:text-6xl font-bold mb-2">5x</p>
+            <CounterValue 
+              value={5} 
+              suffix="x" 
+              className="text-5xl md:text-6xl font-bold mb-2"
+            />
             <p className="text-base md:text-lg">Average Return</p>
           </div>
           
           {/* Stat 3 */}
           <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white">
-            <p className="text-5xl md:text-6xl font-bold mb-2">$100M+</p>
+            <CounterValue 
+              value={100} 
+              prefix="$" 
+              suffix="M+" 
+              className="text-5xl md:text-6xl font-bold mb-2"
+            />
             <p className="text-base md:text-lg">In Client Revenue Generated</p>
           </div>
         </div>
