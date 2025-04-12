@@ -1,0 +1,55 @@
+
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
+
+const StickyHeader: React.FC = () => {
+  const [isSticky, setIsSticky] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 100);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check
+    handleScroll();
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isSticky 
+          ? 'bg-black py-2 shadow-lg' 
+          : 'bg-transparent py-4'
+      }`}
+    >
+      <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="flex items-center">
+          <Link to="/" className="text-white font-bold text-xl">
+            Agency
+          </Link>
+        </div>
+        <nav className="hidden md:flex space-x-2">
+          <Link to="/case-studies">
+            <Button variant="ghost" className="text-white hover:bg-gray-800">
+              Case Studies
+            </Button>
+          </Link>
+          <Button 
+            className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-medium"
+          >
+            Get Started
+          </Button>
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export default StickyHeader;

@@ -1,9 +1,19 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Play } from 'lucide-react';
+import { Play, X } from 'lucide-react';
 
 const VideoSection: React.FC = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const playVideo = () => {
+    setIsPlaying(true);
+  };
+
+  const closeVideo = () => {
+    setIsPlaying(false);
+  };
+
   return (
     <div className="radial-bg w-full py-16 font-sans">
       <div className="container mx-auto z-10 px-4">
@@ -32,8 +42,9 @@ const VideoSection: React.FC = () => {
             className="w-full h-auto rounded-lg"
           />
           <button 
-            className="absolute left-4 bottom-4 bg-[#8bfa7b] hover:bg-[#7ae36c] text-black p-3 rounded-full"
+            className="absolute left-4 bottom-4 bg-[#8bfa7b] hover:bg-[#7ae36c] text-black p-3 rounded-full play-button-pulse"
             aria-label="Play video"
+            onClick={playVideo}
           >
             <Play className="h-6 w-6" />
           </button>
@@ -48,6 +59,31 @@ const VideoSection: React.FC = () => {
           </Button>
         </div>
       </div>
+
+      {/* Video modal */}
+      {isPlaying && (
+        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+          <div className="relative w-full max-w-4xl">
+            <button 
+              className="absolute -top-12 right-0 text-white hover:text-[#8bfa7b]"
+              onClick={closeVideo}
+            >
+              <X className="h-8 w-8" />
+            </button>
+            <div className="aspect-video w-full bg-black">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+                title="Video" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
