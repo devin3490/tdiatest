@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
@@ -6,7 +7,7 @@ import ParallaxDots from './ParallaxDots';
 
 const WhatYouGetSection: React.FC = () => {
   return (
-    <div className="w-full bg-[#0a0a0a] py-20 font-sans relative overflow-hidden">
+    <div className="w-full bg-gradient-to-b from-black to-[#0a0a0a] py-20 font-sans relative overflow-hidden">
       <ParallaxDots 
         count={50} 
         colors={['#006FFF', '#3944bc', '#ffde00', '#ffffff']} 
