@@ -55,9 +55,9 @@ const EcommerceProblemSection: React.FC = () => {
               </p>
               <div className="pt-4">
                 <Button 
-                  className="text-white font-bold text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
+                  className="text-white font-thin text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
                 >
-                  <ZapIcon size={20} /> GET BETTER FLOWS <ZapIcon size={20} />
+                  <ZapIcon size={20} /> Book Your Free Discovery Call <ZapIcon size={20} />
                 </Button>
               </div>
             </div>
@@ -191,7 +191,7 @@ const EcommerceProblemSection: React.FC = () => {
               </p>
               <div className="pt-4">
                 <Button 
-                  className="text-white font-bold text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
+                  className="text-white font-thin text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
                 >
                   <ZapIcon size={20} /> Book Your Free Discovery Call <ZapIcon size={20} />
                 </Button>
