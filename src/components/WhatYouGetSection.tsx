@@ -35,7 +35,7 @@ const WhatYouGetSection: React.FC = () => {
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">
-                Access Monthly Support <span className="bg-[#006fff]/90 px-2 text-black text-xs font-bold rounded ml-2">FREE</span>
+                Access Monthly Support <span className="bg-[#006fff]/90 px-2 text-white text-xs font-bold rounded ml-2">FREE</span>
               </p>
             </div>
             
@@ -72,7 +72,7 @@ const WhatYouGetSection: React.FC = () => {
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">
-                Access to General eComm Coaching <span className="bg-[#ffde00]/90 px-2 text-black text-xs font-bold rounded ml-2">FREE</span>
+                Access to General eComm Coaching <span className="bg-[#006fff]/90 px-2 text-white text-xs font-bold rounded ml-2">FREE</span>
               </p>
             </div>
             
