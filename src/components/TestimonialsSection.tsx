@@ -1,6 +1,6 @@
 
-import React, { useEffect, useState } from 'react';
-import { Play, ShoppingCart, Users, Search, Database } from 'lucide-react';
+import React, { useState } from 'react';
+import { Play } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { 
   Tooltip, 
@@ -11,17 +11,7 @@ import {
 import ParallaxDots from './ParallaxDots';
 
 const TestimonialsSection: React.FC = () => {
-  const [rotation, setRotation] = useState(0);
   const [showVideo, setShowVideo] = useState(false);
-
-  // Animate the orbit continuously
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRotation(prev => (prev + 0.1) % 360);
-    }, 20);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="w-full bg-black text-white py-16 font-sans relative overflow-hidden">
@@ -69,7 +59,7 @@ const TestimonialsSection: React.FC = () => {
             </div>
           </div>
           
-          {/* Vidéo maintenant à droite */}
+          {/* Vidéo maintenant à droite - sans les cercles */}
           <div className="relative rounded-lg overflow-hidden bg-[#0c1533] p-4 order-1 md:order-2">
             <div className="relative">
               <div className="w-full aspect-video flex items-center justify-center relative overflow-hidden rounded-lg">
@@ -80,35 +70,18 @@ const TestimonialsSection: React.FC = () => {
                   className="w-full rounded-lg"
                 />
                 
-                {/* Animated orbit diagram overlay for video thumbnail */}
+                {/* Simplified overlay for video thumbnail - no orbit diagram */}
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  {/* Center icon with shopping cart */}
-                  <div className="relative w-64 h-64">
-                    {/* Center icon with pulsing effect */}
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                      <button 
-                        className="bg-[#006FFF] hover:bg-[#0052cc] text-black p-3 rounded-full transform transition-transform hover:scale-110"
-                        onClick={() => setShowVideo(true)}
-                      >
-                        <Play className="h-6 w-6" />
-                      </button>
-                      {/* Pulsing effect */}
-                      <div className="absolute inset-0 rounded-full border-2 border-[#006FFF] animate-ping opacity-50"></div>
-                    </div>
-                    
-                    {/* Orbit circle */}
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full rounded-full border border-[#006FFF]/30"></div>
-                    
-                    {/* Orbiting elements */}
-                    <div className="absolute inset-0 w-full h-full"
-                      style={{ transform: `rotate(${rotation}deg)`, transformOrigin: 'center center', transition: 'transform 0.1s linear' }}>
-                      
-                      {/* Blue dots at cardinal points */}
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#006FFF] rounded-full shadow-md shadow-[#006FFF]/50"></div>
-                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-3 h-3 bg-[#006FFF] rounded-full shadow-md shadow-[#006FFF]/50"></div>
-                      <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#006FFF] rounded-full shadow-md shadow-[#006FFF]/50"></div>
-                      <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#006FFF] rounded-full shadow-md shadow-[#006FFF]/50"></div>
-                    </div>
+                  {/* Play button with pulsing effect */}
+                  <div className="relative">
+                    <button 
+                      className="bg-[#006FFF] hover:bg-[#0052cc] text-white p-4 rounded-full transform transition-transform hover:scale-110"
+                      onClick={() => setShowVideo(true)}
+                    >
+                      <Play className="h-6 w-6" />
+                    </button>
+                    {/* Pulsing effect */}
+                    <div className="absolute inset-0 rounded-full border-2 border-[#006FFF] animate-ping opacity-50"></div>
                   </div>
                 </div>
               </div>

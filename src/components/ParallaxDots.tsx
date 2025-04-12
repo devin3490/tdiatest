@@ -31,7 +31,7 @@ const ParallaxDots: React.FC<ParallaxDotsProps> = ({
   className = '',
 }) => {
   const [dots, setDots] = useState<Dot[]>([]);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
 
   useEffect(() => {
     // Generate random dots
@@ -44,7 +44,7 @@ const ParallaxDots: React.FC<ParallaxDotsProps> = ({
         y: Math.random() * 100, // % position
         size: minSize + Math.random() * (maxSize - minSize),
         color: colors[Math.floor(Math.random() * colors.length)],
-        speed: 0.02 + Math.random() * 0.08,
+        speed: 0.01 + Math.random() * 0.04, // Reduced speed range
         opacity: minOpacity + Math.random() * (maxOpacity - minOpacity)
       });
     }
@@ -53,9 +53,12 @@ const ParallaxDots: React.FC<ParallaxDotsProps> = ({
 
     // Add mouse move event listener
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth) * 100,
-        y: (e.clientY / window.innerHeight) * 100
+      // Throttle the mouse updates to avoid jittery behavior
+      requestAnimationFrame(() => {
+        setMousePosition({
+          x: (e.clientX / window.innerWidth) * 100,
+          y: (e.clientY / window.innerHeight) * 100
+        });
       });
     };
 
@@ -69,21 +72,24 @@ const ParallaxDots: React.FC<ParallaxDotsProps> = ({
   return (
     <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {dots.map((dot) => {
-        const offsetX = (mousePosition.x - 50) * dot.speed;
-        const offsetY = (mousePosition.y - 50) * dot.speed;
+        // Reduced movement range
+        const offsetX = (mousePosition.x - 50) * dot.speed * 0.5;
+        const offsetY = (mousePosition.y - 50) * dot.speed * 0.5;
         
         return (
           <div
             key={dot.id}
             className="absolute rounded-full"
             style={{
-              left: `${dot.x + offsetX}%`,
-              top: `${dot.y + offsetY}%`,
+              left: `calc(${dot.x}% + ${offsetX}%)`,
+              top: `calc(${dot.y}% + ${offsetY}%)`,
               width: `${dot.size}px`,
               height: `${dot.size}px`,
               backgroundColor: dot.color,
               opacity: dot.opacity,
-              transition: 'left 0.8s cubic-bezier(0.22, 1, 0.36, 1), top 0.8s cubic-bezier(0.22, 1, 0.36, 1)',
+              transform: 'translate(-50%, -50%)',
+              transition: 'left 1.2s ease-out, top 1.2s ease-out',
+              willChange: 'left, top'
             }}
           />
         );
