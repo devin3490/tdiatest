@@ -2,6 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
+import { 
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const StickyHeader: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -41,11 +47,22 @@ const StickyHeader: React.FC = () => {
               Case Studies
             </Button>
           </Link>
-          <Button 
-            className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-medium"
-          >
-            Get Started
-          </Button>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button 
+                  className="bg-[#F97316] hover:bg-[#ea580c] text-white font-medium shadow-lg shadow-orange-500/30 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent 
+                className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-bold px-4 py-2"
+              >
+                It's time to change your life!
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </nav>
       </div>
     </header>
