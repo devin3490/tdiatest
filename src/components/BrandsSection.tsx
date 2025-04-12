@@ -24,7 +24,7 @@ const BrandsSection: React.FC = () => {
             <img 
               src="/lovable-uploads/51b35d3e-4aa2-4ed3-acea-aec17c99c2cc.png" 
               alt="Roots logo" 
-              className="h-12 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </div>
           
@@ -33,7 +33,7 @@ const BrandsSection: React.FC = () => {
             <img 
               src="/lovable-uploads/c9e81737-3181-455f-bd43-4066e3a4564d.png" 
               alt="Cafexo logo" 
-              className="h-12 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </div>
           
@@ -42,7 +42,7 @@ const BrandsSection: React.FC = () => {
             <img 
               src="/lovable-uploads/9ac83d52-cf2c-4fd9-8211-6267c478a2ef.png" 
               alt="Mille et une noix logo" 
-              className="h-12 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </div>
           
@@ -51,7 +51,7 @@ const BrandsSection: React.FC = () => {
             <img 
               src="/lovable-uploads/fef58f99-7425-4014-b102-55c3b919e491.png" 
               alt="Lockfeet logo" 
-              className="h-12 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </div>
           
@@ -60,7 +60,7 @@ const BrandsSection: React.FC = () => {
             <img 
               src="/lovable-uploads/849867d6-86f0-4088-baa6-63f6f93901a7.png" 
               alt="Lika logo" 
-              className="h-12 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </div>
           
@@ -69,7 +69,7 @@ const BrandsSection: React.FC = () => {
             <img 
               src="/lovable-uploads/80b100b9-0baf-4646-93e7-d1229bef68cd.png" 
               alt="Annick Levesque logo" 
-              className="h-12 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </div>
           
@@ -78,7 +78,7 @@ const BrandsSection: React.FC = () => {
             <img 
               src="/lovable-uploads/3faab11a-2fe0-4ca1-a0ef-aae077e75536.png" 
               alt="Onyx logo" 
-              className="h-12 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </div>
           
@@ -87,7 +87,7 @@ const BrandsSection: React.FC = () => {
             <img 
               src="/lovable-uploads/3d4fa156-9074-4c76-ac75-c8a241ea6271.png" 
               alt="Runak logo" 
-              className="h-12 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </div>
           
@@ -96,7 +96,7 @@ const BrandsSection: React.FC = () => {
             <img 
               src="/lovable-uploads/b204c0ad-06bb-4a68-8074-fe3e66b6e2fb.png" 
               alt="Le Coconut logo" 
-              className="h-12 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </div>
         </div>
@@ -129,3 +129,4 @@ const BrandsSection: React.FC = () => {
 };
 
 export default BrandsSection;
+
