@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -24,7 +25,7 @@ const HeroSection: React.FC = () => {
     <div 
       className="w-full min-h-screen flex flex-col items-center justify-center px-4 py-12 lg:py-16 font-sans relative"
       style={{
-        background: `radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(3, 4, 10) 70%)`
+        background: `radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgba(16, 17, 43, 0.95) 70%)`
       }}
     >
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-black w-full"></div>
