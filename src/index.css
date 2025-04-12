@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 /* Add Overusedgrotesk font import */
@@ -170,19 +171,37 @@
   pointer-events: none;
 }
 
-/* Enhanced breathing background animation with expanding/contracting dark corners */
+/* Enhanced breathing background animation with smoother expanding/contracting dark corners */
 @keyframes breatheBackground {
   0% {
     background: radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(3, 4, 10) 70%);
   }
-  25% {
-    background: radial-gradient(circle at center, rgba(0, 125, 255, 0.8) 0%, rgb(3, 4, 10) 90%);
+  10% {
+    background: radial-gradient(circle at center, rgba(0, 115, 255, 0.73) 0%, rgb(3, 4, 10) 76%);
+  }
+  20% {
+    background: radial-gradient(circle at center, rgba(0, 120, 255, 0.76) 0%, rgb(3, 4, 10) 82%);
+  }
+  30% {
+    background: radial-gradient(circle at center, rgba(0, 125, 255, 0.8) 0%, rgb(3, 4, 10) 88%);
+  }
+  40% {
+    background: radial-gradient(circle at center, rgba(0, 130, 255, 0.85) 0%, rgb(3, 4, 10) 94%);
   }
   50% {
     background: radial-gradient(circle at center, rgba(0, 140, 255, 0.9) 0%, rgb(3, 4, 10) 100%);
   }
-  75% {
-    background: radial-gradient(circle at center, rgba(0, 125, 255, 0.8) 0%, rgb(3, 4, 10) 90%);
+  60% {
+    background: radial-gradient(circle at center, rgba(0, 130, 255, 0.85) 0%, rgb(3, 4, 10) 94%);
+  }
+  70% {
+    background: radial-gradient(circle at center, rgba(0, 125, 255, 0.8) 0%, rgb(3, 4, 10) 88%);
+  }
+  80% {
+    background: radial-gradient(circle at center, rgba(0, 120, 255, 0.76) 0%, rgb(3, 4, 10) 82%);
+  }
+  90% {
+    background: radial-gradient(circle at center, rgba(0, 115, 255, 0.73) 0%, rgb(3, 4, 10) 76%);
   }
   100% {
     background: radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(3, 4, 10) 70%);
