@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 /* Add Overusedgrotesk font import */
@@ -128,13 +127,14 @@
   z-index: 0;
 }
 
-/* Ajout de la classe pour la section hero avec transition vers le noir */
+/* Hero section gradient with transition to black */
 .hero-section-gradient {
   background: radial-gradient(circle at center, rgb(0, 111, 255) 0%, rgb(3, 4, 10) 100%);
   position: relative;
   overflow: hidden;
 }
 
+/* Add subtle white details/lines to the hero section */
 .hero-section-gradient::before {
   content: '';
   position: absolute;
@@ -142,9 +142,31 @@
   height: 200%;
   top: -50%;
   left: -50%;
-  background: radial-gradient(circle at center, rgba(0, 111, 255, 0.3) 0%, transparent 40%),
-              radial-gradient(circle at center, rgba(0, 111, 255, 0.2) 0%, transparent 60%);
+  background: 
+    radial-gradient(circle at center, rgba(0, 111, 255, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at center, rgba(0, 111, 255, 0.2) 0%, transparent 60%),
+    linear-gradient(45deg, transparent 98%, rgba(255, 255, 255, 0.1) 99%, transparent 100%),
+    linear-gradient(135deg, transparent 97%, rgba(255, 255, 255, 0.1) 98%, transparent 100%),
+    linear-gradient(225deg, transparent 96%, rgba(255, 255, 255, 0.15) 97%, transparent 100%),
+    linear-gradient(315deg, transparent 95%, rgba(255, 255, 255, 0.1) 96%, transparent 100%);
+  background-size: 100% 100%, 100% 100%, 50px 50px, 60px 60px, 70px 70px, 80px 80px;
   z-index: 0;
+}
+
+/* Add additional subtle diagonal light lines */
+.hero-section-gradient::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: 
+    linear-gradient(45deg, transparent 96%, rgba(255, 255, 255, 0.08) 98%, transparent 100%),
+    linear-gradient(135deg, transparent 95%, rgba(255, 255, 255, 0.06) 97%, transparent 100%);
+  background-size: 100px 100px, 120px 120px;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .highlight {
