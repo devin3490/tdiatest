@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight, Plus } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -10,6 +10,77 @@ import {
 } from "@/components/ui/accordion";
 
 const FAQSection: React.FC = () => {
+  const [backgroundElements, setBackgroundElements] = useState<Array<any>>([]);
+
+  useEffect(() => {
+    // Generate background elements with initial positions
+    const elements = [...Array(20)].map((_, index) => ({
+      id: index,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      rotate: Math.random() * 90,
+      scale: 0.5 + Math.random() * 2,
+      color: index % 3 === 0 ? '#006fff' : index % 3 === 1 ? '#ff0066' : '#ffffff',
+      opacity: 0.07 + (Math.random() * 0.1),
+      // Animation properties
+      direction: Math.random() > 0.5 ? 1 : -1,
+      speed: 0.03 + Math.random() * 0.08,
+      rotationSpeed: 0.005 + Math.random() * 0.02,
+      pulsePhase: Math.random() * Math.PI * 2 // Random starting phase for pulse effect
+    }));
+    
+    setBackgroundElements(elements);
+    
+    // Animation frame
+    let animationFrameId: number;
+    let lastTime = 0;
+    
+    const animate = (time: number) => {
+      if (lastTime === 0) {
+        lastTime = time;
+      }
+      
+      const deltaTime = time - lastTime;
+      lastTime = time;
+      
+      setBackgroundElements(prevElements => 
+        prevElements.map(el => {
+          // Update position with smooth floating motion
+          let newTop = el.top + (el.direction * el.speed * Math.sin(time/4000 + el.id) * 0.8);
+          let newLeft = el.left + (el.direction * el.speed * Math.cos(time/3800 + el.id) * 0.8);
+          
+          // Boundary check with wraparound
+          if (newTop < -10) newTop = 110;
+          if (newTop > 110) newTop = -10;
+          if (newLeft < -10) newLeft = 110;
+          if (newLeft > 110) newLeft = -10;
+          
+          // Update rotation slowly
+          const newRotate = (el.rotate + el.rotationSpeed * deltaTime / 16) % 360;
+          
+          // Pulse scale effect based on sine wave
+          const pulseEffect = 1 + Math.sin(time/2000 + el.pulsePhase) * 0.05;
+          
+          return {
+            ...el,
+            top: newTop,
+            left: newLeft,
+            rotate: newRotate,
+            currentScale: el.scale * pulseEffect
+          };
+        })
+      );
+      
+      animationFrameId = requestAnimationFrame(animate);
+    };
+    
+    animationFrameId = requestAnimationFrame(animate);
+    
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
   const faqItems = [
     {
       question: "Who is this for?",
@@ -39,18 +110,19 @@ const FAQSection: React.FC = () => {
 
   return (
     <div className="w-full py-20 font-sans bg-[#0a0a0a] relative overflow-hidden">
-      {/* Blurred Plus Signs Background */}
+      {/* Animated Blurred Plus Signs Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, index) => (
+        {backgroundElements.map((el) => (
           <div 
-            key={index}
+            key={el.id}
             className="absolute opacity-15 blur-md"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              transform: `rotate(${Math.random() * 90}deg) scale(${0.5 + Math.random() * 2})`,
-              color: index % 3 === 0 ? '#006fff' : index % 3 === 1 ? '#ff0066' : '#ffffff',
-              opacity: 0.07 + (Math.random() * 0.1)
+              top: `${el.top}%`,
+              left: `${el.left}%`,
+              transform: `rotate(${el.rotate}deg) scale(${el.currentScale || el.scale})`,
+              color: el.color,
+              opacity: el.opacity,
+              transition: 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
             }}
           >
             <Plus size={60 + Math.random() * 80} strokeWidth={1} />
@@ -71,7 +143,8 @@ const FAQSection: React.FC = () => {
                   left: `${Math.random() * 100}%`,
                   transform: `rotate(${Math.random() * 90}deg) scale(${0.5 + Math.random()})`,
                   color: index % 2 === 0 ? '#006fff' : '#ffffff',
-                  opacity: 0.1 + (Math.random() * 0.1)
+                  opacity: 0.1 + (Math.random() * 0.1),
+                  animation: `float-${index % 4} ${10 + Math.random() * 15}s infinite ease-in-out`
                 }}
               >
                 <Plus size={30 + Math.random() * 40} strokeWidth={1} />

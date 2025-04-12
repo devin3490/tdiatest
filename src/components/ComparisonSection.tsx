@@ -1,23 +1,90 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Check, X, Plus } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 
 const ComparisonSection: React.FC = () => {
+  const [backgroundElements, setBackgroundElements] = useState<Array<any>>([]);
+  
+  useEffect(() => {
+    // Generate background elements with initial positions
+    const elements = [...Array(15)].map((_, index) => ({
+      id: index,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      rotate: Math.random() * 90,
+      scale: 0.5 + Math.random() * 2,
+      color: index % 3 === 0 ? '#006fff' : index % 3 === 1 ? '#ff0066' : '#ffffff',
+      opacity: 0.07 + (Math.random() * 0.1),
+      // Animation properties
+      direction: Math.random() > 0.5 ? 1 : -1,
+      speed: 0.05 + Math.random() * 0.1,
+      rotationSpeed: 0.01 + Math.random() * 0.03
+    }));
+    
+    setBackgroundElements(elements);
+    
+    // Animation frame
+    let animationFrameId: number;
+    let lastTime = 0;
+    
+    const animate = (time: number) => {
+      if (lastTime === 0) {
+        lastTime = time;
+      }
+      
+      const deltaTime = time - lastTime;
+      lastTime = time;
+      
+      setBackgroundElements(prevElements => 
+        prevElements.map(el => {
+          // Update position
+          let newTop = el.top + (el.direction * el.speed * Math.sin(time/3000) * 0.5);
+          let newLeft = el.left + (el.direction * el.speed * Math.cos(time/2500) * 0.5);
+          
+          // Boundary check
+          if (newTop < -10) newTop = 110;
+          if (newTop > 110) newTop = -10;
+          if (newLeft < -10) newLeft = 110;
+          if (newLeft > 110) newLeft = -10;
+          
+          // Update rotation
+          const newRotate = (el.rotate + el.rotationSpeed * deltaTime / 16) % 360;
+          
+          return {
+            ...el,
+            top: newTop,
+            left: newLeft,
+            rotate: newRotate
+          };
+        })
+      );
+      
+      animationFrameId = requestAnimationFrame(animate);
+    };
+    
+    animationFrameId = requestAnimationFrame(animate);
+    
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
   return (
     <div className="w-full py-20 font-sans bg-[#0a0a0a] relative overflow-hidden">
-      {/* Blurred Plus Signs Background */}
+      {/* Animated Blurred Plus Signs Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(15)].map((_, index) => (
+        {backgroundElements.map((el) => (
           <div 
-            key={index}
-            className="absolute opacity-15 blur-md"
+            key={el.id}
+            className="absolute opacity-15 blur-md transition-transform"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              transform: `rotate(${Math.random() * 90}deg) scale(${0.5 + Math.random() * 2})`,
-              color: index % 3 === 0 ? '#006fff' : index % 3 === 1 ? '#ff0066' : '#ffffff',
-              opacity: 0.07 + (Math.random() * 0.1)
+              top: `${el.top}%`,
+              left: `${el.left}%`,
+              transform: `rotate(${el.rotate}deg) scale(${el.scale})`,
+              color: el.color,
+              opacity: el.opacity,
+              transition: 'transform 0.5s ease'
             }}
           >
             <Plus size={60 + Math.random() * 80} strokeWidth={1} />
