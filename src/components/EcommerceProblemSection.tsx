@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Database, Users, Search, ZapIcon } from 'lucide-react';
@@ -41,9 +40,9 @@ const EcommerceProblemSection: React.FC = () => {
                 brand story effectively without constantly pouring more money into
                 ads—what would that do for your bottom line?
               </p>
-              <div className="pt-4 flex items-center justify-center md:justify-start"> {/* Centered with fallback to left on md screens */}
+              <div className="pt-4 text-center md:text-left"> {/* Use text-center and text-left for alignment */}
                 <Button 
-                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 inline-block" // Added inline-block to control width
                 >
                   <ZapIcon size={20} /> GET BETTER FLOWS <ZapIcon size={20} />
                 </Button>
@@ -151,9 +150,9 @@ const EcommerceProblemSection: React.FC = () => {
                 15 crucial email automations you're neglecting? That's a ton of money
                 left on the table.
               </p>
-              <div className="pt-4 flex items-center justify-center md:justify-start"> {/* Centered with fallback to left on md screens */}
+              <div className="pt-4 text-center md:text-left"> {/* Use text-center and text-left for alignment */}
                 <Button 
-                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                  className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 inline-block" // Added inline-block to control width
                 >
                   <ZapIcon size={20} /> GET BETTER FLOWS <ZapIcon size={20} />
                 </Button>
