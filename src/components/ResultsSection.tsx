@@ -43,7 +43,7 @@ const ResultsSection: React.FC = () => {
                 {/* Placeholder for the nail product image */}
                 <span className="text-gray-400">Nail Product Image</span>
               </div>
-              <div className="bg-[#B3FF17] p-3 translate-z-15">
+              <div className="bg-[#006fff] p-3 translate-z-15">
                 <div className="flex flex-col space-y-1">
                   <p className="font-medium text-black">↑ Hook Rate by 85%</p>
                   <p className="font-medium text-black">↓ CPO by 22%</p>
@@ -59,10 +59,10 @@ const ResultsSection: React.FC = () => {
                 {/* Placeholder for the product package image */}
                 <span className="text-gray-400">Package Image</span>
               </div>
-              <div className="bg-[#B3FF17] p-3 translate-z-15">
+              <div className="bg-[#006fff] p-3 translate-z-15">
                 <div className="flex flex-col space-y-1">
-                  <p className="font-medium text-black">↓ CPA by 30%</p>
-                  <p className="font-medium text-black">↑ Hook rate by 280%</p>
+                  <p className="font-medium text-white">↓ CPA by 30%</p>
+                  <p className="font-medium text-white">↑ Hook rate by 280%</p>
                 </div>
               </div>
             </div>
@@ -75,9 +75,9 @@ const ResultsSection: React.FC = () => {
                 {/* Placeholder for the baby image */}
                 <span className="text-gray-400">Baby Image</span>
               </div>
-              <div className="bg-[#B3FF17] p-3 translate-z-15">
+              <div className="bg-[#006fff] p-3 translate-z-15">
                 <div className="flex flex-col space-y-1">
-                  <p className="font-medium text-black">↑ Return customer rate by 91%</p>
+                  <p className="font-medium text-white">↑ Return customer rate by 91%</p>
                 </div>
               </div>
             </div>
