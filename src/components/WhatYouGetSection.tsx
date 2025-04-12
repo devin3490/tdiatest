@@ -24,51 +24,51 @@ const WhatYouGetSection: React.FC = () => {
           <div className="p-8 space-y-6">
             {/* List items with check marks */}
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
-              <div className="text-[#ffde00] mr-3">
+              <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">Revenue Generating Flows in Under 40 Days</p>
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
-              <div className="text-[#ffde00] mr-3">
+              <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">
-                Access Monthly Support <span className="bg-[#ffde00]/90 px-2 text-black text-xs font-bold rounded ml-2">FREE</span>
+                Access Monthly Support <span className="bg-[#006fff]/90 px-2 text-black text-xs font-bold rounded ml-2">FREE</span>
               </p>
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
-              <div className="text-[#ffde00] mr-3">
+              <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">12 – 15 Powerhouse Email Flows</p>
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
-              <div className="text-[#ffde00] mr-3">
+              <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">Over 40+ Emails/SMS Templates Designed for Your Brand</p>
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
-              <div className="text-[#ffde00] mr-3">
+              <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">Strategy and Customer Mapping</p>
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
-              <div className="text-[#ffde00] mr-3">
+              <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">Copy, Design, and Implementation</p>
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
-              <div className="text-[#ffde00] mr-3">
+              <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">
