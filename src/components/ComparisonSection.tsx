@@ -1,11 +1,30 @@
 
 import React from 'react';
-import { Check, X } from 'lucide-react';
+import { Check, X, Plus } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 
 const ComparisonSection: React.FC = () => {
   return (
-    <div className="w-full py-20 font-sans bg-[#0a0a0a]">
+    <div className="w-full py-20 font-sans bg-[#0a0a0a] relative overflow-hidden">
+      {/* Blurred Plus Signs Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(15)].map((_, index) => (
+          <div 
+            key={index}
+            className="absolute opacity-15 blur-md"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              transform: `rotate(${Math.random() * 90}deg) scale(${0.5 + Math.random() * 2})`,
+              color: index % 3 === 0 ? '#006fff' : index % 3 === 1 ? '#ff0066' : '#ffffff',
+              opacity: 0.07 + (Math.random() * 0.1)
+            }}
+          >
+            <Plus size={60 + Math.random() * 80} strokeWidth={1} />
+          </div>
+        ))}
+      </div>
+      
       <div className="container mx-auto max-w-5xl px-4 z-10 relative">
         {/* Badge */}
         <div className="flex justify-center mb-6">

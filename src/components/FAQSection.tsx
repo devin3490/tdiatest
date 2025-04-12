@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight, Plus } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -37,17 +38,55 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <div className="w-full py-20 font-sans bg-[#0a0a0a] relative">
+    <div className="w-full py-20 font-sans bg-[#0a0a0a] relative overflow-hidden">
+      {/* Blurred Plus Signs Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(20)].map((_, index) => (
+          <div 
+            key={index}
+            className="absolute opacity-15 blur-md"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              transform: `rotate(${Math.random() * 90}deg) scale(${0.5 + Math.random() * 2})`,
+              color: index % 3 === 0 ? '#006fff' : index % 3 === 1 ? '#ff0066' : '#ffffff',
+              opacity: 0.07 + (Math.random() * 0.1)
+            }}
+          >
+            <Plus size={60 + Math.random() * 80} strokeWidth={1} />
+          </div>
+        ))}
+      </div>
+
       <div className="container mx-auto max-w-4xl px-4 z-10 relative">
-        <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-xl p-12 mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
+        <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-xl p-12 mb-12 relative overflow-hidden">
+          {/* Additional smaller plus signs for this card specifically */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {[...Array(8)].map((_, index) => (
+              <div 
+                key={`inner-${index}`}
+                className="absolute opacity-20 blur-sm"
+                style={{
+                  top: `${Math.random() * 100}%`,
+                  left: `${Math.random() * 100}%`,
+                  transform: `rotate(${Math.random() * 90}deg) scale(${0.5 + Math.random()})`,
+                  color: index % 2 === 0 ? '#006fff' : '#ffffff',
+                  opacity: 0.1 + (Math.random() * 0.1)
+                }}
+              >
+                <Plus size={30 + Math.random() * 40} strokeWidth={1} />
+              </div>
+            ))}
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4 relative z-10">
             Ready to scale your<br />brand to{' '}
             <span className="italic font-normal bg-gradient-to-r from-white to-[#006fff] text-transparent bg-clip-text">
               new heights?
             </span>
           </h2>
           
-          <div className="max-w-2xl mx-auto mb-8">
+          <div className="max-w-2xl mx-auto mb-8 relative z-10">
             <p className="text-white/80 text-lg text-center leading-relaxed">
               If you want to achieve ground-breaking growth with increased sales 
               and profitability from your paid ads by having a backend conversion 
@@ -55,7 +94,7 @@ const FAQSection: React.FC = () => {
             </p>
           </div>
           
-          <div className="flex justify-center">
+          <div className="flex justify-center relative z-10">
             <Button 
               className="text-white text-lg"
             >
