@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <div 
-      className="w-full min-h-screen flex flex-col items-center justify-center px-4 py-12 lg:py-16 font-sans relative"
+      <div className="w-full min-h-screen flex flex-col items-center justify-center px-2 py-8 sm:px-4 sm:py-10 lg:py-16">
       style={{
         background: `radial-gradient(circle at center, rgba(0, 111, 255, 0.7) 0%, rgb(0, 0, 0) 90%)`
       }}
