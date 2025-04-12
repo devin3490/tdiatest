@@ -18,13 +18,7 @@ const ResultsSection: React.FC = () => {
         </div>
         
         {/* Platforms we work with logos */}
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-12">
-          <img src="/lovable-uploads/0a9f5c3a-f32d-4d4d-bb6e-93fdbe7ab21d.png" alt="Facebook Ads" className="h-8 md:h-10" />
-          <img src="/lovable-uploads/8b0c8b6b-dcb7-4936-b244-464b838e377d.png" alt="Instagram Ads" className="h-8 md:h-10" />
-          <img src="/lovable-uploads/2f423ce1-a0eb-4fe6-9fca-52e98352b921.png" alt="Google Ads" className="h-7 md:h-9" />
-          <img src="/lovable-uploads/0a9f5c3a-f32d-4d4d-bb6e-93fdbe7ab21d.png" alt="TikTok Ads" className="h-8 md:h-10" />
-        </div>
-        
+
         {/* Results cards grid with 3D effect */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
           {/* Card 1 */}
