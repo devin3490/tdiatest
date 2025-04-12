@@ -18,7 +18,7 @@ const BrandsSection: React.FC = () => {
           </h2>
         </div>
         
-        <div className="max-w-6xl mx-auto mb-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="max-w-6xl mx-auto mb-14 grid grid-cols-3 gap-4">
           <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
             <img 
               src="/lovable-uploads/fa2da3b1-56bc-47f5-b588-2a9a2e38269e.png" 
@@ -58,18 +58,6 @@ const BrandsSection: React.FC = () => {
           
           <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
             <span className="text-white text-lg italic">Hallmark</span>
-          </div>
-          
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-xl font-semibold">Freestyle</span>
-          </div>
-          
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-xl font-bold">STEPR</span>
-          </div>
-          
-          <div className="bg-[#111111] border border-gray-800 p-8 flex items-center justify-center rounded-md">
-            <span className="text-white text-xl font-light">kiwi&co</span>
           </div>
         </div>
         
