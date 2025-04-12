@@ -22,10 +22,10 @@ const FAQSection: React.FC = () => {
       scale: 0.5 + Math.random() * 2,
       color: index % 3 === 0 ? '#006fff' : index % 3 === 1 ? '#ff0066' : '#ffffff',
       opacity: 0.07 + (Math.random() * 0.1),
-      // Animation properties - using slower speeds
+      // Animation properties - using extremely slow speeds
       direction: Math.random() > 0.5 ? 1 : -1,
-      speed: 0.01 + Math.random() * 0.02, // Significantly reduced speed values
-      rotationSpeed: 0.002 + Math.random() * 0.008, // Significantly reduced rotation speed
+      speed: 0.005 + Math.random() * 0.01, // Extremely reduced speed values
+      rotationSpeed: 0.001 + Math.random() * 0.005, // Extremely reduced rotation speed
       pulsePhase: Math.random() * Math.PI * 2 // Random starting phase for pulse effect
     }));
     
@@ -45,9 +45,9 @@ const FAQSection: React.FC = () => {
       
       setBackgroundElements(prevElements => 
         prevElements.map(el => {
-          // Update position with smoother floating motion - longer periods & smaller amplitude
-          let newTop = el.top + (el.direction * el.speed * Math.sin(time/7000 + el.id) * 0.5);
-          let newLeft = el.left + (el.direction * el.speed * Math.cos(time/6800 + el.id) * 0.5);
+          // Update position with extremely smooth floating motion - very long periods & tiny amplitude
+          let newTop = el.top + (el.direction * el.speed * Math.sin(time/14000 + el.id) * 0.1);
+          let newLeft = el.left + (el.direction * el.speed * Math.cos(time/13000 + el.id) * 0.1);
           
           // Boundary check with wraparound
           if (newTop < -10) newTop = 110;
@@ -55,11 +55,11 @@ const FAQSection: React.FC = () => {
           if (newLeft < -10) newLeft = 110;
           if (newLeft > 110) newLeft = -10;
           
-          // Update rotation very slowly
+          // Update rotation extremely slowly
           const newRotate = (el.rotate + el.rotationSpeed * deltaTime / 16) % 360;
           
-          // Slow pulse scale effect based on sine wave with longer period
-          const pulseEffect = 1 + Math.sin(time/3500 + el.pulsePhase) * 0.03; // Smaller amplitude, longer period
+          // Extremely slow pulse scale effect based on sine wave with very long period
+          const pulseEffect = 1 + Math.sin(time/7000 + el.pulsePhase) * 0.01; // Tiny amplitude, very long period
           
           return {
             ...el,
@@ -202,3 +202,4 @@ const FAQSection: React.FC = () => {
 };
 
 export default FAQSection;
+
