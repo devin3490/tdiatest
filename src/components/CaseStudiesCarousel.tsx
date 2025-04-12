@@ -11,7 +11,7 @@ const CaseStudiesCarousel: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-6">
-            Our Client <span className="text-[#8bfa7b]">Success Stories</span>
+            Our Client <span className="text-[#006fff]">Success Stories</span>
           </h2>
           <p className="text-gray-300 text-center max-w-2xl mx-auto">
             We consistently deliver exceptional results for our e-commerce clients through our data-driven email strategies.
@@ -20,7 +20,7 @@ const CaseStudiesCarousel: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* hideAway Case Study */}
-          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#8bfa7b] transition-all duration-300">
+          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300">
             <CardContent className="p-0">
               <div className="relative">
                 <img 
@@ -34,7 +34,7 @@ const CaseStudiesCarousel: React.FC = () => {
                   <h3 className="text-white text-xl font-bold mb-1">hideAway</h3>
                   <div className="mb-2">
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      <span className="text-[#8bfa7b]">328%</span> Increase in<br />Flow Revenue
+                      <span className="text-[#006fff]">328%</span> Increase in<br />Flow Revenue
                     </h2>
                     <p className="text-gray-300 mt-1">in 30 Days</p>
                   </div>
@@ -44,7 +44,7 @@ const CaseStudiesCarousel: React.FC = () => {
           </Card>
 
           {/* RAITH Case Study */}
-          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#8bfa7b] transition-all duration-300">
+          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300">
             <CardContent className="p-0">
               <div className="relative">
                 <img 
@@ -58,7 +58,7 @@ const CaseStudiesCarousel: React.FC = () => {
                   <h3 className="text-white text-xl font-bold mb-1">R A I T H</h3>
                   <div className="mb-2">
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      <span className="text-[#8bfa7b]">210%</span> Increase in<br />Flow Revenue
+                      <span className="text-[#006fff]">210%</span> Increase in<br />Flow Revenue
                     </h2>
                     <p className="text-gray-300 mt-1">in 30 Days</p>
                   </div>
@@ -68,7 +68,7 @@ const CaseStudiesCarousel: React.FC = () => {
           </Card>
 
           {/* Golf Course Supply Case Study */}
-          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#8bfa7b] transition-all duration-300">
+          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300">
             <CardContent className="p-0">
               <div className="relative">
                 <img 
@@ -82,7 +82,7 @@ const CaseStudiesCarousel: React.FC = () => {
                   <h3 className="text-white text-xl font-bold mb-1">GOLF COURSE SUPPLY</h3>
                   <div className="mb-2">
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      <span className="text-[#8bfa7b]">132%</span> Increase in<br />Flow Revenue
+                      <span className="text-[#006fff]">132%</span> Increase in<br />Flow Revenue
                     </h2>
                     <p className="text-gray-300 mt-1">in 30 Days</p>
                   </div>
@@ -95,7 +95,7 @@ const CaseStudiesCarousel: React.FC = () => {
         <div className="flex justify-center mt-10">
           <Link to="/case-studies">
             <Button 
-              className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-bold py-3 px-6 rounded-lg"
+              className="bg-[#006fff] hover:bg-[#0052cc] text-white font-bold py-3 px-6 rounded-lg"
             >
               SEE MORE CASE STUDIES
               <ChevronRight className="ml-2 h-5 w-5" />
