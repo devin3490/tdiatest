@@ -121,7 +121,7 @@ const ResultsSection: React.FC = () => {
           <Button 
             className="text-white font-bold text-lg"
           >
-            BOOK YOUR FREE DISCOVERY CALL
+            Book Your Free Discovery Call
           </Button>
         </div>
       </div>

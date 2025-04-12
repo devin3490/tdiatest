@@ -84,13 +84,13 @@ const VideoSection: React.FC = () => {
                 <Button 
                   className="text-white font-normal text-lg uppercase shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                 >
-                  👉 UPGRADE MY EMAIL FLOWS HERE 👈
+                  Book Your Free Discovery Call
                 </Button>
               </TooltipTrigger>
               <TooltipContent 
                 className="bg-black/70 backdrop-blur-sm border border-white/10 text-white font-normal px-4 py-2"
               >
-                It's time to change your email marketing!
+                It's time to change your advertising!
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

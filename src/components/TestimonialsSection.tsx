@@ -44,9 +44,9 @@ const TestimonialsSection: React.FC = () => {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button 
-                      className="text-white font-bold text-sm shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                      className="text-white font-thin text-sm shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                     >
-                      👉 UPGRADE MY EMAIL FLOWS HERE 👈
+                      Book Your Free Discovery Call
                     </Button>
                   </TooltipTrigger>
                   <TooltipContent 

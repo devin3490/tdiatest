@@ -92,9 +92,9 @@ const WhatYouGetSection: React.FC = () => {
             </h3>
             
             <Button 
-              className="text-white font-bold text-sm flex items-center justify-center gap-2 mx-auto"
+              className="text-white font-thin text-sm flex items-center justify-center gap-2 mx-auto"
             >
-              <span>⚡</span> GET BETTER FLOWS <span>⚡</span>
+              <span>⚡</span> Book Your Free Discovery Call <span>⚡</span>
             </Button>
           </div>
         </Card>

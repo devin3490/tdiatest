@@ -98,7 +98,7 @@ const FAQSection: React.FC = () => {
             <Button 
               className="text-white text-lg"
             >
-              Get Your Free Audit <ArrowRight className="ml-2" />
+              Book Your Free Discovery Call <ArrowRight className="ml-2" />
             </Button>
           </div>
         </div>
