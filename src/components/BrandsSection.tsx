@@ -62,7 +62,7 @@ const BrandCard: React.FC<BrandCardProps> = ({ src, alt }) => {
         <img 
           src={src} 
           alt={alt} 
-          className="h-26 w-full max-w-[100px] object-contain"
+          className="h-32 w-full max-w-[100px] object-contain"
         />
       </div>
     </div>
