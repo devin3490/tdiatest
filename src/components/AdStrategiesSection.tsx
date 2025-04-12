@@ -93,9 +93,9 @@ const AdStrategiesSection: React.FC = () => {
             </div>
             
             <Button 
-              className="text-black font-bold text-center"
+              className="text-white font-thin text-center"
             >
-              BOOK YOUR FREE DISCOVERY CALL
+              Book Your Free Discovery Call
             </Button>
           </div>
         </div>
