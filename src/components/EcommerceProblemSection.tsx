@@ -41,7 +41,7 @@ const EcommerceProblemSection: React.FC = () => {
                 brand story effectively without constantly pouring more money into
                 ads—what would that do for your bottom line?
               </p>
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center md:justify-start"> {/* Added flex and justify-center */}
                 <Button 
                   className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                 >
@@ -151,7 +151,7 @@ const EcommerceProblemSection: React.FC = () => {
                 15 crucial email automations you're neglecting? That's a ton of money
                 left on the table.
               </p>
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center md:justify-start"> {/* Added flex and justify-center */}
                 <Button 
                   className="bg-[#3944bc] hover:bg-[#313aa0] text-white font-bold py-3 px-6 rounded-md text-lg flex items-center gap-2 shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                 >
