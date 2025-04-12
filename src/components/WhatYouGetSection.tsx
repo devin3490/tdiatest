@@ -3,10 +3,19 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
 import { Card } from "@/components/ui/card";
+import ParallaxDots from './ParallaxDots';
 
 const WhatYouGetSection: React.FC = () => {
   return (
-    <div className="w-full bg-[#0a0b1e] py-20 font-sans">
+    <div className="w-full bg-[#0a0b1e] py-20 font-sans relative overflow-hidden">
+      <ParallaxDots 
+        count={50} 
+        colors={['#006FFF', '#3944bc', '#ffde00', '#ffffff']} 
+        minSize={2} 
+        maxSize={6} 
+        className="z-0"
+      />
+      
       <div className="container mx-auto px-4 z-10 relative">
         <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
           What You Get

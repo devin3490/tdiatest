@@ -8,11 +8,20 @@ import {
   TooltipProvider, 
   TooltipTrigger 
 } from "@/components/ui/tooltip";
+import ParallaxDots from './ParallaxDots';
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <div className="w-full bg-black text-white py-16 font-sans">
-      <div className="container mx-auto px-4 py-8">
+    <div className="w-full bg-black text-white py-16 font-sans relative overflow-hidden">
+      <ParallaxDots 
+        count={40} 
+        colors={['#006fff', '#3944bc', '#ffde00']} 
+        minSize={2} 
+        maxSize={7} 
+        className="z-0 opacity-70"
+      />
+      
+      <div className="container mx-auto px-4 py-8 relative z-10">
         {/* Premier témoignage - côtés inversés */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-20">
           {/* Texte maintenant à gauche */}

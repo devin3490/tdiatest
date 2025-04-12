@@ -4,11 +4,20 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronRight } from "lucide-react";
 import { Link } from 'react-router-dom';
+import ParallaxDots from './ParallaxDots';
 
 const CaseStudiesCarousel: React.FC = () => {
   return (
-    <div className="w-full bg-black py-20">
-      <div className="container mx-auto px-4">
+    <div className="w-full bg-black py-20 relative overflow-hidden">
+      <ParallaxDots 
+        count={60} 
+        colors={['#006fff', '#1e90ff', '#3944bc']} 
+        minSize={2} 
+        maxSize={8} 
+        className="z-0 opacity-70"
+      />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-6">
             Our Client <span className="text-[#006fff]">Success Stories</span>
