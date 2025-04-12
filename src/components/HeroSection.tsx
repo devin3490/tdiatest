@@ -68,6 +68,8 @@ const HeroSection: React.FC = () => {
 
         <div className="mb-10 brand-logos flex flex-wrap justify-center items-center gap-4 md:gap-8">
           <img src="/lovable-uploads/c88f347d-3800-4312-be98-31ba7f554896.png" alt="shopify" className="h-24 md:h-20" />
+          <img src="/lovable-uploads/0a9f5c3a-f32d-4d4d-bb6e-93fdbe7ab21d.png" alt="Facebook Ads" className="h-24 md:h-20" />
+          <img src="/lovable-uploads/8b0c8b6b-dcb7-4936-b244-464b838e377d.png" alt="Instagram Ads" className="h-24 md:h-20" />
           <img src="/lovable-uploads/3e49c3b6-3afa-47ca-90fd-cced42929b24.png" alt="klaviyo" className="h-24 md:h-20" />
           <img src="/lovable-uploads/60429fd4-b1d4-4da3-9bc4-dde2e4ef6708.png" alt="bigcommerce" className="h-24 md:h-20" />
           <img src="/lovable-uploads/9eee0582-65db-43e5-8471-eea5b47edf35.png" alt="woocommerce" className="h-24 md:h-20" />
