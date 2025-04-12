@@ -38,7 +38,7 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <div className="w-full py-20 font-sans bg-[#0a0a0a]">
+    <div className="w-full py-20 font-sans bg-gradient-to-b from-[#030a1a] to-[#006fff]/30">
       <div className="container mx-auto max-w-4xl px-4 z-10 relative">
         {/* CTA Section */}
         <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-xl p-12 mb-12">
@@ -87,8 +87,8 @@ const FAQSection: React.FC = () => {
         </div>
       </div>
       
-      {/* Gradient Blue Bottom Section */}
-      <div className="w-full h-20 bg-gradient-to-b from-transparent to-[#006fff]/30 mt-12"></div>
+      {/* Full Blue Gradient Bottom Section */}
+      <div className="w-full h-40 bg-gradient-to-b from-transparent to-[#006fff]/50"></div>
     </div>
   );
 };
