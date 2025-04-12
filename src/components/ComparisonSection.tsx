@@ -16,10 +16,10 @@ const ComparisonSection: React.FC = () => {
       scale: 0.5 + Math.random() * 2,
       color: index % 3 === 0 ? '#006fff' : index % 3 === 1 ? '#ff0066' : '#ffffff',
       opacity: 0.07 + (Math.random() * 0.1),
-      // Animation properties
+      // Animation properties - using slower speeds
       direction: Math.random() > 0.5 ? 1 : -1,
-      speed: 0.05 + Math.random() * 0.1,
-      rotationSpeed: 0.01 + Math.random() * 0.03
+      speed: 0.01 + Math.random() * 0.03, // Reduced speed values
+      rotationSpeed: 0.005 + Math.random() * 0.01 // Reduced rotation speed
     }));
     
     setBackgroundElements(elements);
@@ -38,9 +38,9 @@ const ComparisonSection: React.FC = () => {
       
       setBackgroundElements(prevElements => 
         prevElements.map(el => {
-          // Update position
-          let newTop = el.top + (el.direction * el.speed * Math.sin(time/3000) * 0.5);
-          let newLeft = el.left + (el.direction * el.speed * Math.cos(time/2500) * 0.5);
+          // Update position with smoother, slower movement
+          let newTop = el.top + (el.direction * el.speed * Math.sin(time/6000) * 0.3); // Longer period, smaller amplitude
+          let newLeft = el.left + (el.direction * el.speed * Math.cos(time/5500) * 0.3); // Longer period, smaller amplitude
           
           // Boundary check
           if (newTop < -10) newTop = 110;
@@ -48,7 +48,7 @@ const ComparisonSection: React.FC = () => {
           if (newLeft < -10) newLeft = 110;
           if (newLeft > 110) newLeft = -10;
           
-          // Update rotation
+          // Update rotation more slowly
           const newRotate = (el.rotate + el.rotationSpeed * deltaTime / 16) % 360;
           
           return {

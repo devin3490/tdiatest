@@ -22,10 +22,10 @@ const FAQSection: React.FC = () => {
       scale: 0.5 + Math.random() * 2,
       color: index % 3 === 0 ? '#006fff' : index % 3 === 1 ? '#ff0066' : '#ffffff',
       opacity: 0.07 + (Math.random() * 0.1),
-      // Animation properties
+      // Animation properties - using slower speeds
       direction: Math.random() > 0.5 ? 1 : -1,
-      speed: 0.03 + Math.random() * 0.08,
-      rotationSpeed: 0.005 + Math.random() * 0.02,
+      speed: 0.01 + Math.random() * 0.02, // Significantly reduced speed values
+      rotationSpeed: 0.002 + Math.random() * 0.008, // Significantly reduced rotation speed
       pulsePhase: Math.random() * Math.PI * 2 // Random starting phase for pulse effect
     }));
     
@@ -45,9 +45,9 @@ const FAQSection: React.FC = () => {
       
       setBackgroundElements(prevElements => 
         prevElements.map(el => {
-          // Update position with smooth floating motion
-          let newTop = el.top + (el.direction * el.speed * Math.sin(time/4000 + el.id) * 0.8);
-          let newLeft = el.left + (el.direction * el.speed * Math.cos(time/3800 + el.id) * 0.8);
+          // Update position with smoother floating motion - longer periods & smaller amplitude
+          let newTop = el.top + (el.direction * el.speed * Math.sin(time/7000 + el.id) * 0.5);
+          let newLeft = el.left + (el.direction * el.speed * Math.cos(time/6800 + el.id) * 0.5);
           
           // Boundary check with wraparound
           if (newTop < -10) newTop = 110;
@@ -55,11 +55,11 @@ const FAQSection: React.FC = () => {
           if (newLeft < -10) newLeft = 110;
           if (newLeft > 110) newLeft = -10;
           
-          // Update rotation slowly
+          // Update rotation very slowly
           const newRotate = (el.rotate + el.rotationSpeed * deltaTime / 16) % 360;
           
-          // Pulse scale effect based on sine wave
-          const pulseEffect = 1 + Math.sin(time/2000 + el.pulsePhase) * 0.05;
+          // Slow pulse scale effect based on sine wave with longer period
+          const pulseEffect = 1 + Math.sin(time/3500 + el.pulsePhase) * 0.03; // Smaller amplitude, longer period
           
           return {
             ...el,
