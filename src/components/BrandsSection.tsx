@@ -80,7 +80,7 @@ const BrandsSection: React.FC = () => {
         {/* CTA button */}
         <div className="text-center">
           <Button 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg uppercase"
+            className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-bold py-4 px-8 rounded-lg text-lg uppercase"
           >
             👉 UPGRADE MY EMAIL FLOWS HERE 👈
           </Button>

@@ -10,14 +10,14 @@ const VideoSection: React.FC = () => {
         {/* Step title */}
         <div className="mb-10 text-center">
           <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="text-blue-500">Step 1:</span> 
+            <span className="text-[#8bfa7b]">Step 1:</span> 
             <span className="text-white ml-2">Watch The Video Below</span>
           </h2>
         </div>
         
         {/* Guarantee badge */}
         <div className="text-center mb-6">
-          <div className="bg-blue-900 inline-block px-6 py-2 rounded-md">
+          <div className="bg-[#111827] inline-block px-6 py-2 rounded-md border border-[#8bfa7b]/20">
             <p className="text-white uppercase tracking-wider font-medium text-sm">
               100% MONEY BACK GUARANTEED
             </p>
@@ -32,7 +32,7 @@ const VideoSection: React.FC = () => {
             className="w-full h-auto rounded-lg"
           />
           <button 
-            className="absolute left-4 bottom-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full"
+            className="absolute left-4 bottom-4 bg-[#8bfa7b] hover:bg-[#7ae36c] text-black p-3 rounded-full"
             aria-label="Play video"
           >
             <Play className="h-6 w-6" />
@@ -42,7 +42,7 @@ const VideoSection: React.FC = () => {
         {/* CTA button */}
         <div className="text-center">
           <Button 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg uppercase"
+            className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-bold py-4 px-8 rounded-lg text-lg uppercase"
           >
             👉 UPGRADE MY EMAIL FLOWS HERE 👈
           </Button>

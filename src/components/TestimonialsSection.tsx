@@ -16,7 +16,7 @@ const TestimonialsSection: React.FC = () => {
                 alt="Mike testimonial" 
                 className="w-full rounded-lg"
               />
-              <button className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full">
+              <button className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#8bfa7b] hover:bg-[#7ae36c] text-black p-3 rounded-full">
                 <Play className="h-6 w-6" />
               </button>
             </div>
@@ -25,7 +25,7 @@ const TestimonialsSection: React.FC = () => {
           <div className="flex flex-col space-y-4">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((star) => (
-                <span key={star} className="text-yellow-400 text-xl">★</span>
+                <span key={star} className="text-[#8bfa7b] text-xl">★</span>
               ))}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold">Mike Loved It, and<br />So Will You</h2>
@@ -36,7 +36,7 @@ const TestimonialsSection: React.FC = () => {
             </p>
             <div className="pt-4">
               <Button 
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg text-sm"
+                className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-bold py-2 px-6 rounded-lg text-sm"
               >
                 👉 UPGRADE MY EMAIL FLOWS HERE 👈
               </Button>
@@ -49,7 +49,7 @@ const TestimonialsSection: React.FC = () => {
           <div className="flex flex-col space-y-4 order-2 md:order-1">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((star) => (
-                <span key={star} className="text-yellow-400 text-xl">★</span>
+                <span key={star} className="text-[#8bfa7b] text-xl">★</span>
               ))}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold">Max Loved It Too</h2>
@@ -62,7 +62,7 @@ const TestimonialsSection: React.FC = () => {
             </p>
             <div className="pt-4">
               <Button 
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg text-sm"
+                className="bg-[#8bfa7b] hover:bg-[#7ae36c] text-black font-bold py-2 px-6 rounded-lg text-sm"
               >
                 👉 UPGRADE MY EMAIL FLOWS HERE 👈
               </Button>
@@ -76,7 +76,7 @@ const TestimonialsSection: React.FC = () => {
                 alt="Max testimonial" 
                 className="w-full rounded-lg"
               />
-              <button className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full">
+              <button className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#8bfa7b] hover:bg-[#7ae36c] text-black p-3 rounded-full">
                 <Play className="h-6 w-6" />
               </button>
             </div>

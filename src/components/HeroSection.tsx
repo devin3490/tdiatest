@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Star } from 'lucide-react';
 
@@ -27,7 +28,7 @@ const HeroSection: React.FC = () => {
         <div className="max-w-6xl mx-auto mb-8">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
             Your eComm Email Flows Are <span className="inline-flex items-center">💩 <span className="mx-2">—</span></span> 
-            <span className="highlight">We'll Build 12–15 Custom Revenue Boosting Flows in 30 Days.</span>
+            <span className="text-[#8bfa7b]">We'll Build 12–15 Custom Revenue Boosting Flows in 30 Days.</span>
           </h1>
           <div className="mt-6 text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
             Results Guaranteed — Or You Don't Pay a Dime.
@@ -50,11 +51,11 @@ const HeroSection: React.FC = () => {
             <span className="text-white font-medium">Trusted by Over 200+ Shopify Brands</span>
             <div className="flex">
               {[1, 2, 3, 4, 5].map((_, index) => (
-                <Star key={index} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <Star key={index} className="h-4 w-4 text-[#8bfa7b] fill-[#8bfa7b]" />
               ))}
             </div>
           </div>
-          <p className="text-highlight font-medium">
+          <p className="text-[#8bfa7b] font-medium">
             Over $150M in Flow Revenue (P.S: We Only Build Flows - Specialists of the Art!)
           </p>
         </div>

@@ -55,7 +55,7 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --highlight: 86 100% 50%;
+    --highlight: 86 98% 73%;
   }
 
   .dark {
@@ -95,7 +95,7 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --highlight: 86 100% 50%;
+    --highlight: 86 98% 73%;
   }
 }
 
@@ -129,7 +129,7 @@
 }
 
 .highlight {
-  color: rgb(179, 255, 23);
+  color: #8bfa7b;
 }
 
 .text-gradient {
@@ -168,17 +168,17 @@
 @keyframes pulse {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+    box-shadow: 0 0 0 0 rgba(139, 250, 123, 0.7);
   }
   
   70% {
     transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    box-shadow: 0 0 0 10px rgba(139, 250, 123, 0);
   }
   
   100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    box-shadow: 0 0 0 0 rgba(139, 250, 123, 0);
   }
 }
 
