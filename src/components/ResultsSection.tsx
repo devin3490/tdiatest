@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -122,4 +121,3 @@ const ResultsSection: React.FC = () => {
 };
 
 export default ResultsSection;
-
