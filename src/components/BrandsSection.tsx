@@ -24,7 +24,7 @@ const BrandsSection: React.FC = () => {
             <img 
               src="/lovable-uploads/55f4a520-199c-4f60-a299-f4f53f4e03d5.png" 
               alt="Roots logo" 
-              className="h-32 w-auto object-contain"
+              className="h-64 w-auto object-contain"
             />
           </div>
           
