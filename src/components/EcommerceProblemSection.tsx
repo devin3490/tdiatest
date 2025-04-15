@@ -189,14 +189,15 @@ const EcommerceProblemSection: React.FC = () => {
             
             <div className="order-1 md:order-2 space-y-6">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-                Your Flows Are Weak
+                Your Creatives Are Holding You Back
               </h2>
               <p className="text-thin md:text-lg text-white">
-                Whether your brand is generating $500K or $100M a year, the problem
-                is often the same: basic, ineffective email flows. And no, your standard
-                abandon cart sequence isn't enough. What if we told you there are 12-
-                15 crucial email automations you're neglecting? That's a ton of money
-                left on the table.
+             Whether you’re spending $3K or $300K a month, poor creatives kill performance fast.
+             Most brands recycle the same angles and formats, hoping for better ROAS.
+             But without fresh UGC, optimized hooks, and structured testing — you’re flying blind.
+             Want to see what breakthrough ads really look like?
+
+
               </p>
               <div className="pt-4">
                 <Button 
