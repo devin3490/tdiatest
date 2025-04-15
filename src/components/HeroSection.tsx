@@ -61,7 +61,7 @@ const HeroSection: React.FC = () => {
           >
             It’s Not the Platform. It’s the Strategy. Outsmart Big Brands with Smarter Ads That Actually Sell.
           </h1>
-          <div className="mt-2 text-3xl md:text-4xl lg:text-6xl font-bold text-[#fad500] leading-tight tracking-tight">
+          <div className="mt-2 text-1xl md:text-4xl lg:text-6xl font-bold text-[#fad500] leading-tight tracking-tight">
             Scale Your Brand in 30 Days — Or You Don't Pay a Dime.
           </div>
         </div>
