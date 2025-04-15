@@ -45,8 +45,6 @@ const EcommerceProblemSection: React.FC = () => {
               <p className="text-thin md:text-thin text-white">
                 You’ve tried paid ads. You’ve launched campaigns. Maybe you even hired an agency.
                 But despite all that, your ROAS is inconsistent, your CAC is rising, and your growth feels stuck.
-                And the worst part?
-                You keep pumping budget into Meta or Google, but the results don’t follow.
   
                 
               </p>
