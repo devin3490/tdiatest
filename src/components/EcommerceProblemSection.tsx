@@ -42,7 +42,7 @@ const EcommerceProblemSection: React.FC = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold relative">
                 The eCommerce Problem
               </h2>
-              <p className="text-thin md:text-lg text-white">
+              <p className="text-thin md:text-thin text-white">
                 You’ve tried paid ads. You’ve launched campaigns. Maybe you even hired an agency.
                 But despite all that, your ROAS is inconsistent, your CAC is rising, and your growth feels stuck.
                 And the worst part?
@@ -50,7 +50,7 @@ const EcommerceProblemSection: React.FC = () => {
                 Meanwhile, your competitors seem to scale effortlessly.
                 
               </p>
-              <p className="text-thin md:text-lg text-white">
+              <p className="text-thin md:text-thin text-white">
                At TDIA, we’ve worked with over 30+ eCommerce & B2B brands across North America and discovered a pattern:
                It’s not about spending more. It’s about spending smarter.
                Our AI-powered ad strategies and creative testing systems are built to convert better — not louder.
