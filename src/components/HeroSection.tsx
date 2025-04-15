@@ -59,10 +59,10 @@ const HeroSection: React.FC = () => {
         <div className="max-w-5xl mx-auto mb-6">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight" 
           >
-            Your Ads Aren't Broken — They're Just Untapped Potential. We Unlock It in 30 Days.
+            It’s Not the Platform. It’s the Strategy. Outsmart Big Brands with Smarter Ads That Actually Sell.
           </h1>
           <div className="mt-2 text-3xl md:text-4xl lg:text-6xl font-bold text-[#fad500] leading-tight tracking-tight">
-            Results Guaranteed — Or You Don't Pay a Dime.
+            Scale Your Brand in 30 Days — Or You Don't Pay a Dime.
           </div>
         </div>
 
