@@ -51,10 +51,13 @@ const EcommerceProblemSection: React.FC = () => {
                 
               </p>
               <p className="text-base md:text-lg text-gray-300/90">
-                After working with 200+ brands, we've discovered that properly set up
-                email flows are the real key to profitable scaling. Imagine telling your
-                brand story effectively without constantly pouring more money into
-                ads—what would that do for your bottom line?
+   At TDIA, we’ve worked with over 30+ eCommerce & B2B brands across North America and discovered a pattern:
+It’s not about spending more. It’s about spending smarter.
+Our AI-powered ad strategies and creative testing systems are built to convert better — not louder.
+With over $3M in ad spend under management, we’ve helped our clients lower CAC by up to 43% and scale with clarity.
+
+                If your current strategy isn’t delivering the results you want…
+What’s it really costing you to keep doing things the same way?
               </p>
               <div className="pt-4">
                 <Button 
