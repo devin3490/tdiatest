@@ -47,7 +47,7 @@ const EcommerceProblemSection: React.FC = () => {
                 But despite all that, your ROAS is inconsistent, your CAC is rising, and your growth feels stuck.
                 And the worst part?
                 You keep pumping budget into Meta or Google, but the results don’t follow.
-                Meanwhile, your competitors seem to scale effortlessly.
+  
                 
               </p>
               <p className="text-thin md:text-thin text-white">
