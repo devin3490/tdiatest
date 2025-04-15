@@ -10,10 +10,9 @@ const ResultsSection: React.FC = () => {
         {/* Main heading with highlight on "Creativity" */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold">
-            We Own <span className="text-[#006fff]">Creativity</span> So Your Ads Always Get The Best Results
-          </h2>
+            We Master  <span className="text-[#006fff]">Creative</span> So Your Ads Always Perform Best
           <p className="text-gray-300 mt-3 max-w-3xl mx-auto">
-            High-converting ads rely on bold, optimized creatives, which is why we design, test, and refine every asset to ensure your ads capture attention and drive sales.
+            Winning ads start with smart creatives. That’s why we craft, test, and refine every asset to drive more clicks, more sales, and more scale.
           </p>
         </div>
         
