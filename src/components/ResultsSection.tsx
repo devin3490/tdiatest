@@ -13,7 +13,7 @@ const ResultsSection: React.FC = () => {
             We Master <span className="text-[#006fff]">Creative</span> So Your Ads Always Perform Best
           </h2>
           <p className="text-gray-300 mt-3 max-w-3xl mx-auto">
-            High-converting ads rely on bold, optimized creatives, which is why we design, test, and refine every asset to ensure your ads capture attention and drive sales.
+           Winning ads start with smart creatives. That’s why we craft, test, and refine every asset to drive more clicks, more sales, and more scale.
           </p>
         </div>
         
