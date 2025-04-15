@@ -43,9 +43,12 @@ const EcommerceProblemSection: React.FC = () => {
                 The eCommerce Problem
               </h2>
               <p className="text-base md:text-lg text-gray-300/90">
-                Too many brands depend on ads, uninspired email campaigns, or
-                weak automations to drive revenue—only to wonder why their results
-                fall short. ROAS fluctuates, profits suffer, and growth stalls.
+                You’ve tried paid ads. You’ve launched campaigns. Maybe you even hired an agency.
+                But despite all that, your ROAS is inconsistent, your CAC is rising, and your growth feels stuck.
+                And the worst part? You’re not even sure why.
+                You keep pumping budget into Meta, but the results don’t follow.
+                Meanwhile, your competitors seem to scale effortlessly (launching new products, acquiring more customers, and dominating the feed.)
+                
               </p>
               <p className="text-base md:text-lg text-gray-300/90">
                 After working with 200+ brands, we've discovered that properly set up
