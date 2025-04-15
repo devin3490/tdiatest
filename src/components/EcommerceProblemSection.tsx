@@ -49,10 +49,8 @@ const EcommerceProblemSection: React.FC = () => {
                 
               </p>
               <p className="text-thin md:text-thin text-white">
-               At TDIA, we’ve worked with over 30+ eCommerce & B2B brands across North America and discovered a pattern:
-               It’s not about spending more. It’s about spending smarter.
-               Our AI-powered ad strategies and creative testing systems are built to convert better — not louder.
-               With over $3M in ad spend under management, we’ve helped our clients lower CAC by up to 43% and scale with clarity.
+              At TDIA, we’ve helped 30+ eCom & B2B brands across North America scale smarter — not louder.
+              Our AI-driven strategies and creative testing cut CAC by up to 43% on $3M+ in managed ad spend.
               </p>
 
               <p className="text-thin md:text-lg text-white">
