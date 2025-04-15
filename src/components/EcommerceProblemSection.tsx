@@ -45,19 +45,22 @@ const EcommerceProblemSection: React.FC = () => {
               <p className="text-base md:text-lg text-gray-300/90">
                 You’ve tried paid ads. You’ve launched campaigns. Maybe you even hired an agency.
                 But despite all that, your ROAS is inconsistent, your CAC is rising, and your growth feels stuck.
-                And the worst part? You’re not even sure why.
-                You keep pumping budget into Meta, but the results don’t follow.
-                Meanwhile, your competitors seem to scale effortlessly (launching new products, acquiring more customers, and dominating the feed.)
+                And the worst part?
+                You keep pumping budget into Meta or Google, but the results don’t follow.
+                Meanwhile, your competitors seem to scale effortlessly.
                 
               </p>
               <p className="text-base md:text-lg text-gray-300/90">
-   At TDIA, we’ve worked with over 30+ eCommerce & B2B brands across North America and discovered a pattern:
-It’s not about spending more. It’s about spending smarter.
-Our AI-powered ad strategies and creative testing systems are built to convert better — not louder.
-With over $3M in ad spend under management, we’ve helped our clients lower CAC by up to 43% and scale with clarity.
+               At TDIA, we’ve worked with over 30+ eCommerce & B2B brands across North America and discovered a pattern:
+               It’s not about spending more. It’s about spending smarter.
+               Our AI-powered ad strategies and creative testing systems are built to convert better — not louder.
+               With over $3M in ad spend under management, we’ve helped our clients lower CAC by up to 43% and scale with clarity.
+              </p>
 
-                If your current strategy isn’t delivering the results you want…
-What’s it really costing you to keep doing things the same way?
+              <p className="text-base md:text-lg text-gray-300/90">
+               If your current strategy isn’t delivering the results you want…
+               What’s it really costing you to keep doing things the same way?
+               
               </p>
               <div className="pt-4">
                 <Button 
