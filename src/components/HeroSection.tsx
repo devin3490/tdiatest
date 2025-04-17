@@ -8,7 +8,7 @@ import {
   TooltipProvider, 
   TooltipTrigger 
 } from "@/components/ui/tooltip";
-import { Play, X } from 'lucide-react';
+import { Play, X, Instagram, Youtube, Video } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -98,25 +98,30 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Video container - Updated with new styling */}
+        {/* Video container - Updated with the new image */}
         <div 
           className="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden shadow-2xl cursor-pointer bg-gray-800"
           onClick={playVideo}
         >
-          {/* Video using the testimonial image */}
+          {/* Updated to use the new video image with person and x6 ROAS overlay */}
           <img 
-            src="/lovable-uploads/e1e2dbf9-b755-4532-9516-1dcd9a29482e.png" 
-            alt="Video testimonial" 
+            src="/lovable-uploads/72e5b3cc-f5f8-41c6-ab90-74fde7af8520.png" 
+            alt="x6 ROAS Video testimonial" 
             className="w-full h-auto"
           />
           
-          {/* Blue play button in the bottom left */}
-          <button 
-            className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-white p-3 rounded-full play-button-pulse"
-            aria-label="Play video"
-          >
-            <Play className="h-6 w-6" />
-          </button>
+          {/* Social media buttons - bottom left */}
+          <div className="absolute left-4 bottom-4 flex space-x-2">
+            <button className="bg-[#0066ff] p-2 rounded-full text-white">
+              <Youtube className="h-5 w-5" />
+            </button>
+            <button className="bg-gradient-to-br from-purple-500 to-pink-500 p-2 rounded-full text-white">
+              <Instagram className="h-5 w-5" />
+            </button>
+            <button className="bg-black p-2 rounded-full text-white">
+              <Video className="h-5 w-5" />
+            </button>
+          </div>
         </div>
 
         <div className="text-center">
