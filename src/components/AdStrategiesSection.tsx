@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -13,17 +12,22 @@ const AdStrategiesSection: React.FC = () => {
               <div className="relative">
                 {/* Client Logo Badge */}
                 <div className="absolute -top-8 left-6 bg-white py-2 px-4 rounded-full z-10 shadow-lg">
-                  <p className="font-bold text-xl">CouchHaus</p>
+                  <p className="font-bold text-xl">LOCKFEET</p>
                 </div>
                 
                 {/* Main Image */}
                 <img 
-                  src="/lovable-uploads/37f86f36-4ad6-44f3-b624-ddd5ead092c0.png" 
-                  alt="Woman relaxing with wine" 
+                  src="/lovable-uploads/f587fe65-cd78-4831-bbb2-d6fc38b0ebb3.png" 
+                  alt="Lockfeet shoe features" 
                   className="w-full rounded-2xl"
                 />
                 
-
+                {/* Results Box */}
+                <div className="absolute -bottom-10 right-0 bg-white p-4 rounded-xl shadow-lg max-w-[80%]">
+                  <p className="font-bold text-xl">5X ROAS growth</p>
+                  <p className="font-bold text-xl">currently hitting a €12 CPA</p>
+                  <p className="font-bold text-xl">9.6M views in just 90 days</p>
+                </div>
               </div>
             </div>
           </div>
