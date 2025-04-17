@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Star, Play } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -101,7 +100,7 @@ const HeroSection: React.FC = () => {
           onClick={playVideo}
         >
           <button 
-            className="absolute top-4 right-4 bg-[#006FFF] hover:bg-[#0052cc] text-white p-3 rounded-full play-button-pulse z-10"
+            className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-white p-3 rounded-full play-button-pulse z-10"
             aria-label="Play video"
           >
             <Play className="h-6 w-6" />
