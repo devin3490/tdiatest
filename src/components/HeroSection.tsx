@@ -131,8 +131,7 @@ const HeroSection: React.FC = () => {
               <TooltipTrigger asChild>
                 <Button 
                   className="text-white font-thin text-lg shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto px-8"
-                >
-                  Book Your Free Discovery Call 
+                > Book Your Free Discovery Call 
                 </Button>
               </TooltipTrigger>
               <TooltipContent 
