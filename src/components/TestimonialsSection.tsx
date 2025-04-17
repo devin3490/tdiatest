@@ -34,11 +34,13 @@ const TestimonialsSection: React.FC = () => {
                 <span key={star} className="text-[#fad500] text-2xl">★</span>
               ))}
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold hover:text-[#006FFF] transition-colors">Mike Loved It, and<br />So Will You</h2>
+            <h2 className="text-3xl md:text-4xl font-bold hover:text-[#006FFF] transition-colors">Marco Loved It, and<br />So Will You</h2>
             <p className="text-gray-300">
-              The moment we activated the email flows for our client Mike, 
-              the results were immediate. He witnessed a compounding 
-              effect that positively impacted his bottom line, day in and day out.
+              Working with TDIA has been a game-changer. 
+              We switched from a large U.S. agency that cost twice as much and delivered zero leads. 
+              TDIA took the time to understand our niche market and found creative ways to keep lead costs low.
+
+Now we’re generating ~20 qualified leads monthly. Great team, smart strategy — highly recommend
             </p>
             <div className="pt-4">
               <TooltipProvider>
