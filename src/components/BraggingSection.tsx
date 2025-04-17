@@ -16,7 +16,7 @@ const BraggingSection: React.FC = () => {
         {/* Main heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Okay...Now We're Bragging
+            A Quick Glimpse at What’s Possible.
           </h2>
         </div>
         
