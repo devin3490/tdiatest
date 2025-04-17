@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Play } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -104,7 +105,7 @@ const TestimonialsSection: React.FC = () => {
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+                src="https://www.youtube.com/embed/nPoN4ydzHmY?autoplay=1" 
                 title="Video" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
