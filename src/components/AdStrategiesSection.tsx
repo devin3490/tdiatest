@@ -36,11 +36,11 @@ const AdStrategiesSection: React.FC = () => {
           {/* Right side with content */}
           <div className="w-full md:w-1/2 mt-20 md:mt-0">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ad Strategies Built for Today's Creative-First Landscape
+              Smart Ad Strategies for the Age of Creative Content
             </h2>
             
             <p className="text-gray-300 mb-8">
-              Today, more than ever, you NEED to focus on high-impact creatives to optimize engagement and drive maximum ad performance. This is how we get that done:
+              Today, more than ever, performance follows great creative. This is how we ensure yours leads the way:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 mb-10">
