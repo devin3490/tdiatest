@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Star } from 'lucide-react';
+import { Star, Play } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { 
   Tooltip, 
@@ -7,7 +7,7 @@ import {
   TooltipProvider, 
   TooltipTrigger 
 } from "@/components/ui/tooltip";
-import { Play, X, Instagram, Youtube, Video } from 'lucide-react';
+import { Youtube, Instagram, Video, X } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -100,12 +100,19 @@ const HeroSection: React.FC = () => {
           onClick={playVideo}
         >
           <img 
-            src="/lovable-uploads/e94322c2-2cb8-4af4-a620-18765b68a837.png" 
+            src="/lovable-uploads/7e78c568-5163-4852-b5b7-c025e7d16029.png" 
             alt="x6 ROAS Video testimonial" 
             className="w-full h-auto"
           />
           
-          <div className="absolute left-4 bottom-4 flex space-x-2">
+          <button 
+            className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-white p-3 rounded-full play-button-pulse z-10"
+            aria-label="Play video"
+          >
+            <Play className="h-6 w-6" />
+          </button>
+
+          <div className="absolute left-4 bottom-16 flex space-x-2">
             <button className="bg-[#0066ff] p-2 rounded-full text-white">
               <Youtube className="h-5 w-5" />
             </button>
