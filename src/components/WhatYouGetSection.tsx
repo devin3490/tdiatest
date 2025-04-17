@@ -30,7 +30,7 @@ const WhatYouGetSection: React.FC = () => {
               <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
-              <p className="text-white text-lg">Revenue Generating Flows in Under 40 Days</p>
+              <p className="text-white text-lg">A Full-Funnel Ad Strategy, tailored to your product, industry & goals</p>
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
@@ -38,7 +38,7 @@ const WhatYouGetSection: React.FC = () => {
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">
-                Access Monthly Support <span className="bg-[#006fff]/90 px-2 text-white text-xs font-bold rounded ml-2">FREE</span>
+                Winning Creatives designed & tested by experts <span className="bg-[#006fff]/90 px-2 text-white text-xs font-bold rounded ml-2">FREE</span>
               </p>
             </div>
             
@@ -46,28 +46,28 @@ const WhatYouGetSection: React.FC = () => {
               <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
-              <p className="text-white text-lg">12 – 15 Powerhouse Email Flows</p>
+              <p className="text-white text-lg">Media Buying Done for You</p>
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
               <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
-              <p className="text-white text-lg">Over 40+ Emails/SMS Templates Designed for Your Brand</p>
+              <p className="text-white text-lg">Access to TDIA’s Testing Framework, refined across 30+ eCommerce & B2B brands</p>
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
               <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
-              <p className="text-white text-lg">Strategy and Customer Mapping</p>
+              <p className="text-white text-lg">Creative Testing & Scaling System</p>
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
               <div className="text-[#006fff] mr-3">
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
-              <p className="text-white text-lg">Copy, Design, and Implementation</p>
+              <p className="text-white text-lg">Live Performance Dashboards + Weekly Reports</p>
             </div>
             
             <div className="flex items-center border-b border-[#1e2042]/50 pb-4">
@@ -75,7 +75,7 @@ const WhatYouGetSection: React.FC = () => {
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">
-                Access to General eComm Coaching <span className="bg-[#006fff]/90 px-2 text-white text-xs font-bold rounded ml-2">FREE</span>
+                FREE Strategy Calls Monthly — we act as your fractional CMO <span className="bg-[#006fff]/90 px-2 text-white text-xs font-bold rounded ml-2">FREE</span>
               </p>
             </div>
             
