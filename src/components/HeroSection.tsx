@@ -119,41 +119,7 @@ const HeroSection: React.FC = () => {
             <Play className="h-6 w-6" />
           </button>
 
-          {/* x6 ROAS overlay */}
-          <div className="absolute top-4 right-4 text-[#006FFF] font-bold text-5xl drop-shadow-lg">
-            x6 ROAS
-          </div>
 
-          {/* Stats table overlay */}
-          <div className="absolute right-4 top-24 bg-white/90 rounded-lg shadow-lg p-2 text-xs">
-            <table className="w-full">
-              <thead>
-                <tr className="text-gray-700">
-                  <th className="px-1 py-1">Purchase ROAS</th>
-                  <th className="px-1 py-1">Website purchase ROAS</th>
-                  <th className="px-1 py-1">Cost per add to cart</th>
-                  <th className="px-1 py-1">Adds to cart conversion</th>
-                  <th className="px-1 py-1">Website adds to cart conversion</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="text-center">
-                  <td className="px-1 py-1">38.26 ↙️</td>
-                  <td className="px-1 py-1">38.26 ↙️</td>
-                  <td className="px-1 py-1">$4.89 ↙️</td>
-                  <td className="px-1 py-1">$112,074.93 ↙️</td>
-                  <td className="px-1 py-1">$112,074.93 ↙️</td>
-                </tr>
-                <tr className="text-center">
-                  <td className="px-1 py-1">40.57 ↙️</td>
-                  <td className="px-1 py-1">40.57 ↙️</td>
-                  <td className="px-1 py-1">$2.59 ↙️</td>
-                  <td className="px-1 py-1">$366,095.60 ↙️</td>
-                  <td className="px-1 py-1">$366,095.60 ↙️</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
 
           {/* Promo inset image */}
           <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
