@@ -1,47 +1,44 @@
 
 import React from "react";
-import RevenueChart from "./RevenueChart";
-import StatCard from "./StatCard";
+import { useCounter } from "../hooks/useCounter";
+import { Mail } from "lucide-react";
 
 const ReportsSection: React.FC = () => {
   return (
-    <div className="w-full py-12 bg-gray-50">
+    <div className="w-full py-12 bg-[#0a0a1a]">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Reports</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Carte de statistique */}
-          <div className="md:col-span-1">
-            <StatCard 
-              title="Chiffre d'affaires" 
-              value={210000} 
-              currency="€" 
-              arrow="up" 
-            />
-          </div>
-          
-          <div className="md:col-span-2">
-            {/* La carte est vide pour l'instant */}
-            <div className="h-32"></div>
-          </div>
-        </div>
-        
-        {/* Graphique de revenus */}
-        <RevenueChart 
-          title="Invest Marketing"
-          value={128000}
-          currency="€" 
-          showProgressBar={true}
-        />
-        
-        {/* Tooltip de vente */}
-        <div className="relative mt-12 mb-8">
-          <div className="max-w-xs mx-auto">
-            <div className="bg-[#0a0a1a] text-white p-4 rounded-lg">
-              <div className="text-center mb-2">Sales</div>
-              <div className="text-2xl font-bold text-center">2,678</div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 translate-y-full bottom-0">
-                <div className="w-3 h-3 bg-[#0a0a1a] rotate-45"></div>
+        <div className="max-w-md mx-auto">
+          <div className="bg-[#161630] rounded-lg p-6 shadow-md">
+            {/* En-tête avec bouton Send Email et avatars */}
+            <div className="flex items-center mb-6">
+              <div className="bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-bold flex items-center">
+                <Mail size={14} className="mr-1" />
+                SEND EMAIL
+              </div>
+              <div className="flex ml-4">
+                <div className="w-8 h-8 bg-yellow-500 rounded-full -mr-2 border-2 border-[#161630]"></div>
+                <div className="w-8 h-8 bg-blue-500 rounded-full -mr-2 border-2 border-[#161630]"></div>
+                <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center border-2 border-[#161630]">
+                  <span className="text-white text-xs font-bold">+</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Corps avec les emails livrés */}
+            <div className="bg-[#0c0c24] rounded-lg p-4 border border-gray-800">
+              <div className="text-sm text-gray-400 mb-1 text-center">EMAILS DELIVERED</div>
+              <div className="text-4xl font-bold text-white text-center mb-3">
+                {useCounter({
+                  end: 156,
+                  duration: 2000,
+                  decimals: 0,
+                })}
+              </div>
+              <div className="flex items-center justify-center">
+                <div className="text-red-500 text-sm font-bold">-43%</div>
+                <div className="ml-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                  ↓
+                </div>
               </div>
             </div>
           </div>
