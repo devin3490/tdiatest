@@ -112,18 +112,6 @@ const HeroSection: React.FC = () => {
             className="w-full h-auto"
           />
 
-          <div className="absolute left-4 bottom-16 flex space-x-2">
-            <button className="bg-[#0066ff] p-2 rounded-full text-white">
-              <Youtube className="h-5 w-5" />
-            </button>
-            <button className="bg-gradient-to-br from-purple-500 to-pink-500 p-2 rounded-full text-white">
-              <Instagram className="h-5 w-5" />
-            </button>
-            <button className="bg-black p-2 rounded-full text-white">
-              <Video className="h-5 w-5" />
-            </button>
-          </div>
-        </div>
 
         <div className="text-center">
           <TooltipProvider>
