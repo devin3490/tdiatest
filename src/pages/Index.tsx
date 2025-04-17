@@ -28,7 +28,6 @@ const Index = () => {
       <CaseStudiesCarousel />
       <BraggingSection />
       <WhatYouGetSection />
-      <VideoSection />
       <FounderSection />
       <ComparisonSection />
       <FAQSection />
