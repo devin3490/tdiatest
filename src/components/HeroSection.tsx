@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -74,7 +73,6 @@ const HeroSection: React.FC = () => {
           <img src="/lovable-uploads/83387c98-8746-47f1-8cb1-00fb5e0953e2.png" alt="magento" className="h-24 md:h-20" />
         </div>
 
-        {/* Trusted by section - New content from image */}
         <div className="mb-6 text-center">
           <div className="flex items-center justify-center space-x-1 mb-2">
             <span className="text-white font-medium text-sm md:text-base">Trusted by Over 30+ Brands</span>
@@ -89,7 +87,6 @@ const HeroSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Money back guarantee badge - From the image */}
         <div className="text-center mb-6">
           <div className="bg-black inline-block px-6 py-2 rounded-md">
             <p className="text-white uppercase tracking-wider font-semibold text-sm">
@@ -98,19 +95,16 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Video container - Updated with the new image */}
         <div 
           className="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden shadow-2xl cursor-pointer bg-gray-800"
           onClick={playVideo}
         >
-          {/* Updated to use the new video image with person and x6 ROAS overlay */}
           <img 
-            src="/lovable-uploads/72e5b3cc-f5f8-41c6-ab90-74fde7af8520.png" 
+            src="/lovable-uploads/e94322c2-2cb8-4af4-a620-18765b68a837.png" 
             alt="x6 ROAS Video testimonial" 
             className="w-full h-auto"
           />
           
-          {/* Social media buttons - bottom left */}
           <div className="absolute left-4 bottom-4 flex space-x-2">
             <button className="bg-[#0066ff] p-2 rounded-full text-white">
               <Youtube className="h-5 w-5" />
