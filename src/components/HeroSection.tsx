@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Star, Play } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -111,8 +112,7 @@ const HeroSection: React.FC = () => {
             alt="x6 ROAS Video testimonial" 
             className="w-full h-auto"
           />
-
-
+        </div>
 
         <div className="text-center">
           <TooltipProvider>
