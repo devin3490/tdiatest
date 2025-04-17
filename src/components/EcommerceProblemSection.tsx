@@ -161,7 +161,7 @@ const EcommerceProblemSection: React.FC = () => {
               <div className="bg-[#151638] rounded-lg p-6 max-w-md mx-auto border border-blue-900/30">
                 <div className="flex items-center mb-4">
                   <div className="bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-bold">
-                    SEND EMAIL
+                    Reduce your CAC
                   </div>
                   <div className="flex ml-4">
                     <div className="w-8 h-8 bg-yellow-500 rounded-full -mr-2 border-2 border-[#151638]"></div>
@@ -173,8 +173,8 @@ const EcommerceProblemSection: React.FC = () => {
                 </div>
                 
                 <div className="bg-[#0d0e26] rounded-lg p-4 mt-6 border border-blue-900/20">
-                  <div className="text-sm text-gray-400 mb-1">EMAILS DELIVERED</div>
-                  <div className="text-4xl font-bold">156</div>
+                  <div className="text-sm text-gray-400 mb-1">CAC</div>
+                  <div className="text-4xl font-bold">32$</div>
                   <div className="flex items-center mt-2">
                     <div className="text-red-500 text-sm font-bold">-43%</div>
                     <div className="ml-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">↓</div>
