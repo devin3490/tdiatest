@@ -75,7 +75,7 @@ const WhatYouGetSection: React.FC = () => {
                 <Check className="h-5 w-5 flex-shrink-0" />
               </div>
               <p className="text-white text-lg">
-                FREE Strategy Calls Monthly — we act as your fractional CMO <span className="bg-[#006fff]/90 px-2 text-white text-xs font-bold rounded ml-2">FREE</span>
+                Strategy Calls Monthly — we act as your fractional CMO <span className="bg-[#006fff]/90 px-2 text-white text-xs font-bold rounded ml-2">FREE</span>
               </p>
             </div>
             
