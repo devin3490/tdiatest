@@ -14,6 +14,7 @@ import FounderSection from '../components/FounderSection';
 import FAQSection from '../components/FAQSection';
 import StickyHeader from '../components/StickyHeader';
 import VideoSection from '../components/VideoSection';
+import ReportsSection from '../components/ReportsSection';
 
 const Index = () => {
   return (
@@ -23,11 +24,13 @@ const Index = () => {
       <BrandsSection />
       <EcommerceProblemSection />
       <ResultsSection />
+      <ReportsSection />
       <AdStrategiesSection />
       <TestimonialsSection />
       <CaseStudiesCarousel />
       <BraggingSection />
       <WhatYouGetSection />
+      <VideoSection />
       <FounderSection />
       <ComparisonSection />
       <FAQSection />
