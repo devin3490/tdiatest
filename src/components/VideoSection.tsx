@@ -74,7 +74,7 @@ const VideoSection: React.FC = () => {
           onClick={playVideo}
         >
           <img 
-            src="/lovable-uploads/86ce686e-a76d-473a-b356-ed4acedb6c6f.png" 
+            src="/lovable-uploads/97034205-d2d7-488b-a9e4-381b67003c9c.png" 
             alt="Video thumbnail" 
             className="w-full h-auto rounded-lg"
           />

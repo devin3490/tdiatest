@@ -67,9 +67,9 @@ const TestimonialsSection: React.FC = () => {
           >
             <div className="relative">
               <div className="w-full aspect-video flex items-center justify-center relative overflow-hidden rounded-lg">
-                {/* Video thumbnail */}
+                {/* Video thumbnail - UPDATED IMAGE */}
                 <img 
-                  src="/lovable-uploads/7663611f-941b-485c-937f-b000270c6de8.png" 
+                  src="/lovable-uploads/37161ce8-0d5a-4152-90a5-502235399042.png" 
                   alt="Mike testimonial" 
                   className="w-full rounded-lg"
                 />
