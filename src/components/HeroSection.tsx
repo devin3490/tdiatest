@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Star, Play } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -99,18 +100,18 @@ const HeroSection: React.FC = () => {
           className="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden shadow-2xl cursor-pointer bg-gray-800"
           onClick={playVideo}
         >
-          <img 
-            src="/lovable-uploads/7e78c568-5163-4852-b5b7-c025e7d16029.png" 
-            alt="x6 ROAS Video testimonial" 
-            className="w-full h-auto"
-          />
-          
           <button 
-            className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-white p-3 rounded-full play-button-pulse z-10"
+            className="absolute top-4 right-4 bg-[#006FFF] hover:bg-[#0052cc] text-white p-3 rounded-full play-button-pulse z-10"
             aria-label="Play video"
           >
             <Play className="h-6 w-6" />
           </button>
+
+          <img 
+            src="/lovable-uploads/8e270e3f-1038-4214-b431-75a3f1e37aa4.png" 
+            alt="x6 ROAS Video testimonial" 
+            className="w-full h-auto"
+          />
 
           <div className="absolute left-4 bottom-16 flex space-x-2">
             <button className="bg-[#0066ff] p-2 rounded-full text-white">
