@@ -18,20 +18,11 @@ const AdStrategiesSection: React.FC = () => {
                 
                 {/* Main Image */}
                 <img 
-                  src="/lovable-uploads/f587fe65-cd78-4831-bbb2-d6fc38b0ebb3.png"
+                  src="/lovable-uploads/37f86f36-4ad6-44f3-b624-ddd5ead092c0.png" 
                   alt="Woman relaxing with wine" 
                   className="w-full rounded-2xl"
                 />
                 
-                {/* Results Box */}
-                <div className="absolute -bottom-10 right-0 bg-white p-4 rounded-xl shadow-lg max-w-[80%]">
-                  <p className="font-bold text-xl">ROAS Increase of 27.83%</p>
-                  <p className="font-bold text-xl">currently sitting at 10.61X</p>
-                  <p className="font-bold text-xl">20.8% YOY Sales Growth</p>
-                </div>
-              </div>
-            </div>
-          </div>
           
           {/* Right side with content */}
           <div className="w-full md:w-1/2 mt-20 md:mt-0">
