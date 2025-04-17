@@ -69,7 +69,7 @@ const FounderSection: React.FC = () => {
         {/* Description */}
         <div className="max-w-3xl mx-auto mb-10">
           <p className="text-white/80 text-lg text-center leading-relaxed">
-           At TDIA, we’ve helped brands scale by managing over $1.2M in ad spend — but what truly sets us apart is that we’ve been in your shoes. We know what it feels like to hand over a part of your business to someone else. That’s why we treat every dollar like it’s our own. Our team of senior media buyers and creatives puts extra care into every campaign — because we’re not just an agency, we’re operators too.
+           At TDIA, we’ve helped brands scale by managing over $1.2M in ad spend, but what truly sets us apart is that we’ve been in your shoes. We know what it feels like to hand over a part of your business to someone else. That’s why we treat every dollar like it’s our own. Our team of senior media buyers and creatives puts extra care into every campaign, because we’re not just an agency, we’re operators too.
           </p>
         </div>
         
