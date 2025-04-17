@@ -97,15 +97,27 @@ const HeroSection: React.FC = () => {
         </div>
 
         <div 
-          className="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden shadow-2xl cursor-pointer bg-gray-800"
+          className="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden shadow-2xl cursor-pointer group"
           onClick={playVideo}
         >
-          <button 
-            className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-white p-3 rounded-full play-button-pulse z-10"
-            aria-label="Play video"
-          >
-            <Play className="h-6 w-6" />
-          </button>
+          {/* Animated play button */}
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="relative">
+              {/* Pulsating background effect */}
+              <div className="absolute inset-0 bg-[#006FFF] rounded-full animate-ping opacity-30"></div>
+              <div className="absolute inset-0 bg-[#006FFF] rounded-full animate-pulse opacity-30 animation-delay-300"></div>
+              {/* Play button */}
+              <button 
+                className="relative bg-[#006FFF] hover:bg-[#0052cc] text-white p-5 md:p-6 rounded-full transform transition-all duration-300 hover:scale-110 group-hover:scale-110"
+                aria-label="Play video"
+              >
+                <Play className="h-8 w-8 md:h-10 md:w-10" />
+              </button>
+            </div>
+          </div>
+
+          {/* Semi-transparent overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity group-hover:bg-opacity-10"></div>
 
           <img 
             src="/lovable-uploads/8e270e3f-1038-4214-b431-75a3f1e37aa4.png" 
