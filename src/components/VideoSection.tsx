@@ -69,7 +69,10 @@ const VideoSection: React.FC = () => {
         </div>
         
         {/* Video container */}
-        <div className="max-w-4xl mx-auto mb-12 relative rounded-lg overflow-hidden shadow-2xl">
+        <div 
+          className="max-w-4xl mx-auto mb-12 relative rounded-lg overflow-hidden shadow-2xl cursor-pointer transition-transform hover:scale-[1.01] hover:shadow-blue-500/20" 
+          onClick={playVideo}
+        >
           <img 
             src="/lovable-uploads/86ce686e-a76d-473a-b356-ed4acedb6c6f.png" 
             alt="Video thumbnail" 
@@ -78,7 +81,6 @@ const VideoSection: React.FC = () => {
           <button 
             className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-white p-3 rounded-full play-button-pulse"
             aria-label="Play video"
-            onClick={playVideo}
           >
             <Play className="h-6 w-6" />
           </button>
