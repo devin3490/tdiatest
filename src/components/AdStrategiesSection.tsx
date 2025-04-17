@@ -11,11 +11,14 @@ const AdStrategiesSection: React.FC = () => {
           <div className="relative w-full md:w-1/2 max-w-md mx-auto">
             <div className="bg-[#006FFF] p-6 rounded-3xl">
               <div className="relative">
-
+                {/* Client Logo Badge */}
+                <div className="absolute -top-8 left-6 bg-white py-2 px-4 rounded-full z-10 shadow-lg">
+                  <p className="font-bold text-xl">CouchHaus</p>
+                </div>
                 
                 {/* Main Image */}
                 <img 
-                  src="/lovable-uploads/37f86f36-4ad6-44f3-b624-ddd5ead092c0.png" 
+                  src="/lovable-uploads/f587fe65-cd78-4831-bbb2-d6fc38b0ebb3.png"
                   alt="Woman relaxing with wine" 
                   className="w-full rounded-2xl"
                 />
