@@ -10,10 +10,7 @@ const AdStrategiesSection: React.FC = () => {
           <div className="relative w-full md:w/2 max-w-md mx-auto">
             <div className="relative rounded-3xl overflow-hidden">
               <div className="relative">
-                {/* Client Logo Badge */}
-                <div className="absolute -top-8 left-6 bg-white py-2 px-4 rounded-full z-10 shadow-lg">
-                  <p className="font-bold text-xl">Lockfeet</p>
-                </div>
+
                 
                 {/* Main Image */}
                 <img 
