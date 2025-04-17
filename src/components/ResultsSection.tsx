@@ -93,18 +93,16 @@ const ResultsSection: React.FC = () => {
             <h3 className="text-7xl font-bold mb-2">1</h3>
             <h4 className="text-xl font-semibold mb-3">Hook, Engage, & Convert</h4>
             <p className="text-gray-300 text-sm">
-              Expand your brand's visibility with targeted ad strategies that connect you with the right 
-              audience, increasing your reach and driving more qualified leads to your business.
+             Get seen by the right people, our targeted ad strategies grow your reach and bring in qualified leads that convert.
             </p>
           </div>
           
           {/* Step 2 */}
           <div className="text-center">
             <h3 className="text-7xl font-bold mb-2">2</h3>
-            <h4 className="text-xl font-semibold mb-3">Test, Test, Test Some More</h4>
+            <h4 className="text-xl font-semibold mb-3">Test. Learn. Optimize. Repeat.</h4>
             <p className="text-gray-300 text-sm">
-              Using a structured testing process we continuously iterate on creatives, ensuring every 
-              campaign is optimized for peak performance.
+              Our systematic testing approach allows us to iterate quickly and consistently deliver high-performing campaigns.
             </p>
           </div>
           
