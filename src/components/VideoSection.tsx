@@ -59,25 +59,28 @@ const VideoSection: React.FC = () => {
           <img src="/lovable-uploads/2f423ce1-a0eb-4fe6-9fca-52e98352b921.png" alt="Google Ads" className="h-7 md:h-9" />
         </div>
         
-        {/* Guarantee badge - ALREADY ABOVE VIDEO */}
+        {/* Money back guarantee badge - Now styled like in the first image */}
         <div className="text-center mb-6">
-          <div className="bg-[#111827] inline-block px-6 py-2 rounded-md border border-[#006FFF]/20">
-            <p className="text-white uppercase tracking-wider font-normal text-sm">
+          <div className="bg-black inline-block px-6 py-2 rounded-md">
+            <p className="text-white uppercase tracking-wider font-semibold text-sm">
               100% MONEY BACK GUARANTEED
             </p>
           </div>
         </div>
         
-        {/* Video container */}
+        {/* Video container - now using the new image and styling */}
         <div 
           className="max-w-4xl mx-auto mb-12 relative rounded-lg overflow-hidden shadow-2xl cursor-pointer transition-transform hover:scale-[1.01] hover:shadow-blue-500/20" 
           onClick={playVideo}
         >
+          {/* Updated image - now using the person in the blue jacket */}
           <img 
-            src="/lovable-uploads/97034205-d2d7-488b-a9e4-381b67003c9c.png" 
-            alt="Video thumbnail" 
+            src="/lovable-uploads/2c87bdc0-421b-4e9b-9480-36f8a728fd8a.png" 
+            alt="Video testimonial" 
             className="w-full h-auto rounded-lg"
           />
+          
+          {/* Play button overlay - now in the bottom left like in the first image */}
           <button 
             className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-white p-3 rounded-full play-button-pulse"
             aria-label="Play video"
@@ -86,13 +89,13 @@ const VideoSection: React.FC = () => {
           </button>
         </div>
         
-        {/* CTA button */}
+        {/* CTA button - styled more like in the first image */}
         <div className="text-center">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button 
-                  className="text-white font-normal text-lg uppercase shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                  className="text-white font-normal text-lg shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 px-10"
                 >
                   Book Your Free Discovery Call
                 </Button>
