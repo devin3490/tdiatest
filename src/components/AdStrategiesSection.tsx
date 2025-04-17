@@ -15,7 +15,7 @@ const AdStrategiesSection: React.FC = () => {
                 
                 {/* Main Image */}
                 <img 
-                  src="/lovable-uploads/37f86f36-4ad6-44f3-b624-ddd5ead092c0.png" 
+                  src="/lovable-uploads/f587fe65-cd78-4831-bbb2-d6fc38b0ebb3.png" 
                   alt="Woman relaxing with wine" 
                   className="w-full rounded-2xl"
                 />
