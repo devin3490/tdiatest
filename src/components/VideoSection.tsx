@@ -76,7 +76,7 @@ const VideoSection: React.FC = () => {
             className="w-full h-auto rounded-lg"
           />
           <button 
-            className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-black p-3 rounded-full play-button-pulse"
+            className="absolute left-4 bottom-4 bg-[#006FFF] hover:bg-[#0052cc] text-white p-3 rounded-full play-button-pulse"
             aria-label="Play video"
             onClick={playVideo}
           >
@@ -119,7 +119,7 @@ const VideoSection: React.FC = () => {
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+                src="https://www.youtube.com/embed/nPoN4ydzHmY?autoplay=1" 
                 title="Video" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

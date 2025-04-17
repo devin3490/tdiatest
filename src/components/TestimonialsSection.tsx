@@ -96,17 +96,17 @@ const TestimonialsSection: React.FC = () => {
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
           <div className="relative w-full max-w-4xl">
             <button 
-              className="absolute -top-10 right-0 text-white hover:text-[#006FFF]"
+              className="absolute -top-10 right-0 text-white hover:text-[#006FFF] text-2xl"
               onClick={() => setShowVideo(false)}
             >
-              <span className="text-2xl">×</span>
+              &times;
             </button>
             <div className="aspect-video w-full bg-black">
               <iframe 
                 width="100%" 
                 height="100%" 
                 src="https://www.youtube.com/embed/nPoN4ydzHmY?autoplay=1" 
-                title="Video" 
+                title="Mike's Testimonial" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
