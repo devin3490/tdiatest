@@ -47,56 +47,50 @@ const CaseStudies: React.FC = () => {
             </CardContent>
           </Card>
 
-          {/* Faith case study */}
-          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden">
+          {/* RAITH Case Study */}
+          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300">
             <CardContent className="p-0">
-              <div className="p-6">
-                <div className="flex items-center mb-8">
-                  <h3 className="text-white text-2xl font-bold">R A I T H</h3>
-                </div>
-                
-                <div className="mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">
-                    <span className="text-[#006FFF]">210%</span> Increase in Flow Revenue
-                  </h2>
-                  <p className="text-gray-400 mt-2">in 30 Days</p>
-                </div>
-              </div>
-              
               <div className="relative">
                 <img 
-                  src="/public/lovable-uploads/d6ca1a03-39d3-4a4c-a2e1-f859d79b46c7.png" 
-                  alt="RAITH campaign screenshots"
-                  className="w-full object-cover"
-                  style={{objectPosition: "50% 33%"}}
+                  src="/lovable-uploads/87c01000-ca06-4d2c-8c65-f4b9c08ddf1e.png" 
+                  alt="RAITH case study"
+                  className="w-full"
+                  style={{ objectFit: 'cover', objectPosition: '50% 50%', maxHeight: '200px' }} 
                 />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-6">
+                  <h3 className="text-white text-xl font-bold mb-1">R A I T H</h3>
+                  <div className="mb-2">
+                    <h2 className="text-2xl md:text-3xl font-bold text-white">
+                      <span className="text-[#006fff]">210%</span> Increase in<br />Flow Revenue
+                    </h2>
+                    <p className="text-gray-300 mt-1">in 30 Days</p>
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
 
-          {/* Golf Course case study */}
-          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden">
+          {/* Golf Course Supply Case Study */}
+          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300">
             <CardContent className="p-0">
-              <div className="p-6">
-                <div className="flex items-center mb-8">
-                  <h3 className="text-white text-2xl font-bold">GOLF COURSE SUPPLY</h3>
-                </div>
-                
-                <div className="mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">
-                    <span className="text-[#006FFF]">132%</span> Increase in Flow Revenue
-                  </h2>
-                  <p className="text-gray-400 mt-2">in 30 Days</p>
-                </div>
-              </div>
-              
               <div className="relative">
                 <img 
-                  src="/public/lovable-uploads/d6ca1a03-39d3-4a4c-a2e1-f859d79b46c7.png" 
-                  alt="Golf Course Supply campaign screenshots"
-                  className="w-full object-cover"
-                  style={{objectPosition: "50% 66%"}}
+                  src="/lovable-uploads/02f8bc66-3042-4b06-a33f-fa29d507dd24.png" 
+                  alt="Golf Course Supply case study"
+                  className="w-full"
+                  style={{ objectFit: 'cover', objectPosition: '50% 50%', maxHeight: '200px' }} 
                 />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-6">
+                  <h3 className="text-white text-xl font-bold mb-1">GOLF COURSE SUPPLY</h3>
+                  <div className="mb-2">
+                    <h2 className="text-2xl md:text-3xl font-bold text-white">
+                      <span className="text-[#006fff]">132%</span> Increase in<br />Flow Revenue
+                    </h2>
+                    <p className="text-gray-300 mt-1">in 30 Days</p>
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
