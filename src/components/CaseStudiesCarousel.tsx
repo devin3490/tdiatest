@@ -42,7 +42,7 @@ const CaseStudiesCarousel: React.FC = () => {
                   <h3 className="text-black text-xl font-bold mb-1">Lockfeet</h3>
                   <div className="mb-2">
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      <span className="text-white">From 27 000$ to 85 000$ in 3 months </span><br />to 85 000$
+                      <span className="text-black">From 27 000$ to 85 000$ in 3 months </span><br />to 85 000$
                     </h2>
                     <p className="text-gray-300 mt-1">in 30 Days</p>
                   </div>
