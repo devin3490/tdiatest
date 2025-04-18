@@ -63,10 +63,10 @@ const CaseStudiesCarousel: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
                 <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-white text-xl font-bold mb-1">R A I T H</h3>
+                  <h3 className="text-white text-xl font-bold mb-1">Runak</h3>
                   <div className="mb-2">
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      <span className="text-[#006fff]">210%</span> Increase in<br />Flow Revenue
+                      <span className="text-[#006fff]">7x </span>Roas <br />in the cosmetics industry
                     </h2>
                     <p className="text-gray-300 mt-1">in 30 Days</p>
                   </div>
@@ -87,10 +87,10 @@ const CaseStudiesCarousel: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
                 <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-white text-xl font-bold mb-1">GOLF COURSE SUPPLY</h3>
+                  <h3 className="text-white text-xl font-bold mb-1">Onyx</h3>
                   <div className="mb-2">
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      <span className="text-[#006fff]">132%</span> Increase in<br />Flow Revenue
+                      <span className="text-[#006fff]">0 to 20 </span>leads in a niche market<br />
                     </h2>
                     <p className="text-gray-300 mt-1">in 30 Days</p>
                   </div>
