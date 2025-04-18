@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -38,9 +37,9 @@ const CaseStudies: React.FC = () => {
               
               <div className="relative">
                 <img 
-                  src="/public/lovable-uploads/d6ca1a03-39d3-4a4c-a2e1-f859d79b46c7.png" 
-                  alt="hideAway campaign screenshots"
-                  className="w-full"
+                  src="/lovable-uploads/ea533adb-d52d-4eb7-8af3-4836983d6461.png" 
+                  alt="hideAway case study results"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </CardContent>
