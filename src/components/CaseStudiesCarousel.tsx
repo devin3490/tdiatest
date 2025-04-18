@@ -80,7 +80,7 @@ const CaseStudiesCarousel: React.FC = () => {
             <CardContent className="p-0">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/fafc81e1-2353-47d1-85d1-8daaf131c374.png" 
+                  src="/lovable-uploads/02f8bc66-3042-4b06-a33f-fa29d507dd24.png" 
                   alt="Golf Course Supply case study"
                   className="w-full"
                   style={{ objectFit: 'cover', objectPosition: '0% 66%', maxHeight: '200px' }} 
