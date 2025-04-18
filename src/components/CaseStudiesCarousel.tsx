@@ -56,7 +56,7 @@ const CaseStudiesCarousel: React.FC = () => {
             <CardContent className="p-0">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/d6ca1a03-39d3-4a4c-a2e1-f859d79b46c7.png" 
+                  src="/lovable-uploads/87c01000-ca06-4d2c-8c65-f4b9c08ddf1e.png" 
                   alt="RAITH case study"
                   className="w-full"
                   style={{ objectFit: 'cover', objectPosition: '0% 33%', maxHeight: '200px' }} 
