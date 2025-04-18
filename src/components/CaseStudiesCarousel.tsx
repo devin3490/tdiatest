@@ -39,10 +39,10 @@ const CaseStudiesCarousel: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
                 <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-white text-xl font-bold mb-1">hideAway</h3>
+                  <h3 className="text-black text-xl font-bold mb-1">Lockfeet</h3>
                   <div className="mb-2">
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      <span className="text-[#006fff]">328%</span> Increase in<br />Flow Revenue
+                      <span className="text-[#006fff]">From </span>27 000$<br />to 85 000$
                     </h2>
                     <p className="text-gray-300 mt-1">in 30 Days</p>
                   </div>
