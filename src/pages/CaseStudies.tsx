@@ -21,8 +21,18 @@ const CaseStudies: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* hideAway case study */}
           <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden">
-            <CardContent className="p-0">
-              <div className="p-6">
+            <CardContent className="p-0 relative">
+              {/* Image section - now on the left */}
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/84384628-8607-48d8-838c-7e013574f222.png"
+                  alt="Lockfeet shoes"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Content overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent p-6">
                 <div className="flex items-center mb-8">
                   <h3 className="text-white text-2xl font-bold">hideAway</h3>
                 </div>
@@ -33,14 +43,6 @@ const CaseStudies: React.FC = () => {
                   </h2>
                   <p className="text-gray-400 mt-2">in 30 Days</p>
                 </div>
-              </div>
-              
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/ea533adb-d52d-4eb7-8af3-4836983d6461.png" 
-                  alt="hideAway case study results"
-                  className="w-full h-full object-cover"
-                />
               </div>
             </CardContent>
           </Card>
