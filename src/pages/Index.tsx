@@ -14,6 +14,7 @@ import FounderSection from '../components/FounderSection';
 import FAQSection from '../components/FAQSection';
 import StickyHeader from '../components/StickyHeader';
 import VideoSection from '../components/VideoSection';
+import Footer from '../components/Footer';
 
 const Index = () => {
   return (
@@ -31,9 +32,9 @@ const Index = () => {
       <FounderSection />
       <ComparisonSection />
       <FAQSection />
+      <Footer />
     </div>
   );
 };
 
 export default Index;
-

@@ -1,4 +1,6 @@
 import React from 'react';
+import StickyHeader from '../components/StickyHeader';
+import Footer from '../components/Footer';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
@@ -140,6 +142,9 @@ const CaseStudies: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
