@@ -15,7 +15,6 @@ import FAQSection from '../components/FAQSection';
 import StickyHeader from '../components/StickyHeader';
 import VideoSection from '../components/VideoSection';
 import Footer from '../components/Footer';
-import CtaStrip from '../components/CtaStrip';
 
 const Index = () => {
   return (
@@ -33,7 +32,6 @@ const Index = () => {
       <FounderSection />
       <ComparisonSection />
       <FAQSection />
-      <CtaStrip />
       <Footer />
     </div>
   );
