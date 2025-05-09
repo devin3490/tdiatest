@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full mt-20">
+    <footer className="w-full">
       {/* Blue gradient top border */}
       <div className="h-16 bg-gradient-to-b from-[#006fff] to-black"></div>
       
