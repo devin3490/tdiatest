@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between">
             {/* Logo and company info */}
             <div className="mb-8 md:mb-0">
-              <h3 className="text-white text-xl font-bold mb-4">Lovable Agency</h3>
+              <h3 className="text-white text-xl font-bold mb-4">TDIA Agency</h3>
               <p className="text-gray-400 max-w-md">
                 Premier email marketing agency for e-commerce brands looking to scale.
               </p>
