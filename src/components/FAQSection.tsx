@@ -54,7 +54,7 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <div className="w-full py-20 font-sans bg-[#0a0a0a] relative overflow-hidden">
+    <div className="w-full pt-20 pb-0 font-sans bg-[#0a0a0a] relative overflow-hidden">
       {/* Animated Blurred Plus Signs Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {backgroundElements.map((el) => (
