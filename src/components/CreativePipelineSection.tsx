@@ -24,35 +24,35 @@ const CreativePipelineSection = () => {
 
           {/* Content - Right */}
           <div className="order-1 lg:order-2">
-            <div className="max-w-xl lg:max-w-none text-right">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6 text-right">
+            <div className="max-w-xl lg:max-w-none text-left">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6 text-left">
                 Creative Pipeline System™
               </h2>
               
-              <h3 className="text-xl lg:text-2xl font-semibold text-white mb-4 lg:mb-6 text-right">
+              <h3 className="text-xl lg:text-2xl font-semibold text-white mb-4 lg:mb-6 text-left">
                 From one-off campaigns to a creative engine that scales with trends
               </h3>
               
-              <p className="text-white/70 mb-6 text-base lg:text-lg leading-relaxed text-right">
+              <p className="text-white/70 mb-6 text-base lg:text-lg leading-relaxed text-left">
                 Most fashion brands still rely on guesswork — scattered assortments, overdependence on “hero” pieces, and slow content cycles that can’t keep up with fast-moving trends. The result? Ad fatigue, rising CPAs, and stalled growth.
               </p>
 
-              <p className="text-white font-semibold mb-4 lg:mb-6 text-right">
+              <p className="text-white font-semibold mb-4 lg:mb-6 text-left">
                 With our Creative Pipeline System™, we turn your brand into a continuous creative flow :
               </p>
 
               <ul className="space-y-3 lg:space-y-4 mb-8">
-                <li className="flex items-start justify-end text-right">
-                  <span className="text-white/70 mr-3">Building a continuous flow of fresh creatives aligned with collections & trends</span>
-                  <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 flex-shrink-0"></div>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-white/70">Building a continuous flow of fresh creatives aligned with collections & trends</span>
                 </li>
-                <li className="flex items-start justify-end text-right">
-                  <span className="text-white/70 mr-3">Prioritizing winning SKUs and hooks with AI-driven testing</span>
-                  <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 flex-shrink-0"></div>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-white/70">Prioritizing winning SKUs and hooks with AI-driven testing</span>
                 </li>
-                <li className="flex items-start justify-end text-right">
-                  <span className="text-white/70 mr-3">Keeping merchandising and marketing in sync on one streamlined board</span>
-                  <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 flex-shrink-0"></div>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-white/70">Keeping merchandising and marketing in sync on one streamlined board</span>
                 </li>
               </ul>
 
