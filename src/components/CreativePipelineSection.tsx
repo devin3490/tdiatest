@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
+import ParallaxDots from './ParallaxDots';
 
 const CreativePipelineAnimation = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -67,18 +68,18 @@ const CreativePipelineAnimation = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-64 bg-gradient-to-br from-black/5 to-[#006fff]/5 rounded-2xl p-8 overflow-hidden">
+    <div className="relative w-full h-64 bg-gradient-to-br from-white/10 to-[#006fff]/10 rounded-2xl p-8 overflow-hidden border border-white/20">
       {/* Pipeline lanes */}
       <div className="absolute inset-8">
         <div className="grid grid-cols-3 gap-4 h-full">
-          <div className="bg-white/20 rounded-lg border border-white/30 p-3">
-            <h4 className="text-sm font-semibold text-foreground mb-2">Backlog</h4>
+          <div className="bg-white/10 rounded-lg border border-white/20 p-3">
+            <h4 className="text-sm font-semibold text-white mb-2">Backlog</h4>
           </div>
-          <div className="bg-white/20 rounded-lg border border-white/30 p-3">
-            <h4 className="text-sm font-semibold text-foreground mb-2">In Testing</h4>
+          <div className="bg-white/10 rounded-lg border border-white/20 p-3">
+            <h4 className="text-sm font-semibold text-white mb-2">In Testing</h4>
           </div>
-          <div className="bg-white/20 rounded-lg border border-white/30 p-3">
-            <h4 className="text-sm font-semibold text-foreground mb-2">Approved</h4>
+          <div className="bg-white/10 rounded-lg border border-white/20 p-3">
+            <h4 className="text-sm font-semibold text-white mb-2">Approved</h4>
           </div>
         </div>
         
@@ -103,8 +104,16 @@ const CreativePipelineAnimation = () => {
 
 const CreativePipelineSection = () => {
   return (
-    <section className="w-full bg-white py-16 lg:py-20 font-sans">
-      <div className="container mx-auto px-4">
+    <section className="w-full bg-gradient-to-b from-black to-[#0a0a0a] py-16 lg:py-20 font-sans relative overflow-hidden">
+      <ParallaxDots 
+        count={50} 
+        colors={['#006FFF', '#3944bc', '#ffde00', '#ffffff']} 
+        minSize={2} 
+        maxSize={6} 
+        className="z-0"
+      />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Visual - Left */}
           <div className="order-2 lg:order-1">
@@ -114,34 +123,34 @@ const CreativePipelineSection = () => {
           {/* Content - Right */}
           <div className="order-1 lg:order-2">
             <div className="max-w-xl lg:max-w-none">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 lg:mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
                 Creative Pipeline System™
               </h2>
               
-              <h3 className="text-xl lg:text-2xl font-semibold text-foreground mb-4 lg:mb-6">
+              <h3 className="text-xl lg:text-2xl font-semibold text-white mb-4 lg:mb-6">
                 From random creatives to a predictable growth engine.
               </h3>
               
-              <p className="text-muted-foreground mb-6 text-base lg:text-lg leading-relaxed">
+              <p className="text-white/70 mb-6 text-base lg:text-lg leading-relaxed">
                 Most brands create randomly — no backlog, no cadence, no clarity. That leads to ad fatigue, high CPAs, and stalled growth.
               </p>
 
-              <p className="text-foreground font-semibold mb-4 lg:mb-6">
+              <p className="text-white font-semibold mb-4 lg:mb-6">
                 With our Creative Pipeline System™, we build a continuous creative flow:
               </p>
 
               <ul className="space-y-3 lg:space-y-4 mb-8">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Backlog of testable ideas across angles, formats & avatars</span>
+                  <span className="text-white/70">Backlog of testable ideas across angles, formats & avatars</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">AI-powered prioritization (winning hooks tested first)</span>
+                  <span className="text-white/70">AI-powered prioritization (winning hooks tested first)</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Seamless approvals in a Notion-style board</span>
+                  <span className="text-white/70">Seamless approvals in a Notion-style board</span>
                 </li>
               </ul>
 

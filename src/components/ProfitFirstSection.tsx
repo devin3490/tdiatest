@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
+import ParallaxDots from './ParallaxDots';
 
 const ProfitFirstAnimation = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -60,22 +61,22 @@ const ProfitFirstAnimation = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-64 bg-gradient-to-br from-black/5 to-[#006fff]/5 rounded-2xl p-8 overflow-hidden">
+    <div className="relative w-full h-64 bg-gradient-to-br from-white/10 to-[#006fff]/10 rounded-2xl p-8 overflow-hidden border border-white/20">
       {/* 3-Layer Structure */}
       <div className="grid grid-cols-3 gap-4 h-32">
-        <div className="bg-white/20 rounded-lg border border-white/30 p-3 relative">
-          <h4 className="text-xs font-semibold text-foreground mb-1">Layer 1</h4>
-          <p className="text-xs text-muted-foreground">Testing</p>
+        <div className="bg-white/10 rounded-lg border border-white/20 p-3 relative">
+          <h4 className="text-xs font-semibold text-white mb-1">Layer 1</h4>
+          <p className="text-xs text-white/70">Testing</p>
           <div className="budget-stream absolute bottom-0 left-1/2 w-2 h-8 bg-[#006fff] rounded-t transform -translate-x-1/2 opacity-70"></div>
         </div>
-        <div className="bg-white/20 rounded-lg border border-white/30 p-3 relative">
-          <h4 className="text-xs font-semibold text-foreground mb-1">Layer 2</h4>
-          <p className="text-xs text-muted-foreground">Scaling</p>
+        <div className="bg-white/10 rounded-lg border border-white/20 p-3 relative">
+          <h4 className="text-xs font-semibold text-white mb-1">Layer 2</h4>
+          <p className="text-xs text-white/70">Scaling</p>
           <div className="budget-stream absolute bottom-0 left-1/2 w-2 h-12 bg-[#006fff] rounded-t transform -translate-x-1/2 opacity-70"></div>
         </div>
-        <div className="bg-white/20 rounded-lg border border-white/30 p-3 relative"> 
-          <h4 className="text-xs font-semibold text-foreground mb-1">Layer 3</h4>
-          <p className="text-xs text-muted-foreground">Retargeting</p>
+        <div className="bg-white/10 rounded-lg border border-white/20 p-3 relative"> 
+          <h4 className="text-xs font-semibold text-white mb-1">Layer 3</h4>
+          <p className="text-xs text-white/70">Retargeting</p>
           <div className="budget-stream absolute bottom-0 left-1/2 w-2 h-6 bg-[#006fff] rounded-t transform -translate-x-1/2 opacity-70"></div>
         </div>
       </div>
@@ -84,7 +85,7 @@ const ProfitFirstAnimation = () => {
       <div ref={containerRef} className="absolute bottom-8 right-8 w-20 h-20">
         <div className="profit-gauge relative w-full h-full rounded-full border-4 border-[#006fff] bg-white/10">
           <div className="absolute top-1/2 left-1/2 w-1 h-8 bg-[#006fff] transform -translate-x-1/2 origin-bottom gauge-needle transition-all duration-300"></div>
-          <div className="absolute top-full left-1/2 transform -translate-x-1/2 text-xs text-foreground font-medium mt-1">
+          <div className="absolute top-full left-1/2 transform -translate-x-1/2 text-xs text-white font-medium mt-1">
             ROAS
           </div>
         </div>
@@ -95,39 +96,47 @@ const ProfitFirstAnimation = () => {
 
 const ProfitFirstSection = () => {
   return (
-    <section className="w-full bg-muted py-16 lg:py-20 font-sans">
-      <div className="container mx-auto px-4">
+    <section className="w-full bg-gradient-to-b from-black to-[#0a0a0a] py-16 lg:py-20 font-sans relative overflow-hidden">
+      <ParallaxDots 
+        count={50} 
+        colors={['#006FFF', '#3944bc', '#ffde00', '#ffffff']} 
+        minSize={2} 
+        maxSize={6} 
+        className="z-0"
+      />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content - Left */}
           <div className="max-w-xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 lg:mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
               Profit-First Media Buying™
             </h2>
             
-            <h3 className="text-xl lg:text-2xl font-semibold text-foreground mb-4 lg:mb-6">
+            <h3 className="text-xl lg:text-2xl font-semibold text-white mb-4 lg:mb-6">
               From wasted ad spend to profitable scaling.
             </h3>
             
-            <p className="text-muted-foreground mb-6 text-base lg:text-lg leading-relaxed">
+            <p className="text-white/70 mb-6 text-base lg:text-lg leading-relaxed">
               Most eCom accounts collapse into chaos — overspending, no segmentation, volatile ROAS.
             </p>
 
-            <p className="text-foreground font-semibold mb-4 lg:mb-6">
+            <p className="text-white font-semibold mb-4 lg:mb-6">
               Our Profit-First Media Buying™ fixes this with:
             </p>
 
             <ul className="space-y-3 lg:space-y-4 mb-8">
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <span className="text-muted-foreground">3-layer account structure for clarity</span>
+                <span className="text-white/70">3-layer account structure for clarity</span>
               </li>
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <span className="text-muted-foreground">Automated rules to protect MER/ROAS</span>
+                <span className="text-white/70">Automated rules to protect MER/ROAS</span>
               </li>
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <span className="text-muted-foreground">Controlled scaling triggered by profit, not guesswork</span>
+                <span className="text-white/70">Controlled scaling triggered by profit, not guesswork</span>
               </li>
             </ul>
 
