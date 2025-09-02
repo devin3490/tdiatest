@@ -7,6 +7,9 @@ import CaseStudiesCarousel from '../components/CaseStudiesCarousel';
 import AdStrategiesSection from '../components/AdStrategiesSection';
 import BraggingSection from '../components/BraggingSection';
 import EcommerceProblemSection from '../components/EcommerceProblemSection';
+import CreativePipelineSection from '../components/CreativePipelineSection';
+import ProfitFirstSection from '../components/ProfitFirstSection';
+import CreativeScoringSection from '../components/CreativeScoringSection';
 import WhatYouGetSection from '../components/WhatYouGetSection';
 import ComparisonSection from '../components/ComparisonSection';
 
@@ -22,6 +25,9 @@ const Index = () => {
       <HeroSection />
       <BrandsSection />
       <EcommerceProblemSection />
+      <CreativePipelineSection />
+      <ProfitFirstSection />
+      <CreativeScoringSection />
       <AdStrategiesSection />
       <TestimonialsSection />
       <CaseStudiesCarousel />
