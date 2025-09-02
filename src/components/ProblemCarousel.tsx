@@ -76,12 +76,12 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
     <div className="space-y-6">
       <div className="relative mb-4">
         {/* Enhanced title with multiple effects */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-center relative z-10">
-          <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-black text-center relative z-10">
+          <span className="text-white drop-shadow-2xl">
             {title}
           </span>
           {/* Glow effect behind text */}
-          <span className="absolute inset-0 bg-gradient-to-r from-[#006fff]/30 via-[#4d9bff]/40 to-[#006fff]/30 bg-clip-text text-transparent blur-sm animate-pulse">
+          <span className="absolute inset-0 text-[#006fff]/30 blur-sm animate-pulse">
             {title}
           </span>
         </h2>
