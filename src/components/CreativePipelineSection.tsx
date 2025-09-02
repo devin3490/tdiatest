@@ -84,12 +84,6 @@ const CreativePipelineSection = () => {
                   ))}
                 </svg>
                 
-                {/* Trend Labels */}
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-[#8bfa7b]/20 border border-[#8bfa7b]/40 rounded-full px-3 py-1 backdrop-blur-sm animate-bounce">
-                    <span className="text-[#8bfa7b] text-xs font-medium">CREATIVE FLOW</span>
-                  </div>
-                </div>
               </div>
               
               <style>{`

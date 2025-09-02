@@ -42,8 +42,7 @@ const CreativeScoringSection = () => {
                   { label: 'Hook Rate', value: '94%', color: '#8bfa7b', angle: 0 },
                   { label: 'CTR', value: '4.8%', color: '#ffde00', angle: 72 },
                   { label: 'ROAS', value: '6.2x', color: '#006fff', angle: 144 },
-                  { label: 'Hold Rate', value: '85%', color: '#ff6b6b', angle: 216 },
-                  { label: 'CPA', value: '€12', color: '#8b5cf6', angle: 288 }
+                  { label: 'Hold Rate', value: '85%', color: '#ff6b6b', angle: 270 }
                 ].map((metric, i) => {
                   const angle = metric.angle * Math.PI / 180;
                   const radius = 140;
