@@ -69,66 +69,122 @@ const ProfitFirstSection = () => {
           </div>
 
           {/* Visual - Right */}
-          <div>
-            <div className="w-full h-80 bg-gradient-to-br from-white/5 to-[#006fff]/5 rounded-2xl border border-white/10 p-6 relative overflow-hidden">
-              {/* Profit-First Animation */}
+          <div className="flex items-center justify-center">
+            <div className="relative w-full max-w-lg h-96">
+              {/* Profit Growth Visualization */}
               <div className="absolute inset-0 flex items-center justify-center">
+                {/* 3D Revenue Chart */}
                 <div className="relative w-full h-full">
-                  {/* Revenue Chart Animation */}
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="flex items-end justify-between space-x-2 h-32">
-                      {[3, 5, 4, 7, 6, 9, 8, 11, 10].map((height, i) => (
+                  {/* Animated Bars */}
+                  <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex items-end space-x-3">
+                    {[2, 4, 3, 6, 5, 8, 7, 10, 9, 12].map((height, i) => (
+                      <div key={i} className="relative">
                         <div
-                          key={i}
-                          className="bg-gradient-to-t from-[#006fff] to-[#006fff]/50 rounded-t-sm flex-1 animate-pulse"
+                          className="bg-gradient-to-t from-[#006fff] via-[#3944bc] to-[#ffde00] rounded-t-lg shadow-2xl"
                           style={{
-                            height: `${height * 8}px`,
+                            width: '18px',
+                            height: `${height * 12}px`,
+                            animation: `growUp ${2 + i * 0.2}s ease-out infinite alternate`,
+                            animationDelay: `${i * 0.1}s`,
+                            boxShadow: '0 0 20px rgba(0,111,255,0.5)'
                           }}
                         ></div>
-                      ))}
-                    </div>
-                    <div className="text-white/60 text-xs mt-2 text-center">ROAS Growth</div>
-                  </div>
-                  
-                  {/* Floating Metrics */}
-                  <div className="absolute top-6 left-6">
-                    <div className="bg-[#8bfa7b]/20 border border-[#8bfa7b]/30 rounded-lg p-3 backdrop-blur-sm animate-pulse">
-                      <div className="text-[#8bfa7b] font-bold text-lg">+47%</div>
-                      <div className="text-white/60 text-xs">Profit Margin</div>
-                    </div>
-                  </div>
-                  
-                  <div className="absolute top-20 right-6">
-                    <div className="bg-[#ffde00]/20 border border-[#ffde00]/30 rounded-lg p-3 backdrop-blur-sm animate-bounce">
-                      <div className="text-[#ffde00] font-bold text-lg">5.2x</div>
-                      <div className="text-white/60 text-xs">ROAS</div>
-                    </div>
-                  </div>
-                  
-                  {/* 5-Pillar Strategy Visual */}
-                  <div className="absolute top-6 right-16 flex flex-col space-y-1">
-                    {['Core', 'Drops', 'Drivers', 'Cross', 'Bets'].map((pillar, i) => (
-                      <div
-                        key={i}
-                        className="w-12 h-2 bg-gradient-to-r from-[#006fff]/50 to-[#006fff]/80 rounded-full"
-                        style={{
-                          animation: `pulse ${2 + i * 0.3}s ease-in-out infinite`,
-                          animationDelay: `${i * 0.2}s`
-                        }}
-                      ></div>
+                        <div className="absolute -inset-1 bg-gradient-to-t from-[#006fff]/20 to-[#ffde00]/20 rounded-lg blur-sm -z-10"></div>
+                      </div>
                     ))}
                   </div>
+                  
+                  {/* Floating KPI Cards */}
+                  <div className="absolute top-8 left-8">
+                    <div className="bg-gradient-to-br from-[#8bfa7b]/30 to-[#8bfa7b]/10 border border-[#8bfa7b]/40 rounded-xl p-4 backdrop-blur-lg shadow-2xl">
+                      <div className="text-[#8bfa7b] font-bold text-2xl animate-pulse">+127%</div>
+                      <div className="text-white/80 text-sm">Profit Growth</div>
+                      <div className="w-12 h-1 bg-[#8bfa7b] rounded-full mt-2 animate-pulse"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute top-20 right-8">
+                    <div className="bg-gradient-to-br from-[#ffde00]/30 to-[#ffde00]/10 border border-[#ffde00]/40 rounded-xl p-4 backdrop-blur-lg shadow-2xl">
+                      <div className="text-[#ffde00] font-bold text-2xl animate-bounce">6.7x</div>
+                      <div className="text-white/80 text-sm">ROAS</div>
+                      <div className="w-12 h-1 bg-[#ffde00] rounded-full mt-2 animate-pulse"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute bottom-8 right-12">
+                    <div className="bg-gradient-to-br from-[#006fff]/30 to-[#006fff]/10 border border-[#006fff]/40 rounded-xl p-4 backdrop-blur-lg shadow-2xl">
+                      <div className="text-[#006fff] font-bold text-2xl animate-pulse">€2.4M</div>
+                      <div className="text-white/80 text-sm">Revenue</div>
+                      <div className="w-12 h-1 bg-[#006fff] rounded-full mt-2 animate-pulse"></div>
+                    </div>
+                  </div>
+                  
+                  {/* 5-Pillar Strategy Orbits */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    {['CORE', 'DROPS', 'DRIVERS', 'CROSS', 'BETS'].map((pillar, i) => {
+                      const angle = (i * 72) * Math.PI / 180;
+                      const radius = 80;
+                      const x = Math.cos(angle) * radius;
+                      const y = Math.sin(angle) * radius;
+                      
+                      return (
+                        <div
+                          key={i}
+                          className="absolute w-16 h-6 bg-gradient-to-r from-[#006fff]/60 to-[#3944bc]/40 rounded-full flex items-center justify-center border border-white/20 backdrop-blur-sm"
+                          style={{
+                            left: '50%',
+                            top: '50%',
+                            transform: `translate(${x - 32}px, ${y - 12}px)`,
+                            animation: `float ${3 + i * 0.5}s ease-in-out infinite`,
+                            animationDelay: `${i * 0.3}s`
+                          }}
+                        >
+                          <span className="text-white text-xs font-medium">{pillar}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  
+                  {/* Profit Waves */}
+                  <svg className="absolute inset-0 w-full h-full overflow-visible opacity-30">
+                    <defs>
+                      <radialGradient id="profitGradient">
+                        <stop offset="0%" stopColor="#8bfa7b" stopOpacity="0.6"/>
+                        <stop offset="100%" stopColor="#006fff" stopOpacity="0.1"/>
+                      </radialGradient>
+                    </defs>
+                    {[...Array(4)].map((_, i) => (
+                      <circle
+                        key={i}
+                        cx="50%"
+                        cy="50%"
+                        r={40 + i * 30}
+                        fill="none"
+                        stroke="url(#profitGradient)"
+                        strokeWidth="2"
+                        opacity={0.4 - i * 0.1}
+                        style={{
+                          animation: `expand ${3 + i}s ease-in-out infinite`,
+                          transformOrigin: '50% 50%'
+                        }}
+                      />
+                    ))}
+                  </svg>
                 </div>
               </div>
               
               <style>{`
-                @keyframes growBar {
-                  0% { height: 8px; opacity: 0.5; }
-                  50% { opacity: 1; }
-                  100% { opacity: 0.8; }
+                @keyframes growUp {
+                  0% { transform: scaleY(0.3); opacity: 0.7; }
+                  100% { transform: scaleY(1); opacity: 1; }
                 }
-                .grow-bar {
-                  animation: growBar 2s ease-out infinite;
+                @keyframes expand {
+                  0%, 100% { transform: scale(1); opacity: 0.4; }
+                  50% { transform: scale(1.1); opacity: 0.2; }
+                }
+                @keyframes float {
+                  0%, 100% { transform: translate(var(--x), var(--y)) translateY(0px); }
+                  50% { transform: translate(var(--x), var(--y)) translateY(-8px); }
                 }
               `}</style>
             </div>

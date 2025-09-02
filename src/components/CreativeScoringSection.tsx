@@ -16,96 +16,125 @@ const CreativeScoringSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Visual - Left */}
-          <div className="order-2 lg:order-1">
-            <div className="w-full h-80 bg-gradient-to-br from-white/5 to-[#006fff]/5 rounded-2xl border border-white/10 p-6 relative overflow-hidden">
-              {/* Creative Scoring Animation */}
+          <div className="order-2 lg:order-1 flex items-center justify-center">
+            <div className="relative w-full max-w-lg h-96">
+              {/* Creative Scoring Dashboard */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative w-full h-full">
-                  {/* Scoring Dashboard */}
-                  <div className="grid grid-cols-2 gap-4 absolute inset-6">
-                    {/* Hook Rate Card */}
-                    <div className="bg-black/40 border border-[#8bfa7b]/30 rounded-lg p-3 backdrop-blur-sm">
-                      <div className="text-[#8bfa7b] text-xs mb-1">Hook Rate</div>
-                      <div className="text-white font-bold text-lg animate-pulse">87%</div>
-                      <div className="w-full bg-white/10 h-1 rounded-full mt-2">
-                        <div 
-                          className="bg-[#8bfa7b] h-full rounded-full"
-                          style={{ width: '87%' }}
-                        ></div>
-                      </div>
+                {/* Central Processing Unit */}
+                <div className="relative">
+                  <div className="w-32 h-32 bg-gradient-to-br from-[#006fff]/20 to-[#8bfa7b]/20 rounded-full border-2 border-[#006fff]/30 flex items-center justify-center backdrop-blur-sm">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#006fff] to-[#8bfa7b] rounded-full flex items-center justify-center animate-pulse">
+                      <span className="text-white font-bold text-lg">AI</span>
                     </div>
-                    
-                    {/* CTR Card */}
-                    <div className="bg-black/40 border border-[#ffde00]/30 rounded-lg p-3 backdrop-blur-sm">
-                      <div className="text-[#ffde00] text-xs mb-1">CTR</div>
-                      <div className="text-white font-bold text-lg animate-bounce">4.2%</div>
-                      <div className="w-full bg-white/10 h-1 rounded-full mt-2">
-                        <div 
-                          className="bg-[#ffde00] h-full rounded-full animate-pulse"
-                          style={{ width: '84%' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    {/* ROAS Card */}
-                    <div className="bg-black/40 border border-[#006fff]/30 rounded-lg p-3 backdrop-blur-sm">
-                      <div className="text-[#006fff] text-xs mb-1">ROAS</div>
-                      <div className="text-white font-bold text-lg animate-pulse">5.7x</div>
-                      <div className="w-full bg-white/10 h-1 rounded-full mt-2">
-                        <div 
-                          className="bg-[#006fff] h-full rounded-full animate-pulse"
-                          style={{ width: '95%' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    {/* Status Indicator */}
-                    <div className="bg-black/40 border border-white/20 rounded-lg p-3 backdrop-blur-sm flex items-center justify-center">
+                  </div>
+                  
+                  {/* Rotating Rings */}
+                  <div className="absolute inset-0 animate-spin" style={{ animation: 'spin 20s linear infinite' }}>
+                    <div className="w-full h-full border-2 border-dashed border-[#ffde00]/40 rounded-full"></div>
+                  </div>
+                  <div className="absolute inset-2 animate-spin" style={{ animation: 'spin 15s linear infinite reverse' }}>
+                    <div className="w-full h-full border border-dashed border-[#8bfa7b]/40 rounded-full"></div>
+                  </div>
+                </div>
+                
+                {/* Scoring Metrics Floating Around */}
+                {[
+                  { label: 'Hook Rate', value: '94%', color: '#8bfa7b', angle: 0 },
+                  { label: 'CTR', value: '4.8%', color: '#ffde00', angle: 72 },
+                  { label: 'ROAS', value: '6.2x', color: '#006fff', angle: 144 },
+                  { label: 'Hold Rate', value: '85%', color: '#ff6b6b', angle: 216 },
+                  { label: 'CPA', value: '€12', color: '#8b5cf6', angle: 288 }
+                ].map((metric, i) => {
+                  const angle = metric.angle * Math.PI / 180;
+                  const radius = 140;
+                  const x = Math.cos(angle) * radius;
+                  const y = Math.sin(angle) * radius;
+                  
+                  return (
+                    <div
+                      key={i}
+                      className="absolute bg-gradient-to-br from-black/80 to-black/60 border rounded-xl p-3 backdrop-blur-lg shadow-2xl"
+                      style={{
+                        left: '50%',
+                        top: '50%',
+                        transform: `translate(${x - 40}px, ${y - 30}px)`,
+                        borderColor: `${metric.color}40`,
+                        animation: `orbit ${12 + i * 2}s linear infinite`,
+                        animationDelay: `${i * 0.5}s`
+                      }}
+                    >
                       <div className="text-center">
-                        <div className="w-8 h-8 bg-[#8bfa7b] rounded-full mx-auto mb-2 animate-pulse flex items-center justify-center">
-                          <div className="w-3 h-3 bg-white rounded-full"></div>
+                        <div 
+                          className="font-bold text-lg animate-pulse"
+                          style={{ color: metric.color }}
+                        >
+                          {metric.value}
                         </div>
-                        <div className="text-[#8bfa7b] text-xs font-medium">SCALE</div>
+                        <div className="text-white/60 text-xs">{metric.label}</div>
                       </div>
+                      
+                      {/* Glowing effect */}
+                      <div 
+                        className="absolute inset-0 rounded-xl blur-lg -z-10 opacity-50"
+                        style={{ backgroundColor: `${metric.color}20` }}
+                      ></div>
                     </div>
-                  </div>
+                  );
+                })}
+                
+                {/* Data Flow Lines */}
+                <svg className="absolute inset-0 w-full h-full overflow-visible">
+                  <defs>
+                    <linearGradient id="dataFlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#006fff" stopOpacity="0.8"/>
+                      <stop offset="33%" stopColor="#8bfa7b" stopOpacity="0.6"/>
+                      <stop offset="66%" stopColor="#ffde00" stopOpacity="0.4"/>
+                      <stop offset="100%" stopColor="#ff6b6b" stopOpacity="0.2"/>
+                    </linearGradient>
+                  </defs>
                   
-                  {/* Floating Score Indicators */}
-                  <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-[#8bfa7b] rounded-full animate-ping"></div>
-                      <div className="w-3 h-3 bg-[#ffde00] rounded-full animate-ping" style={{ animationDelay: '0.2s' }}></div>
-                      <div className="w-3 h-3 bg-red-500 rounded-full animate-ping" style={{ animationDelay: '0.4s' }}></div>
-                    </div>
+                  {[...Array(6)].map((_, i) => (
+                    <g key={i}>
+                      <circle
+                        cx="50%"
+                        cy="50%"
+                        r={60 + i * 25}
+                        fill="none"
+                        stroke="url(#dataFlow)"
+                        strokeWidth="1"
+                        strokeDasharray="8,12"
+                        opacity={0.4 - i * 0.05}
+                        style={{
+                          animation: `spin ${10 + i * 3}s linear infinite`,
+                          transformOrigin: '50% 50%'
+                        }}
+                      />
+                    </g>
+                  ))}
+                </svg>
+                
+                {/* Status Indicators */}
+                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+                  <div className="w-3 h-3 bg-[#8bfa7b] rounded-full animate-ping"></div>
+                  <div className="w-3 h-3 bg-[#ffde00] rounded-full animate-ping" style={{ animationDelay: '0.3s' }}></div>
+                  <div className="w-3 h-3 bg-[#006fff] rounded-full animate-ping" style={{ animationDelay: '0.6s' }}></div>
+                </div>
+                
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-[#8bfa7b]/20 border border-[#8bfa7b]/40 rounded-full px-4 py-2 backdrop-blur-sm">
+                    <span className="text-[#8bfa7b] text-sm font-medium animate-pulse">OPTIMIZING</span>
                   </div>
-                  
-                  {/* Algorithm Lines */}
-                  <svg className="absolute inset-0 w-full h-full opacity-20">
-                    <defs>
-                      <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#006fff" stopOpacity="0.8"/>
-                        <stop offset="50%" stopColor="#8bfa7b" stopOpacity="0.6"/>
-                        <stop offset="100%" stopColor="#ffde00" stopOpacity="0.4"/>
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M 20 40 Q 120 20 220 60 Q 280 100 340 40"
-                      stroke="url(#scoreGradient)"
-                      strokeWidth="1.5"
-                      fill="none"
-                      className="animate-pulse"
-                    />
-                  </svg>
                 </div>
               </div>
               
               <style>{`
-                @keyframes expand {
-                  0% { width: 20%; }
-                  100% { width: 87%; }
+                @keyframes orbit {
+                  from { transform: translate(var(--x), var(--y)) rotate(0deg) translate(140px) rotate(0deg); }
+                  to { transform: translate(var(--x), var(--y)) rotate(360deg) translate(140px) rotate(-360deg); }
                 }
-                .expand-animation {
-                  animation: expand 3s ease-in-out infinite;
+                @keyframes spin {
+                  from { transform: rotate(0deg); }
+                  to { transform: rotate(360deg); }
                 }
               `}</style>
             </div>
