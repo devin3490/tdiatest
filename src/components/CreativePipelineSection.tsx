@@ -1,113 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import ParallaxDots from './ParallaxDots';
-
-const CreativePipelineAnimation = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const cards = container.querySelectorAll('.pipeline-card');
-    let animationId: number;
-    let startTime = Date.now();
-
-    const animate = () => {
-      const elapsed = (Date.now() - startTime) % 15000; // 15 second loop
-      
-      cards.forEach((card, index) => {
-        const element = card as HTMLElement;
-        const phase = (elapsed + index * 3000) % 15000; // Stagger cards by 3 seconds
-        
-        // Reset states
-        element.style.transform = 'translateX(0px)';
-        element.style.opacity = '0.9';
-        element.style.boxShadow = '0 4px 12px rgba(0, 111, 255, 0.3)';
-        element.style.backgroundColor = '#006fff';
-        
-        if (phase < 3000) {
-          // In Backlog
-          element.style.transform = 'translateX(0px)';
-        } else if (phase < 8000) {
-          // Moving to Testing
-          const progress = Math.min((phase - 3000) / 2000, 1);
-          element.style.transform = `translateX(${progress * 250}px)`;
-          if (progress >= 1) {
-            element.style.boxShadow = '0 0 25px rgba(0, 111, 255, 0.8)';
-            element.style.backgroundColor = '#0052cc';
-          }
-        } else if (phase < 12000) {
-          // Moving to Approved
-          const progress = Math.min((phase - 8000) / 2000, 1);
-          element.style.transform = `translateX(${250 + progress * 250}px)`;
-          if (progress >= 1) {
-            element.style.boxShadow = '0 0 25px rgba(139, 250, 123, 0.8)';
-            element.style.backgroundColor = '#8bfa7b';
-          }
-        } else {
-          // Reset phase
-          element.style.opacity = '0.6';
-          element.style.transform = 'translateX(0px)';
-        }
-      });
-      
-      animationId = requestAnimationFrame(animate);
-    };
-
-    const shouldAnimate = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (shouldAnimate) {
-      animate();
-    }
-
-    return () => {
-      if (animationId) cancelAnimationFrame(animationId);
-    };
-  }, []);
-
-  return (
-    <div className="relative w-full h-80 bg-gradient-to-br from-white/5 to-[#006fff]/5 rounded-2xl p-6 overflow-hidden border border-white/10">
-      {/* Pipeline lanes - larger and more visible */}
-      <div className="grid grid-cols-3 gap-6 h-32 mb-8">
-        <div className="bg-white/10 rounded-xl border border-white/20 p-4 flex flex-col">
-          <h4 className="text-lg font-bold text-white mb-2">Backlog</h4>
-          <p className="text-sm text-white/70">Ideas Queue</p>
-        </div>
-        <div className="bg-white/10 rounded-xl border border-white/20 p-4 flex flex-col">
-          <h4 className="text-lg font-bold text-white mb-2">In Testing</h4>
-          <p className="text-sm text-white/70">Active Tests</p>
-        </div>
-        <div className="bg-white/10 rounded-xl border border-white/20 p-4 flex flex-col">
-          <h4 className="text-lg font-bold text-white mb-2">Approved</h4>
-          <p className="text-sm text-white/70">Ready to Scale</p>
-        </div>
-      </div>
-      
-      {/* Animated cards - bigger and more visible */}
-      <div ref={containerRef} className="absolute top-40 left-6">
-        {[0, 1, 2].map((index) => (
-          <div
-            key={index}
-            className={`pipeline-card absolute w-24 h-12 bg-[#006fff] rounded-lg text-white text-sm font-bold flex items-center justify-center transition-all duration-1000 ${
-              index === 0 ? 'top-0' : index === 1 ? 'top-16' : 'top-32'
-            }`}
-            style={{ 
-              boxShadow: '0 4px 12px rgba(0, 111, 255, 0.3)',
-              left: '0px'
-            }}
-          >
-            {index === 0 ? 'Hook A' : index === 1 ? 'UGC B' : 'Demo C'}
-          </div>
-        ))}
-      </div>
-      
-      {/* Progress indicator */}
-      <div className="absolute bottom-4 left-6 text-xs text-white/60">
-        Pipeline Flow: Ideation → Testing → Scaling
-      </div>
-    </div>
-  );
-};
 
 const CreativePipelineSection = () => {
   return (
@@ -124,7 +17,9 @@ const CreativePipelineSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Visual - Left */}
           <div className="order-2 lg:order-1">
-            <CreativePipelineAnimation />
+            <div className="w-full h-80 bg-gradient-to-br from-white/5 to-[#006fff]/5 rounded-2xl border border-white/10">
+              {/* Empty space for animation */}
+            </div>
           </div>
 
           {/* Content - Right */}
