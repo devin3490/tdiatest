@@ -24,35 +24,45 @@ const CreativeScoringSection = () => {
 
           {/* Content - Right */}
           <div className="order-1 lg:order-2">
-            <div className="max-w-xl lg:max-w-none">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+            <div className="max-w-xl lg:max-w-none text-left">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6 text-left">
                 Creative Scoring OS™ (incl. Hook Rate First™)
               </h2>
               
-              <h3 className="text-xl lg:text-2xl font-semibold text-white mb-4 lg:mb-6">
-                From "launch and pray" to scaling only the winners.
+              <h3 className="text-xl lg:text-2xl font-semibold text-white mb-4 lg:mb-6 text-left">
+                From ad fatigue to fresh creatives that actually scale.
               </h3>
               
-              <p className="text-white/70 mb-6 text-base lg:text-lg leading-relaxed">
-                Scaling the wrong creatives is the fastest way to burn cash. Vanity metrics (likes, impressions) hide the truth.
+              <p className="text-white/70 mb-4 text-base lg:text-lg leading-relaxed text-left">
+                Fashion brands burn cash not because they lack ideas — but because they can't refresh creatives fast enough.
               </p>
+              
+              <div className="text-white/70 mb-6 text-base lg:text-lg leading-relaxed text-left">
+                <p className="mb-2">👉 After 2–3 exposures, ads fatigue.</p>
+                <p className="mb-2">👉 CPA climbs while CTR drops.</p>
+                <p>👉 Without a system, teams keep "launching and praying."</p>
+              </div>
 
-              <p className="text-white font-semibold mb-4 lg:mb-6">
-                Our Creative Scoring OS™ changes that:
+              <p className="text-white font-semibold mb-4 lg:mb-6 text-left">
+                Our Creative Scoring OS™ fixes that by:
               </p>
 
               <ul className="space-y-3 lg:space-y-4 mb-8">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-white/70">Scores every ad on Hook Rate, CTR, Hold Rate & ROAS</span>
+                  <span className="text-white/70 text-sm lg:text-base">Scoring every ad on Hook Rate, CTR, Hold Rate & ROAS</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-white/70">3-color system shows what to cut, scale, or improve</span>
+                  <span className="text-white/70 text-sm lg:text-base">Flagging fatigued creatives early, before CPA spikes</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-white/70">Hook Rate First™ logic ensures only attention-grabbing ads get scaled</span>
+                  <span className="text-white/70 text-sm lg:text-base">Showing in 3 colors what to cut, scale, or improve</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-white/70 text-sm lg:text-base">Hook Rate First™ logic ensures only attention-grabbing ads get budget</span>
                 </li>
               </ul>
 
@@ -67,7 +77,7 @@ const CreativeScoringSection = () => {
 
               <div className="bg-[#8bfa7b]/10 border border-[#8bfa7b]/30 rounded-lg p-4">
                 <p className="text-[#8bfa7b] font-medium">
-                  ✅ Solves pain points: #10, #11, #14
+                  ✅ Solves pain points: #4 (Creative cadence), #10, #11, #14
                 </p>
               </div>
             </div>
