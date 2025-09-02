@@ -1,5 +1,4 @@
-
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef, useMemo } from 'react';
 
 interface Dot {
   id: number;
@@ -30,105 +29,102 @@ const ParallaxDots: React.FC<ParallaxDotsProps> = ({
   maxOpacity = 0.5,
   className = '',
 }) => {
-  const [dots, setDots] = useState<Dot[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number | null>(null);
   const mousePosition = useRef({ x: 0, y: 0 });
-  const currentMousePosition = useRef({ x: 0, y: 0 });
-  const dotsDataRef = useRef<Dot[]>([]);
+  const dotsElementsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
-    // Generate random dots
+  // Génère les dots une seule fois avec useMemo
+  const dots = useMemo<Dot[]>(() => {
     const newDots: Dot[] = [];
     
     for (let i = 0; i < count; i++) {
       newDots.push({
         id: i,
-        x: Math.random() * 100, // % position
-        y: Math.random() * 100, // % position
+        x: Math.random() * 100,
+        y: Math.random() * 100,
         size: minSize + Math.random() * (maxSize - minSize),
         color: colors[Math.floor(Math.random() * colors.length)],
-        // Increase speed range further for more noticeable parallax effect
-        speed: 0.02 + Math.random() * 0.08, // Significantly higher speed values
+        speed: 0.5 + Math.random() * 1.5, // Vitesse réduite mais plus fluide
         opacity: minOpacity + Math.random() * (maxOpacity - minOpacity)
       });
     }
     
-    setDots(newDots);
-    dotsDataRef.current = newDots;
+    return newDots;
+  }, [count, colors, minSize, maxSize, minOpacity, maxOpacity]);
 
-    // Initialize mouse position to center
-    mousePosition.current = { x: 50, y: 50 };
-    currentMousePosition.current = { x: 50, y: 50 };
-
-    // Add mouse move event listener with improved sensitivity
+  useEffect(() => {
+    let isAnimating = true;
+    
+    // Gestionnaire de mouvement de souris optimisé
     const handleMouseMove = (e: MouseEvent) => {
-      if (containerRef.current) {
-        const rect = containerRef.current.getBoundingClientRect();
-        mousePosition.current = {
-          x: ((e.clientX - rect.left) / rect.width) * 100,
-          y: ((e.clientY - rect.top) / rect.height) * 100
-        };
-      }
+      if (!containerRef.current) return;
+      
+      const rect = containerRef.current.getBoundingClientRect();
+      mousePosition.current = {
+        x: ((e.clientX - rect.left) / rect.width - 0.5) * 100,
+        y: ((e.clientY - rect.top) / rect.height - 0.5) * 100
+      };
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    
-    // Use requestAnimationFrame for smooth animation
+    // Animation optimisée avec transform au lieu de left/top
     const animate = () => {
-      // Higher lerp factor for much more immediate response
-      const lerpFactor = 0.2; 
+      if (!isAnimating) return;
       
-      currentMousePosition.current = {
-        x: currentMousePosition.current.x + (mousePosition.current.x - currentMousePosition.current.x) * lerpFactor,
-        y: currentMousePosition.current.y + (mousePosition.current.y - currentMousePosition.current.y) * lerpFactor
-      };
+      dotsElementsRef.current.forEach((dotElement, index) => {
+        if (!dotElement) return;
+        
+        const dot = dots[index];
+        const offsetX = mousePosition.current.x * dot.speed * 0.3;
+        const offsetY = mousePosition.current.y * dot.speed * 0.3;
+        
+        // Utilise transform pour des performances optimales
+        dotElement.style.transform = `translate(-50%, -50%) translate(${offsetX}px, ${offsetY}px)`;
+      });
       
-      // Update dots state for render only when needed
-      setDots(prevDots => [...prevDots]);
       animationRef.current = requestAnimationFrame(animate);
     };
-    
-    // Start the animation
-    animationRef.current = requestAnimationFrame(animate);
-    
+
+    // Démarrer l'animation seulement si on a le container
+    if (containerRef.current) {
+      window.addEventListener('mousemove', handleMouseMove, { passive: true });
+      animationRef.current = requestAnimationFrame(animate);
+    }
+
     return () => {
+      isAnimating = false;
       window.removeEventListener('mousemove', handleMouseMove);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [count, colors, minSize, maxSize, minOpacity, maxOpacity]);
+  }, [dots]);
 
   return (
     <div 
       ref={containerRef} 
       className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
     >
-      {dots.map((dot) => {
-        // Calculate the parallax offset based on current mouse position
-        // Increase movement range significantly for much more noticeable effect
-        const offsetX = (currentMousePosition.current.x - 50) * dot.speed * 3;
-        const offsetY = (currentMousePosition.current.y - 50) * dot.speed * 3;
-        
-        return (
-          <div
-            key={dot.id}
-            className="absolute rounded-full"
-            style={{
-              left: `calc(${dot.x}% + ${offsetX}%)`,
-              top: `calc(${dot.y}% + ${offsetY}%)`,
-              width: `${dot.size}px`,
-              height: `${dot.size}px`,
-              backgroundColor: dot.color,
-              opacity: dot.opacity,
-              transform: 'translate(-50%, -50%)',
-              // Remove transition for direct movement - this will make it perfectly smooth
-              willChange: 'left, top'
-            }}
-          />
-        );
-      })}
+      {dots.map((dot, index) => (
+        <div
+          key={dot.id}
+          ref={(el) => {
+            dotsElementsRef.current[index] = el;
+          }}
+          className="absolute rounded-full"
+          style={{
+            left: `${dot.x}%`,
+            top: `${dot.y}%`,
+            width: `${dot.size}px`,
+            height: `${dot.size}px`,
+            backgroundColor: dot.color,
+            opacity: dot.opacity,
+            transform: 'translate(-50%, -50%)',
+            willChange: 'transform', // Optimisation GPU
+            backfaceVisibility: 'hidden', // Anti-aliasing
+          }}
+        />
+      ))}
     </div>
   );
 };
