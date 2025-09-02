@@ -70,8 +70,67 @@ const ProfitFirstSection = () => {
 
           {/* Visual - Right */}
           <div>
-            <div className="w-full h-80 bg-gradient-to-br from-white/5 to-[#006fff]/5 rounded-2xl border border-white/10">
-              {/* Empty space for animation */}
+            <div className="w-full h-80 bg-gradient-to-br from-white/5 to-[#006fff]/5 rounded-2xl border border-white/10 p-6 relative overflow-hidden">
+              {/* Profit-First Animation */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-full h-full">
+                  {/* Revenue Chart Animation */}
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <div className="flex items-end justify-between space-x-2 h-32">
+                      {[3, 5, 4, 7, 6, 9, 8, 11, 10].map((height, i) => (
+                        <div
+                          key={i}
+                          className="bg-gradient-to-t from-[#006fff] to-[#006fff]/50 rounded-t-sm flex-1 animate-pulse"
+                          style={{
+                            height: `${height * 8}px`,
+                          }}
+                        ></div>
+                      ))}
+                    </div>
+                    <div className="text-white/60 text-xs mt-2 text-center">ROAS Growth</div>
+                  </div>
+                  
+                  {/* Floating Metrics */}
+                  <div className="absolute top-6 left-6">
+                    <div className="bg-[#8bfa7b]/20 border border-[#8bfa7b]/30 rounded-lg p-3 backdrop-blur-sm animate-pulse">
+                      <div className="text-[#8bfa7b] font-bold text-lg">+47%</div>
+                      <div className="text-white/60 text-xs">Profit Margin</div>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute top-20 right-6">
+                    <div className="bg-[#ffde00]/20 border border-[#ffde00]/30 rounded-lg p-3 backdrop-blur-sm animate-bounce">
+                      <div className="text-[#ffde00] font-bold text-lg">5.2x</div>
+                      <div className="text-white/60 text-xs">ROAS</div>
+                    </div>
+                  </div>
+                  
+                  {/* 5-Pillar Strategy Visual */}
+                  <div className="absolute top-6 right-16 flex flex-col space-y-1">
+                    {['Core', 'Drops', 'Drivers', 'Cross', 'Bets'].map((pillar, i) => (
+                      <div
+                        key={i}
+                        className="w-12 h-2 bg-gradient-to-r from-[#006fff]/50 to-[#006fff]/80 rounded-full"
+                        style={{
+                          animation: `pulse ${2 + i * 0.3}s ease-in-out infinite`,
+                          animationDelay: `${i * 0.2}s`
+                        }}
+                      ></div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              
+              <style>{`
+                @keyframes growBar {
+                  0% { height: 8px; opacity: 0.5; }
+                  50% { opacity: 1; }
+                  100% { opacity: 0.8; }
+                }
+                .grow-bar {
+                  animation: growBar 2s ease-out infinite;
+                }
+              `}</style>
             </div>
           </div>
         </div>

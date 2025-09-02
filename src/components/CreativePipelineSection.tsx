@@ -17,8 +17,65 @@ const CreativePipelineSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Visual - Left */}
           <div className="order-2 lg:order-1">
-            <div className="w-full h-80 bg-gradient-to-br from-white/5 to-[#006fff]/5 rounded-2xl border border-white/10">
-              {/* Empty space for animation */}
+            <div className="w-full h-80 bg-gradient-to-br from-white/5 to-[#006fff]/5 rounded-2xl border border-white/10 p-6 relative overflow-hidden">
+              {/* Creative Pipeline Animation */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-full h-full">
+                  {/* Flowing Cards Animation */}
+                  {[...Array(6)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute w-16 h-20 bg-gradient-to-br from-[#006fff]/30 to-[#ffde00]/20 rounded-lg border border-white/20 backdrop-blur-sm"
+                      style={{
+                        left: `${20 + (i % 3) * 30}%`,
+                        top: `${20 + Math.floor(i / 3) * 40}%`,
+                        animation: `float ${3 + i * 0.5}s ease-in-out infinite`,
+                        animationDelay: `${i * 0.3}s`
+                      }}
+                    >
+                      <div className="w-full h-3 bg-white/10 rounded-t-lg"></div>
+                      <div className="p-2 space-y-1">
+                        <div className="w-8 h-1 bg-white/20 rounded"></div>
+                        <div className="w-6 h-1 bg-white/15 rounded"></div>
+                      </div>
+                    </div>
+                  ))}
+                  
+                  {/* Flow Lines */}
+                  <svg className="absolute inset-0 w-full h-full opacity-30">
+                    <path
+                      d="M 50 50 Q 150 100 250 50 T 350 50"
+                      stroke="url(#gradient1)"
+                      strokeWidth="2"
+                      fill="none"
+                      className="animate-pulse"
+                    />
+                    <defs>
+                      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#006fff" stopOpacity="0.6"/>
+                        <stop offset="100%" stopColor="#ffde00" stopOpacity="0.3"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  
+                  {/* Trend Indicator */}
+                  <div className="absolute top-4 right-4 flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-[#8bfa7b] rounded-full animate-pulse"></div>
+                    <span className="text-[#8bfa7b] text-xs font-medium">TRENDING</span>
+                  </div>
+                </div>
+              </div>
+              
+              <style>{`
+                @keyframes float {
+                  0%, 100% { transform: translateY(0px) rotate(0deg); }
+                  33% { transform: translateY(-8px) rotate(1deg); }
+                  66% { transform: translateY(-4px) rotate(-1deg); }
+                }
+                .float-animation {
+                  animation: float 3s ease-in-out infinite;
+                }
+              `}</style>
             </div>
           </div>
 
