@@ -141,9 +141,9 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
       <div className="pt-4">
         <Button 
           className="text-white font-thin text-lg shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
-          asChild
+          onClick={() => window.open('https://calendly.com/tdiaagency/30min?month=2025-09', '_blank')}
         >
-          <a href={ctaHref}>{ctaText}</a>
+          {ctaText}
         </Button>
       </div>
     </div>

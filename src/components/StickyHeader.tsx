@@ -51,6 +51,7 @@ const StickyHeader: React.FC = () => {
               <TooltipTrigger asChild>
                 <Button 
                   className="text-white font-normal shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                  onClick={() => window.open('https://calendly.com/tdiaagency/30min?month=2025-09', '_blank')}
                 >
                   Get Started
                 </Button>
