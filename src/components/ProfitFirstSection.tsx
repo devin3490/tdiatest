@@ -16,20 +16,20 @@ const ProfitFirstSection = () => {
       <div className="container mx-auto px-4 relative z-10 py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content - Left */}
-          <div className="max-w-xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+          <div className="max-w-xl text-left">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6 text-left">
               Profit-First Media Buying™
             </h2>
             
-            <h3 className="text-xl lg:text-2xl font-semibold text-white mb-4 lg:mb-6">
+            <h3 className="text-xl lg:text-2xl font-semibold text-white mb-4 lg:mb-6 text-left">
               From chaotic catalogs to profitable scaling.
             </h3>
             
-            <p className="text-white/70 mb-6 text-base lg:text-lg leading-relaxed">
+            <p className="text-white/70 mb-6 text-base lg:text-lg leading-relaxed text-left">
               Most fashion brands collapse because their merchandising is broken — diffuse catalogs, stockouts, and over-reliance on a single hero product make ROAS volatile and budgets unstable.
             </p>
 
-            <p className="text-white font-semibold mb-4 lg:mb-6">
+            <p className="text-white font-semibold mb-4 lg:mb-6 text-left">
               Our Profit-First Media Buying™ solves this by:
             </p>
 
