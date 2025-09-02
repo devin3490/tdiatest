@@ -77,9 +77,9 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
           >
             {cards.map((card, index) => (
               <CarouselItem key={index} className="pl-0 basis-full">
-                <div className="group bg-gradient-to-br from-[#10112b] via-[#151638] to-[#0a0b1d] rounded-xl p-8 md:p-12 border border-blue-900/20 relative overflow-hidden min-h-[600px] flex flex-col justify-center transition-all duration-500 hover:border-[#006fff]/50 hover:shadow-2xl hover:shadow-[#006fff]/20 hover:scale-[1.02] cursor-pointer">
+                <div className="group bg-gradient-to-br from-[#10112b] via-[#151638] to-[#0a0b1d] rounded-xl p-8 md:p-12 border border-blue-900/20 relative overflow-hidden min-h-[600px] flex flex-col justify-center transition-colors duration-200 hover:border-[#006fff]/50 cursor-pointer">
                   {/* Enhanced grid overlay with glow effect */}
-                  <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+                  <div className="absolute inset-0 opacity-10 transition-opacity duration-200">
                     <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-500/40 to-transparent absolute top-1/4"></div>
                     <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-500/40 to-transparent absolute top-2/4"></div>
                     <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-500/40 to-transparent absolute top-3/4"></div>
@@ -89,12 +89,12 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                   </div>
 
                   {/* Floating accent dots */}
-                  <div className="absolute top-6 right-6 w-2 h-2 bg-[#006fff] rounded-full animate-pulse"></div>
-                  <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-                  <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-[#4d9bff] rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                  <div className="absolute top-6 right-6 w-2 h-2 bg-[#006fff] rounded-full"></div>
+                  <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                  <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-[#4d9bff] rounded-full"></div>
                   
                   {/* Subtle glow effect on hover */}
-                  <div className="absolute inset-0 bg-gradient-radial from-[#006fff]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-radial from-[#006fff]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   
                   <div className="relative z-10 space-y-8">
                     {/* Header with enhanced number and metric */}
@@ -113,7 +113,7 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                     
                     {/* Enhanced headline with gradient text */}
                     <div className="text-center">
-                      <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight group-hover:from-white group-hover:via-[#4d9bff] group-hover:to-white transition-all duration-500">
+                      <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight group-hover:from-white group-hover:via-[#4d9bff] group-hover:to-white transition-all duration-200">
                         {card.headline}
                       </h4>
                     </div>
@@ -125,7 +125,7 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                           {card.text}
                         </p>
                         {/* Subtle bottom accent line */}
-                        <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#006fff]/50 to-transparent mx-auto mt-6 group-hover:w-32 group-hover:via-[#006fff] transition-all duration-500"></div>
+                        <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#006fff]/50 to-transparent mx-auto mt-6 group-hover:w-32 group-hover:via-[#006fff] transition-all duration-200"></div>
                       </div>
                     </div>
                   </div>
