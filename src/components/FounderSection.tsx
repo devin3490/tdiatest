@@ -68,13 +68,6 @@ const FounderSection: React.FC = () => {
           </p>
         </div>
         
-        {/* CTA Button */}
-        <div className="flex justify-center mb-16">
-          <Button className="text-white font-thin text-lg">
-            Book Your Free Discovery Call <ArrowRight className="ml-2" />
-          </Button>
-        </div>
-        
         {/* Team Members - Desktop View */}
         {!isMobile && (
           <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
