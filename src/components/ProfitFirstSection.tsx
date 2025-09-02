@@ -9,99 +9,86 @@ const ProfitFirstAnimation = () => {
     const container = containerRef.current;
     if (!container) return;
 
-    const chaosElements = container.querySelectorAll('.chaos-bar');
-    const structureElements = container.querySelectorAll('.structure-layer');
-    const rulesElements = container.querySelectorAll('.auto-rule');
-    const profitGauge = container.querySelector('.profit-indicator') as HTMLElement;
+    const chaosIndicators = container.querySelectorAll('.chaos-indicator');
+    const structureLayers = container.querySelectorAll('.structure-layer');
+    const autoRules = container.querySelectorAll('.auto-rule');
+    const profitMeter = container.querySelector('.profit-meter') as HTMLElement;
     let animationId: number;
     let startTime = Date.now();
 
     const animate = () => {
-      const elapsed = (Date.now() - startTime) % 16000; // 16 second loop
+      const elapsed = (Date.now() - startTime) % 20000; // 20 second cycle
       
-      if (elapsed < 4000) {
-        // Phase 1: Chaos - volatile spending
-        chaosElements.forEach((element, index) => {
-          const el = element as HTMLElement;
-          const volatility = Math.sin((elapsed + index * 300) / 200) * 0.5 + 0.5;
-          const height = 20 + volatility * 40;
-          el.style.height = `${height}px`;
-          el.style.backgroundColor = volatility > 0.7 ? '#ff6b6b' : volatility > 0.4 ? '#fad500' : '#ff6b6b';
+      if (elapsed < 5000) {
+        // Phase 1: CHAOS - Volatile spending
+        chaosIndicators.forEach((indicator, index) => {
+          const el = indicator as HTMLElement;
+          const volatility = Math.sin((elapsed + index * 400) / 300) * 0.6 + 0.4;
+          el.style.height = `${30 + volatility * 50}px`;
+          el.style.backgroundColor = volatility > 0.7 ? '#ff4444' : volatility > 0.4 ? '#ff8800' : '#ff6666';
           el.style.opacity = '1';
         });
         
-        // Hide structure during chaos
-        structureElements.forEach(el => {
-          (el as HTMLElement).style.opacity = '0.3';
-        });
-        rulesElements.forEach(el => {
-          (el as HTMLElement).style.opacity = '0';
-        });
-        if (profitGauge) {
-          profitGauge.style.opacity = '0.3';
-          profitGauge.style.backgroundColor = '#ff6b6b';
+        structureLayers.forEach(el => (el as HTMLElement).style.opacity = '0.2');
+        autoRules.forEach(el => (el as HTMLElement).style.opacity = '0.1');
+        
+        if (profitMeter) {
+          profitMeter.style.width = '20%';
+          profitMeter.style.backgroundColor = '#ff4444';
         }
         
-      } else if (elapsed < 8000) {
-        // Phase 2: Structure implementation
-        const progress = (elapsed - 4000) / 4000;
+      } else if (elapsed < 10000) {
+        // Phase 2: STRUCTURE - 3-layer account
+        const progress = (elapsed - 5000) / 5000;
         
-        // Fade out chaos
-        chaosElements.forEach(el => {
-          (el as HTMLElement).style.opacity = `${1 - progress}`;
-        });
+        chaosIndicators.forEach(el => (el as HTMLElement).style.opacity = `${1 - progress}`);
         
-        // Fade in structure
-        structureElements.forEach((el, index) => {
+        structureLayers.forEach((el, index) => {
           const delay = index * 0.3;
-          const elementProgress = Math.max(0, Math.min(1, (progress - delay) / 0.7));
-          (el as HTMLElement).style.opacity = `${elementProgress}`;
-          (el as HTMLElement).style.transform = `translateY(${(1 - elementProgress) * 20}px)`;
+          const layerProgress = Math.max(0, Math.min(1, (progress - delay) / 0.4));
+          (el as HTMLElement).style.opacity = `${0.2 + layerProgress * 0.8}`;
+          (el as HTMLElement).style.transform = `translateY(${(1 - layerProgress) * 30}px)`;
         });
         
-      } else if (elapsed < 12000) {
-        // Phase 3: Automated rules activation
-        const progress = (elapsed - 8000) / 4000;
+        if (profitMeter) {
+          profitMeter.style.width = `${20 + progress * 30}%`;
+          profitMeter.style.backgroundColor = progress > 0.5 ? '#ffa500' : '#ff4444';
+        }
         
-        chaosElements.forEach(el => {
-          (el as HTMLElement).style.opacity = '0';
-        });
+      } else if (elapsed < 15000) {
+        // Phase 3: AUTO RULES - Protection activated
+        const progress = (elapsed - 10000) / 5000;
         
-        structureElements.forEach(el => {
+        chaosIndicators.forEach(el => (el as HTMLElement).style.opacity = '0');
+        structureLayers.forEach(el => {
           (el as HTMLElement).style.opacity = '1';
           (el as HTMLElement).style.transform = 'translateY(0px)';
         });
         
-        // Activate rules one by one
-        rulesElements.forEach((el, index) => {
-          const delay = index * 0.25;
-          const elementProgress = Math.max(0, Math.min(1, (progress - delay) / 0.5));
-          (el as HTMLElement).style.opacity = `${elementProgress}`;
-          (el as HTMLElement).style.transform = `scale(${0.8 + elementProgress * 0.2})`;
+        autoRules.forEach((el, index) => {
+          const delay = index * 0.2;
+          const ruleProgress = Math.max(0, Math.min(1, (progress - delay) / 0.3));
+          (el as HTMLElement).style.opacity = `${ruleProgress}`;
+          (el as HTMLElement).style.transform = `scale(${0.7 + ruleProgress * 0.3})`;
         });
+        
+        if (profitMeter) {
+          profitMeter.style.width = `${50 + progress * 30}%`;
+          profitMeter.style.backgroundColor = progress > 0.5 ? '#00aa00' : '#ffa500';
+        }
         
       } else {
-        // Phase 4: Profitable scaling
-        const progress = (elapsed - 12000) / 4000;
+        // Phase 4: PROFITABLE SCALING
+        const progress = (elapsed - 15000) / 5000;
         
-        chaosElements.forEach(el => {
-          (el as HTMLElement).style.opacity = '0';
-        });
+        chaosIndicators.forEach(el => (el as HTMLElement).style.opacity = '0');
+        structureLayers.forEach(el => (el as HTMLElement).style.opacity = '1');
+        autoRules.forEach(el => (el as HTMLElement).style.opacity = '1');
         
-        structureElements.forEach(el => {
-          (el as HTMLElement).style.opacity = '1';
-        });
-        
-        rulesElements.forEach(el => {
-          (el as HTMLElement).style.opacity = '1';
-          (el as HTMLElement).style.transform = 'scale(1)';
-        });
-        
-        // Profit indicator grows
-        if (profitGauge) {
-          profitGauge.style.opacity = '1';
-          profitGauge.style.backgroundColor = '#8bfa7b';
-          profitGauge.style.transform = `scale(${1 + progress * 0.2})`;
+        if (profitMeter) {
+          profitMeter.style.width = `${80 + progress * 20}%`;
+          profitMeter.style.backgroundColor = '#8bfa7b';
+          profitMeter.style.boxShadow = `0 0 ${10 + progress * 15}px rgba(139, 250, 123, 0.6)`;
         }
       }
       
@@ -119,58 +106,59 @@ const ProfitFirstAnimation = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-64 bg-gradient-to-br from-white/10 to-[#006fff]/10 rounded-2xl p-8 overflow-hidden border border-white/20">
-      {/* Chaos Phase - Volatile Spending Bars */}
-      <div className="absolute top-8 left-8 flex gap-2">
-        {[0, 1, 2, 3].map((index) => (
+    <div className="relative w-full h-80 bg-gradient-to-br from-white/5 to-[#006fff]/5 rounded-2xl p-6 overflow-hidden border border-white/10">
+      {/* Title */}
+      <div className="absolute top-4 left-6 text-white font-bold text-lg">
+        Account Evolution
+      </div>
+      
+      {/* Chaos Phase - Volatile bars */}
+      <div className="absolute top-16 left-6 flex items-end gap-2">
+        <div className="text-sm text-white/70 mr-2">Chaos:</div>
+        {[0, 1, 2, 3, 4].map((index) => (
           <div
             key={`chaos-${index}`}
-            className="chaos-bar w-4 bg-[#ff6b6b] rounded transition-all duration-300"
-            style={{ height: '30px' }}
+            className="chaos-indicator w-6 bg-[#ff4444] rounded-t transition-all duration-300"
+            style={{ height: '40px' }}
           />
         ))}
-        <div className="ml-2 text-xs text-white/70 self-end">Chaos</div>
       </div>
       
       {/* Structure Phase - 3 Layers */}
-      <div className="absolute top-8 left-32 grid grid-cols-3 gap-3 opacity-30">
-        <div className="structure-layer bg-white/10 rounded-lg border border-white/20 p-2 w-16 h-12 transition-all duration-500">
-          <div className="text-xs text-white font-semibold">L1</div>
-          <div className="text-xs text-white/70">Test</div>
+      <div className="absolute top-32 left-6 grid grid-cols-3 gap-4 opacity-20">
+        <div className="structure-layer bg-white/15 rounded-lg border border-white/30 p-3 w-20 h-16 transition-all duration-1000">
+          <div className="text-sm font-bold text-white">Layer 1</div>
+          <div className="text-xs text-white/70">Testing</div>
         </div>
-        <div className="structure-layer bg-white/10 rounded-lg border border-white/20 p-2 w-16 h-12 transition-all duration-500">
-          <div className="text-xs text-white font-semibold">L2</div>
-          <div className="text-xs text-white/70">Scale</div>
+        <div className="structure-layer bg-white/15 rounded-lg border border-white/30 p-3 w-20 h-16 transition-all duration-1000">
+          <div className="text-sm font-bold text-white">Layer 2</div>
+          <div className="text-xs text-white/70">Scaling</div>
         </div>
-        <div className="structure-layer bg-white/10 rounded-lg border border-white/20 p-2 w-16 h-12 transition-all duration-500">
-          <div className="text-xs text-white font-semibold">L3</div>
-          <div className="text-xs text-white/70">Retain</div>
+        <div className="structure-layer bg-white/15 rounded-lg border border-white/30 p-3 w-20 h-16 transition-all duration-1000">
+          <div className="text-sm font-bold text-white">Layer 3</div>
+          <div className="text-xs text-white/70">Retarget</div>
         </div>
       </div>
       
-      {/* Automated Rules */}
-      <div className="absolute bottom-16 left-8 flex gap-2">
+      {/* Auto Rules */}
+      <div className="absolute bottom-24 left-6 flex items-center gap-3">
+        <div className="text-sm text-white/70">Rules:</div>
         {[0, 1, 2].map((index) => (
           <div
             key={`rule-${index}`}
-            className="auto-rule w-6 h-6 bg-[#006fff] rounded-full flex items-center justify-center opacity-0 transition-all duration-500"
+            className="auto-rule w-8 h-8 bg-[#006fff] rounded-full flex items-center justify-center opacity-10 transition-all duration-500"
           >
-            <div className="w-3 h-3 border-2 border-white rounded-full"></div>
+            <div className="w-4 h-4 border-2 border-white rounded"></div>
           </div>
         ))}
-        <div className="ml-2 text-xs text-white/70 self-center">Auto Rules</div>
       </div>
       
-      {/* Profit Indicator */}
-      <div ref={containerRef} className="absolute bottom-8 right-8">
-        <div className="profit-indicator w-16 h-8 bg-[#ff6b6b] rounded-lg flex items-center justify-center transition-all duration-500 opacity-30">
-          <div className="text-xs text-white font-semibold">PROFIT</div>
+      {/* Profit Meter */}
+      <div ref={containerRef} className="absolute bottom-8 left-6 right-6">
+        <div className="text-sm text-white/70 mb-2">Profitability:</div>
+        <div className="w-full h-6 bg-white/10 rounded-full overflow-hidden">
+          <div className="profit-meter h-full bg-[#ff4444] rounded-full transition-all duration-1000" style={{ width: '20%' }}></div>
         </div>
-      </div>
-      
-      {/* Labels */}
-      <div className="absolute bottom-2 left-2 text-xs text-white/50">
-        Chaos → Structure → Rules → Profit
       </div>
     </div>
   );

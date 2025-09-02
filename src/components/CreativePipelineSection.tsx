@@ -14,48 +14,41 @@ const CreativePipelineAnimation = () => {
     let startTime = Date.now();
 
     const animate = () => {
-      const elapsed = (Date.now() - startTime) % 12000; // 12 second loop for slower animation
+      const elapsed = (Date.now() - startTime) % 15000; // 15 second loop
       
       cards.forEach((card, index) => {
         const element = card as HTMLElement;
-        const phase = (elapsed + index * 2000) % 12000; // Stagger cards by 2 seconds
+        const phase = (elapsed + index * 3000) % 15000; // Stagger cards by 3 seconds
         
-        // Reset all states
-        element.style.transform = 'translateX(0)';
-        element.style.opacity = '0.8';
-        element.style.boxShadow = '0 2px 8px rgba(0, 111, 255, 0.3)';
+        // Reset states
+        element.style.transform = 'translateX(0px)';
+        element.style.opacity = '0.9';
+        element.style.boxShadow = '0 4px 12px rgba(0, 111, 255, 0.3)';
+        element.style.backgroundColor = '#006fff';
         
-        // Animation phases: Backlog (0-3s) → In Testing (3-6s) → Approved (6-9s) → Reset (9-12s)
         if (phase < 3000) {
           // In Backlog
           element.style.transform = 'translateX(0px)';
-          element.style.opacity = '0.8';
-        } else if (phase < 6000) {
-          // Moving to/in Testing column (middle column)
-          const progress = Math.min((phase - 3000) / 1000, 1); // 1 second transition
-          const targetX = 140; // Position for middle column
-          element.style.transform = `translateX(${progress * targetX}px)`;
-          element.style.opacity = '1';
+        } else if (phase < 8000) {
+          // Moving to Testing
+          const progress = Math.min((phase - 3000) / 2000, 1);
+          element.style.transform = `translateX(${progress * 250}px)`;
           if (progress >= 1) {
-            // Highlight when fully in testing
-            element.style.boxShadow = '0 0 20px rgba(0, 111, 255, 0.8)';
+            element.style.boxShadow = '0 0 25px rgba(0, 111, 255, 0.8)';
+            element.style.backgroundColor = '#0052cc';
           }
-        } else if (phase < 9000) {
-          // Moving to/in Approved column (right column)
-          const progress = Math.min((phase - 6000) / 1000, 1); // 1 second transition
-          const startX = 140; // Starting from middle column
-          const targetX = 280; // Position for right column
-          element.style.transform = `translateX(${startX + progress * (targetX - startX)}px)`;
-          element.style.opacity = '0.9';
+        } else if (phase < 12000) {
+          // Moving to Approved
+          const progress = Math.min((phase - 8000) / 2000, 1);
+          element.style.transform = `translateX(${250 + progress * 250}px)`;
           if (progress >= 1) {
-            // Green glow when approved
-            element.style.boxShadow = '0 0 20px rgba(139, 250, 123, 0.8)';
+            element.style.boxShadow = '0 0 25px rgba(139, 250, 123, 0.8)';
+            element.style.backgroundColor = '#8bfa7b';
           }
         } else {
-          // Reset phase - fade out and return to start
-          const progress = (phase - 9000) / 3000;
+          // Reset phase
+          element.style.opacity = '0.6';
           element.style.transform = 'translateX(0px)';
-          element.style.opacity = `${0.8 - progress * 0.8}`;
         }
       });
       
@@ -73,38 +66,44 @@ const CreativePipelineAnimation = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-64 bg-gradient-to-br from-white/10 to-[#006fff]/10 rounded-2xl p-8 overflow-hidden border border-white/20">
-      {/* Pipeline lanes */}
-      <div className="absolute inset-8">
-        <div className="grid grid-cols-3 gap-4 h-full">
-          <div className="bg-white/10 rounded-lg border border-white/20 p-3">
-            <h4 className="text-sm font-semibold text-white mb-2">Backlog</h4>
-          </div>
-          <div className="bg-white/10 rounded-lg border border-white/20 p-3">
-            <h4 className="text-sm font-semibold text-white mb-2">In Testing</h4>
-          </div>
-          <div className="bg-white/10 rounded-lg border border-white/20 p-3">
-            <h4 className="text-sm font-semibold text-white mb-2">Approved</h4>
-          </div>
+    <div className="relative w-full h-80 bg-gradient-to-br from-white/5 to-[#006fff]/5 rounded-2xl p-6 overflow-hidden border border-white/10">
+      {/* Pipeline lanes - larger and more visible */}
+      <div className="grid grid-cols-3 gap-6 h-32 mb-8">
+        <div className="bg-white/10 rounded-xl border border-white/20 p-4 flex flex-col">
+          <h4 className="text-lg font-bold text-white mb-2">Backlog</h4>
+          <p className="text-sm text-white/70">Ideas Queue</p>
         </div>
-        
-        {/* Animated cards */}
-        <div ref={containerRef} className="absolute top-16 left-4">
-          {[0, 1, 2].map((index) => (
-            <div
-              key={index}
-              className={`pipeline-card absolute w-16 h-8 bg-[#006fff] rounded text-white text-xs flex items-center justify-center font-medium transition-all duration-500 ${
-                index === 0 ? 'top-0' : index === 1 ? 'top-10' : 'top-20'
-              }`}
-              style={{ 
-                boxShadow: '0 2px 8px rgba(0, 111, 255, 0.3)',
-                left: '0px' // Start all cards in the first column
-              }}
-            >
-              {index === 0 ? 'Hook A' : index === 1 ? 'UGC B' : 'Demo C'}
-            </div>
-          ))}
+        <div className="bg-white/10 rounded-xl border border-white/20 p-4 flex flex-col">
+          <h4 className="text-lg font-bold text-white mb-2">In Testing</h4>
+          <p className="text-sm text-white/70">Active Tests</p>
         </div>
+        <div className="bg-white/10 rounded-xl border border-white/20 p-4 flex flex-col">
+          <h4 className="text-lg font-bold text-white mb-2">Approved</h4>
+          <p className="text-sm text-white/70">Ready to Scale</p>
+        </div>
+      </div>
+      
+      {/* Animated cards - bigger and more visible */}
+      <div ref={containerRef} className="absolute top-40 left-6">
+        {[0, 1, 2].map((index) => (
+          <div
+            key={index}
+            className={`pipeline-card absolute w-24 h-12 bg-[#006fff] rounded-lg text-white text-sm font-bold flex items-center justify-center transition-all duration-1000 ${
+              index === 0 ? 'top-0' : index === 1 ? 'top-16' : 'top-32'
+            }`}
+            style={{ 
+              boxShadow: '0 4px 12px rgba(0, 111, 255, 0.3)',
+              left: '0px'
+            }}
+          >
+            {index === 0 ? 'Hook A' : index === 1 ? 'UGC B' : 'Demo C'}
+          </div>
+        ))}
+      </div>
+      
+      {/* Progress indicator */}
+      <div className="absolute bottom-4 left-6 text-xs text-white/60">
+        Pipeline Flow: Ideation → Testing → Scaling
       </div>
     </div>
   );

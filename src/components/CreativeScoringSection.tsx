@@ -10,46 +10,82 @@ const CreativeScoringAnimation = () => {
     if (!container) return;
 
     const tiles = container.querySelectorAll('.scoring-tile');
-    const gate = container.querySelector('.hook-gate') as HTMLElement;
+    const hookGate = container.querySelector('.hook-gate') as HTMLElement;
+    const scaleZone = container.querySelector('.scale-zone') as HTMLElement;
     let animationId: number;
     let startTime = Date.now();
 
     const animate = () => {
-      const elapsed = (Date.now() - startTime) % 8000; // 8 second loop
+      const elapsed = (Date.now() - startTime) % 18000; // 18 second cycle
       
-      tiles.forEach((tile, index) => {
-        const element = tile as HTMLElement;
-        const phase = (elapsed + index * 800) % 8000;
-        
-        // Reset position
-        element.style.transform = 'translateX(0)';
-        element.style.boxShadow = '';
-        
-        // Scoring phases
-        if (phase < 2000) {
-          // Initial scoring
-          const scores = ['A', 'C', 'A', 'B'];
-          const colors = ['#8bfa7b', '#ff6b6b', '#8bfa7b', '#fad500'];
+      if (elapsed < 6000) {
+        // Phase 1: Initial scoring - show mixed results
+        tiles.forEach((tile, index) => {
+          const element = tile as HTMLElement;
+          const scores = ['A', 'C', 'B', 'A', 'C', 'B'];
+          const colors = ['#8bfa7b', '#ff6666', '#ffa500', '#8bfa7b', '#ff6666', '#ffa500'];
+          
           element.textContent = scores[index] || 'C';
-          element.style.backgroundColor = colors[index] || '#ff6b6b';
-        } else if (phase < 4000) {
-          // Hook Rate First filtering
-          if (index === 0 || index === 2) {
+          element.style.backgroundColor = colors[index] || '#ff6666';
+          element.style.transform = 'scale(1)';
+          element.style.opacity = '1';
+        });
+        
+        if (hookGate) {
+          hookGate.style.borderColor = '#666';
+          hookGate.style.opacity = '0.7';
+        }
+        
+      } else if (elapsed < 12000) {
+        // Phase 2: Hook Rate First filtering
+        const progress = (elapsed - 6000) / 6000;
+        
+        tiles.forEach((tile, index) => {
+          const element = tile as HTMLElement;
+          const isWinner = index === 0 || index === 3; // A scores
+          
+          if (isWinner) {
             element.style.opacity = '1';
-            if (gate) gate.style.borderColor = '#8bfa7b';
+            element.style.transform = 'scale(1.1)';
+            element.style.boxShadow = '0 0 20px rgba(139, 250, 123, 0.8)';
+          } else {
+            element.style.opacity = `${1 - progress * 0.6}`;
+            element.style.transform = 'scale(0.9)';
+            element.style.filter = 'blur(1px)';
+          }
+        });
+        
+        if (hookGate) {
+          hookGate.style.borderColor = progress > 0.5 ? '#8bfa7b' : '#ffa500';
+          hookGate.style.opacity = '1';
+          hookGate.style.boxShadow = progress > 0.5 ? '0 0 15px rgba(139, 250, 123, 0.6)' : '';
+        }
+        
+      } else {
+        // Phase 3: Winners to scale zone
+        const progress = (elapsed - 12000) / 6000;
+        
+        tiles.forEach((tile, index) => {
+          const element = tile as HTMLElement;
+          const isWinner = index === 0 || index === 3;
+          
+          if (isWinner) {
+            const moveProgress = Math.min(progress * 2, 1);
+            element.style.transform = `translateX(${moveProgress * 200}px) scale(1.2)`;
+            element.style.opacity = '1';
+            element.style.boxShadow = '0 0 25px rgba(139, 250, 123, 1)';
           } else {
             element.style.opacity = '0.3';
-            if (gate) gate.style.borderColor = '#ff6b6b';
+            element.style.filter = 'blur(2px)';
           }
-        } else if (phase < 6000) {
-          // Moving winners to scale
-          if (index === 0) {
-            const progress = (phase - 4000) / 2000;
-            element.style.transform = `translateX(${progress * 150}px)`;
-            element.style.boxShadow = '0 0 20px rgba(139, 250, 123, 0.8)';
-          }
+        });
+        
+        if (scaleZone && progress > 0.5) {
+          scaleZone.style.backgroundColor = 'rgba(139, 250, 123, 0.2)';
+          scaleZone.style.borderColor = '#8bfa7b';
+          scaleZone.style.boxShadow = '0 0 20px rgba(139, 250, 123, 0.4)';
         }
-      });
+      }
       
       animationId = requestAnimationFrame(animate);
     };
@@ -65,36 +101,58 @@ const CreativeScoringAnimation = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-64 bg-gradient-to-br from-white/10 to-[#006fff]/10 rounded-2xl p-8 overflow-hidden border border-white/20">
-      {/* Scoring Grid */}
-      <div className="grid grid-cols-2 gap-3 w-32">
-        {[0, 1, 2, 3].map((index) => (
+    <div className="relative w-full h-80 bg-gradient-to-br from-white/5 to-[#006fff]/5 rounded-2xl p-6 overflow-hidden border border-white/10">
+      {/* Title */}
+      <div className="absolute top-4 left-6 text-white font-bold text-lg">
+        Creative Scoring System
+      </div>
+      
+      {/* Scoring Grid - larger tiles */}
+      <div className="grid grid-cols-3 gap-4 w-60 mt-12">
+        {[0, 1, 2, 3, 4, 5].map((index) => (
           <div
             key={index}
-            className={`scoring-tile w-12 h-12 rounded-lg text-white text-sm font-bold flex items-center justify-center transition-all duration-500 ${
-              index < 2 ? 'bg-[#8bfa7b]' : 'bg-[#ff6b6b]'
-            }`}
+            className="scoring-tile w-16 h-16 rounded-xl text-white text-lg font-bold flex items-center justify-center transition-all duration-1000 bg-[#8bfa7b]"
           >
-            {index < 2 ? 'A' : 'C'}
+            A
           </div>
         ))}
       </div>
       
-      {/* Hook Rate First Gate */}
-      <div className="hook-gate absolute top-1/2 left-40 w-16 h-24 border-4 border-[#006fff] rounded-lg flex items-center justify-center transform -translate-y-1/2 transition-all duration-500">
-        <div className="text-xs text-white font-semibold text-center">
-          Hook<br/>Gate
+      {/* Hook Rate First Gate - bigger and more prominent */}
+      <div className="hook-gate absolute top-28 right-32 w-24 h-32 border-4 border-gray-600 rounded-xl flex flex-col items-center justify-center transition-all duration-1000 opacity-70">
+        <div className="text-sm text-white font-bold text-center">
+          Hook Rate<br/>First™<br/>Filter
         </div>
       </div>
       
-      {/* Scale Zone */}
-      <div ref={containerRef} className="absolute top-8 right-8 w-20 h-16 bg-white/10 rounded-lg border border-white/20 p-2">
-        <h4 className="text-xs font-semibold text-white text-center">Scale</h4>
+      {/* Scale Zone - larger and more visible */}
+      <div ref={containerRef} className="scale-zone absolute top-24 right-4 w-24 h-24 bg-white/5 rounded-xl border-2 border-white/20 p-3 transition-all duration-1000">
+        <h4 className="text-sm font-bold text-white text-center">Scale Zone</h4>
+        <div className="text-xs text-white/70 text-center mt-1">Winners Only</div>
       </div>
       
-      {/* Labels */}
-      <div className="absolute bottom-4 left-8 text-xs text-white/70">
-        A = Winner • B = Test • C = Cut
+      {/* Legend */}
+      <div className="absolute bottom-6 left-6 text-sm text-white/70">
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 bg-[#8bfa7b] rounded"></div>
+            <span>A = Scale</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 bg-[#ffa500] rounded"></div>
+            <span>B = Test</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 bg-[#ff6666] rounded"></div>
+            <span>C = Cut</span>
+          </div>
+        </div>
+      </div>
+      
+      {/* Process indicator */}
+      <div className="absolute bottom-2 right-6 text-xs text-white/50">
+        Score → Filter → Scale
       </div>
     </div>
   );
