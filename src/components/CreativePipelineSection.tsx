@@ -17,7 +17,7 @@ const CreativePipelineSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Visual - Left */}
           <div className="order-2 lg:order-1 flex items-center justify-center">
-            <div className="relative w-full max-w-4xl h-[480px]">
+            <div className="relative w-full max-w-4xl h-[520px]">
               {/* Kanban Board Animation */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-full h-full bg-gradient-to-br from-white/5 to-[#006fff]/10 rounded-2xl border border-white/10 p-4">
@@ -34,7 +34,7 @@ const CreativePipelineSection = () => {
                   </div>
                   
                   {/* Column Containers */}
-                  <div className="grid grid-cols-4 gap-3 h-80 relative">
+                  <div className="grid grid-cols-4 gap-3 h-96 relative">
                     {[0, 1, 2, 3].map((columnIndex) => (
                       <div 
                         key={columnIndex}
@@ -64,12 +64,12 @@ const CreativePipelineSection = () => {
                         style={{
                           backgroundColor: `${card.color}20`,
                           borderColor: `${card.color}40`,
-                          width: 'calc(25% - 20px)', // Taille adaptée à la colonne
+                          width: 'calc(25% - 24px)', // Largeur adaptée avec marges
                           height: '60px',
                           animation: `moveCardCentered 10s ease-in-out infinite`,
                           animationDelay: `${card.delay}s`,
-                          left: 'calc(12.5% - calc(25% - 20px) / 2)', // Centré dans la première colonne
-                          top: `${120 + cardIndex * 80}px`, // Espacement vertical augmenté
+                          left: 'calc(12.5% - calc((25% - 24px) / 2))', // Parfaitement centré
+                          top: `${100 + cardIndex * 75}px`, // Espacement vertical réduit pour rester dans les colonnes
                         }}
                       >
                         <div className="p-2 text-center h-full flex flex-col justify-center">
@@ -149,23 +149,23 @@ const CreativePipelineSection = () => {
               <style>{`
                 @keyframes moveCardCentered {
                   0%, 15% { 
-                    left: calc(12.5% - calc(25% - 20px) / 2);
+                    left: calc(12.5% - calc((25% - 24px) / 2));
                     opacity: 1;
                   }
                   20%, 35% { 
-                    left: calc(37.5% - calc(25% - 20px) / 2);
+                    left: calc(37.5% - calc((25% - 24px) / 2));
                     opacity: 1;
                   }
                   40%, 55% { 
-                    left: calc(62.5% - calc(25% - 20px) / 2);
+                    left: calc(62.5% - calc((25% - 24px) / 2));
                     opacity: 1;
                   }
                   60%, 85% { 
-                    left: calc(87.5% - calc(25% - 20px) / 2);
+                    left: calc(87.5% - calc((25% - 24px) / 2));
                     opacity: 1;
                   }
                   90%, 100% {
-                    left: calc(87.5% - calc(25% - 20px) / 2);
+                    left: calc(87.5% - calc((25% - 24px) / 2));
                     opacity: 0;
                   }
                 }
