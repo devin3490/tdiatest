@@ -29,8 +29,8 @@ const Index = () => {
       <ProfitFirstSection />
       <CreativeScoringSection />
       
-      <TestimonialsSection />
       <CaseStudiesCarousel />
+      <TestimonialsSection />
       <BraggingSection />
       <WhatYouGetSection />
       
