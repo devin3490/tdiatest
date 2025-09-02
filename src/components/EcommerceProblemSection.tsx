@@ -20,9 +20,9 @@ const EcommerceProblemSection: React.FC = () => {
     cards: [
       { 
         label: "01", 
-        headline: "ROAS instable", 
-        text: "Vous avez lancé des campagnes, mais la performance est irrégulière et difficile à diagnostiquer.",
-        metric: "-23% ROAS"
+        headline: "Messy Merchandising = Missed Sales", 
+        text: "A scattered catalog, constant stockouts, and over-reliance on too many SKUs confuse customers and kill conversions. Winning brands simplify. We help you build your assortment around 5 proven pillars: evergreens, innovation, click-magnets, cross-sells, and calculated bets.",
+        metric: "+30% lift in product discovery"
       },
       { 
         label: "02", 
