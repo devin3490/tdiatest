@@ -105,7 +105,7 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                         </span>
                       </div>
                       {card.metric && (
-                        <span className="bg-gradient-to-r from-[#006fff]/15 to-[#4d9bff]/15 border border-[#006fff]/40 text-[#006fff] px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap backdrop-blur-sm group-hover:border-[#006fff] group-hover:bg-gradient-to-r group-hover:from-[#006fff]/25 group-hover:to-[#4d9bff]/25 group-hover:text-white transition-all duration-300 shadow-md shadow-[#006fff]/10">
+                        <span className="bg-gradient-to-r from-[#006fff]/15 to-[#4d9bff]/15 border border-[#006fff]/40 text-[#006fff] px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap backdrop-blur-sm shadow-md shadow-[#006fff]/10">
                           {card.metric}
                         </span>
                       )}
@@ -113,7 +113,7 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                     
                     {/* Enhanced headline with gradient text */}
                     <div className="text-center">
-                      <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight group-hover:from-white group-hover:via-[#4d9bff] group-hover:to-white transition-all duration-200">
+                      <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight">
                         {card.headline}
                       </h4>
                     </div>
@@ -121,11 +121,11 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                     {/* Enhanced description with better spacing */}
                     <div className="text-center max-w-4xl mx-auto">
                       <div className="relative">
-                        <p className="text-white/90 text-lg md:text-xl leading-relaxed group-hover:text-white transition-colors duration-300">
+                        <p className="text-white/90 text-lg md:text-xl leading-relaxed">
                           {card.text}
                         </p>
                         {/* Subtle bottom accent line */}
-                        <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#006fff]/50 to-transparent mx-auto mt-6 group-hover:w-32 group-hover:via-[#006fff] transition-all duration-200"></div>
+                        <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#006fff]/50 to-transparent mx-auto mt-6"></div>
                       </div>
                     </div>
                   </div>
