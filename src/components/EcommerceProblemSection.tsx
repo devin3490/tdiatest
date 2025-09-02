@@ -27,13 +27,13 @@ const EcommerceProblemSection: React.FC = () => {
       { 
         label: "02", 
         headline: "The Hero Product Trap", 
-        text: "When 80–90% of your revenue relies on one item, you’re exposed. Repurchase rates stay low, and once the hype fades, sales collapse. Smart brands don’t gamble — they expand with controlled variations (colors, fabrics, cuts) while preparing the next heroes to carry growth forward.",
+        text: "When 80–90% of your revenue relies on one item, you're exposed. Repurchase rates stay low, and once the hype fades, sales collapse. Smart brands don't gamble — they expand with controlled variations (colors, fabrics, cuts) while preparing the next heroes to carry growth forward.",
         metric: "+25% repeat revenue unlocked"
       },
       { 
         label: "03", 
-        headline: "Slow “Time-to-Value” Kills Conversions", 
-        text: "If your creative takes more than 3 seconds to deliver value, viewers drop. Low CTR, weak add-to-cart rates, and wasted clicks follow. Winning ads open instantly with the product + price, sharp angles, and clear usage context — grabbing attention before it’s gone."
+        headline: "Slow \"Time-to-Value\" Kills Conversions", 
+        text: "If your creative takes more than 3 seconds to deliver value, viewers drop. Low CTR, weak add-to-cart rates, and wasted clicks follow. Winning ads open instantly with the product + price, sharp angles, and clear usage context — grabbing attention before it's gone."
       },
       { 
         label: "04", 
@@ -64,12 +64,36 @@ const EcommerceProblemSection: React.FC = () => {
       { 
         label: "09", 
         headline: "Weak Mobile CRO/UX", 
-        text: "On mobile, the first screen shows no product, no price, no CTA — just intrusive pop-ups and slow load times. High-converting brands win with the “3-in-3 rule” (product, price, CTA visible instantly), sticky ATC, clear visuals (sizes, capacity, details), sequenced pop-ups, and optimized speed."
+        text: "On mobile, the first screen shows no product, no price, no CTA — just intrusive pop-ups and slow load times. High-converting brands win with the \"3-in-3 rule\" (product, price, CTA visible instantly), sticky ATC, clear visuals (sizes, capacity, details), sequenced pop-ups, and optimized speed."
       },
       { 
         label: "10", 
         headline: "Unit Economics Blinded by Returns", 
-        text: "An “acceptable” CAC can hide margin destruction when returns aren’t factored in. Smart operators integrate returns, logistics, payments, and support into the P&L — then recalibrate CAC to reflect true profitability."
+        text: "An \"acceptable\" CAC can hide margin destruction when returns aren't factored in. Smart operators integrate returns, logistics, payments, and support into the P&L — then recalibrate CAC to reflect true profitability."
+      },
+      { 
+        label: "11", 
+        headline: "Email & SMS Revenue Leakage", 
+        text: "Generic flows, poor segmentation, and low send frequency leave massive revenue on the table. Top brands layer behavioral triggers, preference data, and lifecycle stages to create hyper-relevant messaging that drives 25-40% of total revenue.",
+        metric: "+35% email revenue contribution"
+      },
+      { 
+        label: "12", 
+        headline: "Retention Strategy Missing", 
+        text: "First-time buyers never return because there's no systematic follow-up plan. Winning brands deploy welcome series, replenishment reminders, loyalty programs, and VIP tiers to transform one-time buyers into repeat customers and brand advocates.",
+        metric: "+45% customer lifetime value"
+      },
+      { 
+        label: "13", 
+        headline: "Influencer ROI Invisibility", 
+        text: "Throwing money at creators without tracking true performance beyond vanity metrics. Smart brands use unique codes, landing pages, and attribution models to measure real conversions, then double down on what works while cutting wasteful partnerships.",
+        metric: "+60% influencer campaign efficiency"
+      },
+      { 
+        label: "14", 
+        headline: "Post-Purchase Experience Neglected", 
+        text: "The customer journey ends at checkout instead of beginning there. High-growth brands optimize shipping notifications, unboxing experiences, and follow-up sequences to reduce returns, increase reviews, and create viral word-of-mouth marketing.",
+        metric: "+25% customer satisfaction increase"
       }
     ],
     cta: { text: "Book Your Free Discovery Call", href: "/#calendly-or-link" }
