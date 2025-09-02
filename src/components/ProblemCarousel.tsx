@@ -74,42 +74,57 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
           >
             {cards.map((card, index) => (
               <CarouselItem key={index} className="pl-0 basis-full">
-                <div className="bg-gradient-to-br from-[#10112b] to-[#0a0b1d] rounded-xl p-8 md:p-12 border border-blue-900/20 relative overflow-hidden min-h-[600px] flex flex-col justify-center">
-                  {/* Grid overlay */}
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="h-px w-full bg-blue-500/30 absolute top-1/4"></div>
-                    <div className="h-px w-full bg-blue-500/30 absolute top-2/4"></div>
-                    <div className="h-px w-full bg-blue-500/30 absolute top-3/4"></div>
-                    <div className="w-px h-full bg-blue-500/30 absolute left-1/4"></div>
-                    <div className="w-px h-full bg-blue-500/30 absolute left-2/4"></div>
-                    <div className="w-px h-full bg-blue-500/30 absolute left-3/4"></div>
+                <div className="group bg-gradient-to-br from-[#10112b] via-[#151638] to-[#0a0b1d] rounded-xl p-8 md:p-12 border border-blue-900/20 relative overflow-hidden min-h-[600px] flex flex-col justify-center transition-all duration-500 hover:border-[#006fff]/50 hover:shadow-2xl hover:shadow-[#006fff]/20 hover:scale-[1.02] cursor-pointer">
+                  {/* Enhanced grid overlay with glow effect */}
+                  <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+                    <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-500/40 to-transparent absolute top-1/4"></div>
+                    <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-500/40 to-transparent absolute top-2/4"></div>
+                    <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-500/40 to-transparent absolute top-3/4"></div>
+                    <div className="w-px h-full bg-gradient-to-b from-transparent via-blue-500/40 to-transparent absolute left-1/4"></div>
+                    <div className="w-px h-full bg-gradient-to-b from-transparent via-blue-500/40 to-transparent absolute left-2/4"></div>
+                    <div className="w-px h-full bg-gradient-to-b from-transparent via-blue-500/40 to-transparent absolute left-3/4"></div>
                   </div>
+
+                  {/* Floating accent dots */}
+                  <div className="absolute top-6 right-6 w-2 h-2 bg-[#006fff] rounded-full animate-pulse"></div>
+                  <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                  <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-[#4d9bff] rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                  
+                  {/* Subtle glow effect on hover */}
+                  <div className="absolute inset-0 bg-gradient-radial from-[#006fff]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="relative z-10 space-y-8">
-                    {/* Header with number and metric */}
+                    {/* Header with enhanced number and metric */}
                     <div className="flex items-start justify-between">
-                      <span className="text-[#006fff] font-bold text-xl bg-[#006fff]/10 border border-[#006fff]/30 px-4 py-2 rounded-lg">
-                        {card.label}
-                      </span>
+                      <div className="relative">
+                        <span className="text-[#006fff] font-bold text-2xl bg-gradient-to-r from-[#006fff]/20 to-[#4d9bff]/20 border border-[#006fff]/50 px-6 py-3 rounded-lg backdrop-blur-sm group-hover:border-[#006fff] group-hover:bg-gradient-to-r group-hover:from-[#006fff]/30 group-hover:to-[#4d9bff]/30 transition-all duration-300 shadow-lg shadow-[#006fff]/20">
+                          {card.label}
+                        </span>
+                        <div className="absolute -inset-1 bg-gradient-to-r from-[#006fff]/20 to-[#4d9bff]/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                       {card.metric && (
-                        <span className="bg-[#006fff]/10 border border-[#006fff]/30 text-[#006fff] px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
+                        <span className="bg-gradient-to-r from-[#006fff]/15 to-[#4d9bff]/15 border border-[#006fff]/40 text-[#006fff] px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap backdrop-blur-sm group-hover:border-[#006fff] group-hover:bg-gradient-to-r group-hover:from-[#006fff]/25 group-hover:to-[#4d9bff]/25 group-hover:text-white transition-all duration-300 shadow-md shadow-[#006fff]/10">
                           {card.metric}
                         </span>
                       )}
                     </div>
                     
-                    {/* Headline */}
+                    {/* Enhanced headline with gradient text */}
                     <div className="text-center">
-                      <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                      <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight group-hover:from-white group-hover:via-[#4d9bff] group-hover:to-white transition-all duration-500">
                         {card.headline}
                       </h4>
                     </div>
                     
-                    {/* Description */}
+                    {/* Enhanced description with better spacing */}
                     <div className="text-center max-w-4xl mx-auto">
-                      <p className="text-white/80 text-lg md:text-xl leading-relaxed">
-                        {card.text}
-                      </p>
+                      <div className="relative">
+                        <p className="text-white/90 text-lg md:text-xl leading-relaxed group-hover:text-white transition-colors duration-300">
+                          {card.text}
+                        </p>
+                        {/* Subtle bottom accent line */}
+                        <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#006fff]/50 to-transparent mx-auto mt-6 group-hover:w-32 group-hover:via-[#006fff] transition-all duration-500"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
