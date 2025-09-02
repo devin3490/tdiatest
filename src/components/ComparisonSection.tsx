@@ -67,27 +67,27 @@ const ComparisonSection: React.FC = () => {
             <div className="space-y-6">
               <div className="flex items-start">
                 <X className="text-red-500 mr-3 h-6 w-6 flex-shrink-0 mt-0.5" />
-                <p className="text-white/80 text-lg">Slow communication</p>
+                <p className="text-white/80 text-lg">Generic strategies</p>
               </div>
               
               <div className="flex items-start">
                 <X className="text-red-500 mr-3 h-6 w-6 flex-shrink-0 mt-0.5" />
-                <p className="text-white/80 text-lg">Single channel approach</p>
+                <p className="text-white/80 text-lg">Ignore seasonality & product cycles</p>
               </div>
               
               <div className="flex items-start">
                 <X className="text-red-500 mr-3 h-6 w-6 flex-shrink-0 mt-0.5" />
-                <p className="text-white/80 text-lg">Outdated growth strategies</p>
+                <p className="text-white/80 text-lg">Treat fashion like any DTC brand</p>
               </div>
               
               <div className="flex items-start">
                 <X className="text-red-500 mr-3 h-6 w-6 flex-shrink-0 mt-0.5" />
-                <p className="text-white/80 text-lg">Lack of industry research</p>
+                <p className="text-white/80 text-lg">Slow to adapt to stock & trend shifts</p>
               </div>
               
               <div className="flex items-start">
                 <X className="text-red-500 mr-3 h-6 w-6 flex-shrink-0 mt-0.5" />
-                <p className="text-white/80 text-lg">Outsourced to mediocre talent</p>
+                <p className="text-white/80 text-lg">Focus only on ads, not assortment</p>
               </div>
             </div>
           </div>
@@ -105,27 +105,27 @@ const ComparisonSection: React.FC = () => {
             <div className="space-y-6">
               <div className="flex items-start">
                 <Check className="text-highlight mr-3 h-6 w-6 flex-shrink-0 mt-0.5" />
-                <p className="text-white text-lg">Constant, proactive communication</p>
+                <p className="text-white text-lg">Media + merchandising fully aligned</p>
               </div>
               
               <div className="flex items-start">
                 <Check className="text-highlight mr-3 h-6 w-6 flex-shrink-0 mt-0.5" />
-                <p className="text-white text-lg">Omni-channel approach</p>
+                <p className="text-white text-lg">Seasonal & drop-based planning</p>
               </div>
               
               <div className="flex items-start">
                 <Check className="text-highlight mr-3 h-6 w-6 flex-shrink-0 mt-0.5" />
-                <p className="text-white text-lg">Tailored best-fit solutions</p>
+                <p className="text-white text-lg">Strategies built on assortment pillars</p>
               </div>
               
               <div className="flex items-start">
                 <Check className="text-highlight mr-3 h-6 w-6 flex-shrink-0 mt-0.5" />
-                <p className="text-white text-lg">Provides industry specific expertise</p>
+                <p className="text-white text-lg">Fast creative pipeline, weekly refresh</p>
               </div>
               
               <div className="flex items-start">
                 <Check className="text-highlight mr-3 h-6 w-6 flex-shrink-0 mt-0.5" />
-                <p className="text-white text-lg">Founders with 5+ years of experience</p>
+                <p className="text-white text-lg">Scaling triggered by profit, not guesses</p>
               </div>
             </div>
           </div>
