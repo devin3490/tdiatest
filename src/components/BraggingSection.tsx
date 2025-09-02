@@ -27,7 +27,7 @@ const BraggingSection: React.FC = () => {
             <div className="rounded-lg bg-transparent border border-white/20 p-8 text-center text-white h-full transform-style-preserve-3d">
               <div className="transform translate-z-20">
                 <CounterValue 
-                  value={1.5} 
+                  value={3} 
                   prefix="$" 
                   suffix="M+" 
                   className="text-5xl md:text-6xl font-bold mb-2"
