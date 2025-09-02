@@ -17,83 +17,169 @@ const CreativePipelineSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Visual - Left */}
           <div className="order-2 lg:order-1 flex items-center justify-center">
-            <div className="relative w-full max-w-md h-96">
-              {/* Creative Pipeline Flow Animation */}
+            <div className="relative w-full max-w-2xl h-96">
+              {/* Kanban Board Animation */}
               <div className="absolute inset-0 flex items-center justify-center">
-                {/* Central Hub */}
-                <div className="relative w-24 h-24 bg-gradient-to-br from-[#006fff] to-[#3944bc] rounded-full flex items-center justify-center shadow-2xl shadow-[#006fff]/50">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#ffde00] to-[#006fff] rounded-full animate-pulse"></div>
-                  <div className="absolute inset-0 rounded-full animate-ping bg-[#006fff]/30"></div>
-                </div>
-                
-                {/* Orbiting Creative Cards */}
-                {[...Array(8)].map((_, i) => {
-                  const angle = (i * 45) * Math.PI / 180;
-                  const radius = 120;
-                  const x = Math.cos(angle) * radius;
-                  const y = Math.sin(angle) * radius;
+                <div className="w-full h-full bg-gradient-to-br from-white/5 to-[#006fff]/10 rounded-2xl border border-white/10 p-6">
                   
-                  return (
-                    <div
-                      key={i}
-                      className="absolute w-12 h-16 bg-gradient-to-br from-[#006fff]/80 to-[#ffde00]/60 rounded-lg backdrop-blur-sm border border-white/30 shadow-lg"
-                      style={{
-                        left: '50%',
-                        top: '50%',
-                        transform: `translate(${x - 24}px, ${y - 32}px)`,
-                        animation: `orbit 12s linear infinite`,
-                        animationDelay: `${i * 1.5}s`
-                      }}
-                    >
-                      <div className="w-full h-2 bg-white/20 rounded-t-lg"></div>
-                      <div className="p-1.5 space-y-0.5">
-                        <div className="w-6 h-0.5 bg-white/40 rounded"></div>
-                        <div className="w-4 h-0.5 bg-white/30 rounded"></div>
-                        <div className="w-5 h-0.5 bg-white/25 rounded"></div>
+                  {/* Column Headers */}
+                  <div className="grid grid-cols-4 gap-4 mb-4">
+                    {['IDEA', 'PRODUCTION', 'APPROVED', 'LAUNCH'].map((stage, i) => (
+                      <div key={stage} className="text-center">
+                        <div className="text-white/80 text-xs font-medium mb-2 px-2 py-1 bg-white/10 rounded-full">
+                          {stage}
+                        </div>
                       </div>
-                      <div className="absolute -inset-1 bg-gradient-to-r from-[#006fff]/20 to-[#ffde00]/20 rounded-lg -z-10 animate-pulse"></div>
+                    ))}
+                  </div>
+                  
+                  {/* Column Containers */}
+                  <div className="grid grid-cols-4 gap-4 h-64 relative">
+                    {[0, 1, 2, 3].map((columnIndex) => (
+                      <div 
+                        key={columnIndex}
+                        className="bg-white/5 border border-white/10 rounded-lg p-2 relative"
+                      >
+                        {/* Column indicator dots */}
+                        <div className="absolute top-2 right-2">
+                          <div className={`w-2 h-2 rounded-full ${
+                            columnIndex === 0 ? 'bg-yellow-400' :
+                            columnIndex === 1 ? 'bg-orange-400' :
+                            columnIndex === 2 ? 'bg-blue-400' :
+                            'bg-green-400'
+                          } animate-pulse`}></div>
+                        </div>
+                      </div>
+                    ))}
+                    
+                    {/* Animated Cards */}
+                    {[
+                      { id: 'ugc1', name: 'UGC 1', color: '#8bfa7b', delay: 0 },
+                      { id: 'ugc2', name: 'UGC 2', color: '#ffde00', delay: 2 },
+                      { id: 'static1', name: 'STATIC 1', color: '#006fff', delay: 4 }
+                    ].map((card, cardIndex) => (
+                      <div
+                        key={card.id}
+                        className="absolute w-20 h-16 rounded-lg border border-white/20 backdrop-blur-sm shadow-lg"
+                        style={{
+                          backgroundColor: `${card.color}20`,
+                          borderColor: `${card.color}40`,
+                          animation: `moveCard 8s ease-in-out infinite`,
+                          animationDelay: `${card.delay}s`,
+                          left: '8px',
+                          top: `${80 + cardIndex * 20}px`,
+                        }}
+                      >
+                        <div className="p-2 text-center">
+                          <div 
+                            className="text-xs font-medium mb-1"
+                            style={{ color: card.color }}
+                          >
+                            {card.name}
+                          </div>
+                          <div className="w-full h-2 bg-white/20 rounded-full">
+                            <div 
+                              className="h-full rounded-full animate-pulse"
+                              style={{ 
+                                backgroundColor: card.color,
+                                width: '60%',
+                                animation: `progress 8s ease-in-out infinite`,
+                                animationDelay: `${card.delay}s`
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                        
+                        {/* Glowing effect */}
+                        <div 
+                          className="absolute inset-0 rounded-lg blur-sm -z-10 animate-pulse"
+                          style={{ backgroundColor: `${card.color}10` }}
+                        ></div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Flow Arrows */}
+                  <svg className="absolute inset-0 w-full h-full overflow-visible pointer-events-none">
+                    <defs>
+                      <linearGradient id="flowArrow" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#006fff" stopOpacity="0.6"/>
+                        <stop offset="50%" stopColor="#8bfa7b" stopOpacity="0.4"/>
+                        <stop offset="100%" stopColor="#ffde00" stopOpacity="0.2"/>
+                      </linearGradient>
+                      <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                              refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="url(#flowArrow)" />
+                      </marker>
+                    </defs>
+                    
+                    {/* Connecting arrows between columns */}
+                    {[0, 1, 2].map((i) => (
+                      <line
+                        key={i}
+                        x1={`${(i + 1) * 25 - 2}%`}
+                        y1="50%"
+                        x2={`${(i + 2) * 25 - 23}%`}
+                        y2="50%"
+                        stroke="url(#flowArrow)"
+                        strokeWidth="2"
+                        strokeDasharray="5,5"
+                        markerEnd="url(#arrowhead)"
+                        opacity="0.5"
+                        style={{
+                          animation: `flowAnimation ${3 + i}s ease-in-out infinite`,
+                          animationDelay: `${i * 0.5}s`
+                        }}
+                      />
+                    ))}
+                  </svg>
+                  
+                  {/* Pipeline Status */}
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-[#006fff]/20 border border-[#006fff]/40 rounded-full px-4 py-2 backdrop-blur-sm">
+                      <span className="text-[#006fff] text-sm font-medium animate-pulse">
+                        PIPELINE ACTIVE
+                      </span>
                     </div>
-                  );
-                })}
-                
-                {/* Flowing Lines */}
-                <svg className="absolute inset-0 w-full h-full overflow-visible">
-                  <defs>
-                    <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#006fff" stopOpacity="0.8"/>
-                      <stop offset="50%" stopColor="#ffde00" stopOpacity="0.6"/>
-                      <stop offset="100%" stopColor="#8bfa7b" stopOpacity="0.4"/>
-                    </linearGradient>
-                  </defs>
-                  {[...Array(6)].map((_, i) => (
-                    <circle
-                      key={i}
-                      cx="50%"
-                      cy="50%"
-                      r={60 + i * 20}
-                      fill="none"
-                      stroke="url(#flowGradient)"
-                      strokeWidth="1"
-                      strokeDasharray="5,10"
-                      opacity={0.3 - i * 0.05}
-                      style={{
-                        animation: `spin ${8 + i * 2}s linear infinite`,
-                        transformOrigin: '50% 50%'
-                      }}
-                    />
-                  ))}
-                </svg>
-                
+                  </div>
+                </div>
               </div>
               
               <style>{`
-                @keyframes orbit {
-                  from { transform: translate(var(--x), var(--y)) rotate(0deg) translate(120px) rotate(0deg); }
-                  to { transform: translate(var(--x), var(--y)) rotate(360deg) translate(120px) rotate(-360deg); }
+                @keyframes moveCard {
+                  0%, 20% { 
+                    transform: translateX(0px);
+                    opacity: 1;
+                  }
+                  25%, 45% { 
+                    transform: translateX(calc(100% + 16px));
+                    opacity: 1;
+                  }
+                  50%, 70% { 
+                    transform: translateX(calc(200% + 32px));
+                    opacity: 1;
+                  }
+                  75%, 95% { 
+                    transform: translateX(calc(300% + 48px));
+                    opacity: 1;
+                  }
+                  96%, 100% {
+                    transform: translateX(calc(300% + 48px));
+                    opacity: 0;
+                  }
                 }
-                @keyframes spin {
-                  from { transform: rotate(0deg); }
-                  to { transform: rotate(360deg); }
+                
+                @keyframes progress {
+                  0% { width: 10%; }
+                  25% { width: 40%; }
+                  50% { width: 70%; }
+                  75% { width: 90%; }
+                  100% { width: 100%; }
+                }
+                
+                @keyframes flowAnimation {
+                  0%, 100% { opacity: 0.3; }
+                  50% { opacity: 0.8; }
                 }
               `}</style>
             </div>
