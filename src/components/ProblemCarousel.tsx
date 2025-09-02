@@ -64,6 +64,9 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
           opts={{
             align: "start",
             loop: true,
+            duration: 25,
+            dragFree: true,
+            containScroll: "trimSnaps",
           }}
         >
           <CarouselContent 
@@ -97,10 +100,9 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                     {/* Header with enhanced number and metric */}
                     <div className="flex items-start justify-between">
                       <div className="relative">
-                        <span className="text-[#006fff] font-bold text-2xl bg-gradient-to-r from-[#006fff]/20 to-[#4d9bff]/20 border border-[#006fff]/50 px-6 py-3 rounded-lg backdrop-blur-sm group-hover:border-[#006fff] group-hover:bg-gradient-to-r group-hover:from-[#006fff]/30 group-hover:to-[#4d9bff]/30 transition-all duration-300 shadow-lg shadow-[#006fff]/20">
+                        <span className="text-[#006fff] font-bold text-2xl bg-gradient-to-r from-[#006fff]/20 to-[#4d9bff]/20 border border-[#006fff]/50 px-6 py-3 rounded-lg backdrop-blur-sm shadow-lg shadow-[#006fff]/20">
                           {card.label}
                         </span>
-                        <div className="absolute -inset-1 bg-gradient-to-r from-[#006fff]/20 to-[#4d9bff]/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
                       {card.metric && (
                         <span className="bg-gradient-to-r from-[#006fff]/15 to-[#4d9bff]/15 border border-[#006fff]/40 text-[#006fff] px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap backdrop-blur-sm group-hover:border-[#006fff] group-hover:bg-gradient-to-r group-hover:from-[#006fff]/25 group-hover:to-[#4d9bff]/25 group-hover:text-white transition-all duration-300 shadow-md shadow-[#006fff]/10">
