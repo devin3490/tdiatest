@@ -9,7 +9,7 @@ import BraggingSection from '../components/BraggingSection';
 import EcommerceProblemSection from '../components/EcommerceProblemSection';
 import WhatYouGetSection from '../components/WhatYouGetSection';
 import ComparisonSection from '../components/ComparisonSection';
-import FounderSection from '../components/FounderSection';
+
 import FAQSection from '../components/FAQSection';
 import StickyHeader from '../components/StickyHeader';
 import VideoSection from '../components/VideoSection';
@@ -27,7 +27,7 @@ const Index = () => {
       <CaseStudiesCarousel />
       <BraggingSection />
       <WhatYouGetSection />
-      <FounderSection />
+      
       <ComparisonSection />
       <FAQSection />
       <Footer />
