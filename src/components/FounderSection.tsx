@@ -40,11 +40,6 @@ const FounderSection: React.FC = () => {
       photo: "/lovable-uploads/b3c497cb-c8cf-4cec-aa09-7e64cbe5ea55.png"
     },
     {
-      name: "Tristan Langlais",
-      role: "Head of Advertising",
-      photo: "/lovable-uploads/e32ad8cf-c021-45ee-8bb8-f9bc5903d8c2.png"
-    },
-    {
       name: "Bafing Keita",
       role: "Head of Data & CRO",
       photo: "/lovable-uploads/664cb3fb-6045-474b-a673-d32ac9eb4897.png"
