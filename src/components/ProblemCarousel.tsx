@@ -74,7 +74,7 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
           >
             {cards.map((card, index) => (
               <CarouselItem key={index} className="pl-0 basis-full">
-                <div className="bg-gradient-to-br from-[#10112b] to-[#0a0b1d] rounded-xl p-6 md:p-8 border border-blue-900/20 relative overflow-hidden min-h-[200px]">
+                <div className="bg-gradient-to-br from-[#10112b] to-[#0a0b1d] rounded-xl p-8 md:p-12 border border-blue-900/20 relative overflow-hidden min-h-[600px] flex flex-col justify-center">
                   {/* Grid overlay */}
                   <div className="absolute inset-0 opacity-10">
                     <div className="h-px w-full bg-blue-500/30 absolute top-1/4"></div>
@@ -85,7 +85,7 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                     <div className="w-px h-full bg-blue-500/30 absolute left-3/4"></div>
                   </div>
                   
-                  <div className="relative z-10 space-y-4">
+                  <div className="relative z-10 space-y-6">
                     <div className="flex items-center justify-between">
                       <span className="text-[#006fff] font-bold text-lg">
                         {card.label}
@@ -97,11 +97,11 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                       )}
                     </div>
                     
-                    <h4 className="text-xl md:text-2xl font-semibold text-white">
+                    <h4 className="text-2xl md:text-3xl font-semibold text-white leading-tight">
                       {card.headline}
                     </h4>
                     
-                    <p className="text-white/80 text-base leading-relaxed">
+                    <p className="text-white/80 text-lg md:text-xl leading-relaxed">
                       {card.text}
                     </p>
                   </div>
