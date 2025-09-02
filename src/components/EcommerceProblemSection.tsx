@@ -63,13 +63,13 @@ const EcommerceProblemSection: React.FC = () => {
       },
       { 
         label: "09", 
-        headline: "Mesure incomplète", 
-        text: "KPIs suivis sans contexte ni seuils de décision."
+        headline: "Weak Mobile CRO/UX", 
+        text: "On mobile, the first screen shows no product, no price, no CTA — just intrusive pop-ups and slow load times. High-converting brands win with the “3-in-3 rule” (product, price, CTA visible instantly), sticky ATC, clear visuals (sizes, capacity, details), sequenced pop-ups, and optimized speed."
       },
       { 
         label: "10", 
-        headline: "Absence de système", 
-        text: "Pas de cadre comme Profit-First Media Buying™ pour guider les choix."
+        headline: "Unit Economics Blinded by Returns", 
+        text: "An “acceptable” CAC can hide margin destruction when returns aren’t factored in. Smart operators integrate returns, logistics, payments, and support into the P&L — then recalibrate CAC to reflect true profitability."
       }
     ],
     cta: { text: "Book Your Free Discovery Call", href: "/#calendly-or-link" }
