@@ -28,73 +28,79 @@ const CaseStudiesCarousel: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* hideAway Case Study */}
-          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300">
-            <CardContent className="p-0">
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/84384628-8607-48d8-838c-7e013574f222.png" 
-                  alt="hideAway case study"
-                  className="w-full"
-                  style={{ objectFit: 'cover', objectPosition: '0% 0%', maxHeight: '200px' }} 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <div className="mb-2">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      <span className="text-[006fff]">From 27 000$ to 85 000$ in 3 months </span><br />
-                    </h2>
-                    <p className="text-gray-300 mt-1">in 30 Days</p>
+          <a href="https://tdiaagency.com/case-studies" target="_blank" rel="noopener noreferrer" className="block">
+            <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300 cursor-pointer">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/84384628-8607-48d8-838c-7e013574f222.png" 
+                    alt="hideAway case study"
+                    className="w-full"
+                    style={{ objectFit: 'cover', objectPosition: '0% 0%', maxHeight: '200px' }} 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <div className="mb-2">
+                      <h2 className="text-2xl md:text-3xl font-bold text-white">
+                        <span className="text-[006fff]">From 27 000$ to 85 000$ in 3 months </span><br />
+                      </h2>
+                      <p className="text-gray-300 mt-1">in 30 Days</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </a>
 
           {/* RAITH Case Study */}
-          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300">
-            <CardContent className="p-0">
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/87c01000-ca06-4d2c-8c65-f4b9c08ddf1e.png" 
-                  alt="RAITH case study"
-                  className="w-full"
-                  style={{ objectFit: 'cover', objectPosition: '0% 33%', maxHeight: '200px' }} 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <div className="mb-2">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      <span className="text-white">7x </span>Roas <br />in the cosmetics industry
-                    </h2>
-                    <p className="text-gray-300 mt-1">in 30 Days</p>
+          <a href="https://tdiaagency.com/case-studies" target="_blank" rel="noopener noreferrer" className="block">
+            <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300 cursor-pointer">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/87c01000-ca06-4d2c-8c65-f4b9c08ddf1e.png" 
+                    alt="RAITH case study"
+                    className="w-full"
+                    style={{ objectFit: 'cover', objectPosition: '0% 33%', maxHeight: '200px' }} 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <div className="mb-2">
+                      <h2 className="text-2xl md:text-3xl font-bold text-white">
+                        <span className="text-white">7x </span>Roas <br />in the cosmetics industry
+                      </h2>
+                      <p className="text-gray-300 mt-1">in 30 Days</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </a>
 
           {/* Golf Course Supply Case Study */}
-          <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300">
-            <CardContent className="p-0">
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/02f8bc66-3042-4b06-a33f-fa29d507dd24.png" 
-                  alt="Golf Course Supply case study"
-                  className="w-full"
-                  style={{ objectFit: 'cover', objectPosition: '0% 66%', maxHeight: '200px' }} 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <div className="mb-2">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      <span className="text-white">0 to 20 </span>leads in a niche market<br />
-                    </h2>
-                    <p className="text-gray-300 mt-1">in 30 Days</p>
+          <a href="https://tdiaagency.com/case-studies" target="_blank" rel="noopener noreferrer" className="block">
+            <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300 cursor-pointer">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/02f8bc66-3042-4b06-a33f-fa29d507dd24.png" 
+                    alt="Golf Course Supply case study"
+                    className="w-full"
+                    style={{ objectFit: 'cover', objectPosition: '0% 66%', maxHeight: '200px' }} 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <div className="mb-2">
+                      <h2 className="text-2xl md:text-3xl font-bold text-white">
+                        <span className="text-white">0 to 20 </span>leads in a niche market<br />
+                      </h2>
+                      <p className="text-gray-300 mt-1">in 30 Days</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </a>
         </div>
         
         <div className="flex justify-center mt-10">
