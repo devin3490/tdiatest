@@ -14,43 +14,48 @@ const CreativePipelineAnimation = () => {
     let startTime = Date.now();
 
     const animate = () => {
-      const elapsed = (Date.now() - startTime) % 8000; // 8 second loop
+      const elapsed = (Date.now() - startTime) % 12000; // 12 second loop for slower animation
       
       cards.forEach((card, index) => {
         const element = card as HTMLElement;
-        const phase = (elapsed + index * 1000) % 8000;
+        const phase = (elapsed + index * 2000) % 12000; // Stagger cards by 2 seconds
         
         // Reset all states
         element.style.transform = 'translateX(0)';
-        element.style.opacity = '0.6';
+        element.style.opacity = '0.8';
         element.style.boxShadow = '0 2px 8px rgba(0, 111, 255, 0.3)';
         
-        // Animation phases
-        if (phase < 2000) {
-          // Backlog phase
+        // Animation phases: Backlog (0-3s) → In Testing (3-6s) → Approved (6-9s) → Reset (9-12s)
+        if (phase < 3000) {
+          // In Backlog
+          element.style.transform = 'translateX(0px)';
           element.style.opacity = '0.8';
-          element.style.boxShadow = '0 2px 8px rgba(0, 111, 255, 0.3)';
-        } else if (phase < 4000) {
-          // Moving to testing
-          const progress = (phase - 2000) / 2000;
-          element.style.transform = `translateX(${progress * 120}px)`;
-          element.style.opacity = '0.9';
-          element.style.boxShadow = '0 2px 8px rgba(0, 111, 255, 0.3)';
         } else if (phase < 6000) {
-          // In testing
-          element.style.transform = 'translateX(120px)';
+          // Moving to/in Testing column (middle column)
+          const progress = Math.min((phase - 3000) / 1000, 1); // 1 second transition
+          const targetX = 140; // Position for middle column
+          element.style.transform = `translateX(${progress * targetX}px)`;
           element.style.opacity = '1';
-          if (index === 0) {
+          if (progress >= 1) {
+            // Highlight when fully in testing
             element.style.boxShadow = '0 0 20px rgba(0, 111, 255, 0.8)';
-          } else {
-            element.style.boxShadow = '0 2px 8px rgba(0, 111, 255, 0.3)';
+          }
+        } else if (phase < 9000) {
+          // Moving to/in Approved column (right column)
+          const progress = Math.min((phase - 6000) / 1000, 1); // 1 second transition
+          const startX = 140; // Starting from middle column
+          const targetX = 280; // Position for right column
+          element.style.transform = `translateX(${startX + progress * (targetX - startX)}px)`;
+          element.style.opacity = '0.9';
+          if (progress >= 1) {
+            // Green glow when approved
+            element.style.boxShadow = '0 0 20px rgba(139, 250, 123, 0.8)';
           }
         } else {
-          // Moving to approved
-          const progress = (phase - 6000) / 2000;
-          element.style.transform = `translateX(${120 + progress * 120}px)`;
-          element.style.opacity = '0.9';
-          element.style.boxShadow = '0 2px 8px rgba(0, 111, 255, 0.3)';
+          // Reset phase - fade out and return to start
+          const progress = (phase - 9000) / 3000;
+          element.style.transform = 'translateX(0px)';
+          element.style.opacity = `${0.8 - progress * 0.8}`;
         }
       });
       
@@ -91,7 +96,10 @@ const CreativePipelineAnimation = () => {
               className={`pipeline-card absolute w-16 h-8 bg-[#006fff] rounded text-white text-xs flex items-center justify-center font-medium transition-all duration-500 ${
                 index === 0 ? 'top-0' : index === 1 ? 'top-10' : 'top-20'
               }`}
-              style={{ boxShadow: '0 2px 8px rgba(0, 111, 255, 0.3)' }}
+              style={{ 
+                boxShadow: '0 2px 8px rgba(0, 111, 255, 0.3)',
+                left: '0px' // Start all cards in the first column
+              }}
             >
               {index === 0 ? 'Hook A' : index === 1 ? 'UGC B' : 'Demo C'}
             </div>
