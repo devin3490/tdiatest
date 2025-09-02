@@ -141,7 +141,7 @@ const FAQSection: React.FC = () => {
         </div>
       </div>
       
-      <div className="w-full h-20 bg-gradient-to-b from-transparent to-[#006fff] mt-12 "></div>
+      <div className="w-full h-20 bg-gradient-to-b from-[#0a0a0a] to-[#006fff] mt-12"></div>
     </div>
   );
 };
