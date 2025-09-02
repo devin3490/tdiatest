@@ -28,7 +28,7 @@ const CaseStudiesCarousel: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* hideAway Case Study */}
-          <a href="https://tdiaagency.com/case-studies" target="_blank" rel="noopener noreferrer" className="block">
+          <a href="https://tdiaagency.com/" target="_blank" rel="noopener noreferrer" className="block">
             <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300 cursor-pointer">
               <CardContent className="p-0">
                 <div className="relative">
@@ -53,7 +53,7 @@ const CaseStudiesCarousel: React.FC = () => {
           </a>
 
           {/* RAITH Case Study */}
-          <a href="https://tdiaagency.com/case-studies" target="_blank" rel="noopener noreferrer" className="block">
+          <a href="https://tdiaagency.com/" target="_blank" rel="noopener noreferrer" className="block">
             <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300 cursor-pointer">
               <CardContent className="p-0">
                 <div className="relative">
@@ -78,7 +78,7 @@ const CaseStudiesCarousel: React.FC = () => {
           </a>
 
           {/* Golf Course Supply Case Study */}
-          <a href="https://tdiaagency.com/case-studies" target="_blank" rel="noopener noreferrer" className="block">
+          <a href="https://tdiaagency.com/" target="_blank" rel="noopener noreferrer" className="block">
             <Card className="bg-black border border-gray-800 rounded-xl overflow-hidden hover:border-[#006fff] transition-all duration-300 cursor-pointer">
               <CardContent className="p-0">
                 <div className="relative">
