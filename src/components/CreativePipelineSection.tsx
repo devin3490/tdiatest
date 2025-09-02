@@ -17,7 +17,7 @@ const CreativePipelineSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Visual - Left */}
           <div className="order-2 lg:order-1 flex items-center justify-center">
-            <div className="relative w-full max-w-4xl h-96">
+            <div className="relative w-full max-w-4xl h-[480px]">
               {/* Kanban Board Animation */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-full h-full bg-gradient-to-br from-white/5 to-[#006fff]/10 rounded-2xl border border-white/10 p-4">
@@ -34,7 +34,7 @@ const CreativePipelineSection = () => {
                   </div>
                   
                   {/* Column Containers */}
-                  <div className="grid grid-cols-4 gap-3 h-72 relative">
+                  <div className="grid grid-cols-4 gap-3 h-80 relative">
                     {[0, 1, 2, 3].map((columnIndex) => (
                       <div 
                         key={columnIndex}
@@ -52,7 +52,7 @@ const CreativePipelineSection = () => {
                       </div>
                     ))}
                     
-                    {/* Animated Cards - positioned to stay within columns */}
+                    {/* Animated Cards - positioned to stay centered in each column */}
                     {[
                       { id: 'ugc1', name: 'UGC 1', color: '#8bfa7b', delay: 0 },
                       { id: 'ugc2', name: 'UGC 2', color: '#ffde00', delay: 2.5 },
@@ -66,10 +66,10 @@ const CreativePipelineSection = () => {
                           borderColor: `${card.color}40`,
                           width: 'calc(25% - 20px)', // Taille adaptée à la colonne
                           height: '60px',
-                          animation: `moveCardFixed 10s ease-in-out infinite`,
+                          animation: `moveCardCentered 10s ease-in-out infinite`,
                           animationDelay: `${card.delay}s`,
-                          left: '16px', // Position initiale dans la première colonne
-                          top: `${100 + cardIndex * 25}px`,
+                          left: 'calc(12.5% - calc(25% - 20px) / 2)', // Centré dans la première colonne
+                          top: `${120 + cardIndex * 80}px`, // Espacement vertical augmenté
                         }}
                       >
                         <div className="p-2 text-center h-full flex flex-col justify-center">
@@ -147,25 +147,25 @@ const CreativePipelineSection = () => {
               </div>
               
               <style>{`
-                @keyframes moveCardFixed {
+                @keyframes moveCardCentered {
                   0%, 15% { 
-                    transform: translateX(0px);
+                    left: calc(12.5% - calc(25% - 20px) / 2);
                     opacity: 1;
                   }
                   20%, 35% { 
-                    transform: translateX(calc(100% + 12px));
+                    left: calc(37.5% - calc(25% - 20px) / 2);
                     opacity: 1;
                   }
                   40%, 55% { 
-                    transform: translateX(calc(200% + 24px));
+                    left: calc(62.5% - calc(25% - 20px) / 2);
                     opacity: 1;
                   }
                   60%, 85% { 
-                    transform: translateX(calc(300% + 36px));
+                    left: calc(87.5% - calc(25% - 20px) / 2);
                     opacity: 1;
                   }
                   90%, 100% {
-                    transform: translateX(calc(300% + 36px));
+                    left: calc(87.5% - calc(25% - 20px) / 2);
                     opacity: 0;
                   }
                 }
