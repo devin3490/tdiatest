@@ -4,7 +4,7 @@ import ProblemCarousel from './ProblemCarousel';
 const EcommerceProblemSection: React.FC = () => {
 
   const problemData = {
-    title: "The Accessories Growth Blocker",
+    title: "Why Do Your Campaigns Work One Month and Fail the Next?",
     cards: [
       { 
         label: "01", 
