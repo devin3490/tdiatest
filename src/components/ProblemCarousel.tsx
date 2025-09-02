@@ -90,16 +90,15 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                       <span className="text-[#006fff] font-bold text-lg">
                         {card.label}
                       </span>
+                      <h4 className="text-2xl md:text-3xl font-semibold text-white leading-tight text-center flex-1 mx-4">
+                        {card.headline}
+                      </h4>
                       {card.metric && (
                         <span className="bg-[#006fff]/10 border border-[#006fff]/30 text-[#006fff] px-3 py-1 rounded-full text-sm font-medium">
                           {card.metric}
                         </span>
                       )}
                     </div>
-                    
-                    <h4 className="text-2xl md:text-3xl font-semibold text-white leading-tight">
-                      {card.headline}
-                    </h4>
                     
                     <p className="text-white/80 text-lg md:text-xl leading-relaxed">
                       {card.text}
