@@ -26,40 +26,40 @@ const EcommerceProblemSection: React.FC = () => {
       },
       { 
         label: "02", 
-        headline: "The Hero Product Trap", 
-        text: "When 80–90% of your revenue relies on one item, you’re exposed. Repurchase rates stay low, and once the hype fades, sales collapse. Smart brands don’t gamble — they expand with controlled variations (colors, fabrics, cuts) while preparing the next heroes to carry growth forward.",
-        metric: "+25% repeat revenue unlocked"
+        headline: "CAC en hausse", 
+        text: "Le coût d'acquisition grimpe pendant que la croissance stagne.",
+        metric: "+43% CAC"
       },
       { 
         label: "03", 
-        headline: "Créatives non testées", 
-        text: "Pas de boucle de feedback ni de protocole de test structuré."
+        headline: "Slow “Time-to-Value” Kills Conversions", 
+        text: "If your creative takes more than 3 seconds to deliver value, viewers drop. Low CTR, weak add-to-cart rates, and wasted clicks follow. Winning ads open instantly with the product + price, sharp angles, and clear usage context — grabbing attention before it’s gone."
       },
       { 
         label: "04", 
-        headline: "Ciblage confus", 
-        text: "Les audiences ne sont pas segmentées par intention et maturité."
+        headline: "Creative Cadence Too Low", 
+        text: "When ads fatigue after just 2–3 impressions, CPAs skyrocket. Growth brands run on a continuous production system — weekly variations, fresh formats, new angles, and diverse messages to keep performance alive."
       },
       { 
         label: "05", 
-        headline: "Budget mal alloué", 
-        text: "Les dollars médias ne suivent pas la hiérarchie des priorités business."
+        headline: "Broken Meta Architecture", 
+        text: "Over-fragmentation, constant re-learning, or budget spread too thin — your Meta campaigns never stabilize. Winning brands choose among 3 proven architectures (hyper-consolidation, controlled fragmentation, big-idea scaling) with AVP layering on top."
       },
       { 
         label: "06", 
-        headline: "Scaling fragile", 
-        text: "Chaque montée de budget casse la rentabilité.",
-        metric: "50% échec"
+        headline: "Underused & Misconfigured Google Ads", 
+        text: "Losing your own branded demand, irrelevant Shopping results, and inflated attribution waste spend. The fix: protect your brand in Search, run PMax with new-customer focus, exclude brand traffic, enrich your feed, and run YouTube in a 2-step funnel.",
+        metric: "+35% capture on high-intent traffic"
       },
       { 
         label: "07", 
-        headline: "Manque de clarté", 
-        text: "Pas de visibilité temps réel ni d'insights actionnables."
+        headline: "Seasonality Played Wrong", 
+        text: "Budgets spread too thin, peaks missed, and ROAS swings wildly. The smart move: concentrate spend on key weeks, pilot campaigns intra-day, pre-warm leads/viewers, and use geo-targeting to win in off-seasons."
       },
       { 
         label: "08", 
-        headline: "Stack créatif limité", 
-        text: "Peu de formats, peu d'angles, peu de variations."
+        headline: "Pricing & Promo Chaos", 
+        text: "Price wars crush margins, baskets drift outside your profit zone, and promos feel random. Instead, anchor prices to your positioning, adopt clear promo doctrines (credible no-promo vs orchestrated promos), bundle smartly, and ease payment options."
       },
       { 
         label: "09", 
