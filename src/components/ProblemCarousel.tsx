@@ -135,20 +135,23 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                   {/* Subtle glow effect on hover */}
                   <div className="absolute inset-0 bg-gradient-radial from-[#006fff]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   
-                  <div className="relative z-10 space-y-8">
-                    {/* Header with enhanced number and metric */}
-                    <div className="flex items-start justify-between">
-                      <div className="relative">
-                        <span className="text-[#006fff] font-bold text-2xl bg-gradient-to-r from-[#006fff]/20 to-[#4d9bff]/20 border border-[#006fff]/50 px-6 py-3 rounded-lg backdrop-blur-sm shadow-lg shadow-[#006fff]/20">
-                          {card.label}
-                        </span>
-                      </div>
-                      {card.metric && (
-                        <span className="bg-gradient-to-r from-[#006fff]/15 to-[#4d9bff]/15 border border-[#006fff]/40 text-[#006fff] px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap backdrop-blur-sm shadow-md shadow-[#006fff]/10">
-                          {card.metric}
-                        </span>
-                      )}
-                    </div>
+                   {/* Number positioned at top-left */}
+                   <div className="absolute top-8 left-8 z-20">
+                     <span className="text-[#006fff] font-bold text-2xl bg-gradient-to-r from-[#006fff]/20 to-[#4d9bff]/20 border border-[#006fff]/50 px-6 py-3 rounded-lg backdrop-blur-sm shadow-lg shadow-[#006fff]/20">
+                       {card.label}
+                     </span>
+                   </div>
+                   
+                   {/* Metric positioned at top-right */}
+                   {card.metric && (
+                     <div className="absolute top-8 right-8 z-20">
+                       <span className="bg-gradient-to-r from-[#006fff]/15 to-[#4d9bff]/15 border border-[#006fff]/40 text-[#006fff] px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap backdrop-blur-sm shadow-md shadow-[#006fff]/10">
+                         {card.metric}
+                       </span>
+                     </div>
+                   )}
+                   
+                   <div className="relative z-10 space-y-8 pt-16">
                     
                     {/* Enhanced headline with gradient text */}
                     <div className="text-center">
