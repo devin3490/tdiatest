@@ -16,7 +16,7 @@ const EcommerceProblemSection: React.FC = () => {
   }, []);
 
   const problemData = {
-    title: "The eCommerce Problem",
+    title: "The Accessories Growth Blocker",
     cards: [
       { 
         label: "01", 
