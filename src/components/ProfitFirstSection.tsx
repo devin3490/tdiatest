@@ -178,7 +178,7 @@ const ProfitFirstAnimation = () => {
 
 const ProfitFirstSection = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-black to-[#0a0a0a] py-16 lg:py-20 font-sans relative overflow-hidden">
+    <section className="w-full bg-black py-0 font-sans relative overflow-hidden">
       <ParallaxDots 
         count={50} 
         colors={['#006FFF', '#3944bc', '#ffde00', '#ffffff']} 
@@ -187,7 +187,7 @@ const ProfitFirstSection = () => {
         className="z-0"
       />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content - Left */}
           <div className="max-w-xl">

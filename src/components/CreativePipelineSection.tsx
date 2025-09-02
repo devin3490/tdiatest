@@ -112,7 +112,7 @@ const CreativePipelineAnimation = () => {
 
 const CreativePipelineSection = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-black to-[#0a0a0a] py-16 lg:py-20 font-sans relative overflow-hidden">
+    <section className="w-full bg-black py-16 lg:py-20 font-sans relative overflow-hidden">
       <ParallaxDots 
         count={50} 
         colors={['#006FFF', '#3944bc', '#ffde00', '#ffffff']} 
