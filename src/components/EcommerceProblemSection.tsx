@@ -26,9 +26,9 @@ const EcommerceProblemSection: React.FC = () => {
       },
       { 
         label: "02", 
-        headline: "CAC en hausse", 
-        text: "Le coût d'acquisition grimpe pendant que la croissance stagne.",
-        metric: "+43% CAC"
+        headline: "The Hero Product Trap", 
+        text: "When 80–90% of your revenue relies on one item, you’re exposed. Repurchase rates stay low, and once the hype fades, sales collapse. Smart brands don’t gamble — they expand with controlled variations (colors, fabrics, cuts) while preparing the next heroes to carry growth forward.",
+        metric: "+25% repeat revenue unlocked"
       },
       { 
         label: "03", 
