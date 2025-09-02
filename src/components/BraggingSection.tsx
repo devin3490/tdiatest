@@ -24,7 +24,7 @@ const BraggingSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
           {/* Stat 1 */}
           <Card3D glowColor="rgba(0, 111, 255, 0.3)">
-            <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white h-full transform-style-preserve-3d">
+            <div className="rounded-lg bg-transparent border border-white/20 p-8 text-center text-white h-full transform-style-preserve-3d">
               <div className="transform translate-z-20">
                 <CounterValue 
                   value={1.3} 
@@ -39,7 +39,7 @@ const BraggingSection: React.FC = () => {
           
           {/* Stat 2 */}
           <Card3D glowColor="rgba(0, 111, 255, 0.3)">
-            <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white h-full transform-style-preserve-3d">
+            <div className="rounded-lg bg-transparent border border-white/20 p-8 text-center text-white h-full transform-style-preserve-3d">
               <div className="transform translate-z-20">
                 <CounterValue 
                   value={6} 
@@ -53,7 +53,7 @@ const BraggingSection: React.FC = () => {
           
           {/* Stat 3 */}
           <Card3D glowColor="rgba(0, 111, 255, 0.3)">
-            <div className="rounded-lg bg-[#006FFF] p-8 text-center text-white h-full transform-style-preserve-3d">
+            <div className="rounded-lg bg-transparent border border-white/20 p-8 text-center text-white h-full transform-style-preserve-3d">
               <div className="transform translate-z-20">
                 <CounterValue 
                   value={7.5} 
