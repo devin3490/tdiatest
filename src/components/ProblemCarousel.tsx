@@ -85,24 +85,32 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                     <div className="w-px h-full bg-blue-500/30 absolute left-3/4"></div>
                   </div>
                   
-                  <div className="relative z-10 space-y-6">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[#006fff] font-bold text-lg">
+                  <div className="relative z-10 space-y-8">
+                    {/* Header with number and metric */}
+                    <div className="flex items-start justify-between">
+                      <span className="text-[#006fff] font-bold text-xl bg-[#006fff]/10 border border-[#006fff]/30 px-4 py-2 rounded-lg">
                         {card.label}
                       </span>
-                      <h4 className="text-2xl md:text-3xl font-semibold text-white leading-tight text-center flex-1 mx-4">
-                        {card.headline}
-                      </h4>
                       {card.metric && (
-                        <span className="bg-[#006fff]/10 border border-[#006fff]/30 text-[#006fff] px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-[#006fff]/10 border border-[#006fff]/30 text-[#006fff] px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
                           {card.metric}
                         </span>
                       )}
                     </div>
                     
-                    <p className="text-white/80 text-lg md:text-xl leading-relaxed">
-                      {card.text}
-                    </p>
+                    {/* Headline */}
+                    <div className="text-center">
+                      <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                        {card.headline}
+                      </h4>
+                    </div>
+                    
+                    {/* Description */}
+                    <div className="text-center max-w-4xl mx-auto">
+                      <p className="text-white/80 text-lg md:text-xl leading-relaxed">
+                        {card.text}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </CarouselItem>
