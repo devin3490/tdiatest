@@ -30,29 +30,29 @@ const CreativePipelineSection = () => {
               </h2>
               
               <h3 className="text-xl lg:text-2xl font-semibold text-white mb-4 lg:mb-6">
-                From random creatives to a predictable growth engine.
+                From one-off campaigns to a creative engine that scales with trends
               </h3>
               
               <p className="text-white/70 mb-6 text-base lg:text-lg leading-relaxed">
-                Most brands create randomly — no backlog, no cadence, no clarity. That leads to ad fatigue, high CPAs, and stalled growth.
+                Most fashion brands still rely on guesswork — scattered assortments, overdependence on “hero” pieces, and slow content cycles that can’t keep up with fast-moving trends. The result? Ad fatigue, rising CPAs, and stalled growth.
               </p>
 
               <p className="text-white font-semibold mb-4 lg:mb-6">
-                With our Creative Pipeline System™, we build a continuous creative flow:
+                With our Creative Pipeline System™, we turn your brand into a continuous creative flow :
               </p>
 
               <ul className="space-y-3 lg:space-y-4 mb-8">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-white/70">Backlog of testable ideas across angles, formats & avatars</span>
+                  <span className="text-white/70">Building a continuous flow of fresh creatives aligned with collections & trends</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-white/70">AI-powered prioritization (winning hooks tested first)</span>
+                  <span className="text-white/70">Prioritizing winning SKUs and hooks with AI-driven testing</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[#006fff] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-white/70">Seamless approvals in a Notion-style board</span>
+                  <span className="text-white/70">Keeping merchandising and marketing in sync on one streamlined board</span>
                 </li>
               </ul>
 
