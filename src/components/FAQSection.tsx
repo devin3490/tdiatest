@@ -115,6 +115,7 @@ const FAQSection: React.FC = () => {
           <div className="flex justify-center relative z-10">
             <Button 
               className="text-white font-thin text-lg"
+              onClick={() => window.open('https://calendly.com/tdiaagency/30min?month=2025-09', '_blank')}
             >
               Book Your Free Discovery Call <ArrowRight className="ml-2" />
             </Button>

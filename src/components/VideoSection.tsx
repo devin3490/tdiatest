@@ -96,6 +96,7 @@ const VideoSection: React.FC = () => {
               <TooltipTrigger asChild>
                 <Button 
                   className="text-white font-normal text-lg shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 px-10"
+                  onClick={() => window.open('https://calendly.com/tdiaagency/30min?month=2025-09', '_blank')}
                 >
                   Book Your Free Discovery Call
                 </Button>

@@ -108,6 +108,7 @@ const CaseStudies: React.FC = () => {
               </p>
               <Button 
                 className="bg-[#006FFF] hover:bg-[#0052cc] text-black font-bold py-3 px-6 rounded-full text-center"
+                onClick={() => window.open('https://calendly.com/tdiaagency/30min?month=2025-09', '_blank')}
               >
                 BOOK YOUR FREE DISCOVERY CALL
                 <ArrowRight className="ml-2" />

@@ -96,6 +96,7 @@ const WhatYouGetSection: React.FC = () => {
             
             <Button 
               className="text-white font-thin text-sm flex items-center justify-center gap-2 mx-auto"
+              onClick={() => window.open('https://calendly.com/tdiaagency/30min?month=2025-09', '_blank')}
             >
               <span>⚡</span> Book Your Free Discovery Call <span>⚡</span>
             </Button>

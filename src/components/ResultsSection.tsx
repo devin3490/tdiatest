@@ -121,6 +121,7 @@ const ResultsSection: React.FC = () => {
         <div className="text-center">
           <Button 
             className="text-white font-thin text-lg"
+            onClick={() => window.open('https://calendly.com/tdiaagency/30min?month=2025-09', '_blank')}
           >
             Book Your Free Discovery Call
           </Button>

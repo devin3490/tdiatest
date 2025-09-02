@@ -84,6 +84,7 @@ const AdStrategiesSection: React.FC = () => {
             
             <Button 
               className="text-white font-thin text-center"
+              onClick={() => window.open('https://calendly.com/tdiaagency/30min?month=2025-09', '_blank')}
             >
               Book Your Free Discovery Call
             </Button>

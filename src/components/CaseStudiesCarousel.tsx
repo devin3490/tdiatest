@@ -104,14 +104,13 @@ const CaseStudiesCarousel: React.FC = () => {
         </div>
         
         <div className="flex justify-center mt-10">
-          <Link to="/case-studies">
-            <Button 
-              className="text-white font-thin"
-            >
-              Book Your Free Discovery Call
-              <ChevronRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+          <Button 
+            className="text-white font-thin"
+            onClick={() => window.open('https://calendly.com/tdiaagency/30min?month=2025-09', '_blank')}
+          >
+            Book Your Free Discovery Call
+            <ChevronRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </div>
     </div>

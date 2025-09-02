@@ -48,6 +48,7 @@ Now weâ€™re generating ~20 qualified leads monthly. Great team, smart strategy â
                   <TooltipTrigger asChild>
                     <Button 
                       className="text-white font-thin text-sm shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                      onClick={() => window.open('https://calendly.com/tdiaagency/30min?month=2025-09', '_blank')}
                     >
                       Book Your Free Discovery Call
                     </Button>
