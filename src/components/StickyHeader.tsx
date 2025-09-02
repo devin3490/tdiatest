@@ -46,11 +46,6 @@ const StickyHeader: React.FC = () => {
           </Link>
         </div>
         <nav className="hidden md:flex space-x-2">
-          <Link to="/case-studies">
-            <Button variant="ghost" className="text-white hover:bg-gray-800 font-normal">
-              Case Studies
-            </Button>
-          </Link>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
