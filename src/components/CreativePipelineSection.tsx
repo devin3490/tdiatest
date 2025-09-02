@@ -17,16 +17,16 @@ const CreativePipelineSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Visual - Left */}
           <div className="order-2 lg:order-1 flex items-center justify-center">
-            <div className="relative w-full max-w-2xl h-96">
+            <div className="relative w-full max-w-4xl h-96">
               {/* Kanban Board Animation */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-full h-full bg-gradient-to-br from-white/5 to-[#006fff]/10 rounded-2xl border border-white/10 p-6">
+                <div className="w-full h-full bg-gradient-to-br from-white/5 to-[#006fff]/10 rounded-2xl border border-white/10 p-4">
                   
                   {/* Column Headers */}
-                  <div className="grid grid-cols-4 gap-4 mb-4">
+                  <div className="grid grid-cols-4 gap-3 mb-4">
                     {['IDEA', 'PRODUCTION', 'APPROVED', 'LAUNCH'].map((stage, i) => (
                       <div key={stage} className="text-center">
-                        <div className="text-white/80 text-xs font-medium mb-2 px-2 py-1 bg-white/10 rounded-full">
+                        <div className="text-white/80 text-xs font-medium mb-2 px-3 py-1.5 bg-white/10 rounded-full">
                           {stage}
                         </div>
                       </div>
@@ -34,14 +34,14 @@ const CreativePipelineSection = () => {
                   </div>
                   
                   {/* Column Containers */}
-                  <div className="grid grid-cols-4 gap-4 h-64 relative">
+                  <div className="grid grid-cols-4 gap-3 h-72 relative">
                     {[0, 1, 2, 3].map((columnIndex) => (
                       <div 
                         key={columnIndex}
-                        className="bg-white/5 border border-white/10 rounded-lg p-2 relative"
+                        className="bg-white/5 border border-white/10 rounded-lg p-3 relative"
                       >
                         {/* Column indicator dots */}
-                        <div className="absolute top-2 right-2">
+                        <div className="absolute top-3 right-3">
                           <div className={`w-2 h-2 rounded-full ${
                             columnIndex === 0 ? 'bg-yellow-400' :
                             columnIndex === 1 ? 'bg-orange-400' :
@@ -52,38 +52,39 @@ const CreativePipelineSection = () => {
                       </div>
                     ))}
                     
-                    {/* Animated Cards */}
+                    {/* Animated Cards - positioned to stay within columns */}
                     {[
                       { id: 'ugc1', name: 'UGC 1', color: '#8bfa7b', delay: 0 },
-                      { id: 'ugc2', name: 'UGC 2', color: '#ffde00', delay: 2 },
-                      { id: 'static1', name: 'STATIC 1', color: '#006fff', delay: 4 }
+                      { id: 'ugc2', name: 'UGC 2', color: '#ffde00', delay: 2.5 },
+                      { id: 'static1', name: 'STATIC 1', color: '#006fff', delay: 5 }
                     ].map((card, cardIndex) => (
                       <div
                         key={card.id}
-                        className="absolute w-20 h-16 rounded-lg border border-white/20 backdrop-blur-sm shadow-lg"
+                        className="absolute rounded-lg border border-white/20 backdrop-blur-sm shadow-lg"
                         style={{
                           backgroundColor: `${card.color}20`,
                           borderColor: `${card.color}40`,
-                          animation: `moveCard 8s ease-in-out infinite`,
+                          width: 'calc(25% - 20px)', // Taille adaptée à la colonne
+                          height: '60px',
+                          animation: `moveCardFixed 10s ease-in-out infinite`,
                           animationDelay: `${card.delay}s`,
-                          left: '8px',
-                          top: `${80 + cardIndex * 20}px`,
+                          left: '16px', // Position initiale dans la première colonne
+                          top: `${100 + cardIndex * 25}px`,
                         }}
                       >
-                        <div className="p-2 text-center">
+                        <div className="p-2 text-center h-full flex flex-col justify-center">
                           <div 
                             className="text-xs font-medium mb-1"
                             style={{ color: card.color }}
                           >
                             {card.name}
                           </div>
-                          <div className="w-full h-2 bg-white/20 rounded-full">
+                          <div className="w-full h-1.5 bg-white/20 rounded-full">
                             <div 
-                              className="h-full rounded-full animate-pulse"
+                              className="h-full rounded-full"
                               style={{ 
                                 backgroundColor: card.color,
-                                width: '60%',
-                                animation: `progress 8s ease-in-out infinite`,
+                                animation: `progressFixed 10s ease-in-out infinite`,
                                 animationDelay: `${card.delay}s`
                               }}
                             ></div>
@@ -93,7 +94,7 @@ const CreativePipelineSection = () => {
                         {/* Glowing effect */}
                         <div 
                           className="absolute inset-0 rounded-lg blur-sm -z-10 animate-pulse"
-                          style={{ backgroundColor: `${card.color}10` }}
+                          style={{ backgroundColor: `${card.color}15` }}
                         ></div>
                       </div>
                     ))}
@@ -117,15 +118,15 @@ const CreativePipelineSection = () => {
                     {[0, 1, 2].map((i) => (
                       <line
                         key={i}
-                        x1={`${(i + 1) * 25 - 2}%`}
-                        y1="50%"
-                        x2={`${(i + 2) * 25 - 23}%`}
-                        y2="50%"
+                        x1={`${(i + 1) * 25 - 1}%`}
+                        y1="55%"
+                        x2={`${(i + 2) * 25 - 24}%`}
+                        y2="55%"
                         stroke="url(#flowArrow)"
-                        strokeWidth="2"
-                        strokeDasharray="5,5"
+                        strokeWidth="1.5"
+                        strokeDasharray="4,4"
                         markerEnd="url(#arrowhead)"
-                        opacity="0.5"
+                        opacity="0.4"
                         style={{
                           animation: `flowAnimation ${3 + i}s ease-in-out infinite`,
                           animationDelay: `${i * 0.5}s`
@@ -146,40 +147,41 @@ const CreativePipelineSection = () => {
               </div>
               
               <style>{`
-                @keyframes moveCard {
-                  0%, 20% { 
+                @keyframes moveCardFixed {
+                  0%, 15% { 
                     transform: translateX(0px);
                     opacity: 1;
                   }
-                  25%, 45% { 
-                    transform: translateX(calc(100% + 16px));
+                  20%, 35% { 
+                    transform: translateX(calc(100% + 12px));
                     opacity: 1;
                   }
-                  50%, 70% { 
-                    transform: translateX(calc(200% + 32px));
+                  40%, 55% { 
+                    transform: translateX(calc(200% + 24px));
                     opacity: 1;
                   }
-                  75%, 95% { 
-                    transform: translateX(calc(300% + 48px));
+                  60%, 85% { 
+                    transform: translateX(calc(300% + 36px));
                     opacity: 1;
                   }
-                  96%, 100% {
-                    transform: translateX(calc(300% + 48px));
+                  90%, 100% {
+                    transform: translateX(calc(300% + 36px));
                     opacity: 0;
                   }
                 }
                 
-                @keyframes progress {
-                  0% { width: 10%; }
-                  25% { width: 40%; }
-                  50% { width: 70%; }
-                  75% { width: 90%; }
+                @keyframes progressFixed {
+                  0% { width: 15%; }
+                  20% { width: 45%; }
+                  40% { width: 70%; }
+                  60% { width: 90%; }
+                  85% { width: 100%; }
                   100% { width: 100%; }
                 }
                 
                 @keyframes flowAnimation {
-                  0%, 100% { opacity: 0.3; }
-                  50% { opacity: 0.8; }
+                  0%, 100% { opacity: 0.2; }
+                  50% { opacity: 0.6; }
                 }
               `}</style>
             </div>
