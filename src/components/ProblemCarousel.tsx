@@ -39,16 +39,37 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
       return;
     }
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on("select", () => {
+    const updateCurrent = () => {
+      setCount(api.scrollSnapList().length);
       setCurrent(api.selectedScrollSnap() + 1);
-    });
+    };
+
+    updateCurrent();
+    api.on("select", updateCurrent);
+    api.on("reInit", updateCurrent);
+
+    return () => {
+      api.off("select", updateCurrent);
+      api.off("reInit", updateCurrent);
+    };
   }, [api]);
 
   const scrollTo = (index: number) => {
-    api?.scrollTo(index);
+    if (api) {
+      api.scrollTo(index);
+    }
+  };
+
+  const scrollPrev = () => {
+    if (api) {
+      api.scrollPrev();
+    }
+  };
+
+  const scrollNext = () => {
+    if (api) {
+      api.scrollNext();
+    }
   };
 
   return (
@@ -135,14 +156,20 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
           </CarouselContent>
           
           {/* Custom navigation buttons */}
-          <CarouselPrevious 
-            className="absolute -left-4 top-1/2 -translate-y-1/2 bg-[#151638] border-blue-600/30 text-white hover:bg-[#006fff] hover:border-[#006fff] transition-all duration-300"
+          <button 
+            onClick={scrollPrev}
+            className="absolute -left-4 top-1/2 -translate-y-1/2 bg-[#151638] border border-blue-600/30 text-white hover:bg-[#006fff] hover:border-[#006fff] transition-all duration-200 rounded-full w-10 h-10 flex items-center justify-center z-10 shadow-lg"
             aria-label="Previous problem"
-          />
-          <CarouselNext 
-            className="absolute -right-4 top-1/2 -translate-y-1/2 bg-[#151638] border-blue-600/30 text-white hover:bg-[#006fff] hover:border-[#006fff] transition-all duration-300"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button 
+            onClick={scrollNext}
+            className="absolute -right-4 top-1/2 -translate-y-1/2 bg-[#151638] border border-blue-600/30 text-white hover:bg-[#006fff] hover:border-[#006fff] transition-all duration-200 rounded-full w-10 h-10 flex items-center justify-center z-10 shadow-lg"
             aria-label="Next problem"
-          />
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
         </Carousel>
         
         {/* Pagination dots */}
