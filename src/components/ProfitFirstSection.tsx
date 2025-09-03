@@ -57,7 +57,7 @@ const ProfitFirstSection = () => {
             <div className="mb-8">
               <Button 
                 className="w-full sm:w-auto text-white font-medium shadow-lg shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
-                onClick={() => window.open('#/profit-first-media', '_self')}
+                onClick={() => window.open('https://calendly.com/tdiaagency/30min?month=2025-09', '_blank')}
               >
                 Make Media Buying Profitable
               </Button>
