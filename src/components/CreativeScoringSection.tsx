@@ -1,8 +1,10 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import ParallaxDots from './ParallaxDots';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const CreativeScoringSection = () => {
+  const isMobile = useIsMobile();
   return (
     <section className="w-full bg-black py-16 lg:py-20 font-sans relative overflow-hidden">
       <ParallaxDots 
@@ -17,7 +19,8 @@ const CreativeScoringSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Visual - Left */}
           <div className="order-2 lg:order-1 flex items-center justify-center">
-            <div className="relative w-full max-w-lg h-96">
+            {!isMobile && (
+              <div className="relative w-full max-w-lg h-96">
               {/* Creative Scoring Dashboard */}
               <div className="absolute inset-0 flex items-center justify-center">
                 {/* Central Processing Unit */}
@@ -137,6 +140,7 @@ const CreativeScoringSection = () => {
                 }
               `}</style>
             </div>
+            )}
           </div>
 
           {/* Content - Right */}

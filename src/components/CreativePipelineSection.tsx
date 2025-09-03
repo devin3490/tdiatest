@@ -19,7 +19,8 @@ const CreativePipelineSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Visual - Left */}
           <div className="order-2 lg:order-1 flex items-center justify-center">
-            <div className="relative w-full max-w-4xl h-[520px]">
+            {!isMobile && (
+              <div className="relative w-full max-w-4xl h-[520px]">
               {/* Kanban Board Animation */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-full h-full bg-gradient-to-br from-white/5 to-[#006fff]/10 rounded-2xl border border-white/10 p-4">
@@ -188,6 +189,7 @@ const CreativePipelineSection = () => {
                 }
               `}</style>
             </div>
+            )}
           </div>
 
           {/* Content - Right */}

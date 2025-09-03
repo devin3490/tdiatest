@@ -1,8 +1,10 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import ParallaxDots from './ParallaxDots';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const ProfitFirstSection = () => {
+  const isMobile = useIsMobile();
   return (
     <section className="w-full bg-black py-0 font-sans relative overflow-hidden">
       <ParallaxDots 
@@ -70,7 +72,8 @@ const ProfitFirstSection = () => {
 
           {/* Visual - Right */}
           <div className="flex items-center justify-center">
-            <div className="relative w-full max-w-lg h-96">
+            {!isMobile && (
+              <div className="relative w-full max-w-lg h-96">
               {/* Profit Growth Visualization */}
               <div className="absolute inset-0 flex items-center justify-center">
                 {/* 3D Revenue Chart */}
@@ -186,8 +189,9 @@ const ProfitFirstSection = () => {
                   0%, 100% { transform: translate(var(--x), var(--y)) translateY(0px); }
                   50% { transform: translate(var(--x), var(--y)) translateY(-8px); }
                 }
-              `}</style>
+               `}</style>
             </div>
+            )}
           </div>
         </div>
       </div>
