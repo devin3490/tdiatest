@@ -1,5 +1,6 @@
 
 import React, { useRef, useState } from 'react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 interface Card3DProps {
   className?: string;
@@ -12,12 +13,13 @@ const Card3D: React.FC<Card3DProps> = ({
   children, 
   glowColor = "rgba(255, 255, 255, 0.08)" 
 }) => {
+  const isMobile = useIsMobile();
   const cardRef = useRef<HTMLDivElement>(null);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [position, setPosition] = useState({ x: 50, y: 50 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (cardRef.current) {
+    if (cardRef.current && !isMobile) {
       // Get the card dimensions and position
       const rect = cardRef.current.getBoundingClientRect();
       
@@ -59,7 +61,7 @@ const Card3D: React.FC<Card3DProps> = ({
       <div 
         className="perspective-card-inner transition-transform duration-200"
         style={{
-          transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
+          transform: isMobile ? 'none' : `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
           transformStyle: "preserve-3d"
         }}
       >
@@ -69,7 +71,7 @@ const Card3D: React.FC<Card3DProps> = ({
         className="perspective-card-glow absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-300 rounded-lg"
         style={{
           background: `radial-gradient(circle at ${position.x}% ${position.y}%, ${glowColor}, transparent 70%)`,
-          opacity: Math.abs(rotation.x) > 2 || Math.abs(rotation.y) > 2 ? 1 : 0
+          opacity: isMobile ? 0 : (Math.abs(rotation.x) > 2 || Math.abs(rotation.y) > 2 ? 1 : 0)
         }}
       />
     </div>

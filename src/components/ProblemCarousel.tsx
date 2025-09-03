@@ -116,7 +116,7 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
           >
             {cards.map((card, index) => (
               <CarouselItem key={index} className="pl-0 basis-full">
-                <div className="group bg-gradient-to-br from-[#10112b] via-[#151638] to-[#0a0b1d] rounded-xl p-8 md:p-12 border border-blue-900/20 relative overflow-hidden min-h-[600px] flex flex-col justify-center transition-colors duration-200 hover:border-[#006fff]/50 cursor-pointer">
+                <div className="group bg-gradient-to-br from-[#10112b] via-[#151638] to-[#0a0b1d] rounded-xl p-4 sm:p-6 md:p-8 lg:p-12 border border-blue-900/20 relative overflow-hidden min-h-[500px] sm:min-h-[550px] md:min-h-[600px] flex flex-col justify-center transition-colors duration-200 hover:border-[#006fff]/50 cursor-pointer">
                   {/* Enhanced grid overlay with glow effect */}
                   <div className="absolute inset-0 opacity-10 transition-opacity duration-200">
                     <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-500/40 to-transparent absolute top-1/4"></div>
@@ -136,26 +136,26 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                   <div className="absolute inset-0 bg-gradient-radial from-[#006fff]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   
                    {/* Number positioned at top-left */}
-                   <div className="absolute top-8 left-8 z-20">
-                     <span className="text-[#006fff] font-bold text-2xl bg-gradient-to-r from-[#006fff]/20 to-[#4d9bff]/20 border border-[#006fff]/50 px-6 py-3 rounded-lg backdrop-blur-sm shadow-lg shadow-[#006fff]/20">
+                   <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8 z-20">
+                     <span className="text-[#006fff] font-bold text-lg sm:text-xl md:text-2xl bg-gradient-to-r from-[#006fff]/20 to-[#4d9bff]/20 border border-[#006fff]/50 px-3 py-2 sm:px-4 sm:py-2.5 md:px-6 md:py-3 rounded-lg backdrop-blur-sm shadow-lg shadow-[#006fff]/20">
                        {card.label}
                      </span>
                    </div>
                    
                    {/* Metric positioned at top-right */}
                    {card.metric && (
-                     <div className="absolute top-8 right-8 z-20">
-                       <span className="bg-gradient-to-r from-[#006fff]/15 to-[#4d9bff]/15 border border-[#006fff]/40 text-[#006fff] px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap backdrop-blur-sm shadow-md shadow-[#006fff]/10">
+                     <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 z-20">
+                       <span className="bg-gradient-to-r from-[#006fff]/15 to-[#4d9bff]/15 border border-[#006fff]/40 text-[#006fff] px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-2.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap backdrop-blur-sm shadow-md shadow-[#006fff]/10">
                          {card.metric}
                        </span>
                      </div>
                    )}
                    
-                   <div className="relative z-10 space-y-8 pt-16">
+                   <div className="relative z-10 space-y-4 sm:space-y-6 md:space-y-8 pt-12 sm:pt-14 md:pt-16 px-2 sm:px-4">
                     
                     {/* Enhanced headline with gradient text */}
                     <div className="text-center">
-                      <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight">
+                      <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight">
                         {card.headline}
                       </h4>
                     </div>
@@ -163,11 +163,11 @@ const ProblemCarousel: React.FC<ProblemCarouselProps> = ({
                     {/* Enhanced description with better spacing */}
                     <div className="text-center max-w-4xl mx-auto">
                       <div className="relative">
-                        <p className="text-white/90 text-lg md:text-xl leading-relaxed">
+                        <p className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed px-2">
                           {card.text}
                         </p>
                         {/* Subtle bottom accent line */}
-                        <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#006fff]/50 to-transparent mx-auto mt-6"></div>
+                        <div className="h-px w-16 sm:w-20 bg-gradient-to-r from-transparent via-[#006fff]/50 to-transparent mx-auto mt-4 sm:mt-6"></div>
                       </div>
                     </div>
                   </div>

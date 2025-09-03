@@ -1,8 +1,10 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import ParallaxDots from './ParallaxDots';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const CreativePipelineSection = () => {
+  const isMobile = useIsMobile();
   return (
     <section className="w-full bg-black py-16 lg:py-20 font-sans relative overflow-hidden">
       <ParallaxDots 
@@ -47,7 +49,7 @@ const CreativePipelineSection = () => {
                             columnIndex === 1 ? 'bg-orange-400' :
                             columnIndex === 2 ? 'bg-blue-400' :
                             'bg-green-400'
-                          } animate-pulse`}></div>
+                          } ${!isMobile ? 'animate-pulse' : ''}`}></div>
                         </div>
                       </div>
                     ))}
@@ -66,8 +68,8 @@ const CreativePipelineSection = () => {
                           borderColor: `${card.color}40`,
                           width: 'calc(25% - 24px)', // Largeur adaptée avec marges
                           height: '60px',
-                          animation: `moveCardCentered 10s ease-in-out infinite`,
-                          animationDelay: `${card.delay}s`,
+                          animation: isMobile ? 'none' : `moveCardCentered 10s ease-in-out infinite`,
+                          animationDelay: isMobile ? '0s' : `${card.delay}s`,
                           left: 'calc(12.5% - calc((25% - 24px) / 2))', // Parfaitement centré
                           top: `${100 + cardIndex * 75}px`, // Espacement vertical réduit pour rester dans les colonnes
                         }}
@@ -84,8 +86,9 @@ const CreativePipelineSection = () => {
                               className="h-full rounded-full"
                               style={{ 
                                 backgroundColor: card.color,
-                                animation: `progressFixed 10s ease-in-out infinite`,
-                                animationDelay: `${card.delay}s`
+                                animation: isMobile ? 'none' : `progressFixed 10s ease-in-out infinite`,
+                                animationDelay: isMobile ? '0s' : `${card.delay}s`,
+                                width: isMobile ? '100%' : undefined
                               }}
                             ></div>
                           </div>
@@ -93,7 +96,7 @@ const CreativePipelineSection = () => {
                         
                         {/* Glowing effect */}
                         <div 
-                          className="absolute inset-0 rounded-lg blur-sm -z-10 animate-pulse"
+                          className={`absolute inset-0 rounded-lg blur-sm -z-10 ${!isMobile ? 'animate-pulse' : ''}`}
                           style={{ backgroundColor: `${card.color}15` }}
                         ></div>
                       </div>
@@ -128,8 +131,8 @@ const CreativePipelineSection = () => {
                         markerEnd="url(#arrowhead)"
                         opacity="0.4"
                         style={{
-                          animation: `flowAnimation ${3 + i}s ease-in-out infinite`,
-                          animationDelay: `${i * 0.5}s`
+                          animation: isMobile ? 'none' : `flowAnimation ${3 + i}s ease-in-out infinite`,
+                          animationDelay: isMobile ? '0s' : `${i * 0.5}s`
                         }}
                       />
                     ))}
@@ -138,7 +141,7 @@ const CreativePipelineSection = () => {
                   {/* Pipeline Status */}
                   <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-[#006fff]/20 border border-[#006fff]/40 rounded-full px-4 py-2 backdrop-blur-sm">
-                      <span className="text-[#006fff] text-sm font-medium animate-pulse">
+                      <span className={`text-[#006fff] text-sm font-medium ${!isMobile ? 'animate-pulse' : ''}`}>
                         PIPELINE ACTIVE
                       </span>
                     </div>

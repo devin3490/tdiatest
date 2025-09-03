@@ -2,8 +2,10 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import Card3D from './Card3D';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const ResultsSection: React.FC = () => {
+  const isMobile = useIsMobile();
   return (
     <div className="w-full bg-black text-white py-16 font-sans">
       <div className="container mx-auto px-4">
@@ -22,68 +24,128 @@ const ResultsSection: React.FC = () => {
         {/* Results cards grid with 3D effect */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
           {/* Card 1 */}
-          <Card3D glowColor="rgba(179, 255, 23, 0.2)">
-            <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full transform-style-preserve-3d">
+          {isMobile ? (
+            <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full">
               <img 
                 src="/lovable-uploads/15e81cc9-46f1-4a30-af8a-e4aefeb71f63.png" 
                 alt="Woman in black outfit" 
-                className="w-full h-52 object-cover translate-z-10"
+                className="w-full h-52 object-cover"
               />
-              <div className="bg-[#006fff] p-3 translate-z-15">
+              <div className="bg-[#006fff] p-3">
                 <div className="flex flex-col space-y-1">
                   <p className="font-medium text-white">↑ ROAS by 33%</p>
                   <p className="font-medium text-white">↑ CTR by 14%</p>
                 </div>
               </div>
             </div>
-          </Card3D>
+          ) : (
+            <Card3D glowColor="rgba(179, 255, 23, 0.2)">
+              <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full transform-style-preserve-3d">
+                <img 
+                  src="/lovable-uploads/15e81cc9-46f1-4a30-af8a-e4aefeb71f63.png" 
+                  alt="Woman in black outfit" 
+                  className="w-full h-52 object-cover translate-z-10"
+                />
+                <div className="bg-[#006fff] p-3 translate-z-15">
+                  <div className="flex flex-col space-y-1">
+                    <p className="font-medium text-white">↑ ROAS by 33%</p>
+                    <p className="font-medium text-white">↑ CTR by 14%</p>
+                  </div>
+                </div>
+              </div>
+            </Card3D>
+          )}
           
           {/* Card 2 */}
-          <Card3D glowColor="rgba(179, 255, 23, 0.2)">
-            <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full transform-style-preserve-3d">
-              <div className="w-full h-52 bg-gray-700 flex items-center justify-center translate-z-10">
+          {isMobile ? (
+            <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full">
+              <div className="w-full h-52 bg-gray-700 flex items-center justify-center">
                 {/* Placeholder for the nail product image */}
                 <span className="text-gray-400">Nail Product Image</span>
               </div>
-              <div className="bg-[#006fff] p-3 translate-z-15">
+              <div className="bg-[#006fff] p-3">
                 <div className="flex flex-col space-y-1">
                   <p className="font-medium text-white">↑ Hook Rate by 85%</p>
                   <p className="font-medium text-white">↓ CPO by 22%</p>
                 </div>
               </div>
             </div>
-          </Card3D>
+          ) : (
+            <Card3D glowColor="rgba(179, 255, 23, 0.2)">
+              <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full transform-style-preserve-3d">
+                <div className="w-full h-52 bg-gray-700 flex items-center justify-center translate-z-10">
+                  {/* Placeholder for the nail product image */}
+                  <span className="text-gray-400">Nail Product Image</span>
+                </div>
+                <div className="bg-[#006fff] p-3 translate-z-15">
+                  <div className="flex flex-col space-y-1">
+                    <p className="font-medium text-white">↑ Hook Rate by 85%</p>
+                    <p className="font-medium text-white">↓ CPO by 22%</p>
+                  </div>
+                </div>
+              </div>
+            </Card3D>
+          )}
           
           {/* Card 3 */}
-          <Card3D glowColor="rgba(179, 255, 23, 0.2)">
-            <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full transform-style-preserve-3d">
-              <div className="w-full h-52 bg-gray-700 flex items-center justify-center translate-z-10">
+          {isMobile ? (
+            <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full">
+              <div className="w-full h-52 bg-gray-700 flex items-center justify-center">
                 {/* Placeholder for the product package image */}
                 <span className="text-gray-400">Package Image</span>
               </div>
-              <div className="bg-[#006fff] p-3 translate-z-15">
+              <div className="bg-[#006fff] p-3">
                 <div className="flex flex-col space-y-1">
                   <p className="font-medium text-white">↓ CPA by 30%</p>
                   <p className="font-medium text-white">↑ Hook rate by 280%</p>
                 </div>
               </div>
             </div>
-          </Card3D>
+          ) : (
+            <Card3D glowColor="rgba(179, 255, 23, 0.2)">
+              <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full transform-style-preserve-3d">
+                <div className="w-full h-52 bg-gray-700 flex items-center justify-center translate-z-10">
+                  {/* Placeholder for the product package image */}
+                  <span className="text-gray-400">Package Image</span>
+                </div>
+                <div className="bg-[#006fff] p-3 translate-z-15">
+                  <div className="flex flex-col space-y-1">
+                    <p className="font-medium text-white">↓ CPA by 30%</p>
+                    <p className="font-medium text-white">↑ Hook rate by 280%</p>
+                  </div>
+                </div>
+              </div>
+            </Card3D>
+          )}
           
           {/* Card 4 */}
-          <Card3D glowColor="rgba(179, 255, 23, 0.2)">
-            <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full transform-style-preserve-3d">
-              <div className="w-full h-52 bg-gray-700 flex items-center justify-center translate-z-10">
+          {isMobile ? (
+            <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full">
+              <div className="w-full h-52 bg-gray-700 flex items-center justify-center">
                 {/* Placeholder for the baby image */}
                 <span className="text-gray-400">Baby Image</span>
               </div>
-              <div className="bg-[#006fff] p-3 translate-z-15">
+              <div className="bg-[#006fff] p-3">
                 <div className="flex flex-col space-y-1">
                   <p className="font-medium text-white">↑ Return customer rate by 91%</p>
                 </div>
               </div>
             </div>
-          </Card3D>
+          ) : (
+            <Card3D glowColor="rgba(179, 255, 23, 0.2)">
+              <div className="rounded-lg overflow-hidden relative bg-pink-200/10 h-full transform-style-preserve-3d">
+                <div className="w-full h-52 bg-gray-700 flex items-center justify-center translate-z-10">
+                  {/* Placeholder for the baby image */}
+                  <span className="text-gray-400">Baby Image</span>
+                </div>
+                <div className="bg-[#006fff] p-3 translate-z-15">
+                  <div className="flex flex-col space-y-1">
+                    <p className="font-medium text-white">↑ Return customer rate by 91%</p>
+                  </div>
+                </div>
+              </div>
+            </Card3D>
+          )}
         </div>
         
         {/* 3 Steps Section */}

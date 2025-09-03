@@ -2,6 +2,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useCounter } from '../hooks/useCounter';
+import { useIsMobile } from '../hooks/use-mobile';
 
 interface CounterValueProps {
   value: number;
@@ -18,6 +19,8 @@ const CounterValue: React.FC<CounterValueProps> = ({
   decimals = 0,
   className = ''
 }) => {
+  const isMobile = useIsMobile();
+  
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -27,7 +30,7 @@ const CounterValue: React.FC<CounterValueProps> = ({
   const formattedCount = useCounter({
     end: value,
     start: 0,
-    duration: 2500,
+    duration: isMobile ? 0 : 2500,
     decimals,
     prefix,
     suffix,
