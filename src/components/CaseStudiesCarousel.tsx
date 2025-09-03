@@ -37,7 +37,7 @@ const CaseStudiesCarousel: React.FC = () => {
                     alt="hideAway case study"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/70"></div>
+                  <div className="absolute inset-0 bg-black/80"></div>
                   <div className="absolute inset-0 flex items-center justify-center text-center p-8">
                     <div>
                       <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -63,7 +63,7 @@ const CaseStudiesCarousel: React.FC = () => {
                       alt="RAITH case study"
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/70"></div>
+                    <div className="absolute inset-0 bg-black/80"></div>
                     <div className="absolute inset-0 flex items-center justify-center text-center p-6">
                       <div>
                         <h2 className="text-xl md:text-2xl font-bold text-white">
@@ -87,7 +87,7 @@ const CaseStudiesCarousel: React.FC = () => {
                       alt="Golf Course Supply case study"
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/70"></div>
+                    <div className="absolute inset-0 bg-black/80"></div>
                     <div className="absolute inset-0 flex items-center justify-center text-center p-6">
                       <div>
                         <h2 className="text-xl md:text-2xl font-bold text-white">
